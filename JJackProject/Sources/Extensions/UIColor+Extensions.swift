@@ -15,4 +15,5 @@ extension UIColor {
     
     @nonobjc class var maize: UIColor {
         return UIColor(red: 245.0 / 255.0, green: 207.0 / 255.0, blue: 69.0 / 255.0, alpha: 1.0)
+    }
 }

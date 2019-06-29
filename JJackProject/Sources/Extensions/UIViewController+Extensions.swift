@@ -22,7 +22,7 @@ extension UIViewController {
     
     // UIAlertController with Handler
     func simpleAlertwithHandler(title: String, message: String, okHandler : ((UIAlertAction) -> Void)?, cancleHandler : ((UIAlertAction) -> Void)?){
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
         let okAction = UIAlertAction(title: "확인",style: .default, handler: okHandler)
         let cancelAction = UIAlertAction(title: "취소",style: .cancel, handler: cancleHandler)
         alert.addAction(okAction)

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -56,7 +56,6 @@
 				27D39B95E6AC9BB96A01A0E6 /* Pods-JJackProject.debug.xcconfig */,
 				BFF167A4C8D4A321CCB6A7A9 /* Pods-JJackProject.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -445,7 +444,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = JJackProject/Info.plist;
+				DEVELOPMENT_TEAM = 325VLH85CK;
+				INFOPLIST_FILE = "$(SRCROOT)/JJackProject/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -463,7 +463,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = JJackProject/Info.plist;
+				DEVELOPMENT_TEAM = 325VLH85CK;
+				INFOPLIST_FILE = "$(SRCROOT)/JJackProject/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
