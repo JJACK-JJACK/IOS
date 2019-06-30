@@ -2,16 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "icMoreYellow.png"
     },
     {
+      "scale" : "2x",
       "idiom" : "universal",
-      "filename" : "cherryBlossom.jpeg",
-      "scale" : "2x"
+      "filename" : "icMoreYellow@2x.png"
     },
     {
+      "scale" : "3x",
       "idiom" : "universal",
-      "scale" : "3x"
+      "filename" : "icMoreYellow@3x.png"
     }
   ],
   "info" : {
