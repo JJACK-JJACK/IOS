@@ -18,7 +18,10 @@
 		C08482DA22C253370087F3BC /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08482D922C253370087F3BC /* UIViewController+Extensions.swift */; };
 		C08482DC22C337110087F3BC /* UIImageView+ㄷExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08482DB22C337110087F3BC /* UIImageView+ㄷExtensions.swift */; };
 		C08482E122C3378E0087F3BC /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08482E022C3378E0087F3BC /* APIManager.swift */; };
-		C084832522C93C930087F3BC /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C084832422C93C930087F3BC /* SignUpVC.swift */; };
+		C084832522C93C930087F3BC /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C084832422C93C930087F3BC /* LoginVC.swift */; };
+		C084832822C953190087F3BC /* SignUpVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C084832722C953190087F3BC /* SignUpVC1.swift */; };
+		C084832A22C953350087F3BC /* SignUpVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C084832922C953350087F3BC /* SignUpVC2.swift */; };
+		C084832C22C953540087F3BC /* SignUpVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C084832B22C953540087F3BC /* SignUpVC3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +40,10 @@
 		C08482D922C253370087F3BC /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		C08482DB22C337110087F3BC /* UIImageView+ㄷExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ㄷExtensions.swift"; sourceTree = "<group>"; };
 		C08482E022C3378E0087F3BC /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		C084832422C93C930087F3BC /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		C084832422C93C930087F3BC /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		C084832722C953190087F3BC /* SignUpVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC1.swift; sourceTree = "<group>"; };
+		C084832922C953350087F3BC /* SignUpVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC2.swift; sourceTree = "<group>"; };
+		C084832B22C953540087F3BC /* SignUpVC3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +138,7 @@
 		C08482D222C252AD0087F3BC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C084832622C93C9B0087F3BC /* Login */,
+				C084832622C93C9B0087F3BC /* Auth */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -177,13 +183,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		C084832622C93C9B0087F3BC /* Login */ = {
+		C084832622C93C9B0087F3BC /* Auth */ = {
 			isa = PBXGroup;
 			children = (
 				C08482BF22C2515D0087F3BC /* FirstVC.swift */,
-				C084832422C93C930087F3BC /* SignUpVC.swift */,
+				C084832422C93C930087F3BC /* LoginVC.swift */,
+				C084832722C953190087F3BC /* SignUpVC1.swift */,
+				C084832922C953350087F3BC /* SignUpVC2.swift */,
+				C084832B22C953540087F3BC /* SignUpVC3.swift */,
 			);
-			path = Login;
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,9 +310,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C084832522C93C930087F3BC /* SignUpVC.swift in Sources */,
+				C084832522C93C930087F3BC /* LoginVC.swift in Sources */,
 				C08482C022C2515D0087F3BC /* FirstVC.swift in Sources */,
 				C08482D622C2530B0087F3BC /* UIColor+Extensions.swift in Sources */,
+				C084832C22C953540087F3BC /* SignUpVC3.swift in Sources */,
+				C084832A22C953350087F3BC /* SignUpVC2.swift in Sources */,
+				C084832822C953190087F3BC /* SignUpVC1.swift in Sources */,
 				C08482DA22C253370087F3BC /* UIViewController+Extensions.swift in Sources */,
 				C08482D822C253290087F3BC /* UIView+Extensions.swift in Sources */,
 				C08482DC22C337110087F3BC /* UIImageView+ㄷExtensions.swift in Sources */,

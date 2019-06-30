@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SignUpVC: UIViewController {
+class LoginVC: UIViewController {
 
     @IBOutlet weak var underBarView: UIView!
     @IBOutlet weak var Login: UIButton!
