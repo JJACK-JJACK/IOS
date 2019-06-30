@@ -24,7 +24,7 @@ class SignUpVC: UIViewController {
         toSignup.makeRounded(cornerRadius: 4.0)
     }
     func setBorderColor() {
-        
+        toSignup.setBorder(borderColor: nil, borderWidth: 1.0)
     }
     func setup(){
         setBorderRadius()
