@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		8F3B3AAF1F9585C0519B1F4E /* Pods_JJackProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C72F7EE5AF72F18546F2D3E /* Pods_JJackProject.framework */; };
 		C08482BE22C2515D0087F3BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08482BD22C2515D0087F3BC /* AppDelegate.swift */; };
-		C08482C022C2515D0087F3BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08482BF22C2515D0087F3BC /* ViewController.swift */; };
+		C08482C022C2515D0087F3BC /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08482BF22C2515D0087F3BC /* FirstVC.swift */; };
 		C08482C322C2515D0087F3BC /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C08482C122C2515D0087F3BC /* Login.storyboard */; };
 		C08482C522C251600087F3BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C08482C422C251600087F3BC /* Assets.xcassets */; };
 		C08482C822C251600087F3BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C08482C622C251600087F3BC /* LaunchScreen.storyboard */; };
@@ -18,6 +18,10 @@
 		C08482DA22C253370087F3BC /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08482D922C253370087F3BC /* UIViewController+Extensions.swift */; };
 		C08482DC22C337110087F3BC /* UIImageView+ㄷExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08482DB22C337110087F3BC /* UIImageView+ㄷExtensions.swift */; };
 		C08482E122C3378E0087F3BC /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08482E022C3378E0087F3BC /* APIManager.swift */; };
+		C084832522C93C930087F3BC /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C084832422C93C930087F3BC /* LoginVC.swift */; };
+		C084832822C953190087F3BC /* SignUpVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C084832722C953190087F3BC /* SignUpVC1.swift */; };
+		C084832A22C953350087F3BC /* SignUpVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C084832922C953350087F3BC /* SignUpVC2.swift */; };
+		C084832C22C953540087F3BC /* SignUpVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C084832B22C953540087F3BC /* SignUpVC3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +30,7 @@
 		BFF167A4C8D4A321CCB6A7A9 /* Pods-JJackProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JJackProject.release.xcconfig"; path = "Target Support Files/Pods-JJackProject/Pods-JJackProject.release.xcconfig"; sourceTree = "<group>"; };
 		C08482BA22C2515D0087F3BC /* JJackProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJackProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08482BD22C2515D0087F3BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C08482BF22C2515D0087F3BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C08482BF22C2515D0087F3BC /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
 		C08482C222C2515D0087F3BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		C08482C422C251600087F3BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C08482C722C251600087F3BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +40,10 @@
 		C08482D922C253370087F3BC /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		C08482DB22C337110087F3BC /* UIImageView+ㄷExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ㄷExtensions.swift"; sourceTree = "<group>"; };
 		C08482E022C3378E0087F3BC /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		C084832422C93C930087F3BC /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		C084832722C953190087F3BC /* SignUpVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC1.swift; sourceTree = "<group>"; };
+		C084832922C953350087F3BC /* SignUpVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC2.swift; sourceTree = "<group>"; };
+		C084832B22C953540087F3BC /* SignUpVC3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,7 +138,7 @@
 		C08482D222C252AD0087F3BC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C08482BF22C2515D0087F3BC /* ViewController.swift */,
+				C084832622C93C9B0087F3BC /* Auth */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -173,6 +181,18 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C084832622C93C9B0087F3BC /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				C08482BF22C2515D0087F3BC /* FirstVC.swift */,
+				C084832422C93C930087F3BC /* LoginVC.swift */,
+				C084832722C953190087F3BC /* SignUpVC1.swift */,
+				C084832922C953350087F3BC /* SignUpVC2.swift */,
+				C084832B22C953540087F3BC /* SignUpVC3.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,8 +310,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C08482C022C2515D0087F3BC /* ViewController.swift in Sources */,
+				C084832522C93C930087F3BC /* LoginVC.swift in Sources */,
+				C08482C022C2515D0087F3BC /* FirstVC.swift in Sources */,
 				C08482D622C2530B0087F3BC /* UIColor+Extensions.swift in Sources */,
+				C084832C22C953540087F3BC /* SignUpVC3.swift in Sources */,
+				C084832A22C953350087F3BC /* SignUpVC2.swift in Sources */,
+				C084832822C953190087F3BC /* SignUpVC1.swift in Sources */,
 				C08482DA22C253370087F3BC /* UIViewController+Extensions.swift in Sources */,
 				C08482D822C253290087F3BC /* UIView+Extensions.swift in Sources */,
 				C08482DC22C337110087F3BC /* UIImageView+ㄷExtensions.swift in Sources */,

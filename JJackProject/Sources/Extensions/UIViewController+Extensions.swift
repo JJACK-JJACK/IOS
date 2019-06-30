@@ -31,15 +31,15 @@ extension UIViewController {
     }
     
     // Set Custom Back Button
-    func setBackBtn(color : UIColor){
+    func setBackBtn(){
         
         // 백버튼 이미지 파일 이름에 맞게 변경해주세요.
-        let backBTN = UIBarButtonItem(image: UIImage(named: "backBtn"),
+        let backBTN = UIBarButtonItem(image: UIImage(named: "icBack"),
                                       style: .plain,
                                       target: self,
                                       action: #selector(self.pop))
         navigationItem.leftBarButtonItem = backBTN
-        navigationItem.leftBarButtonItem?.tintColor = color
+//        navigationItem.leftBarButtonItem?.tintColor = color
         navigationController?.interactivePopGestureRecognizer?.delegate = self as? UIGestureRecognizerDelegate
     }
     

@@ -48,7 +48,7 @@ extension UIView {
             self.layer.borderColor = borderColor_.cgColor
         } else {
             // borderColor 변수가 nil 일 경우의 default
-            self.layer.borderColor = UIColor(red: 205/255, green: 209/255, blue: 208/255, alpha: 1.0).cgColor
+            self.layer.borderColor = UIColor(red: 221/255, green: 221/255, blue: 221/255, alpha: 1.0).cgColor
         }
         
         // UIView 의 테두리 두께 설정
