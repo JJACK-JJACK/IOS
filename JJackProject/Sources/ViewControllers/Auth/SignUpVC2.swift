@@ -17,14 +17,13 @@ class SignUpVC2: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func goNext(_ sender: Any) {
+        guard let dvc = storyboard?.instantiateViewController(withIdentifier: "SettingNickname")as? SignUpVC3 else {return}
+        present(dvc, animated: true, completion: nil)
     }
-    */
-
+    
+    @IBAction func Back(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }

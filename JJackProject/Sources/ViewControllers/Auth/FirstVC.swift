@@ -17,13 +17,17 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         setup()
     }
+    // setting boarder color
     func setBorderColorOfButton () {
         toSignup.setBorder(borderColor: UIColor.pointCol, borderWidth: 1.0)
     }
+    // setting the radius
     func setBorderRadius() {
         toSignin.makeRounded(cornerRadius: 4.0)
         toSignup.makeRounded(cornerRadius: 4.0)
     }
+    
+    // set when view did load
     func setup() {
         setBorderColorOfButton()
         setBorderRadius()

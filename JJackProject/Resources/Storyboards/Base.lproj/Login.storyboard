@@ -122,7 +122,7 @@
         <!--LoginVC-->
         <scene sceneID="neZ-Ne-J5s">
             <objects>
-                <viewController id="gMf-3u-gYl" customClass="LoginVC" customModule="JJackProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" id="gMf-3u-gYl" customClass="LoginVC" customModule="JJackProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HL7-Gk-jvg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -275,7 +275,7 @@
                                 </constraints>
                                 <state key="normal" image="icBack"/>
                                 <connections>
-                                    <action selector="Back:" destination="9qE-7a-gYm" eventType="touchUpInside" id="NWE-Bz-Eeu"/>
+                                    <action selector="Back:" destination="9qE-7a-gYm" eventType="touchUpInside" id="WTK-jh-ndz"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6gV-75-dRX">
@@ -314,7 +314,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="uys-ku-M9n" kind="presentation" id="pW1-Xv-wK3"/>
+                                    <action selector="goNext:" destination="9qE-7a-gYm" eventType="touchUpInside" id="4QY-EQ-irp"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwp-VO-yzD">
@@ -358,7 +358,7 @@
         <!--Sign UpVC2-->
         <scene sceneID="T9g-eY-gHL">
             <objects>
-                <viewController id="uys-ku-M9n" customClass="SignUpVC2" customModule="JJackProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingPwd" id="uys-ku-M9n" customClass="SignUpVC2" customModule="JJackProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WxS-he-u3r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -371,7 +371,7 @@
                                 </constraints>
                                 <state key="normal" image="icBack"/>
                                 <connections>
-                                    <action selector="Back:" destination="uys-ku-M9n" eventType="touchUpInside" id="Bji-jf-kT0"/>
+                                    <action selector="Back:" destination="uys-ku-M9n" eventType="touchUpInside" id="434-vf-O0T"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XsV-Bv-7dM">
@@ -447,7 +447,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="3Qm-ya-Bor" kind="presentation" id="yNk-eT-1Ac"/>
+                                    <action selector="goNext:" destination="uys-ku-M9n" eventType="touchUpInside" id="u7m-hB-QYa"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -479,9 +479,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LJn-Ib-ACJ"/>
                     </view>
-                    <connections>
-                        <outlet property="underBarView" destination="XsV-Bv-7dM" id="0ML-oR-uxP"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Cp-Zc-8qs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -490,7 +487,7 @@
         <!--Sign UpVC3-->
         <scene sceneID="jWV-Xi-Z23">
             <objects>
-                <viewController id="3Qm-ya-Bor" customClass="SignUpVC3" customModule="JJackProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingNickname" id="3Qm-ya-Bor" customClass="SignUpVC3" customModule="JJackProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U3z-R1-tdi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -503,7 +500,7 @@
                                 </constraints>
                                 <state key="normal" image="icBack"/>
                                 <connections>
-                                    <action selector="Back:" destination="uys-ku-M9n" eventType="touchUpInside" id="fAO-LD-5DW"/>
+                                    <action selector="Back:" destination="3Qm-ya-Bor" eventType="touchUpInside" id="oy9-L6-iuL"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NoT-HM-2io">
@@ -578,6 +575,9 @@
                                 <state key="normal" title="완료">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="completeSignup:" destination="3Qm-ya-Bor" eventType="touchUpInside" id="aTW-eb-L3N"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knC-Vu-L0P">
                                 <rect key="frame" x="299" y="234" width="42" height="27"/>
@@ -614,8 +614,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dax-PI-jlo"/>
                     </view>
+                    <connections>
+                        <segue destination="X6L-2V-39b" kind="unwind" identifier="unwindToMain" unwindAction="unwindToMainWithSegue:" id="SAh-p8-C1O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="25z-jX-b8h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="X6L-2V-39b" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4190" y="548"/>
         </scene>
