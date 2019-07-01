@@ -32,7 +32,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="14"/>
                                 <state key="normal" title="이메일 로그인">
-                                    <color key="titleColor" red="1" green="0.80784313725490198" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uw5-my-SqR"/>
@@ -188,11 +188,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FoM-SU-fpu">
-                                <rect key="frame" x="259" y="309.66666666666669" width="77" height="29"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
-                                <state key="normal" title="비밀번호 찾기"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qH3-4h-lKG">
                                 <rect key="frame" x="37" y="357.66666666666669" width="301" height="64"/>
                                 <color key="backgroundColor" red="1" green="0.76078431372549016" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -201,7 +196,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="20"/>
                                 <state key="normal" title="로그인">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LV8-1A-S0x">
@@ -211,7 +206,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="20"/>
                                 <state key="normal" title="이메일 회원가입">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
                                     <segue destination="9qE-7a-gYm" kind="presentation" id="lCZ-oX-cG1"/>
@@ -229,13 +224,11 @@
                             <constraint firstItem="ljE-b2-PTp" firstAttribute="leading" secondItem="x5o-bR-2tf" secondAttribute="leading" constant="36" id="BEd-Zh-1Iz"/>
                             <constraint firstItem="qH3-4h-lKG" firstAttribute="leading" secondItem="x5o-bR-2tf" secondAttribute="leading" constant="37" id="IWO-Bw-4aJ"/>
                             <constraint firstItem="x5o-bR-2tf" firstAttribute="trailing" secondItem="qH3-4h-lKG" secondAttribute="trailing" constant="37" id="IzH-KC-tTJ"/>
-                            <constraint firstItem="FoM-SU-fpu" firstAttribute="trailing" secondItem="6HM-Jv-aVZ" secondAttribute="trailing" id="OVs-fs-8MM"/>
                             <constraint firstItem="6HM-Jv-aVZ" firstAttribute="leading" secondItem="ljE-b2-PTp" secondAttribute="leading" id="RUA-R1-rBZ"/>
                             <constraint firstItem="uCa-ra-JUM" firstAttribute="leading" secondItem="ljE-b2-PTp" secondAttribute="leading" id="RlQ-Mu-bcc"/>
                             <constraint firstItem="HAB-pj-bE8" firstAttribute="leading" secondItem="x5o-bR-2tf" secondAttribute="leading" constant="36" id="V37-CQ-9sq"/>
                             <constraint firstItem="x5o-bR-2tf" firstAttribute="trailing" secondItem="ljE-b2-PTp" secondAttribute="trailing" constant="39" id="XBn-44-7ZZ"/>
                             <constraint firstItem="LV8-1A-S0x" firstAttribute="trailing" secondItem="qH3-4h-lKG" secondAttribute="trailing" id="XBp-Bh-nao"/>
-                            <constraint firstItem="FoM-SU-fpu" firstAttribute="top" secondItem="6HM-Jv-aVZ" secondAttribute="bottom" constant="16.5" id="YBE-Eu-9I1"/>
                             <constraint firstItem="6HM-Jv-aVZ" firstAttribute="top" secondItem="ljE-b2-PTp" secondAttribute="bottom" constant="3" id="YPM-5f-boQ"/>
                             <constraint firstItem="x5o-bR-2tf" firstAttribute="trailing" secondItem="HAB-pj-bE8" secondAttribute="trailing" constant="39" id="Yvx-CZ-qvG"/>
                             <constraint firstItem="LV8-1A-S0x" firstAttribute="leading" secondItem="qH3-4h-lKG" secondAttribute="leading" id="aTz-Lt-3Ne"/>
@@ -319,10 +312,6 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwp-VO-yzD">
                                 <rect key="frame" x="36" y="109.00000000000001" width="131" height="57.666666666666671"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="57.666666666666671" id="1w0-oI-DoG"/>
-                                    <constraint firstAttribute="width" constant="131" id="s77-em-TV8"/>
-                                </constraints>
                                 <string key="text">이메일 주소를
 입력해주세요</string>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="24"/>
@@ -425,11 +414,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcO-SX-cGF">
-                                <rect key="frame" x="36" y="109.00000000000001" width="131" height="57.666666666666671"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="131" id="eKq-Un-olx"/>
-                                    <constraint firstAttribute="height" constant="57.666666666666671" id="uvO-3q-I21"/>
-                                </constraints>
+                                <rect key="frame" x="36.000000000000007" y="109.00000000000001" width="124.66666666666669" height="57.666666666666671"/>
                                 <string key="text">비밀번호를
 입력해주세요</string>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="24"/>
@@ -554,11 +539,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ev-Y9-IEh">
-                                <rect key="frame" x="36" y="108.00000000000001" width="131" height="57.666666666666671"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="131" id="gj7-Zp-TaA"/>
-                                    <constraint firstAttribute="height" constant="57.666666666666671" id="v42-9z-Vo6"/>
-                                </constraints>
+                                <rect key="frame" x="36.000000000000007" y="108.00000000000001" width="124.66666666666669" height="57.666666666666671"/>
                                 <string key="text">닉네임을
 입력해주세요</string>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="24"/>

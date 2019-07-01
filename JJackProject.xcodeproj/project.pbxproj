@@ -11,6 +11,7 @@
 		C01A043822C9E7DF00ED8CD2 /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C01A043722C9E7DF00ED8CD2 /* SideMenu.storyboard */; };
 		C01A043B22C9E9AE00ED8CD2 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01A043A22C9E9AE00ED8CD2 /* SideMenuVC.swift */; };
 		C01A043D22CA272A00ED8CD2 /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C01A043C22CA272A00ED8CD2 /* MyPage.storyboard */; };
+		C01E92E322CA372F00D43366 /* MyPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E92E222CA372F00D43366 /* MyPageVC.swift */; };
 		C08482BE22C2515D0087F3BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08482BD22C2515D0087F3BC /* AppDelegate.swift */; };
 		C08482C022C2515D0087F3BC /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08482BF22C2515D0087F3BC /* FirstVC.swift */; };
 		C08482C322C2515D0087F3BC /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C08482C122C2515D0087F3BC /* Login.storyboard */; };
@@ -34,6 +35,7 @@
 		C01A043722C9E7DF00ED8CD2 /* SideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
 		C01A043A22C9E9AE00ED8CD2 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		C01A043C22CA272A00ED8CD2 /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
+		C01E92E222CA372F00D43366 /* MyPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageVC.swift; sourceTree = "<group>"; };
 		C08482BA22C2515D0087F3BC /* JJackProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJackProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08482BD22C2515D0087F3BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C08482BF22C2515D0087F3BC /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
@@ -87,6 +89,14 @@
 				C01A043A22C9E9AE00ED8CD2 /* SideMenuVC.swift */,
 			);
 			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		C01E92E122CA371800D43366 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				C01E92E222CA372F00D43366 /* MyPageVC.swift */,
+			);
+			path = MyPage;
 			sourceTree = "<group>";
 		};
 		C08482B122C2515D0087F3BC = {
@@ -154,6 +164,7 @@
 		C08482D222C252AD0087F3BC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C01E92E122CA371800D43366 /* MyPage */,
 				C01A043922C9E99200ED8CD2 /* SideMenu */,
 				C084832622C93C9B0087F3BC /* Auth */,
 			);
@@ -331,6 +342,7 @@
 			files = (
 				C084832522C93C930087F3BC /* LoginVC.swift in Sources */,
 				C08482C022C2515D0087F3BC /* FirstVC.swift in Sources */,
+				C01E92E322CA372F00D43366 /* MyPageVC.swift in Sources */,
 				C01A043B22C9E9AE00ED8CD2 /* SideMenuVC.swift in Sources */,
 				C08482D622C2530B0087F3BC /* UIColor+Extensions.swift in Sources */,
 				C084832C22C953540087F3BC /* SignUpVC3.swift in Sources */,

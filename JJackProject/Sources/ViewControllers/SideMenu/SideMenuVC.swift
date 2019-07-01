@@ -23,4 +23,7 @@ class SideMenuVC: UIViewController {
         self.useInfo.setBorder(borderColor: UIColor.veryLightPink, borderWidth: 1.0)
         self.useInfo.makeRounded(cornerRadius: 15.5)
     }
+    @IBAction func cancelMenu(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
 }
