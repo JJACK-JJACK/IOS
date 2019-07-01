@@ -1,9 +1,9 @@
 {
   "images" : [
     {
+      "filename" : "icChildren.png",
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "icChildren.png"
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
@@ -11,8 +11,8 @@
       "scale" : "2x"
     },
     {
-      "scale" : "3x",
       "idiom" : "universal",
+      "scale" : "3x",
       "filename" : "icChildren@3x.png"
     }
   ],
