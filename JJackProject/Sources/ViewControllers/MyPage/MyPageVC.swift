@@ -37,6 +37,11 @@ class MyPageVC: UIViewController {
             break
         }
     }
+    @IBAction func viewHistory(_ sender: Any) {
+        guard let dvc = storyboard?.instantiateViewController(withIdentifier: "UseHistoryVC")as? UseHistoryVC else {return}
+        navigationController?.pushViewController(dvc, animated: true)
+        
+    }
     
     @IBAction func logoutBtn(_ sender: UIButton) {
         guard let dvc = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "FirstView") as? ViewController else {return}

@@ -109,6 +109,9 @@
                                 <state key="normal" title="베리 이용 내역">
                                     <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="viewHistory:" destination="zm3-GA-k2L" eventType="touchUpInside" id="GyB-8d-Cx0"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oe2-7O-pSu" userLabel="line2">
                                 <rect key="frame" x="20" y="393" width="374" height="1"/>
@@ -129,7 +132,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HEU-nY-UsV">
                                 <rect key="frame" x="20" y="456.5" width="380" height="32"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
-                                <state key="normal" title="베리 이용 내역">
+                                <state key="normal" title="문의하기">
                                     <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
@@ -253,7 +256,7 @@
         <!--Use HistoryVC-->
         <scene sceneID="T7H-jF-fuU">
             <objects>
-                <viewController id="x9H-GV-bag" customClass="UseHistoryVC" customModule="JJackProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UseHistoryVC" id="x9H-GV-bag" customClass="UseHistoryVC" customModule="JJackProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aa6-28-LxM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -261,6 +264,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jG8-QS-GP9">
                                 <rect key="frame" x="11" y="53" width="27" height="32"/>
                                 <state key="normal" image="icBack"/>
+                                <connections>
+                                    <action selector="Back:" destination="x9H-GV-bag" eventType="touchUpInside" id="TJR-FP-1sB"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="보유베리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8e-D2-tpA">
                                 <rect key="frame" x="20" y="124" width="70" height="24"/>
@@ -282,9 +288,19 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bLk-k2-6OC">
                                 <rect key="frame" x="0.0" y="224" width="414" height="16"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="장애인 재단" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sow-rk-xxq">
+                                        <rect key="frame" x="20" y="0.5" width="56" height="15"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="12"/>
+                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="Xac-If-ZjY"/>
+                                    <constraint firstItem="Sow-rk-xxq" firstAttribute="centerY" secondItem="bLk-k2-6OC" secondAttribute="centerY" id="p9F-rN-Mn4"/>
+                                    <constraint firstItem="Sow-rk-xxq" firstAttribute="leading" secondItem="bLk-k2-6OC" secondAttribute="leading" constant="20" id="s9x-Uc-kKx"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xzK-cR-PKi">
@@ -294,53 +310,64 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="622"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="yn7-vU-oOM">
-                                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                            <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoryCell" rowHeight="104" id="yn7-vU-oOM" customClass="HistoryCell" customModule="JJackProject" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="414" height="104"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yn7-vU-oOM" id="bbB-Ra-jOG">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="103.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAM-81-gpg" userLabel="date">
-                                                            <rect key="frame" x="20" y="26" width="30" height="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="베리기부" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lAM-81-gpg" userLabel="date">
+                                                            <rect key="frame" x="20" y="23" width="49" height="17"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="14"/>
                                                             <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Kd-5d-qk0" userLabel="content">
-                                                            <rect key="frame" x="79" y="11" width="32" height="17"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
-                                                            <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ro-AP-k17">
-                                                            <rect key="frame" x="239" y="12" width="39" height="20"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="베리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ro-AP-k17">
+                                                            <rect key="frame" x="366" y="46" width="28" height="20"/>
                                                             <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEr-nV-b1z">
-                                                            <rect key="frame" x="133" y="13" width="27" height="15"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="12"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEr-nV-b1z">
+                                                            <rect key="frame" x="20" y="48.5" width="22" height="15"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="12"/>
                                                             <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEq-k9-s2p">
-                                                            <rect key="frame" x="143" y="23" width="27" height="15"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="12"/>
-                                                            <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="장애인 재단" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEq-k9-s2p">
+                                                            <rect key="frame" x="20" y="65.5" width="56" height="15"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="12"/>
+                                                            <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="num" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mn-Ew-tr2">
+                                                            <rect key="frame" x="326" y="46" width="32" height="20"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
+                                                            <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="wEq-k9-s2p" secondAttribute="bottom" constant="23" id="2mm-9C-R3X"/>
+                                                        <constraint firstItem="wEq-k9-s2p" firstAttribute="top" secondItem="dEr-nV-b1z" secondAttribute="bottom" constant="2" id="6kR-qi-Vak"/>
                                                         <constraint firstItem="lAM-81-gpg" firstAttribute="leading" secondItem="bbB-Ra-jOG" secondAttribute="leading" constant="20" id="7m9-7H-V3l"/>
-                                                        <constraint firstItem="lAM-81-gpg" firstAttribute="top" secondItem="bbB-Ra-jOG" secondAttribute="top" constant="26" id="wMG-lE-Sb6"/>
+                                                        <constraint firstItem="2Ro-AP-k17" firstAttribute="centerY" secondItem="dEr-nV-b1z" secondAttribute="centerY" id="8SC-b3-Ix2"/>
+                                                        <constraint firstItem="wEq-k9-s2p" firstAttribute="leading" secondItem="bbB-Ra-jOG" secondAttribute="leading" constant="20" id="MCk-WZ-SfQ"/>
+                                                        <constraint firstItem="dEr-nV-b1z" firstAttribute="top" secondItem="lAM-81-gpg" secondAttribute="bottom" constant="8.5" id="NiQ-wF-2yY"/>
+                                                        <constraint firstItem="6Mn-Ew-tr2" firstAttribute="centerY" secondItem="dEr-nV-b1z" secondAttribute="centerY" id="SFh-g4-EWe"/>
+                                                        <constraint firstAttribute="trailing" secondItem="2Ro-AP-k17" secondAttribute="trailing" constant="20" id="cAP-ug-oh6"/>
+                                                        <constraint firstItem="2Ro-AP-k17" firstAttribute="leading" secondItem="6Mn-Ew-tr2" secondAttribute="trailing" constant="8" id="ccL-eV-sCb"/>
+                                                        <constraint firstItem="dEr-nV-b1z" firstAttribute="leading" secondItem="bbB-Ra-jOG" secondAttribute="leading" constant="20" id="mo8-0b-kzs"/>
+                                                        <constraint firstItem="lAM-81-gpg" firstAttribute="top" secondItem="bbB-Ra-jOG" secondAttribute="top" constant="23" id="wMG-lE-Sb6"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="Institution" destination="wEq-k9-s2p" id="YW9-9H-31h"/>
+                                                    <outlet property="berry" destination="6Mn-Ew-tr2" id="7wQ-mD-aKs"/>
+                                                    <outlet property="date" destination="dEr-nV-b1z" id="tbe-9g-bLO"/>
+                                                    <outlet property="purpose" destination="lAM-81-gpg" id="NUe-5j-6ko"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
@@ -374,6 +401,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="tvV-Of-BdT"/>
                     </view>
+                    <connections>
+                        <outlet property="historyTable" destination="M0A-vr-lEe" id="Yrc-iR-ssQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fCm-WC-XO8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

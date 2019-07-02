@@ -163,6 +163,9 @@
                                 <state key="normal" title="이용내역">
                                     <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="showHistory:" destination="OX7-sM-8P6" eventType="touchUpInside" id="J1m-Dv-h1S"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="79" translatesAutoresizingMaskIntoConstraints="NO" id="7ac-Ql-0Ju">
                                 <rect key="frame" x="83" y="456" width="209" height="82"/>
