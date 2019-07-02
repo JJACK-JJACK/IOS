@@ -33,8 +33,8 @@ class ViewController: UIViewController {
         setBorderColorOfButton()
         setBorderRadius()
     }
-    @IBAction func button(_ sender: Any) {
-        
+    @IBAction func unwindToMain (segue: UIStoryboardSegue) {
     }
+    
 }
 

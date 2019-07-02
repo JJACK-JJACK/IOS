@@ -19,10 +19,11 @@ class SignUpVC3: UIViewController {
 
     
     @IBAction func completeSignup(_ sender: UIButton) {
+        print("hello")
         performSegue(withIdentifier: "unwindToMain", sender: self)
     }
     
     @IBAction func Back(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
 }

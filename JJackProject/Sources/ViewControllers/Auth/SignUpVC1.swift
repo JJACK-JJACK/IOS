@@ -21,12 +21,14 @@ class SignUpVC1: UIViewController {
         
         guard let dvc = storyboard?.instantiateViewController(withIdentifier: "SettingPwd") as? SignUpVC2 else { return }
         
-        present(dvc, animated: true, completion: nil)
+        navigationController?.pushViewController(dvc, animated: true)
     }
     
     @IBAction func Back(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+//    @IBAction func unwindToMain (segue: UIStoryboardSegue) {
+//    }
     
     
 }

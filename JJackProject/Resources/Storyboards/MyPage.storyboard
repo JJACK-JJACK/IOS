@@ -13,7 +13,7 @@
         <!--My PageVC-->
         <scene sceneID="s5E-SZ-S2X">
             <objects>
-                <viewController modalTransitionStyle="partialCurl" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zm3-GA-k2L" customClass="MyPageVC" customModule="JJackProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="zm3-GA-k2L" customClass="MyPageVC" customModule="JJackProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jiX-qI-4Tv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -159,6 +159,9 @@
                                 <state key="normal" title="로그아웃">
                                     <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="logoutBtn:" destination="zm3-GA-k2L" eventType="touchUpInside" id="Jxd-w8-0ha"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbq-od-EEz">
                                 <rect key="frame" x="20" y="560.5" width="380" height="32"/>
