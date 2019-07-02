@@ -141,7 +141,10 @@ extension HomeVC: UICollectionViewDelegateFlowLayout{
         return UIEdgeInsets(top: 0, left: 40, bottom: 0, right: 40)
     }
     
-    //    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    //        print(indexPath.row)
-    //    }
+        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            
+            guard let dvc = storyboard?.instantiateViewController(withIdentifier: "MainVC") as? MainVC else {return}
+            dvc.parmaIndex = indexPath.row
+            present(dvc, animated: true, completion: nil)
+        }
 }

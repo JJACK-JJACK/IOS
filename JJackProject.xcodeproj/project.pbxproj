@@ -20,6 +20,7 @@
 		C01E92F322CB732800D43366 /* HomeMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C01E92F222CB732800D43366 /* HomeMain.storyboard */; };
 		C01E930422CB7C5E00D43366 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E930322CB7C5E00D43366 /* HomeVC.swift */; };
 		C01E930722CBC02B00D43366 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E930622CBC02B00D43366 /* HomeCell.swift */; };
+		C01E930922CBEB6400D43366 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E930822CBEB6400D43366 /* MainVC.swift */; };
 		C08482BE22C2515D0087F3BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08482BD22C2515D0087F3BC /* AppDelegate.swift */; };
 		C08482C022C2515D0087F3BC /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08482BF22C2515D0087F3BC /* FirstVC.swift */; };
 		C08482C322C2515D0087F3BC /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C08482C122C2515D0087F3BC /* Login.storyboard */; };
@@ -52,6 +53,7 @@
 		C01E92F222CB732800D43366 /* HomeMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeMain.storyboard; sourceTree = "<group>"; };
 		C01E930322CB7C5E00D43366 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		C01E930622CBC02B00D43366 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		C01E930822CBEB6400D43366 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		C08482BA22C2515D0087F3BC /* JJackProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJackProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08482BD22C2515D0087F3BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C08482BF22C2515D0087F3BC /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				C01E930322CB7C5E00D43366 /* HomeVC.swift */,
+				C01E930822CBEB6400D43366 /* MainVC.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 				C01E92E522CA401B00D43366 /* EditAccoutVC.swift in Sources */,
 				C084832822C953190087F3BC /* SignUpVC1.swift in Sources */,
 				C08482DA22C253370087F3BC /* UIViewController+Extensions.swift in Sources */,
+				C01E930922CBEB6400D43366 /* MainVC.swift in Sources */,
 				C01E92E722CA788D00D43366 /* EditNicknameVC.swift in Sources */,
 				C01E930722CBC02B00D43366 /* HomeCell.swift in Sources */,
 				C08482D822C253290087F3BC /* UIView+Extensions.swift in Sources */,
