@@ -11,6 +11,12 @@
 		C01A043822C9E7DF00ED8CD2 /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C01A043722C9E7DF00ED8CD2 /* SideMenu.storyboard */; };
 		C01A043B22C9E9AE00ED8CD2 /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01A043A22C9E9AE00ED8CD2 /* SideMenuVC.swift */; };
 		C01A043D22CA272A00ED8CD2 /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C01A043C22CA272A00ED8CD2 /* MyPage.storyboard */; };
+		C01E92E322CA372F00D43366 /* MyPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E92E222CA372F00D43366 /* MyPageVC.swift */; };
+		C01E92E522CA401B00D43366 /* EditAccoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E92E422CA401B00D43366 /* EditAccoutVC.swift */; };
+		C01E92E722CA788D00D43366 /* EditNicknameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E92E622CA788D00D43366 /* EditNicknameVC.swift */; };
+		C01E92E922CB433600D43366 /* UseHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E92E822CB433600D43366 /* UseHistoryVC.swift */; };
+		C01E92EF22CB5F6B00D43366 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E92EE22CB5F6B00D43366 /* HistoryCell.swift */; };
+		C01E92F122CB62DE00D43366 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E92F022CB62DE00D43366 /* History.swift */; };
 		C08482BE22C2515D0087F3BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08482BD22C2515D0087F3BC /* AppDelegate.swift */; };
 		C08482C022C2515D0087F3BC /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08482BF22C2515D0087F3BC /* FirstVC.swift */; };
 		C08482C322C2515D0087F3BC /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C08482C122C2515D0087F3BC /* Login.storyboard */; };
@@ -34,6 +40,12 @@
 		C01A043722C9E7DF00ED8CD2 /* SideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
 		C01A043A22C9E9AE00ED8CD2 /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		C01A043C22CA272A00ED8CD2 /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
+		C01E92E222CA372F00D43366 /* MyPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageVC.swift; sourceTree = "<group>"; };
+		C01E92E422CA401B00D43366 /* EditAccoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccoutVC.swift; sourceTree = "<group>"; };
+		C01E92E622CA788D00D43366 /* EditNicknameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNicknameVC.swift; sourceTree = "<group>"; };
+		C01E92E822CB433600D43366 /* UseHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseHistoryVC.swift; sourceTree = "<group>"; };
+		C01E92EE22CB5F6B00D43366 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
+		C01E92F022CB62DE00D43366 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		C08482BA22C2515D0087F3BC /* JJackProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJackProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08482BD22C2515D0087F3BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C08482BF22C2515D0087F3BC /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
@@ -87,6 +99,17 @@
 				C01A043A22C9E9AE00ED8CD2 /* SideMenuVC.swift */,
 			);
 			path = SideMenu;
+			sourceTree = "<group>";
+		};
+		C01E92E122CA371800D43366 /* MyPage */ = {
+			isa = PBXGroup;
+			children = (
+				C01E92E222CA372F00D43366 /* MyPageVC.swift */,
+				C01E92E422CA401B00D43366 /* EditAccoutVC.swift */,
+				C01E92E622CA788D00D43366 /* EditNicknameVC.swift */,
+				C01E92E822CB433600D43366 /* UseHistoryVC.swift */,
+			);
+			path = MyPage;
 			sourceTree = "<group>";
 		};
 		C08482B122C2515D0087F3BC = {
@@ -154,6 +177,7 @@
 		C08482D222C252AD0087F3BC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C01E92E122CA371800D43366 /* MyPage */,
 				C01A043922C9E99200ED8CD2 /* SideMenu */,
 				C084832622C93C9B0087F3BC /* Auth */,
 			);
@@ -182,6 +206,7 @@
 		C08482DD22C3371E0087F3BC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C01E92F022CB62DE00D43366 /* History.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -196,6 +221,7 @@
 		C08482DF22C337640087F3BC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C01E92EE22CB5F6B00D43366 /* HistoryCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -329,14 +355,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C01E92F122CB62DE00D43366 /* History.swift in Sources */,
 				C084832522C93C930087F3BC /* LoginVC.swift in Sources */,
 				C08482C022C2515D0087F3BC /* FirstVC.swift in Sources */,
+				C01E92E322CA372F00D43366 /* MyPageVC.swift in Sources */,
 				C01A043B22C9E9AE00ED8CD2 /* SideMenuVC.swift in Sources */,
 				C08482D622C2530B0087F3BC /* UIColor+Extensions.swift in Sources */,
+				C01E92E922CB433600D43366 /* UseHistoryVC.swift in Sources */,
+				C01E92EF22CB5F6B00D43366 /* HistoryCell.swift in Sources */,
 				C084832C22C953540087F3BC /* SignUpVC3.swift in Sources */,
 				C084832A22C953350087F3BC /* SignUpVC2.swift in Sources */,
+				C01E92E522CA401B00D43366 /* EditAccoutVC.swift in Sources */,
 				C084832822C953190087F3BC /* SignUpVC1.swift in Sources */,
 				C08482DA22C253370087F3BC /* UIViewController+Extensions.swift in Sources */,
+				C01E92E722CA788D00D43366 /* EditNicknameVC.swift in Sources */,
 				C08482D822C253290087F3BC /* UIView+Extensions.swift in Sources */,
 				C08482DC22C337110087F3BC /* UIImageView+ㄷExtensions.swift in Sources */,
 				C08482BE22C2515D0087F3BC /* AppDelegate.swift in Sources */,

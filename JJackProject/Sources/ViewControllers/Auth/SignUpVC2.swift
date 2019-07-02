@@ -19,11 +19,11 @@ class SignUpVC2: UIViewController {
 
     @IBAction func goNext(_ sender: Any) {
         guard let dvc = storyboard?.instantiateViewController(withIdentifier: "SettingNickname")as? SignUpVC3 else {return}
-        present(dvc, animated: true, completion: nil)
+        navigationController?.pushViewController(dvc, animated: true)
     }
     
     @IBAction func Back(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
     
 }

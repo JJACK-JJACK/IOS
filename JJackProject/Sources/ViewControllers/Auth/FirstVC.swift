@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     }
     // setting boarder color
     func setBorderColorOfButton () {
+        toSignin.setBorder(borderColor: UIColor.veryLightPink, borderWidth: 1.0)
         toSignup.setBorder(borderColor: UIColor.pointCol, borderWidth: 1.0)
     }
     // setting the radius
@@ -32,8 +33,8 @@ class ViewController: UIViewController {
         setBorderColorOfButton()
         setBorderRadius()
     }
-    @IBAction func button(_ sender: Any) {
-        
+    @IBAction func unwindToMain (segue: UIStoryboardSegue) {
     }
+    
 }
 
