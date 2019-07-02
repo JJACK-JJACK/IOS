@@ -14,6 +14,7 @@
 		C01E92E322CA372F00D43366 /* MyPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E92E222CA372F00D43366 /* MyPageVC.swift */; };
 		C01E92E522CA401B00D43366 /* EditAccoutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E92E422CA401B00D43366 /* EditAccoutVC.swift */; };
 		C01E92E722CA788D00D43366 /* EditNicknameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E92E622CA788D00D43366 /* EditNicknameVC.swift */; };
+		C01E92E922CB433600D43366 /* UseHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E92E822CB433600D43366 /* UseHistoryVC.swift */; };
 		C08482BE22C2515D0087F3BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08482BD22C2515D0087F3BC /* AppDelegate.swift */; };
 		C08482C022C2515D0087F3BC /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08482BF22C2515D0087F3BC /* FirstVC.swift */; };
 		C08482C322C2515D0087F3BC /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C08482C122C2515D0087F3BC /* Login.storyboard */; };
@@ -40,6 +41,7 @@
 		C01E92E222CA372F00D43366 /* MyPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageVC.swift; sourceTree = "<group>"; };
 		C01E92E422CA401B00D43366 /* EditAccoutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditAccoutVC.swift; sourceTree = "<group>"; };
 		C01E92E622CA788D00D43366 /* EditNicknameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNicknameVC.swift; sourceTree = "<group>"; };
+		C01E92E822CB433600D43366 /* UseHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseHistoryVC.swift; sourceTree = "<group>"; };
 		C08482BA22C2515D0087F3BC /* JJackProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJackProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08482BD22C2515D0087F3BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C08482BF22C2515D0087F3BC /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				C01E92E222CA372F00D43366 /* MyPageVC.swift */,
 				C01E92E422CA401B00D43366 /* EditAccoutVC.swift */,
 				C01E92E622CA788D00D43366 /* EditNicknameVC.swift */,
+				C01E92E822CB433600D43366 /* UseHistoryVC.swift */,
 			);
 			path = MyPage;
 			sourceTree = "<group>";
@@ -351,6 +354,7 @@
 				C01E92E322CA372F00D43366 /* MyPageVC.swift in Sources */,
 				C01A043B22C9E9AE00ED8CD2 /* SideMenuVC.swift in Sources */,
 				C08482D622C2530B0087F3BC /* UIColor+Extensions.swift in Sources */,
+				C01E92E922CB433600D43366 /* UseHistoryVC.swift in Sources */,
 				C084832C22C953540087F3BC /* SignUpVC3.swift in Sources */,
 				C084832A22C953350087F3BC /* SignUpVC2.swift in Sources */,
 				C01E92E522CA401B00D43366 /* EditAccoutVC.swift in Sources */,
