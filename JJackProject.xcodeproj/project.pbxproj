@@ -17,6 +17,9 @@
 		C01E92E922CB433600D43366 /* UseHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E92E822CB433600D43366 /* UseHistoryVC.swift */; };
 		C01E92EF22CB5F6B00D43366 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E92EE22CB5F6B00D43366 /* HistoryCell.swift */; };
 		C01E92F122CB62DE00D43366 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E92F022CB62DE00D43366 /* History.swift */; };
+		C01E92F322CB732800D43366 /* HomeMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C01E92F222CB732800D43366 /* HomeMain.storyboard */; };
+		C01E930422CB7C5E00D43366 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E930322CB7C5E00D43366 /* HomeVC.swift */; };
+		C01E930722CBC02B00D43366 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E930622CBC02B00D43366 /* HomeCell.swift */; };
 		C08482BE22C2515D0087F3BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08482BD22C2515D0087F3BC /* AppDelegate.swift */; };
 		C08482C022C2515D0087F3BC /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08482BF22C2515D0087F3BC /* FirstVC.swift */; };
 		C08482C322C2515D0087F3BC /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C08482C122C2515D0087F3BC /* Login.storyboard */; };
@@ -46,6 +49,9 @@
 		C01E92E822CB433600D43366 /* UseHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseHistoryVC.swift; sourceTree = "<group>"; };
 		C01E92EE22CB5F6B00D43366 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
 		C01E92F022CB62DE00D43366 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		C01E92F222CB732800D43366 /* HomeMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeMain.storyboard; sourceTree = "<group>"; };
+		C01E930322CB7C5E00D43366 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		C01E930622CBC02B00D43366 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		C08482BA22C2515D0087F3BC /* JJackProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJackProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08482BD22C2515D0087F3BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C08482BF22C2515D0087F3BC /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
@@ -112,6 +118,14 @@
 			path = MyPage;
 			sourceTree = "<group>";
 		};
+		C01E930222CB7C2300D43366 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C01E930322CB7C5E00D43366 /* HomeVC.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
 		C08482B122C2515D0087F3BC = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +183,7 @@
 				C08482C122C2515D0087F3BC /* Login.storyboard */,
 				C08482C622C251600087F3BC /* LaunchScreen.storyboard */,
 				C01A043722C9E7DF00ED8CD2 /* SideMenu.storyboard */,
+				C01E92F222CB732800D43366 /* HomeMain.storyboard */,
 				C01A043C22CA272A00ED8CD2 /* MyPage.storyboard */,
 			);
 			path = Storyboards;
@@ -177,6 +192,7 @@
 		C08482D222C252AD0087F3BC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C01E930222CB7C2300D43366 /* Home */,
 				C01E92E122CA371800D43366 /* MyPage */,
 				C01A043922C9E99200ED8CD2 /* SideMenu */,
 				C084832622C93C9B0087F3BC /* Auth */,
@@ -222,6 +238,7 @@
 			isa = PBXGroup;
 			children = (
 				C01E92EE22CB5F6B00D43366 /* HistoryCell.swift */,
+				C01E930622CBC02B00D43366 /* HomeCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -298,6 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C01E92F322CB732800D43366 /* HomeMain.storyboard in Resources */,
 				C01A043822C9E7DF00ED8CD2 /* SideMenu.storyboard in Resources */,
 				C01A043D22CA272A00ED8CD2 /* MyPage.storyboard in Resources */,
 				C08482C822C251600087F3BC /* LaunchScreen.storyboard in Resources */,
@@ -369,9 +387,11 @@
 				C084832822C953190087F3BC /* SignUpVC1.swift in Sources */,
 				C08482DA22C253370087F3BC /* UIViewController+Extensions.swift in Sources */,
 				C01E92E722CA788D00D43366 /* EditNicknameVC.swift in Sources */,
+				C01E930722CBC02B00D43366 /* HomeCell.swift in Sources */,
 				C08482D822C253290087F3BC /* UIView+Extensions.swift in Sources */,
 				C08482DC22C337110087F3BC /* UIImageView+ㄷExtensions.swift in Sources */,
 				C08482BE22C2515D0087F3BC /* AppDelegate.swift in Sources */,
+				C01E930422CB7C5E00D43366 /* HomeVC.swift in Sources */,
 				C08482E122C3378E0087F3BC /* APIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

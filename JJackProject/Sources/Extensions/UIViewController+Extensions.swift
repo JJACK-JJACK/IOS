@@ -64,6 +64,8 @@ extension UIViewController {
         bar.backgroundColor = UIColor.white
     }
     
+    
+    
     func gsno(_ value: String?) -> String{
         guard let value_ = value else {
             return ""
