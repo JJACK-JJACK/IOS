@@ -26,6 +26,8 @@
 		C027A94522CD074700F198ED /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027A94422CD074700F198ED /* DetailVC.swift */; };
 		C027A94722CD249C00F198ED /* DonateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027A94622CD249C00F198ED /* DonateVC.swift */; };
 		C027A94922CD356100F198ED /* CompleteDonateAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027A94822CD356100F198ED /* CompleteDonateAlertVC.swift */; };
+		C027A94B22CD399600F198ED /* Record.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C027A94A22CD399600F198ED /* Record.storyboard */; };
+		C027A94E22CD40F200F198ED /* RecordedDonationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027A94D22CD40F200F198ED /* RecordedDonationVC.swift */; };
 		C08482BE22C2515D0087F3BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08482BD22C2515D0087F3BC /* AppDelegate.swift */; };
 		C08482C022C2515D0087F3BC /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08482BF22C2515D0087F3BC /* FirstVC.swift */; };
 		C08482C322C2515D0087F3BC /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C08482C122C2515D0087F3BC /* Login.storyboard */; };
@@ -64,6 +66,8 @@
 		C027A94422CD074700F198ED /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		C027A94622CD249C00F198ED /* DonateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateVC.swift; sourceTree = "<group>"; };
 		C027A94822CD356100F198ED /* CompleteDonateAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteDonateAlertVC.swift; sourceTree = "<group>"; };
+		C027A94A22CD399600F198ED /* Record.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Record.storyboard; sourceTree = "<group>"; };
+		C027A94D22CD40F200F198ED /* RecordedDonationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordedDonationVC.swift; sourceTree = "<group>"; };
 		C08482BA22C2515D0087F3BC /* JJackProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJackProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08482BD22C2515D0087F3BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C08482BF22C2515D0087F3BC /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
@@ -142,6 +146,14 @@
 			name = Home;
 			sourceTree = "<group>";
 		};
+		C027A94C22CD40C600F198ED /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				C027A94D22CD40F200F198ED /* RecordedDonationVC.swift */,
+			);
+			name = Record;
+			sourceTree = "<group>";
+		};
 		C08482B122C2515D0087F3BC = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +213,7 @@
 				C01A043722C9E7DF00ED8CD2 /* SideMenu.storyboard */,
 				C01E92F222CB732800D43366 /* HomeMain.storyboard */,
 				C01A043C22CA272A00ED8CD2 /* MyPage.storyboard */,
+				C027A94A22CD399600F198ED /* Record.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -208,6 +221,7 @@
 		C08482D222C252AD0087F3BC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C027A94C22CD40C600F198ED /* Record */,
 				C01E930222CB7C2300D43366 /* Home */,
 				C01E92E122CA371800D43366 /* MyPage */,
 				C01A043922C9E99200ED8CD2 /* SideMenu */,
@@ -337,6 +351,7 @@
 				C01A043822C9E7DF00ED8CD2 /* SideMenu.storyboard in Resources */,
 				C01A043D22CA272A00ED8CD2 /* MyPage.storyboard in Resources */,
 				C08482C822C251600087F3BC /* LaunchScreen.storyboard in Resources */,
+				C027A94B22CD399600F198ED /* Record.storyboard in Resources */,
 				C08482C522C251600087F3BC /* Assets.xcassets in Resources */,
 				C08482C322C2515D0087F3BC /* Login.storyboard in Resources */,
 			);
@@ -410,6 +425,7 @@
 				C08482DA22C253370087F3BC /* UIViewController+Extensions.swift in Sources */,
 				C01E930922CBEB6400D43366 /* MainVC.swift in Sources */,
 				C01E92E722CA788D00D43366 /* EditNicknameVC.swift in Sources */,
+				C027A94E22CD40F200F198ED /* RecordedDonationVC.swift in Sources */,
 				C01E930722CBC02B00D43366 /* HomeCell.swift in Sources */,
 				C01BC94222CCA7C6000AAF58 /* MainCell.swift in Sources */,
 				C08482D822C253290087F3BC /* UIView+Extensions.swift in Sources */,
