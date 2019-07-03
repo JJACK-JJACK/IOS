@@ -18,7 +18,7 @@ extension UIColor {
     }
     
     @nonobjc class var JackBlack: UIColor {
-        return UIColor(white: 17.0 / 255.0, alpha: 1.0)
+        return UIColor(red: 17.0 / 255.0, green: 17.0 / 255.0, blue: 17.0 / 255.0, alpha: 1.0)
     }
     
     @nonobjc class var mainCol: UIColor {
@@ -33,4 +33,11 @@ extension UIColor {
         return UIColor(white: 200.0 / 255.0, alpha: 1.0)
     }
 
+}
+
+extension UIFont {
+    
+    @nonobjc class var Bold: UIFont {
+        return UIFont(name: "AppleSDGothicNeo-Bold", size: 20.0)!
+    }
 }

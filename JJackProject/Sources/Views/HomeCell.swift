@@ -12,9 +12,13 @@ class HomeCell: UICollectionViewCell {
     
     @IBOutlet weak var categoryImg: UIImageView!
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         categoryImg.layer.cornerRadius = 8
-        categoryImg.layer.masksToBounds = true
+        categoryImg.layer.masksToBounds = false
     }
 }
