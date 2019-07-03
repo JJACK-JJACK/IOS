@@ -22,7 +22,7 @@ extension UIViewController {
     
     // UIAlertController with Handler
     func simpleAlertwithHandler(title: String, message: String, okHandler : ((UIAlertAction) -> Void)?, cancleHandler : ((UIAlertAction) -> Void)?){
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "확인",style: .default, handler: okHandler)
         let cancelAction = UIAlertAction(title: "취소",style: .cancel, handler: cancleHandler)
         alert.addAction(okAction)
@@ -31,15 +31,15 @@ extension UIViewController {
     }
     
     // Set Custom Back Button
-    func setBackBtn(color : UIColor){
+    func setBackBtn(){
         
         // 백버튼 이미지 파일 이름에 맞게 변경해주세요.
-        let backBTN = UIBarButtonItem(image: UIImage(named: "backBtn"),
+        let backBTN = UIBarButtonItem(image: UIImage(named: "icBack"),
                                       style: .plain,
                                       target: self,
                                       action: #selector(self.pop))
         navigationItem.leftBarButtonItem = backBTN
-        navigationItem.leftBarButtonItem?.tintColor = color
+//        navigationItem.leftBarButtonItem?.tintColor = color
         navigationController?.interactivePopGestureRecognizer?.delegate = self as? UIGestureRecognizerDelegate
     }
     
@@ -63,6 +63,8 @@ extension UIViewController {
         bar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         bar.backgroundColor = UIColor.white
     }
+    
+    
     
     func gsno(_ value: String?) -> String{
         guard let value_ = value else {

@@ -13,7 +13,31 @@ extension UIColor {
         return UIColor(white: 112.0 / 255.0, alpha: 1.0)
     }
     
-    @nonobjc class var maize: UIColor {
-        return UIColor(red: 245.0 / 255.0, green: 207.0 / 255.0, blue: 69.0 / 255.0, alpha: 1.0)
+    @nonobjc class var dotCol: UIColor {
+        return UIColor(white: 238.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var JackBlack: UIColor {
+        return UIColor(red: 17.0 / 255.0, green: 17.0 / 255.0, blue: 17.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var mainCol: UIColor {
+        return UIColor(red: 1.0, green: 194.0 / 255.0, blue: 31.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var pointCol: UIColor {
+        return UIColor(red: 218.0 / 255.0, green: 72.0 / 255.0, blue: 48.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var veryLightPink: UIColor {
+        return UIColor(white: 200.0 / 255.0, alpha: 1.0)
+    }
+
+}
+
+extension UIFont {
+    
+    @nonobjc class var Bold: UIFont {
+        return UIFont(name: "AppleSDGothicNeo-Bold", size: 20.0)!
     }
 }
