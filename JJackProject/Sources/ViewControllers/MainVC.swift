@@ -100,7 +100,7 @@ class MainVC: UIViewController {
         navigationController?.show(dvc, sender: self)
     }
     @IBAction func goHome(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
     
 }
@@ -149,7 +149,16 @@ extension MainVC: UICollectionViewDelegateFlowLayout{
 
 extension MainVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // cell클릭시 발생하는 정하기
+        guard let dvc = storyboard?.instantiateViewController(withIdentifier: "Detail")as? DetailVC else {return}
+        let info = infoSet[indexPath.row]
+        
+        dvc.paramThumbImg = info.thumbImg
+        dvc.paramTitle = info.title
+        dvc.paramInstitution = info.institution
+        dvc.paramDate = info.date
+        dvc.paramProcess = info.processRate
+        dvc.paramDonated = info.donatedBerry
+        navigationController?.pushViewController(dvc, animated: true)
     }
     
 }
@@ -165,6 +174,7 @@ extension MainVC: UITableViewDataSource {
         cell.thumbImg.image = UIImage(named: List.thumbImg)
         cell.date.text = List.date
         cell.title.text = List.title
+        cell.institution.text = List.institution
         cell.processRate.text = List.processRate + "%"
         cell.donatedBerry.text = List.donatedBerry
         
@@ -179,9 +189,9 @@ extension MainVC: UITableViewDataSource {
 }
 extension MainVC {
     func setInfoData() {
-        let info1 = MainInfo(thumbnail: "icCard", date: "D - 41", title: "올 겨울 혜리에게도 따뜻한 이불을 주세요!", processRate: "50", donatedBerry: "404,040")
-        let info2 = MainInfo(thumbnail: "icCard", date: "D - 32", title: "올 겨울 혜리에게도 따뜻한 이불을 주세요!", processRate: "70", donatedBerry: "404,040")
-        let info3 = MainInfo(thumbnail: "icCard", date: "D - 321", title: "올 겨울 혜리에게도 따뜻한 이불을 주세요!", processRate: "20", donatedBerry: "404,040")
+        let info1 = MainInfo(thumbnail: "icCard", date: "D - 41", title: "올 겨울 혜리에게도 따뜻한 이불을 주세요!",institution: "사회 복지관", processRate: "50", donatedBerry: "404,040")
+        let info2 = MainInfo(thumbnail: "icCard", date: "D - 32", title: "올 겨울 혜리에게도 따뜻한 이불을 주세요!",institution: "샬롬 요양원", processRate: "70", donatedBerry: "404,040")
+        let info3 = MainInfo(thumbnail: "icCard", date: "D - 321", title: "올 겨울 혜리에게도 따뜻한 이불을 주세요!", institution: "주남바다요양센터", processRate: "20", donatedBerry: "404,040")
         
         self.infoSet = [info1, info2, info3]
     }
