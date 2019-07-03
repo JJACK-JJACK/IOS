@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SideMenu
 
 class MyPageVC: UIViewController {
 
@@ -15,13 +16,18 @@ class MyPageVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupSideMenu()
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func goHome(_ sender: Any) {
+        backHome()
+    }
     // SideMenu 열기
     @IBAction func openMenu(_ sender: Any) {
-        guard let dvc = UIStoryboard(name: "SideMenu", bundle: nil).instantiateViewController(withIdentifier: "SideMenuVC")as? SideMenuVC else { return }
-        navigationController?.pushViewController(dvc, animated: true)
+        guard let dvc = UIStoryboard(name: "SideMenu", bundle: nil).instantiateViewController(withIdentifier: "SideMenu")as? UISideMenuNavigationController else { return }
+        
+        navigationController?.show(dvc, sender: self)
     }
     // Nickname, email 다음 뷰로 넘겨주기
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -50,5 +56,4 @@ class MyPageVC: UIViewController {
         }, cancleHandler: nil)
     }
     
-
 }

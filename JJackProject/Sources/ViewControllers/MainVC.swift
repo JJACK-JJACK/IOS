@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SideMenu
 
 class MainVC: UIViewController {
     
@@ -49,6 +50,10 @@ class MainVC: UIViewController {
         setInfoData()
 //        setup()
         self.loadViewIfNeeded()
+        
+        //sideMenu setUp
+        setupSideMenu()
+
     
     }
 //    func setup(){
@@ -90,9 +95,9 @@ class MainVC: UIViewController {
         collectionView.cellForItem
     }
     @IBAction func showMenu(_ sender: Any) {
-        guard let dvc = UIStoryboard(name: "SideMenu", bundle: nil).instantiateViewController(withIdentifier: "SideMenuVC") as? SideMenuVC else {return}
+        guard let dvc = UIStoryboard(name: "SideMenu", bundle: nil).instantiateViewController(withIdentifier: "SideMenu")as? UISideMenuNavigationController else {return}
         
-        navigationController?.pushViewController(dvc, animated: true)
+        navigationController?.show(dvc, sender: self)
     }
     @IBAction func goHome(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)

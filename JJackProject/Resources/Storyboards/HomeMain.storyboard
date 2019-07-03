@@ -194,7 +194,7 @@
                                 <rect key="frame" x="17" y="51" width="36" height="34"/>
                                 <state key="normal" image="icHome"/>
                                 <connections>
-                                    <action selector="goHome:" destination="Hee-G6-REu" eventType="touchUpInside" id="yJB-JH-dZH"/>
+                                    <action selector="goHome:" destination="Hee-G6-REu" eventType="touchUpInside" id="3jK-ok-RhY"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hd9-7k-Yv3">
@@ -546,24 +546,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uAe-Cv-vlT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2552" y="145.56650246305421"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="FBN-ce-I94">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="RUG-bg-EGU" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CbO-jX-JdJ">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Hee-G6-REu" kind="relationship" relationship="rootViewController" id="Bt6-ml-egA"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qdy-ts-alj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1716" y="145.56650246305421"/>
+            <point key="canvasLocation" x="1885" y="146"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0F1-PJ-h7w">

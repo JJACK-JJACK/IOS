@@ -13,7 +13,7 @@
         <!--Side MenuVC-->
         <scene sceneID="bBP-yo-pVR">
             <objects>
-                <viewController storyboardIdentifier="SideMenuVC" modalTransitionStyle="partialCurl" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OX7-sM-8P6" customClass="SideMenuVC" customModule="JJackProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="partialCurl" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OX7-sM-8P6" customClass="SideMenuVC" customModule="JJackProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Rk-Id-HXn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,6 +25,9 @@
                                     <constraint firstAttribute="width" constant="36" id="xZZ-Qb-ih1"/>
                                 </constraints>
                                 <state key="normal" image="icHome"/>
+                                <connections>
+                                    <action selector="goHome:" destination="OX7-sM-8P6" eventType="touchUpInside" id="a1C-nW-PmA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmc-yR-RGY">
                                 <rect key="frame" x="334" y="53.666666666666657" width="27" height="29"/>
@@ -105,6 +108,9 @@
                                             <constraint firstAttribute="width" constant="72" id="Lt3-1I-6fm"/>
                                         </constraints>
                                         <state key="normal" image="icMypage"/>
+                                        <connections>
+                                            <action selector="showMyPage:" destination="OX7-sM-8P6" eventType="touchUpInside" id="Ihn-X5-bqt"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -279,11 +285,30 @@
                     <navigationItem key="navigationItem" id="inC-IG-M9V"/>
                     <connections>
                         <outlet property="useInfo" destination="ZyH-cg-LF5" id="ZRn-hv-t5c"/>
+                        <segue destination="xw5-tP-gdi" kind="unwind" identifier="goHome" unwindAction="unwind:" id="gOM-Rg-17Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cdh-kg-vgp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="xw5-tP-gdi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="658" y="50"/>
+            <point key="canvasLocation" x="1599.2" y="49.50738916256158"/>
+        </scene>
+        <!--Side Menu Navigation Controller-->
+        <scene sceneID="qX1-jp-7qr">
+            <objects>
+                <navigationController storyboardIdentifier="SideMenu" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="nSM-mc-DUH" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2AF-nn-Fq7">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OX7-sM-8P6" kind="relationship" relationship="rootViewController" id="yVR-me-zEU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AJ5-Ts-oL3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="656.79999999999995" y="49.50738916256158"/>
         </scene>
     </scenes>
     <resources>

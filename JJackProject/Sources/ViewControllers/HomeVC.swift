@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SideMenu
 
 class HomeVC: UIViewController {
 
@@ -69,6 +70,9 @@ class HomeVC: UIViewController {
         self.pageDot4.makeRounded(cornerRadius: nil)
         self.pageDot5.makeRounded(cornerRadius: nil)
         self.pageDot6.makeRounded(cornerRadius: nil)
+        
+        //sideMenu setUp
+        setupSideMenu()
     }
     
     override func didReceiveMemoryWarning() {
@@ -122,9 +126,13 @@ class HomeVC: UIViewController {
         })
     }
     @IBAction func openMenu(_ sender: Any) {
-        guard let dvc = UIStoryboard(name: "SideMenu", bundle: nil).instantiateViewController(withIdentifier: "SideMenuVC")as? SideMenuVC else {return}
+        guard let dvc = UIStoryboard(name: "SideMenu", bundle: nil).instantiateViewController(withIdentifier: "SideMenu")as? UISideMenuNavigationController else {return}
         
-        navigationController?.pushViewController(dvc, animated: true)
+        navigationController?.show(dvc, sender: self)
+    }
+    
+    @IBAction func unwind (_ segue: UIStoryboardSegue) {
+        
     }
     
 }
@@ -151,7 +159,7 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate {
         
         guard let dvc = storyboard?.instantiateViewController(withIdentifier: "MainVC") as? MainVC else {return}
         dvc.parmaIndex = indexPath.row
-        present(dvc, animated: true, completion: nil)
+       navigationController?.show(dvc, sender: self)
     }
 
 }
