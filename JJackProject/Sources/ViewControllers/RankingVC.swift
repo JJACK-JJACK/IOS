@@ -56,19 +56,35 @@ class RankingVC: UIViewController {
     }
     
     @IBAction func showTopTenList(_ sender: UIButton) {
-        allCate.backgroundColor = .white
-        animal.backgroundColor = .white
-        environment.backgroundColor = .white
-        child.backgroundColor = .white
-        disabled.backgroundColor = .white
-        senior.backgroundColor = .white
-        emergency.backgroundColor = .white
-        setup()
         if !sender.isSelected {
-            sender.backgroundColor = .mainCol
-            sender.setBorder(borderColor: nil , borderWidth: 0.0 )
-            sender.titleLabel?.font = .Bold3
+            sender.isSelected = true
         }
+        
+        switch sender.currentTitle {
+        case "전체":
+            deselected(button1: nil, button2: animal, button3: environment, button4: child, button5: disabled, button6: senior, button7: emergency)
+        case "동물":
+            deselected(button1: allCate, button2: nil, button3: environment, button4: child, button5: disabled, button6: senior, button7: emergency)
+        case "환경":
+            deselected(button1: allCate, button2: animal, button3: nil, button4: child, button5: disabled, button6: senior, button7: emergency)
+        case "어린이":
+            deselected(button1: allCate, button2: animal, button3: environment, button4: nil, button5: disabled, button6: senior, button7: emergency)
+        case "장애우":
+            deselected(button1: allCate, button2: animal, button3: environment, button4: child, button5: nil, button6: senior, button7: emergency)
+        case "어르신":
+            deselected(button1: allCate, button2: animal, button3: environment, button4: child, button5: disabled, button6: nil, button7: emergency)
+        case "긴급구조":
+            deselected(button1: allCate, button2: animal, button3: environment, button4: child, button5: disabled, button6: senior, button7: nil)
+        default:
+            break
+        }
+        showSelectedState(button: allCate)
+        showSelectedState(button: animal)
+        showSelectedState(button: environment)
+        showSelectedState(button: child)
+        showSelectedState(button: disabled)
+        showSelectedState(button: senior)
+        showSelectedState(button: emergency)
     }
     
 }
@@ -111,9 +127,26 @@ extension RankingVC: UICollectionViewDelegateFlowLayout {
 }
 
 extension RankingVC {
-    func settingBtn (backGroundCol: UIColor, Font: UIFont) {
-        self.view.backgroundColor = .white
-        self.view.text
+    func deselected (button1: UIButton?, button2: UIButton?, button3: UIButton?, button4: UIButton?, button5: UIButton?, button6: UIButton?, button7: UIButton?){
         
+        button1?.isSelected = false
+        button2?.isSelected = false
+        button3?.isSelected = false
+        button4?.isSelected = false
+        button5?.isSelected = false
+        button6?.isSelected = false
+        button7?.isSelected = false
+    }
+    
+    func showSelectedState (button: UIButton) {
+        if button.isSelected {
+            button.backgroundColor = .mainCol
+            button.setBorder(borderColor: nil, borderWidth: 0.0)
+            button.titleLabel?.font = .Bold3
+        } else {
+            button.backgroundColor = .white
+            button.setBorder(borderColor: .brownGrey, borderWidth: 1.0)
+            button.titleLabel?.font = .Medium
+        }
     }
 }
