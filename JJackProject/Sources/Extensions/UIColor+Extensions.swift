@@ -58,4 +58,11 @@ extension UIFont {
     @nonobjc class var Light2: UIFont {
         return UIFont(name: "AppleSDGothicNeo-Light", size: 16.0)!
     }
+    
+    @nonobjc class var Bold3: UIFont {
+        return UIFont(name: "AppleSDGothicNeo-Bold", size: 14.0)!
+    }
+    @nonobjc class var Medium: UIFont {
+        return UIFont(name: "AppleSDGothicNeo-Medium", size: 14.0)!
+    }
 }
