@@ -126,9 +126,7 @@ class HomeVC: UIViewController {
         })
     }
     @IBAction func openMenu(_ sender: Any) {
-        guard let dvc = UIStoryboard(name: "SideMenu", bundle: nil).instantiateViewController(withIdentifier: "SideMenu")as? UISideMenuNavigationController else {return}
-        
-        navigationController?.show(dvc, sender: self)
+        showMenu()
     }
     
     @IBAction func unwind (_ segue: UIStoryboardSegue) {

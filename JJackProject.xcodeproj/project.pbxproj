@@ -29,6 +29,8 @@
 		C027A94B22CD399600F198ED /* Record.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C027A94A22CD399600F198ED /* Record.storyboard */; };
 		C027A94E22CD40F200F198ED /* RecordedDonationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027A94D22CD40F200F198ED /* RecordedDonationVC.swift */; };
 		C027A95022CD4C9600F198ED /* EarnBerryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027A94F22CD4C9600F198ED /* EarnBerryVC.swift */; };
+		C03353EC22CDC565007EEA16 /* RecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03353EB22CDC565007EEA16 /* RecordCell.swift */; };
+		C03353EE22CDC6C7007EEA16 /* DetailRecordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03353ED22CDC6C7007EEA16 /* DetailRecordVC.swift */; };
 		C08482BE22C2515D0087F3BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08482BD22C2515D0087F3BC /* AppDelegate.swift */; };
 		C08482C022C2515D0087F3BC /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08482BF22C2515D0087F3BC /* FirstVC.swift */; };
 		C08482C322C2515D0087F3BC /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C08482C122C2515D0087F3BC /* Login.storyboard */; };
@@ -70,6 +72,8 @@
 		C027A94A22CD399600F198ED /* Record.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Record.storyboard; sourceTree = "<group>"; };
 		C027A94D22CD40F200F198ED /* RecordedDonationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordedDonationVC.swift; sourceTree = "<group>"; };
 		C027A94F22CD4C9600F198ED /* EarnBerryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarnBerryVC.swift; sourceTree = "<group>"; };
+		C03353EB22CDC565007EEA16 /* RecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCell.swift; sourceTree = "<group>"; };
+		C03353ED22CDC6C7007EEA16 /* DetailRecordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRecordVC.swift; sourceTree = "<group>"; };
 		C08482BA22C2515D0087F3BC /* JJackProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJackProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08482BD22C2515D0087F3BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C08482BF22C2515D0087F3BC /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 			children = (
 				C027A94D22CD40F200F198ED /* RecordedDonationVC.swift */,
 				C027A94F22CD4C9600F198ED /* EarnBerryVC.swift */,
+				C03353ED22CDC6C7007EEA16 /* DetailRecordVC.swift */,
 			);
 			name = Record;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 				C01E92EE22CB5F6B00D43366 /* HistoryCell.swift */,
 				C01E930622CBC02B00D43366 /* HomeCell.swift */,
 				C01BC94122CCA7C6000AAF58 /* MainCell.swift */,
+				C03353EB22CDC565007EEA16 /* RecordCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -423,6 +429,7 @@
 				C01E92EF22CB5F6B00D43366 /* HistoryCell.swift in Sources */,
 				C084832C22C953540087F3BC /* SignUpVC3.swift in Sources */,
 				C084832A22C953350087F3BC /* SignUpVC2.swift in Sources */,
+				C03353EC22CDC565007EEA16 /* RecordCell.swift in Sources */,
 				C01E92E522CA401B00D43366 /* EditAccoutVC.swift in Sources */,
 				C084832822C953190087F3BC /* SignUpVC1.swift in Sources */,
 				C08482DA22C253370087F3BC /* UIViewController+Extensions.swift in Sources */,
@@ -432,6 +439,7 @@
 				C01E930722CBC02B00D43366 /* HomeCell.swift in Sources */,
 				C01BC94222CCA7C6000AAF58 /* MainCell.swift in Sources */,
 				C08482D822C253290087F3BC /* UIView+Extensions.swift in Sources */,
+				C03353EE22CDC6C7007EEA16 /* DetailRecordVC.swift in Sources */,
 				C027A95022CD4C9600F198ED /* EarnBerryVC.swift in Sources */,
 				C08482DC22C337110087F3BC /* UIImageView+ㄷExtensions.swift in Sources */,
 				C08482BE22C2515D0087F3BC /* AppDelegate.swift in Sources */,

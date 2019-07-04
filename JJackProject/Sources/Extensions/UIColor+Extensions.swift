@@ -33,6 +33,13 @@ extension UIColor {
         return UIColor(red: 218.0 / 255.0, green: 72.0 / 255.0, blue: 48.0 / 255.0, alpha: 1.0)
     }
     
+    @nonobjc class var closeCol: UIColor {
+        return UIColor(red: 134.0 / 255.0, green: 184.0 / 255.0, blue: 84.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var completeCol: UIColor {
+        return UIColor(red: 70.0 / 255.0, green: 79.0 / 255.0, blue: 178.0 / 255.0, alpha: 1.0)
+    }
     @nonobjc class var veryLightPink: UIColor {
         return UIColor(white: 200.0 / 255.0, alpha: 1.0)
     }

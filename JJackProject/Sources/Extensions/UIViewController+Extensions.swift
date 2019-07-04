@@ -95,6 +95,12 @@ extension UIViewController {
     func backHome() {
         performSegue(withIdentifier: "goHome", sender: self)
     }
+    func showMenu() {
+        guard let dvc = UIStoryboard(name: "SideMenu", bundle: nil).instantiateViewController(withIdentifier: "SideMenu") as? UISideMenuNavigationController else {return}
+        
+        navigationController?.show(dvc, sender: self)
+
+    }
     
     func gsno(_ value: String?) -> String{
         guard let value_ = value else {

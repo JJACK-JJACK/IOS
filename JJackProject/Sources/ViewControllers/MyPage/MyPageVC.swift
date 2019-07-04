@@ -16,7 +16,6 @@ class MyPageVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupSideMenu()
         // Do any additional setup after loading the view.
     }
     
@@ -25,9 +24,7 @@ class MyPageVC: UIViewController {
     }
     // SideMenu 열기
     @IBAction func openMenu(_ sender: Any) {
-        guard let dvc = UIStoryboard(name: "SideMenu", bundle: nil).instantiateViewController(withIdentifier: "SideMenu")as? UISideMenuNavigationController else { return }
-        
-        navigationController?.show(dvc, sender: self)
+        showMenu()
     }
     // Nickname, email 다음 뷰로 넘겨주기
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
