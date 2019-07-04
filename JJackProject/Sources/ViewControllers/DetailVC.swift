@@ -10,6 +10,15 @@ import UIKit
 
 class DetailVC: UIViewController {
 
+    @IBOutlet weak var container1: UIView!
+    @IBOutlet weak var container2: UIView!
+    @IBOutlet weak var viewHeight: NSLayoutConstraint!
+    
+    
+
+    
+    
+    
     @IBOutlet weak var thumbImg: UIImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var institution: UILabel!
@@ -38,6 +47,7 @@ class DetailVC: UIViewController {
         setup()
     }
     
+    
     var paramThumbImg: String = ""
     var paramTitle: String = ""
     var paramInstitution: String = ""
@@ -45,6 +55,7 @@ class DetailVC: UIViewController {
     var paramProcess: String = ""
     var paramDonated: String = ""
 //    var paramGoal: String = ""
+    
     func setup() {
         // insert values
         self.thumbImg.image = UIImage(named: paramThumbImg)
@@ -63,6 +74,8 @@ class DetailVC: UIViewController {
         self.statusBar.makeRounded(cornerRadius: nil)
         self.rateBar.makeRounded(cornerRadius: nil)
         
+        // ready for container view
+        self.container2.isHidden = true
         self.onPlan.constant = 0
     }
     
@@ -89,6 +102,9 @@ class DetailVC: UIViewController {
         }))
             self.story.setTitleColor(.JackBlack, for: .normal)
             self.story.titleLabel?.font = .Bold2
+            
+            self.container1.isHidden = false
+            self.viewHeight.constant = 1846
         }else {
             (UIView.animate(withDuration: 0.3, animations: {
                 self.onStory.constant = 0
@@ -96,6 +112,8 @@ class DetailVC: UIViewController {
             }))
             self.story.setTitleColor(.brownGrey, for: .normal)
             self.story.titleLabel?.font = .Light2
+            
+            self.container1.isHidden = true
         }
         
         if plan.isSelected { (UIView.animate(withDuration: 0.3, animations: {
@@ -104,6 +122,9 @@ class DetailVC: UIViewController {
         }))
             self.plan.setTitleColor(.JackBlack, for: .normal)
             self.plan.titleLabel?.font = .Bold2
+    
+            self.container2.isHidden = false
+            self.viewHeight.constant = container2.frame.height
         }else {
             (UIView.animate(withDuration: 0.3, animations: {
                 self.onPlan.constant = 0
@@ -111,6 +132,7 @@ class DetailVC: UIViewController {
             }))
             self.plan.setTitleColor(.brownGrey, for: .normal)
             self.plan.titleLabel?.font = .Light2
+            self.container2.isHidden = true
         }
         story.isSelected = false
         plan.isSelected = false

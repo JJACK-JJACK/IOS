@@ -61,4 +61,7 @@ class DonateVC: UIViewController {
             break
         }
     }
+    @IBAction func Back(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
