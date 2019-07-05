@@ -104,6 +104,9 @@
                                             <constraint firstAttribute="width" constant="58" id="Wa7-Bw-LWj"/>
                                         </constraints>
                                         <state key="normal" image="icRanking"/>
+                                        <connections>
+                                            <action selector="showRanking:" destination="OX7-sM-8P6" eventType="touchUpInside" id="cVs-Vy-M61"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzF-J4-4uu">
                                         <rect key="frame" x="236" y="0.0" width="72" height="69"/>

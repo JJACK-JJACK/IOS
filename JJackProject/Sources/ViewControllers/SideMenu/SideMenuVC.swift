@@ -31,6 +31,10 @@ class SideMenuVC: UIViewController {
         guard let dvc = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: "UseHistoryVC") as? UseHistoryVC else {return}
         navigationController?.pushViewController(dvc, animated: true)
     }
+    @IBAction func showRanking(_ sender: Any) {
+        guard let dvc = UIStoryboard(name: "Ranking", bundle: nil).instantiateViewController(withIdentifier: "Ranking")as? RankingVC else {return}
+        navigationController?.pushViewController(dvc, animated: true)
+    }
     @IBAction func showRecord(_ sender: Any) {
         guard let dvc = UIStoryboard(name: "Record", bundle: nil).instantiateViewController(withIdentifier: "Record")as? RecordedDonationVC else {return}
         navigationController?.pushViewController(dvc, animated: true)

@@ -47,6 +47,8 @@
 		C084832822C953190087F3BC /* SignUpVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C084832722C953190087F3BC /* SignUpVC1.swift */; };
 		C084832A22C953350087F3BC /* SignUpVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C084832922C953350087F3BC /* SignUpVC2.swift */; };
 		C084832C22C953540087F3BC /* SignUpVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C084832B22C953540087F3BC /* SignUpVC3.swift */; };
+		C08D146322CF03E700F5EB0A /* RankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08D146222CF03E700F5EB0A /* RankingCell.swift */; };
+		C08D146522CF07AD00F5EB0A /* Ranking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08D146422CF07AD00F5EB0A /* Ranking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +96,8 @@
 		C084832722C953190087F3BC /* SignUpVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC1.swift; sourceTree = "<group>"; };
 		C084832922C953350087F3BC /* SignUpVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC2.swift; sourceTree = "<group>"; };
 		C084832B22C953540087F3BC /* SignUpVC3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC3.swift; sourceTree = "<group>"; };
+		C08D146222CF03E700F5EB0A /* RankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCell.swift; sourceTree = "<group>"; };
+		C08D146422CF07AD00F5EB0A /* Ranking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +280,7 @@
 			children = (
 				C01E92F022CB62DE00D43366 /* History.swift */,
 				C01BC94322CCB393000AAF58 /* MainInfo.swift */,
+				C08D146422CF07AD00F5EB0A /* Ranking.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -294,6 +299,7 @@
 				C01E930622CBC02B00D43366 /* HomeCell.swift */,
 				C01BC94122CCA7C6000AAF58 /* MainCell.swift */,
 				C03353EB22CDC565007EEA16 /* RecordCell.swift */,
+				C08D146222CF03E700F5EB0A /* RankingCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -434,6 +440,7 @@
 				C084832522C93C930087F3BC /* LoginVC.swift in Sources */,
 				C08482C022C2515D0087F3BC /* FirstVC.swift in Sources */,
 				C01E92E322CA372F00D43366 /* MyPageVC.swift in Sources */,
+				C08D146522CF07AD00F5EB0A /* Ranking.swift in Sources */,
 				C01BC94422CCB393000AAF58 /* MainInfo.swift in Sources */,
 				C027A94922CD356100F198ED /* CompleteDonateAlertVC.swift in Sources */,
 				C027A94722CD249C00F198ED /* DonateVC.swift in Sources */,
@@ -452,6 +459,7 @@
 				C01E92E722CA788D00D43366 /* EditNicknameVC.swift in Sources */,
 				C027A94E22CD40F200F198ED /* RecordedDonationVC.swift in Sources */,
 				C01E930722CBC02B00D43366 /* HomeCell.swift in Sources */,
+				C08D146322CF03E700F5EB0A /* RankingCell.swift in Sources */,
 				C01BC94222CCA7C6000AAF58 /* MainCell.swift in Sources */,
 				C03353F322CE237D007EEA16 /* RankingVC.swift in Sources */,
 				C08482D822C253290087F3BC /* UIView+Extensions.swift in Sources */,

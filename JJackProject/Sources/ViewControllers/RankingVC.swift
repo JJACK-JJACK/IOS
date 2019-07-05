@@ -14,6 +14,10 @@ class RankingVC: UIViewController {
     
     let topTenList: [UIImage] = []
     
+    @IBOutlet weak var categoryTopten: UITableView!
+    
+    var cateTopten: [Ranking] = []
+    
     
     @IBOutlet weak var allCate: UIButton!
     @IBOutlet weak var animal: UIButton!
@@ -30,7 +34,11 @@ class RankingVC: UIViewController {
         topTenListView.dataSource = self
         topTenListView.delegate = self
         
+        categoryTopten.dataSource = self
+
+        
         setup()
+        setData()
     }
     func setup() {
         setBorder()
@@ -87,6 +95,12 @@ class RankingVC: UIViewController {
         showSelectedState(button: emergency)
     }
     
+    @IBAction func showMenu(_ sender: Any) {
+        showMenu()
+    }
+    @IBAction func goHome(_ sender: Any) {
+        backHome()
+    }
 }
 extension RankingVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -125,6 +139,28 @@ extension RankingVC: UICollectionViewDelegateFlowLayout {
 
     
 }
+extension RankingVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cateTopten.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = categoryTopten.dequeueReusableCell(withIdentifier: "Ranking")as! RankingCell
+        let topTenList = cateTopten[indexPath.row]
+        
+        cell.rank.text = topTenList.rank
+        cell.profileImg.image = UIImage(named: topTenList.profileImg)
+        cell.name.text = topTenList.name
+        cell.donatedBerry.text = topTenList.donatedBerry + "베리"
+        cell.visitCount.text = topTenList.viewCount + "회"
+        
+        return cell
+        
+    }
+    
+    
+}
+
 
 extension RankingVC {
     func deselected (button1: UIButton?, button2: UIButton?, button3: UIButton?, button4: UIButton?, button5: UIButton?, button6: UIButton?, button7: UIButton?){
@@ -148,5 +184,10 @@ extension RankingVC {
             button.setBorder(borderColor: .brownGrey, borderWidth: 1.0)
             button.titleLabel?.font = .Medium
         }
+    }
+    func setData () {
+        let top1 = Ranking(rank: "1등", profileImg: "icCard" , name: "모상일", donatedBerry: "123", viewCount: "3434")
+        let top2 = Ranking(rank: "2등", profileImg: "icAnimal" , name: "모상일", donatedBerry: "123", viewCount: "3434")
+        cateTopten = [top1, top2]
     }
 }
