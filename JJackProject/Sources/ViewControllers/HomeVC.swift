@@ -156,7 +156,7 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         guard let dvc = storyboard?.instantiateViewController(withIdentifier: "MainVC") as? MainVC else {return}
-        dvc.parmaIndex = indexPath.row
+        dvc.paramIndex = indexPath.row
        navigationController?.show(dvc, sender: self)
     }
 

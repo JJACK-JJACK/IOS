@@ -585,6 +585,7 @@
                         <outlet property="highDonated" destination="hzX-lJ-SGG" id="6uG-rz-Fvv"/>
                         <outlet property="lowDonated" destination="tTH-7k-hng" id="Aq3-Ld-Fsz"/>
                         <outlet property="mainView" destination="gVb-Wj-G0L" id="B2O-OR-UWB"/>
+                        <outlet property="scrollView" destination="8XU-tb-AsJ" id="0zW-qu-PBf"/>
                         <outlet property="senior" destination="IY0-yl-qh2" id="Mcw-RR-a1O"/>
                         <outlet property="upToDate" destination="bVa-1b-yyT" id="ctU-bP-iae"/>
                     </connections>

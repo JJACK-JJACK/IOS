@@ -9,7 +9,7 @@
 import UIKit
 import SideMenu
 
-class MainVC: UIViewController {
+class MainVC: UIViewController, UIScrollViewDelegate{
     
     let imageSet: [UIImage] = [
         (UIImage(named: "icChildren"))!,
@@ -26,6 +26,8 @@ class MainVC: UIViewController {
     
     @IBOutlet weak var donationInfoView: UITableView!
     
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     @IBOutlet weak var child: UIButton!
     @IBOutlet weak var senior: UIButton!
     @IBOutlet weak var animal: UIButton!
@@ -37,7 +39,7 @@ class MainVC: UIViewController {
     @IBOutlet weak var highDonated: UIButton!
     @IBOutlet weak var lowDonated: UIButton!
     
-    var parmaIndex: Int = 0
+    var paramIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +50,9 @@ class MainVC: UIViewController {
         donationInfoView.dataSource = self
         donationInfoView.delegate = self
         
-        setBoldCategory(response: parmaIndex)
+        scrollView.delegate = self
+        
+        setBoldCategory(response: paramIndex)
         
         // 초기 설정.. 굳이?
         setBtn(button: upToDate, color: .JackBlack, font: .Medium2)
@@ -71,6 +75,14 @@ class MainVC: UIViewController {
         }
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        scroll(index: paramIndex)
+    }
+    func scroll (index: Int) {
+        let menuIndex = NSIndexPath(item: index, section: 0)
+        self.mainView.scrollToItem(at: menuIndex as IndexPath, at: .centeredHorizontally, animated: true)
+    }
+
 
     // 선택시 볼더로 변경..!
     // 솝툰에 있는 알고리즘을 빌려와서 콜렉션뷰랑 연결한후
@@ -81,18 +93,21 @@ class MainVC: UIViewController {
         case 0:
             setBtn(button: child, color: .JackBlack, font: .Bold)
         case 1:
-           setBtn(button: senior, color: .brownGrey, font: .Light2)
+           setBtn(button: senior, color: .JackBlack, font: .Bold)
         case 2:
-            setBtn(button: animal, color: .brownGrey, font: .Light2)
+            setBtn(button: animal, color: .JackBlack, font: .Bold)
         case 3:
-            setBtn(button: disabled, color: .brownGrey, font: .Light2)
+            setBtn(button: disabled, color: .JackBlack, font: .Bold)
         case 4:
-           setBtn(button: environment, color: .brownGrey, font: .Light2)
+           setBtn(button: environment, color: .JackBlack, font: .Bold)
         case 5:
-            setBtn(button: emergency, color: .brownGrey, font: .Light2)
+            setBtn(button: emergency, color: .JackBlack, font: .Bold)
         default:
              break
         }
+        
+        scroll(index: response)
+        
     }
     //Bolding Category
     @IBAction func selectCategory(_ sender: UIButton) {
@@ -149,10 +164,7 @@ class MainVC: UIViewController {
     @IBAction func goHome(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
-    func scroll (index: Int) {
-        let menuIndex = NSIndexPath(item: index, section: 0)
-        self.mainView.scrollToItem(at: menuIndex as IndexPath, at: .centeredHorizontally, animated: true)
-    }
+    
 }
 extension MainVC: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
