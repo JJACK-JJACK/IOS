@@ -292,27 +292,27 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bLk-k2-6OC">
-                                <rect key="frame" x="0.0" y="224" width="414" height="16"/>
+                                <rect key="frame" x="0.0" y="224" width="414" height="32"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="장애인 재단" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sow-rk-xxq">
-                                        <rect key="frame" x="20" y="0.5" width="56" height="15"/>
-                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="12"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="최근 베리 사용내역" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sow-rk-xxq">
+                                        <rect key="frame" x="20" y="8.5" width="89.5" height="15"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
                                         <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="16" id="Xac-If-ZjY"/>
+                                    <constraint firstAttribute="height" constant="32" id="Xac-If-ZjY"/>
                                     <constraint firstItem="Sow-rk-xxq" firstAttribute="centerY" secondItem="bLk-k2-6OC" secondAttribute="centerY" id="p9F-rN-Mn4"/>
                                     <constraint firstItem="Sow-rk-xxq" firstAttribute="leading" secondItem="bLk-k2-6OC" secondAttribute="leading" constant="20" id="s9x-Uc-kKx"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xzK-cR-PKi">
-                                <rect key="frame" x="0.0" y="240" width="414" height="622"/>
+                                <rect key="frame" x="0.0" y="256" width="414" height="606"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="M0A-vr-lEe">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="622"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="606"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoryCell" rowHeight="104" id="yn7-vU-oOM" customClass="HistoryCell" customModule="JJackProject" customModuleProvider="target">

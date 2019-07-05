@@ -44,6 +44,15 @@ extension UseHistoryVC: UITableViewDataSource{
         cell.Institution.text = history.institution
         cell.berry.text = history.berry
         
+        switch cell.purpose.text {
+        case "기부":
+            cell.berry.textColor = .pointCol
+        case "충전":
+            cell.berry.textColor = .mainCol
+        default:
+            break
+        }
+        
         return cell
     }
     
@@ -52,12 +61,12 @@ extension UseHistoryVC: UITableViewDataSource{
 
 extension UseHistoryVC {
     func setHistoryData (){
-        let history1 = History(purpose: "베리기부", date: "2019.06.02", institution: "우리집", berry: "101010")
-        let history2 = History(purpose: "베리충전", date: "2019.06.02", institution: nil, berry: "10102")
-        let history3 = History(purpose: "베리기부", date: "2019.06.23", institution: "우리집", berry: "10333")
-        let history4 = History(purpose: "베리기부", date: "2019.06.02", institution: "우리집", berry: "101010")
-        let history5 = History(purpose: "베리충전", date: "2019.06.342", institution: nil, berry: "1010")
-        let history6 = History(purpose: "베리기부", date: "2019.06.02", institution: "우리집", berry: "101010")
+        let history1 = History(purpose: "기부", date: "2019.06.02", institution: "우리집", berry: "101010")
+        let history2 = History(purpose: "충전", date: "2019.06.02", institution: nil, berry: "10102")
+        let history3 = History(purpose: "기부", date: "2019.06.23", institution: "우리집", berry: "10333")
+        let history4 = History(purpose: "기부", date: "2019.06.02", institution: "우리집", berry: "101010")
+        let history5 = History(purpose: "충전", date: "2019.06.342", institution: nil, berry: "1010")
+        let history6 = History(purpose: "기부", date: "2019.06.02", institution: "우리집", berry: "101010")
         historyList = [history1,history2,history3,history4,history5,history6]
     }
     

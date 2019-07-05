@@ -12,12 +12,12 @@ import SideMenu
 class MainVC: UIViewController {
     
     let imageSet: [UIImage] = [
-        (UIImage(named: "icCard"))!,
-        (UIImage(named: "icCard"))!,
-        (UIImage(named: "icCard"))!,
-        (UIImage(named: "icCard"))!,
-        (UIImage(named: "icCard"))!,
-        (UIImage(named: "icCard"))!
+        (UIImage(named: "icChildren"))!,
+        (UIImage(named: "icSenior"))!,
+        (UIImage(named: "icAnimal"))!,
+        (UIImage(named: "icDisabled"))!,
+        (UIImage(named: "icEnvironment"))!,
+        (UIImage(named: "icEmergency"))!
     ]
 
     @IBOutlet weak var mainView: UICollectionView!
@@ -33,6 +33,9 @@ class MainVC: UIViewController {
     @IBOutlet weak var environment: UIButton!
     @IBOutlet weak var emergency: UIButton!
     
+    @IBOutlet weak var upToDate: UIButton!
+    @IBOutlet weak var highDonated: UIButton!
+    @IBOutlet weak var lowDonated: UIButton!
     
     var parmaIndex: Int = 0
     
@@ -47,12 +50,14 @@ class MainVC: UIViewController {
         
         setBoldCategory(response: parmaIndex)
         
+        // 초기 설정.. 굳이?
+        setBtn(button: upToDate, color: .JackBlack, font: .Medium2)
         setInfoData()
 
         self.loadViewIfNeeded()
         
         //sideMenu setUp
-        setupSideMenu()
+//        setupSideMenu()
 
     
     }
@@ -71,36 +76,71 @@ class MainVC: UIViewController {
     // 솝툰에 있는 알고리즘을 빌려와서 콜렉션뷰랑 연결한후
     // 이 함수와도 연결해 보자..
     func setBoldCategory (response: Int) {
-        print(response)
+    
         switch response {
         case 0:
-            self.child.titleLabel?.font = UIFont.Bold
-            self.child.setTitleColor(.JackBlack, for: .normal)
+            setBtn(button: child, color: .JackBlack, font: .Bold)
         case 1:
-            self.senior.titleLabel?.font = UIFont.Bold
-            self.senior.setTitleColor(.JackBlack, for: .normal)
+           setBtn(button: senior, color: .brownGrey, font: .Light2)
         case 2:
-            self.animal.titleLabel?.font = UIFont.Bold
-            self.animal.setTitleColor(.JackBlack, for: .normal)
+            setBtn(button: animal, color: .brownGrey, font: .Light2)
         case 3:
-            self.disabled.titleLabel?.font = UIFont.Bold
-            self.disabled.setTitleColor(.JackBlack, for: .normal)
+            setBtn(button: disabled, color: .brownGrey, font: .Light2)
         case 4:
-            self.environment.titleLabel?.font = UIFont.Bold
-            self.environment.setTitleColor(.JackBlack, for: .normal)
+           setBtn(button: environment, color: .brownGrey, font: .Light2)
         case 5:
-            self.emergency.titleLabel?.font = UIFont.Bold
-            self.emergency.setTitleColor(.JackBlack, for: .normal)
+            setBtn(button: emergency, color: .brownGrey, font: .Light2)
         default:
              break
         }
     }
+    //Bolding Category
+    @IBAction func selectCategory(_ sender: UIButton) {
+        setBtn(button: child, color: .brownGrey, font: .Light)
+        setBtn(button: senior, color: .brownGrey, font: .Light)
+        setBtn(button: animal, color: .brownGrey, font: .Light)
+        setBtn(button: disabled, color: .brownGrey, font: .Light)
+        setBtn(button: environment, color: .brownGrey, font: .Light)
+        setBtn(button: emergency, color: .brownGrey, font: .Light)
+        
+        if !sender.isSelected {
+            sender.titleLabel?.font = .Bold
+            sender.setTitleColor(.JackBlack, for: .normal)
+            
+            switch sender.currentTitle {
+            case "어린이":
+                scroll(index: 0)
+            case "어르신":
+                scroll(index: 1)
+            case "동물":
+                scroll(index: 2)
+            case "장애우":
+                scroll(index: 3)
+            case "환경":
+                scroll(index: 4)
+            case "긴급구조":
+                scroll(index: 5)
+            default:
+                break
+            }
+        }
+    }
+    //Bolding Arrange
+    @IBAction func selectArrange(_ sender: UIButton) {
+        setBtn(button: upToDate, color: .brownGrey, font: .Light2)
+        setBtn(button: highDonated, color: .brownGrey, font: .Light2)
+        setBtn(button: lowDonated, color: .brownGrey, font: .Light2)
+        
+        if !sender.isSelected {
+            sender.titleLabel?.font = .Medium2
+            sender.setTitleColor(.JackBlack, for: .normal)
+            
+            
+            // switch 사용해서 통신 !
+        }
+    }
     
     // 선택되어 넘어온 카테고리 보여주기 셀!
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        
-        collectionView.cellForItem
-    }
     @IBAction func showMenu(_ sender: Any) {
         guard let dvc = UIStoryboard(name: "SideMenu", bundle: nil).instantiateViewController(withIdentifier: "SideMenu")as? UISideMenuNavigationController else {return}
         
@@ -109,7 +149,10 @@ class MainVC: UIViewController {
     @IBAction func goHome(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
-    
+    func scroll (index: Int) {
+        let menuIndex = NSIndexPath(item: index, section: 0)
+        self.mainView.scrollToItem(at: menuIndex as IndexPath, at: .centeredHorizontally, animated: true)
+    }
 }
 extension MainVC: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -151,7 +194,6 @@ extension MainVC: UICollectionViewDelegateFlowLayout{
         
         return UIEdgeInsets(top: 1,  left: 1, bottom: 1, right: 1)
     }
-    
 }
 
 extension MainVC: UITableViewDelegate {
@@ -202,4 +244,9 @@ extension MainVC {
         
         self.infoSet = [info1, info2, info3]
     }
+    func setBtn(button: UIButton, color: UIColor, font: UIFont) {
+        button.titleLabel?.font = font
+        button.setTitleColor(color, for: .normal)
+    }
 }
+
