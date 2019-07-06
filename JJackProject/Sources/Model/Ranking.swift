@@ -9,14 +9,12 @@
 import Foundation
 
 struct Ranking {
-    var rank: String
     var profileImg: String
     var name: String
     var donatedBerry: String
     var viewCount: String
     
-    init(rank: String, profileImg: String, name: String, donatedBerry: String, viewCount: String) {
-        self.rank = rank
+    init(profileImg: String, name: String, donatedBerry: String, viewCount: String) {
         self.profileImg = profileImg
         self.name = name
         self.donatedBerry = name

@@ -189,6 +189,9 @@
                                             <constraint firstAttribute="height" constant="82" id="K7m-Tj-XXD"/>
                                         </constraints>
                                         <state key="normal" image="icAnimal"/>
+                                        <connections>
+                                            <action selector="goMainView:" destination="OX7-sM-8P6" eventType="touchUpInside" id="Ecb-YE-Ghj"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Na1-Pc-NJ1" userLabel="환경">
                                         <rect key="frame" x="144" y="0.0" width="65" height="82"/>
@@ -197,6 +200,9 @@
                                             <constraint firstAttribute="height" constant="82" id="Vdx-uK-E6I"/>
                                         </constraints>
                                         <state key="normal" image="icEnvironment"/>
+                                        <connections>
+                                            <action selector="goMainView:" destination="OX7-sM-8P6" eventType="touchUpInside" id="WM1-uT-XN2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -210,6 +216,9 @@
                                             <constraint firstAttribute="width" constant="65" id="ii5-kh-Mah"/>
                                         </constraints>
                                         <state key="normal" image="icChildren"/>
+                                        <connections>
+                                            <action selector="goMainView:" destination="OX7-sM-8P6" eventType="touchUpInside" id="REU-76-lv1"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQh-Oc-6nW" userLabel="장애우">
                                         <rect key="frame" x="144" y="0.0" width="65" height="82"/>
@@ -218,6 +227,9 @@
                                             <constraint firstAttribute="width" constant="65" id="raX-zu-a5x"/>
                                         </constraints>
                                         <state key="normal" image="icDisabled"/>
+                                        <connections>
+                                            <action selector="goMainView:" destination="OX7-sM-8P6" eventType="touchUpInside" id="WwN-Q8-mZP"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -231,6 +243,9 @@
                                             <constraint firstAttribute="width" constant="65" id="zcy-IV-tMs"/>
                                         </constraints>
                                         <state key="normal" image="icEmergency"/>
+                                        <connections>
+                                            <action selector="goMainView:" destination="OX7-sM-8P6" eventType="touchUpInside" id="Scy-Wh-vaa"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFd-vr-Eh2" userLabel="어르신">
                                         <rect key="frame" x="144" y="0.0" width="65" height="82"/>
@@ -239,6 +254,9 @@
                                             <constraint firstAttribute="width" constant="65" id="LUb-WW-WzP"/>
                                         </constraints>
                                         <state key="normal" image="icSenior"/>
+                                        <connections>
+                                            <action selector="goMainView:" destination="OX7-sM-8P6" eventType="touchUpInside" id="zJh-mU-IXL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

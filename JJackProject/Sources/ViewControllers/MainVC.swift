@@ -78,6 +78,7 @@ class MainVC: UIViewController, UIScrollViewDelegate{
     override func viewDidAppear(_ animated: Bool) {
         scroll(index: paramIndex)
     }
+    // 버튼 클릭시 컬랙션 뷰 스크롤
     func scroll (index: Int) {
         let menuIndex = NSIndexPath(item: index, section: 0)
         self.mainView.scrollToItem(at: menuIndex as IndexPath, at: .centeredHorizontally, animated: true)
@@ -205,6 +206,22 @@ extension MainVC: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         
         return UIEdgeInsets(top: 1,  left: 1, bottom: 1, right: 1)
+    }
+    func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
+        
+        setBtn(button: child, color: .brownGrey, font: .Light)
+        setBtn(button: senior, color: .brownGrey, font: .Light)
+        setBtn(button: animal, color: .brownGrey, font: .Light)
+        setBtn(button: disabled, color: .brownGrey, font: .Light)
+        setBtn(button: environment, color: .brownGrey, font: .Light)
+        setBtn(button: emergency, color: .brownGrey, font: .Light)
+        
+        switch indexPath.item {
+        case 3:
+            setBtn(button: disabled, color: .JackBlack, font: .Bold)
+        default:
+            break
+        }
     }
 }
 

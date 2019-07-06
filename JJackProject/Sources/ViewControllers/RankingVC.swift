@@ -148,7 +148,7 @@ extension RankingVC: UITableViewDataSource {
         let cell = categoryTopten.dequeueReusableCell(withIdentifier: "Ranking")as! RankingCell
         let topTenList = cateTopten[indexPath.row]
         
-        cell.rank.text = topTenList.rank
+        cell.rank.text = String(indexPath.row + 1) + "등"
         cell.profileImg.image = UIImage(named: topTenList.profileImg)
         cell.name.text = topTenList.name
         cell.donatedBerry.text = topTenList.donatedBerry + "베리"
@@ -186,8 +186,9 @@ extension RankingVC {
         }
     }
     func setData () {
-        let top1 = Ranking(rank: "1등", profileImg: "icCard" , name: "모상일", donatedBerry: "123", viewCount: "3434")
-        let top2 = Ranking(rank: "2등", profileImg: "icAnimal" , name: "모상일", donatedBerry: "123", viewCount: "3434")
-        cateTopten = [top1, top2]
+        let top1 = Ranking(profileImg: "icCard" , name: "모상일", donatedBerry: "123", viewCount: "3434")
+        let top2 = Ranking(profileImg: "icAnimal" , name: "모상일", donatedBerry: "123", viewCount: "3434")
+        let top3 = Ranking(profileImg: "icChildren" , name: "모상일", donatedBerry: "123", viewCount: "3434")
+        cateTopten = [top1, top2, top3]
     }
 }
