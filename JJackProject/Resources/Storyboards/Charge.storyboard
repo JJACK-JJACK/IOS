@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="J1M-td-lVr">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ChargeVC-->
+        <scene sceneID="0Li-pk-fus">
+            <objects>
+                <viewController id="J1M-td-lVr" customClass="ChargeVC" customModule="JJackProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SFo-fl-Ab9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="베리충전" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esG-3X-8tF">
+                                <rect key="frame" x="20" y="175" width="104" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="1qB-kn-0xH"/>
+                                    <constraint firstAttribute="width" constant="104" id="baf-jP-7iZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="30"/>
+                                <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIY-ux-gxo">
+                                <rect key="frame" x="11" y="53" width="27" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="27" id="3fa-pQ-g2I"/>
+                                    <constraint firstAttribute="height" constant="32" id="vit-dz-TbV"/>
+                                </constraints>
+                                <state key="normal" image="icBack"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="berryRIcon" translatesAutoresizingMaskIntoConstraints="NO" id="7ub-bS-wRA">
+                                <rect key="frame" x="132" y="175" width="36" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="cyg-pL-Zo2"/>
+                                    <constraint firstAttribute="width" constant="36" id="emS-Oa-Zke"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zgv-of-QY1">
+                                <rect key="frame" x="20" y="243" width="256" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="TQL-Uc-9zg"/>
+                                    <constraint firstAttribute="height" constant="34" id="f7v-vu-iSl"/>
+                                </constraints>
+                                <string key="text">원하는 결제수단을 선택해주세요!
+여러분의 베리들이 모여 더 나은 세상이 됩니다.</string>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="14"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icBankbook" translatesAutoresizingMaskIntoConstraints="NO" id="hYJ-Nm-6h1">
+                                <rect key="frame" x="132" y="598" width="28" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3A7-GL-5kq">
+                                <rect key="frame" x="20" y="414" width="335" height="64"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="EH0-e0-BgV">
+                                        <rect key="frame" x="110.66666666666666" y="20.666666666666686" width="114" height="24"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icCard" translatesAutoresizingMaskIntoConstraints="NO" id="bf2-tO-G4h">
+                                                <rect key="frame" x="0.0" y="0.0" width="28" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="bf2-tO-G4h" secondAttribute="height" multiplier="7:6" id="CHZ-by-j57"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카드결제" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDH-Lh-9G8">
+                                                <rect key="frame" x="44" y="0.0" width="70" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="MDH-Lh-9G8" secondAttribute="height" multiplier="35:12" id="fsd-WY-kRk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="114" id="8Pc-6g-33e"/>
+                                            <constraint firstAttribute="width" secondItem="EH0-e0-BgV" secondAttribute="height" multiplier="19:4" id="L20-XW-sjx"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJy-Kd-RSX">
+                                        <rect key="frame" x="0.0" y="4.0000000000000036" width="335" height="57.333333333333343"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="YJy-Kd-RSX" secondAttribute="height" multiplier="187:32" id="biA-zE-lzt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="575-Za-JFh" kind="presentation" id="Ulw-4s-YZi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.85490196080000003" green="0.28235294119999998" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="EH0-e0-BgV" firstAttribute="centerY" secondItem="YJy-Kd-RSX" secondAttribute="centerY" id="0Nb-fy-2ZY"/>
+                                    <constraint firstItem="EH0-e0-BgV" firstAttribute="centerX" secondItem="YJy-Kd-RSX" secondAttribute="centerX" id="CjI-59-OUk"/>
+                                    <constraint firstItem="YJy-Kd-RSX" firstAttribute="top" secondItem="3A7-GL-5kq" secondAttribute="top" constant="4" id="G0R-WF-pqd"/>
+                                    <constraint firstAttribute="bottom" secondItem="YJy-Kd-RSX" secondAttribute="bottom" constant="2.6666666666666572" id="Isf-6a-TZ8"/>
+                                    <constraint firstItem="YJy-Kd-RSX" firstAttribute="leading" secondItem="3A7-GL-5kq" secondAttribute="leading" id="MTC-oV-0fN"/>
+                                    <constraint firstAttribute="trailing" secondItem="YJy-Kd-RSX" secondAttribute="trailing" id="pVV-dA-8Me"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vFQ-zx-EdC">
+                                <rect key="frame" x="20" y="494" width="335" height="64"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="upD-1g-reu">
+                                        <rect key="frame" x="103" y="22.666666666666629" width="129" height="20"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icBankbook" translatesAutoresizingMaskIntoConstraints="NO" id="vzV-Wo-nHK">
+                                                <rect key="frame" x="0.0" y="0.0" width="22.666666666666668" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="vzV-Wo-nHK" secondAttribute="height" multiplier="27:24" id="yBw-wO-hNX"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="무통장입금" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sG-eh-Rdz">
+                                                <rect key="frame" x="38.66666666666665" y="0.0" width="90.333333333333314" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="9sG-eh-Rdz" secondAttribute="height" multiplier="80:18" id="JDe-Jx-77Q"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="129" id="OW4-CL-tyX"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWf-OA-XbS">
+                                        <rect key="frame" x="0.0" y="4.0000000000000036" width="335" height="57.333333333333343"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ZWf-OA-XbS" secondAttribute="height" multiplier="187:32" id="6MX-WA-EnC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.76078431369999999" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ZWf-OA-XbS" secondAttribute="trailing" id="1YB-hK-UfE"/>
+                                    <constraint firstItem="upD-1g-reu" firstAttribute="centerX" secondItem="ZWf-OA-XbS" secondAttribute="centerX" id="7og-JM-xB6"/>
+                                    <constraint firstItem="ZWf-OA-XbS" firstAttribute="leading" secondItem="vFQ-zx-EdC" secondAttribute="leading" id="Qcf-g4-2qq"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZWf-OA-XbS" secondAttribute="bottom" constant="2.6666666666666572" id="Xsb-VW-I7j"/>
+                                    <constraint firstItem="ZWf-OA-XbS" firstAttribute="top" secondItem="vFQ-zx-EdC" secondAttribute="top" constant="4" id="YIz-1A-Sic"/>
+                                    <constraint firstItem="upD-1g-reu" firstAttribute="centerY" secondItem="ZWf-OA-XbS" secondAttribute="centerY" id="uQW-wW-Q2m"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tBy-K8-Wf4" firstAttribute="trailing" secondItem="3A7-GL-5kq" secondAttribute="trailing" constant="20" id="6Xi-i5-dOm"/>
+                            <constraint firstItem="eIY-ux-gxo" firstAttribute="leading" secondItem="tBy-K8-Wf4" secondAttribute="leading" constant="11" id="EWs-e0-1SX"/>
+                            <constraint firstItem="zgv-of-QY1" firstAttribute="leading" secondItem="tBy-K8-Wf4" secondAttribute="leading" constant="20" id="J4C-mo-hts"/>
+                            <constraint firstItem="esG-3X-8tF" firstAttribute="top" secondItem="eIY-ux-gxo" secondAttribute="bottom" constant="90" id="NHk-WU-eZu"/>
+                            <constraint firstItem="eIY-ux-gxo" firstAttribute="top" secondItem="tBy-K8-Wf4" secondAttribute="top" constant="9" id="QCk-kI-amT"/>
+                            <constraint firstItem="vFQ-zx-EdC" firstAttribute="top" secondItem="3A7-GL-5kq" secondAttribute="bottom" constant="16" id="Z03-qv-YOG"/>
+                            <constraint firstItem="7ub-bS-wRA" firstAttribute="centerY" secondItem="esG-3X-8tF" secondAttribute="centerY" id="adX-U5-S7P"/>
+                            <constraint firstItem="3A7-GL-5kq" firstAttribute="leading" secondItem="tBy-K8-Wf4" secondAttribute="leading" constant="20" id="dfr-jZ-VL0"/>
+                            <constraint firstItem="7ub-bS-wRA" firstAttribute="leading" secondItem="esG-3X-8tF" secondAttribute="trailing" constant="8" id="fyc-aQ-FvQ"/>
+                            <constraint firstItem="tBy-K8-Wf4" firstAttribute="trailing" secondItem="vFQ-zx-EdC" secondAttribute="trailing" constant="20" id="kzc-tt-B2I"/>
+                            <constraint firstItem="tBy-K8-Wf4" firstAttribute="bottom" secondItem="vFQ-zx-EdC" secondAttribute="bottom" constant="220" id="od3-8Z-7W4"/>
+                            <constraint firstItem="zgv-of-QY1" firstAttribute="top" secondItem="esG-3X-8tF" secondAttribute="bottom" constant="32" id="orY-D8-2M5"/>
+                            <constraint firstItem="vFQ-zx-EdC" firstAttribute="leading" secondItem="tBy-K8-Wf4" secondAttribute="leading" constant="20" id="q5G-yq-Pic"/>
+                            <constraint firstItem="esG-3X-8tF" firstAttribute="leading" secondItem="tBy-K8-Wf4" secondAttribute="leading" constant="20" id="ylZ-WU-JUy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tBy-K8-Wf4"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dRH-w8-Wqj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-119" y="112"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IN1-a0-Lq8">
+            <objects>
+                <viewController id="575-Za-JFh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qBx-OI-VSe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flO-He-dBC">
+                                <rect key="frame" x="16" y="67" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="644-bH-BoH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="72i-Hs-QAC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="745" y="112"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="berryRIcon" width="36" height="35"/>
+        <image name="icBack" width="27" height="32"/>
+        <image name="icBankbook" width="48" height="34"/>
+        <image name="icCard" width="45" height="28"/>
+    </resources>
+</document>

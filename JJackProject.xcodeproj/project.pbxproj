@@ -23,6 +23,8 @@
 		C01E930422CB7C5E00D43366 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E930322CB7C5E00D43366 /* HomeVC.swift */; };
 		C01E930722CBC02B00D43366 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E930622CBC02B00D43366 /* HomeCell.swift */; };
 		C01E930922CBEB6400D43366 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E930822CBEB6400D43366 /* MainVC.swift */; };
+		C021C2F622D06E3200ADF1FE /* Charge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C021C2F522D06E3200ADF1FE /* Charge.storyboard */; };
+		C021C2F922D06E5900ADF1FE /* ChargeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C021C2F822D06E5900ADF1FE /* ChargeVC.swift */; };
 		C027A94522CD074700F198ED /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027A94422CD074700F198ED /* DetailVC.swift */; };
 		C027A94722CD249C00F198ED /* DonateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027A94622CD249C00F198ED /* DonateVC.swift */; };
 		C027A94922CD356100F198ED /* CompleteDonateAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027A94822CD356100F198ED /* CompleteDonateAlertVC.swift */; };
@@ -70,6 +72,8 @@
 		C01E930322CB7C5E00D43366 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		C01E930622CBC02B00D43366 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		C01E930822CBEB6400D43366 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		C021C2F522D06E3200ADF1FE /* Charge.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Charge.storyboard; sourceTree = "<group>"; };
+		C021C2F822D06E5900ADF1FE /* ChargeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeVC.swift; sourceTree = "<group>"; };
 		C027A94422CD074700F198ED /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		C027A94622CD249C00F198ED /* DonateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateVC.swift; sourceTree = "<group>"; };
 		C027A94822CD356100F198ED /* CompleteDonateAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteDonateAlertVC.swift; sourceTree = "<group>"; };
@@ -160,6 +164,14 @@
 			name = Home;
 			sourceTree = "<group>";
 		};
+		C021C2F722D06E4200ADF1FE /* Charge */ = {
+			isa = PBXGroup;
+			children = (
+				C021C2F822D06E5900ADF1FE /* ChargeVC.swift */,
+			);
+			name = Charge;
+			sourceTree = "<group>";
+		};
 		C027A94C22CD40C600F198ED /* Record */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +251,7 @@
 				C01A043C22CA272A00ED8CD2 /* MyPage.storyboard */,
 				C027A94A22CD399600F198ED /* Record.storyboard */,
 				C03353EF22CE230C007EEA16 /* Ranking.storyboard */,
+				C021C2F522D06E3200ADF1FE /* Charge.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -246,6 +259,7 @@
 		C08482D222C252AD0087F3BC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C021C2F722D06E4200ADF1FE /* Charge */,
 				C03353F122CE2368007EEA16 /* Ranking */,
 				C027A94C22CD40C600F198ED /* Record */,
 				C01E930222CB7C2300D43366 /* Home */,
@@ -383,6 +397,7 @@
 				C08482C822C251600087F3BC /* LaunchScreen.storyboard in Resources */,
 				C027A94B22CD399600F198ED /* Record.storyboard in Resources */,
 				C08482C522C251600087F3BC /* Assets.xcassets in Resources */,
+				C021C2F622D06E3200ADF1FE /* Charge.storyboard in Resources */,
 				C08482C322C2515D0087F3BC /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +481,7 @@
 				C03353EE22CDC6C7007EEA16 /* DetailRecordVC.swift in Sources */,
 				C027A95022CD4C9600F198ED /* EarnBerryVC.swift in Sources */,
 				C08482DC22C337110087F3BC /* UIImageView+ㄷExtensions.swift in Sources */,
+				C021C2F922D06E5900ADF1FE /* ChargeVC.swift in Sources */,
 				C08482BE22C2515D0087F3BC /* AppDelegate.swift in Sources */,
 				C01E930422CB7C5E00D43366 /* HomeVC.swift in Sources */,
 				C08482E122C3378E0087F3BC /* APIManager.swift in Sources */,
