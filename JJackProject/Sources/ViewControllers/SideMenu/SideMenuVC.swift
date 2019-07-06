@@ -27,6 +27,11 @@ class SideMenuVC: UIViewController {
         backHome()
     }
     
+    @IBAction func showChargingView(_ sender: Any) {
+        guard let dvc = UIStoryboard(name: "Charge", bundle: nil).instantiateViewController(withIdentifier: "ChargeNavigation")as? UINavigationController else {return}
+        
+        self.present(dvc, animated: true, completion: nil)
+    }
     @IBAction func showHistory(_ sender: Any) {
         guard let dvc = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: "UseHistoryVC") as? UseHistoryVC else {return}
         navigationController?.pushViewController(dvc, animated: true)

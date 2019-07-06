@@ -135,7 +135,14 @@ extension RankingVC: UICollectionViewDelegateFlowLayout {
 
         return UIEdgeInsets(top: 20,  left: 20, bottom: 19, right: 20)
     }
-//
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let dvc = storyboard?.instantiateViewController(withIdentifier: "DetailRanking")as? DetailRankingVC else {return}
+        let List = topTenList[indexPath.row]
+        dvc.paramThumbImg = List
+        
+        navigationController?.pushViewController(dvc, animated: true)
+    }
 
     
 }
