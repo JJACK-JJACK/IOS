@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nSM-mc-DUH">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,7 +13,7 @@
         <!--Side MenuVC-->
         <scene sceneID="bBP-yo-pVR">
             <objects>
-                <viewController storyboardIdentifier="SideMenuVC" modalTransitionStyle="partialCurl" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OX7-sM-8P6" customClass="SideMenuVC" customModule="JJackProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="partialCurl" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OX7-sM-8P6" customClass="SideMenuVC" customModule="JJackProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Rk-Id-HXn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,6 +25,9 @@
                                     <constraint firstAttribute="width" constant="36" id="xZZ-Qb-ih1"/>
                                 </constraints>
                                 <state key="normal" image="icHome"/>
+                                <connections>
+                                    <action selector="goHome:" destination="OX7-sM-8P6" eventType="touchUpInside" id="a1C-nW-PmA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mmc-yR-RGY">
                                 <rect key="frame" x="334" y="53.666666666666657" width="27" height="29"/>
@@ -91,6 +94,9 @@
                                             <constraint firstAttribute="width" constant="58" id="A5c-1u-Ela"/>
                                         </constraints>
                                         <state key="normal" image="icUsagelist"/>
+                                        <connections>
+                                            <action selector="showRecord:" destination="OX7-sM-8P6" eventType="touchUpInside" id="idN-nF-cuc"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eb-Fg-802">
                                         <rect key="frame" x="118" y="0.0" width="58" height="69"/>
@@ -98,6 +104,9 @@
                                             <constraint firstAttribute="width" constant="58" id="Wa7-Bw-LWj"/>
                                         </constraints>
                                         <state key="normal" image="icRanking"/>
+                                        <connections>
+                                            <action selector="showRanking:" destination="OX7-sM-8P6" eventType="touchUpInside" id="cVs-Vy-M61"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzF-J4-4uu">
                                         <rect key="frame" x="236" y="0.0" width="72" height="69"/>
@@ -105,6 +114,9 @@
                                             <constraint firstAttribute="width" constant="72" id="Lt3-1I-6fm"/>
                                         </constraints>
                                         <state key="normal" image="icMypage"/>
+                                        <connections>
+                                            <action selector="showMyPage:" destination="OX7-sM-8P6" eventType="touchUpInside" id="Ihn-X5-bqt"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -152,6 +164,9 @@
                                     <constraint firstAttribute="width" constant="62" id="qtR-N3-rT2"/>
                                 </constraints>
                                 <state key="normal" image="icCharge"/>
+                                <connections>
+                                    <action selector="showChargingView:" destination="OX7-sM-8P6" eventType="touchUpInside" id="6LB-D8-93Q"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZyH-cg-LF5">
                                 <rect key="frame" x="269" y="245" width="73" height="30"/>
@@ -177,6 +192,9 @@
                                             <constraint firstAttribute="height" constant="82" id="K7m-Tj-XXD"/>
                                         </constraints>
                                         <state key="normal" image="icAnimal"/>
+                                        <connections>
+                                            <action selector="goMainView:" destination="OX7-sM-8P6" eventType="touchUpInside" id="Ecb-YE-Ghj"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Na1-Pc-NJ1" userLabel="환경">
                                         <rect key="frame" x="144" y="0.0" width="65" height="82"/>
@@ -185,6 +203,9 @@
                                             <constraint firstAttribute="height" constant="82" id="Vdx-uK-E6I"/>
                                         </constraints>
                                         <state key="normal" image="icEnvironment"/>
+                                        <connections>
+                                            <action selector="goMainView:" destination="OX7-sM-8P6" eventType="touchUpInside" id="WM1-uT-XN2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -198,6 +219,9 @@
                                             <constraint firstAttribute="width" constant="65" id="ii5-kh-Mah"/>
                                         </constraints>
                                         <state key="normal" image="icChildren"/>
+                                        <connections>
+                                            <action selector="goMainView:" destination="OX7-sM-8P6" eventType="touchUpInside" id="REU-76-lv1"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQh-Oc-6nW" userLabel="장애우">
                                         <rect key="frame" x="144" y="0.0" width="65" height="82"/>
@@ -206,6 +230,9 @@
                                             <constraint firstAttribute="width" constant="65" id="raX-zu-a5x"/>
                                         </constraints>
                                         <state key="normal" image="icDisabled"/>
+                                        <connections>
+                                            <action selector="goMainView:" destination="OX7-sM-8P6" eventType="touchUpInside" id="WwN-Q8-mZP"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -219,6 +246,9 @@
                                             <constraint firstAttribute="width" constant="65" id="zcy-IV-tMs"/>
                                         </constraints>
                                         <state key="normal" image="icEmergency"/>
+                                        <connections>
+                                            <action selector="goMainView:" destination="OX7-sM-8P6" eventType="touchUpInside" id="Scy-Wh-vaa"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFd-vr-Eh2" userLabel="어르신">
                                         <rect key="frame" x="144" y="0.0" width="65" height="82"/>
@@ -227,6 +257,9 @@
                                             <constraint firstAttribute="width" constant="65" id="LUb-WW-WzP"/>
                                         </constraints>
                                         <state key="normal" image="icSenior"/>
+                                        <connections>
+                                            <action selector="goMainView:" destination="OX7-sM-8P6" eventType="touchUpInside" id="zJh-mU-IXL"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -279,11 +312,30 @@
                     <navigationItem key="navigationItem" id="inC-IG-M9V"/>
                     <connections>
                         <outlet property="useInfo" destination="ZyH-cg-LF5" id="ZRn-hv-t5c"/>
+                        <segue destination="xw5-tP-gdi" kind="unwind" identifier="goHome" unwindAction="unwind:" id="gOM-Rg-17Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cdh-kg-vgp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="xw5-tP-gdi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="658" y="50"/>
+            <point key="canvasLocation" x="1599.2" y="49.50738916256158"/>
+        </scene>
+        <!--Side Menu Navigation Controller-->
+        <scene sceneID="qX1-jp-7qr">
+            <objects>
+                <navigationController storyboardIdentifier="SideMenu" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="nSM-mc-DUH" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2AF-nn-Fq7">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OX7-sM-8P6" kind="relationship" relationship="rootViewController" id="yVR-me-zEU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AJ5-Ts-oL3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="656.79999999999995" y="49.50738916256158"/>
         </scene>
     </scenes>
     <resources>

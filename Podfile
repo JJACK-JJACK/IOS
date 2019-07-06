@@ -8,4 +8,5 @@ target 'JJackProject' do
   # Pods for JJackProject
   pod 'Alamofire', '~> 4.8.2'
   pod 'Kingfisher', '~> 4.10.1'	
+  pod 'SideMenu'
 end

@@ -35,7 +35,7 @@
                                     <color key="titleColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <segue destination="gMf-3u-gYl" kind="presentation" id="qUP-Tu-2jc"/>
+                                    <segue destination="R2v-SV-kLQ" kind="presentation" id="qUP-Tu-2jc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ha8-ZA-kk2">
@@ -197,6 +197,9 @@
                                 <state key="normal" title="로그인">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="Login:" destination="gMf-3u-gYl" eventType="touchUpInside" id="x8Z-gO-71U"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LV8-1A-S0x">
                                 <rect key="frame" x="37" y="441.66666666666669" width="301" height="64"/>
@@ -241,6 +244,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="x5o-bR-2tf"/>
                     </view>
+                    <navigationItem key="navigationItem" id="9a0-N1-Lv2"/>
                     <connections>
                         <outlet property="Login" destination="qH3-4h-lKG" id="Yhu-J9-CrW"/>
                         <outlet property="toSignup" destination="LV8-1A-S0x" id="fT0-sX-a7N"/>
@@ -249,7 +253,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="icV-Wi-66L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2828" y="-308"/>
+            <point key="canvasLocation" x="3770.4000000000001" y="-308.12807881773398"/>
         </scene>
         <!--Sign UpVC1-->
         <scene sceneID="yT3-3N-q64">
@@ -632,6 +636,23 @@
             </objects>
             <point key="canvasLocation" x="2845.5999999999999" y="547.53694581280786"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wgT-D5-gsQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="R2v-SV-kLQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gNT-Ok-Tud">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gMf-3u-gYl" kind="relationship" relationship="rootViewController" id="CvF-9c-Q0h"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="apo-s4-ZhR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2828" y="-308.12807881773398"/>
+        </scene>
     </scenes>
     <resources>
         <image name="berryRIcon" width="36" height="35"/>
@@ -639,6 +660,6 @@
         <image name="icEmail" width="18" height="14"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9YL-dE-3q6"/>
+        <segue reference="lCZ-oX-cG1"/>
     </inferredMetricsTieBreakers>
 </document>

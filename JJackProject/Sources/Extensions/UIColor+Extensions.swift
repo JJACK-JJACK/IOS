@@ -10,7 +10,7 @@ import UIKit
 
 extension UIColor {
     @nonobjc class var brownishGrey: UIColor {
-        return UIColor(white: 112.0 / 255.0, alpha: 1.0)
+        return UIColor(white: 102.0 / 255.0, alpha: 1.0)
     }
     
     @nonobjc class var dotCol: UIColor {
@@ -21,6 +21,10 @@ extension UIColor {
         return UIColor(red: 17.0 / 255.0, green: 17.0 / 255.0, blue: 17.0 / 255.0, alpha: 1.0)
     }
     
+    @nonobjc class var brownGrey: UIColor {
+        return UIColor(white: 153.0 / 255.0, alpha: 1.0)
+    }
+    
     @nonobjc class var mainCol: UIColor {
         return UIColor(red: 1.0, green: 194.0 / 255.0, blue: 31.0 / 255.0, alpha: 1.0)
     }
@@ -29,6 +33,13 @@ extension UIColor {
         return UIColor(red: 218.0 / 255.0, green: 72.0 / 255.0, blue: 48.0 / 255.0, alpha: 1.0)
     }
     
+    @nonobjc class var closeCol: UIColor {
+        return UIColor(red: 134.0 / 255.0, green: 184.0 / 255.0, blue: 84.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var completeCol: UIColor {
+        return UIColor(red: 70.0 / 255.0, green: 79.0 / 255.0, blue: 178.0 / 255.0, alpha: 1.0)
+    }
     @nonobjc class var veryLightPink: UIColor {
         return UIColor(white: 200.0 / 255.0, alpha: 1.0)
     }
@@ -39,5 +50,27 @@ extension UIFont {
     
     @nonobjc class var Bold: UIFont {
         return UIFont(name: "AppleSDGothicNeo-Bold", size: 20.0)!
+    }
+    
+    @nonobjc class var Bold2: UIFont {
+        return UIFont(name: "AppleSDGothicNeo-Bold", size: 16.0)!
+    }
+    
+    @nonobjc class var Bold3: UIFont {
+        return UIFont(name: "AppleSDGothicNeo-Bold", size: 14.0)!
+    }
+    @nonobjc class var Light: UIFont {
+        return UIFont(name: "AppleSDGothicNeo-Light", size: 20.0)!
+    }
+    @nonobjc class var Light2: UIFont {
+        return UIFont(name: "AppleSDGothicNeo-Light", size: 16.0)!
+    }
+    
+    
+    @nonobjc class var Medium: UIFont {
+        return UIFont(name: "AppleSDGothicNeo-Medium", size: 14.0)!
+    }
+    @nonobjc class var Medium2: UIFont {
+        return UIFont(name: "AppleSDGothicNeo-Medium", size: 16.0)!
     }
 }

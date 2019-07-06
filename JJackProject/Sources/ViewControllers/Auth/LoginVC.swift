@@ -34,6 +34,11 @@ class LoginVC: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func Login(_ sender: Any) {
+        guard let dvc = UIStoryboard(name: "HomeMain", bundle: nil).instantiateViewController(withIdentifier: "Home")as? HomeVC else {return}
+        navigationController?.pushViewController(dvc, animated: true)
+    }
+    
     @IBAction func unwindToMain (segue: UIStoryboardSegue) {
     }
    
