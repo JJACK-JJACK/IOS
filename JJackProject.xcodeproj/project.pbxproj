@@ -25,6 +25,7 @@
 		C01E930922CBEB6400D43366 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01E930822CBEB6400D43366 /* MainVC.swift */; };
 		C021C2F622D06E3200ADF1FE /* Charge.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C021C2F522D06E3200ADF1FE /* Charge.storyboard */; };
 		C021C2F922D06E5900ADF1FE /* ChargeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C021C2F822D06E5900ADF1FE /* ChargeVC.swift */; };
+		C021C2FB22D0D3D100ADF1FE /* CompleteChargeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C021C2FA22D0D3D100ADF1FE /* CompleteChargeVC.swift */; };
 		C027A94522CD074700F198ED /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027A94422CD074700F198ED /* DetailVC.swift */; };
 		C027A94722CD249C00F198ED /* DonateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027A94622CD249C00F198ED /* DonateVC.swift */; };
 		C027A94922CD356100F198ED /* CompleteDonateAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027A94822CD356100F198ED /* CompleteDonateAlertVC.swift */; };
@@ -74,6 +75,7 @@
 		C01E930822CBEB6400D43366 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		C021C2F522D06E3200ADF1FE /* Charge.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Charge.storyboard; sourceTree = "<group>"; };
 		C021C2F822D06E5900ADF1FE /* ChargeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeVC.swift; sourceTree = "<group>"; };
+		C021C2FA22D0D3D100ADF1FE /* CompleteChargeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteChargeVC.swift; sourceTree = "<group>"; };
 		C027A94422CD074700F198ED /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		C027A94622CD249C00F198ED /* DonateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateVC.swift; sourceTree = "<group>"; };
 		C027A94822CD356100F198ED /* CompleteDonateAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteDonateAlertVC.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				C021C2F822D06E5900ADF1FE /* ChargeVC.swift */,
+				C021C2FA22D0D3D100ADF1FE /* CompleteChargeVC.swift */,
 			);
 			name = Charge;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				C08D146522CF07AD00F5EB0A /* Ranking.swift in Sources */,
 				C01BC94422CCB393000AAF58 /* MainInfo.swift in Sources */,
 				C027A94922CD356100F198ED /* CompleteDonateAlertVC.swift in Sources */,
+				C021C2FB22D0D3D100ADF1FE /* CompleteChargeVC.swift in Sources */,
 				C027A94722CD249C00F198ED /* DonateVC.swift in Sources */,
 				C027A94522CD074700F198ED /* DetailVC.swift in Sources */,
 				C01A043B22C9E9AE00ED8CD2 /* SideMenuVC.swift in Sources */,
