@@ -227,6 +227,8 @@
                     <navigationItem key="navigationItem" id="9a0-N1-Lv2"/>
                     <connections>
                         <outlet property="Login" destination="qH3-4h-lKG" id="Yhu-J9-CrW"/>
+                        <outlet property="idTF" destination="HAB-pj-bE8" id="IjB-Tm-ULf"/>
+                        <outlet property="pwTF" destination="ljE-b2-PTp" id="nZf-3d-4mX"/>
                         <outlet property="toSignup" destination="LV8-1A-S0x" id="fT0-sX-a7N"/>
                         <outlet property="underBarView" destination="OSl-1Y-vbk" id="yM4-KP-2Gp"/>
                     </connections>
@@ -325,6 +327,11 @@
                         <viewLayoutGuide key="safeArea" id="igk-Pw-ooL"/>
                     </view>
                     <navigationItem key="navigationItem" id="0Ay-qL-gjd"/>
+                    <connections>
+                        <outlet property="control" destination="PAg-eu-hSp" id="KZh-vN-Lsm"/>
+                        <outlet property="emailTF" destination="RQ8-fq-WQp" id="NDt-vA-Lrn"/>
+                        <outlet property="nextBtn" destination="5zz-02-9tf" id="rGf-Hd-xUK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1v4-BE-k5r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -444,7 +451,7 @@
                             <constraint firstItem="XsV-Bv-7dM" firstAttribute="leading" secondItem="eOC-nG-aSj" secondAttribute="leading" id="UGQ-71-amv"/>
                             <constraint firstItem="yzt-hg-QRv" firstAttribute="top" secondItem="OeF-UJ-amJ" secondAttribute="bottom" constant="16" id="WUL-F9-bTp"/>
                             <constraint firstItem="Xc0-QT-4mF" firstAttribute="top" secondItem="VcO-SX-cGF" secondAttribute="bottom" constant="31" id="YJb-zK-f4W"/>
-                            <constraint firstItem="LJn-Ib-ACJ" firstAttribute="bottom" secondItem="HVj-27-iPV" secondAttribute="bottom" constant="103" id="eC2-vp-0xZ"/>
+                            <constraint firstAttribute="bottom" secondItem="HVj-27-iPV" secondAttribute="bottom" constant="137" id="eC2-vp-0xZ"/>
                             <constraint firstItem="LJn-Ib-ACJ" firstAttribute="trailing" secondItem="eOC-nG-aSj" secondAttribute="trailing" constant="39" id="f4z-eN-5MU"/>
                             <constraint firstItem="LJn-Ib-ACJ" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Xc0-QT-4mF" secondAttribute="trailing" symbolic="YES" id="mZO-Pt-PBg"/>
                             <constraint firstItem="S7e-W5-eMO" firstAttribute="leading" secondItem="yzt-hg-QRv" secondAttribute="leading" id="o0s-aY-J2a"/>
@@ -453,6 +460,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LJn-Ib-ACJ"/>
                     </view>
+                    <connections>
+                        <outlet property="control" destination="eC2-vp-0xZ" id="80I-F4-5HL"/>
+                        <outlet property="nextBtn" destination="HVj-27-iPV" id="tO7-yg-rrf"/>
+                        <outlet property="pwCheckTF" destination="yzt-hg-QRv" id="SlD-DN-WDy"/>
+                        <outlet property="pwTF" destination="eOC-nG-aSj" id="ZRd-Ni-rwA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Cp-Zc-8qs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -598,6 +611,10 @@
                     </view>
                     <connections>
                         <outlet property="checkDuplicate" destination="knC-Vu-L0P" id="Cbw-VE-gdb"/>
+                        <outlet property="control" destination="Nci-Ax-1HL" id="xuy-Ke-gqn"/>
+                        <outlet property="nameTF" destination="0HU-Mp-775" id="7WV-5F-Uvg"/>
+                        <outlet property="nextBtn" destination="8UX-2e-zNe" id="QN3-MH-PGf"/>
+                        <outlet property="pwCheckTF" destination="iLl-ze-wEQ" id="P19-sD-ne7"/>
                         <segue destination="X6L-2V-39b" kind="unwind" identifier="unwindToMain" unwindAction="unwindToMainWithSegue:" id="UGx-2D-7mR"/>
                     </connections>
                 </viewController>
@@ -647,6 +664,6 @@
         <image name="imgLogin" width="313" height="161"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9YL-dE-3q6"/>
+        <segue reference="lCZ-oX-cG1"/>
     </inferredMetricsTieBreakers>
 </document>
