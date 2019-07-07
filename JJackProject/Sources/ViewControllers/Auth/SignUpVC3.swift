@@ -31,11 +31,20 @@ class SignUpVC3: UIViewController {
         setupNotification()
     }
     
+    var paramPw: String = ""
 
     
     @IBAction func completeSignup(_ sender: UIButton) {
-        print("hello")
-        performSegue(withIdentifier: "unwindToMain", sender: self)
+        guard let pw = pwCheckTF.text else {return}
+        guard let nickName = nameTF.text else {return}
+        
+        if pw == self.paramPw{
+            // 통신
+            performSegue(withIdentifier: "unwindToMain", sender: self)
+        } else {
+            simpleAlert(title: "실패", message: "비밀번호가 일치 하지 않습니다.")
+        }
+        
     }
     
     @IBAction func Back(_ sender: Any) {
@@ -70,5 +79,6 @@ extension SignUpVC3: UITextFieldDelegate {
         //        self.Login.transform = .identity
         //        self.toSignup.transform = .identity
         self.nextBtn.transform = .identity
+        self.view.transform = .identity
     }
 }

@@ -26,10 +26,16 @@ class SignUpVC1: UIViewController {
     
 
     @IBAction func goNext(_ sender: Any) {
-        
-        guard let dvc = storyboard?.instantiateViewController(withIdentifier: "SettingPwd") as? SignUpVC2 else { return }
-        
-        navigationController?.pushViewController(dvc, animated: true)
+        guard let email = emailTF.text else {return}
+        if email.Validate() {
+            guard let dvc = storyboard?.instantiateViewController(withIdentifier: "SettingPwd") as? SignUpVC2 else { return }
+            
+            dvc.paramEmail = email
+            navigationController?.pushViewController(dvc, animated: true)
+        }else {
+            simpleAlert(title: "실패", message: "이메일 형식이 잘못 되었습니다.")
+        }
+       
     }
     
     @IBAction func Back(_ sender: Any) {

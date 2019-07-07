@@ -28,6 +28,10 @@
 		C021C2FB22D0D3D100ADF1FE /* CompleteChargeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C021C2FA22D0D3D100ADF1FE /* CompleteChargeVC.swift */; };
 		C021C2FD22D0ED1E00ADF1FE /* DetailRankingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C021C2FC22D0ED1E00ADF1FE /* DetailRankingVC.swift */; };
 		C021C2FF22D20C7D00ADF1FE /* ChargeMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C021C2FE22D20C7D00ADF1FE /* ChargeMainVC.swift */; };
+		C021C30322D225A500ADF1FE /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C021C30222D225A500ADF1FE /* NetworkResult.swift */; };
+		C021C30622D225F300ADF1FE /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C021C30522D225F300ADF1FE /* AuthService.swift */; };
+		C021C30822D229AC00ADF1FE /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = C021C30722D229AC00ADF1FE /* Token.swift */; };
+		C021C30A22D255A400ADF1FE /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C021C30922D255A400ADF1FE /* String+Extension.swift */; };
 		C027A94522CD074700F198ED /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027A94422CD074700F198ED /* DetailVC.swift */; };
 		C027A94722CD249C00F198ED /* DonateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027A94622CD249C00F198ED /* DonateVC.swift */; };
 		C027A94922CD356100F198ED /* CompleteDonateAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C027A94822CD356100F198ED /* CompleteDonateAlertVC.swift */; };
@@ -80,6 +84,10 @@
 		C021C2FA22D0D3D100ADF1FE /* CompleteChargeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteChargeVC.swift; sourceTree = "<group>"; };
 		C021C2FC22D0ED1E00ADF1FE /* DetailRankingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRankingVC.swift; sourceTree = "<group>"; };
 		C021C2FE22D20C7D00ADF1FE /* ChargeMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeMainVC.swift; sourceTree = "<group>"; };
+		C021C30222D225A500ADF1FE /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		C021C30522D225F300ADF1FE /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		C021C30722D229AC00ADF1FE /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		C021C30922D255A400ADF1FE /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		C027A94422CD074700F198ED /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		C027A94622CD249C00F198ED /* DonateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateVC.swift; sourceTree = "<group>"; };
 		C027A94822CD356100F198ED /* CompleteDonateAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteDonateAlertVC.swift; sourceTree = "<group>"; };
@@ -173,11 +181,29 @@
 		C021C2F722D06E4200ADF1FE /* Charge */ = {
 			isa = PBXGroup;
 			children = (
+				C08482DF22C337640087F3BC /* Views */,
 				C021C2F822D06E5900ADF1FE /* ChargeVC.swift */,
 				C021C2FA22D0D3D100ADF1FE /* CompleteChargeVC.swift */,
 				C021C2FE22D20C7D00ADF1FE /* ChargeMainVC.swift */,
 			);
 			name = Charge;
+			sourceTree = "<group>";
+		};
+		C021C30122D2258000ADF1FE /* common */ = {
+			isa = PBXGroup;
+			children = (
+				C08482E022C3378E0087F3BC /* APIManager.swift */,
+				C021C30222D225A500ADF1FE /* NetworkResult.swift */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		C021C30422D225D900ADF1FE /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				C021C30522D225F300ADF1FE /* AuthService.swift */,
+			);
+			name = Auth;
 			sourceTree = "<group>";
 		};
 		C027A94C22CD40C600F198ED /* Record */ = {
@@ -244,7 +270,6 @@
 				C08482D322C252C70087F3BC /* APIServices */,
 				C08482DD22C3371E0087F3BC /* Model */,
 				C08482DE22C337490087F3BC /* Protocol */,
-				C08482DF22C337640087F3BC /* Views */,
 				C08482D222C252AD0087F3BC /* ViewControllers */,
 			);
 			path = Sources;
@@ -282,7 +307,8 @@
 		C08482D322C252C70087F3BC /* APIServices */ = {
 			isa = PBXGroup;
 			children = (
-				C08482E022C3378E0087F3BC /* APIManager.swift */,
+				C021C30422D225D900ADF1FE /* Auth */,
+				C021C30122D2258000ADF1FE /* common */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -294,6 +320,7 @@
 				C08482D722C253290087F3BC /* UIView+Extensions.swift */,
 				C08482D922C253370087F3BC /* UIViewController+Extensions.swift */,
 				C08482DB22C337110087F3BC /* UIImageView+ㄷExtensions.swift */,
+				C021C30922D255A400ADF1FE /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -304,6 +331,7 @@
 				C01E92F022CB62DE00D43366 /* History.swift */,
 				C01BC94322CCB393000AAF58 /* MainInfo.swift */,
 				C08D146422CF07AD00F5EB0A /* Ranking.swift */,
+				C021C30722D229AC00ADF1FE /* Token.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -324,7 +352,8 @@
 				C03353EB22CDC565007EEA16 /* RecordCell.swift */,
 				C08D146222CF03E700F5EB0A /* RankingCell.swift */,
 			);
-			path = Views;
+			name = Views;
+			path = ../Views;
 			sourceTree = "<group>";
 		};
 		C084832622C93C9B0087F3BC /* Auth */ = {
@@ -466,6 +495,7 @@
 				C01E92E322CA372F00D43366 /* MyPageVC.swift in Sources */,
 				C08D146522CF07AD00F5EB0A /* Ranking.swift in Sources */,
 				C01BC94422CCB393000AAF58 /* MainInfo.swift in Sources */,
+				C021C30622D225F300ADF1FE /* AuthService.swift in Sources */,
 				C027A94922CD356100F198ED /* CompleteDonateAlertVC.swift in Sources */,
 				C021C2FB22D0D3D100ADF1FE /* CompleteChargeVC.swift in Sources */,
 				C027A94722CD249C00F198ED /* DonateVC.swift in Sources */,
@@ -490,6 +520,7 @@
 				C03353F322CE237D007EEA16 /* RankingVC.swift in Sources */,
 				C08482D822C253290087F3BC /* UIView+Extensions.swift in Sources */,
 				C03353EE22CDC6C7007EEA16 /* DetailRecordVC.swift in Sources */,
+				C021C30822D229AC00ADF1FE /* Token.swift in Sources */,
 				C027A95022CD4C9600F198ED /* EarnBerryVC.swift in Sources */,
 				C08482DC22C337110087F3BC /* UIImageView+ㄷExtensions.swift in Sources */,
 				C021C2F922D06E5900ADF1FE /* ChargeVC.swift in Sources */,
@@ -497,6 +528,8 @@
 				C01E930422CB7C5E00D43366 /* HomeVC.swift in Sources */,
 				C08482E122C3378E0087F3BC /* APIManager.swift in Sources */,
 				C021C2FF22D20C7D00ADF1FE /* ChargeMainVC.swift in Sources */,
+				C021C30322D225A500ADF1FE /* NetworkResult.swift in Sources */,
+				C021C30A22D255A400ADF1FE /* String+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

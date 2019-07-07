@@ -25,12 +25,21 @@ class SignUpVC2: UIViewController {
         setupNotification()
         
         self.nextBtn.setBorder(borderColor: .pointCol, borderWidth: 4.0)
+        print(paramEmail)
     }
     
+    var paramEmail: String = ""
 
     @IBAction func goNext(_ sender: Any) {
-        guard let dvc = storyboard?.instantiateViewController(withIdentifier: "SettingNickname")as? SignUpVC3 else {return}
-        navigationController?.pushViewController(dvc, animated: true)
+        guard let pw = pwTF.text else {return}
+        guard let pwCheck = pwCheckTF.text else {return}
+        if pw == pwCheck {
+            guard let dvc = storyboard?.instantiateViewController(withIdentifier: "SettingNickname")as? SignUpVC3 else {return}
+           dvc.paramPw = pw
+            navigationController?.pushViewController(dvc, animated: true)
+        }else {
+            simpleAlert(title: "실패", message: "두 비밀번호가 일치하지 않습니다.")
+        }
     }
     
     @IBAction func Back(_ sender: Any) {
@@ -66,5 +75,6 @@ extension SignUpVC2: UITextFieldDelegate {
         //        self.Login.transform = .identity
         //        self.toSignup.transform = .identity
         self.nextBtn.transform = .identity
+        self.view.transform = .identity
     }
 }

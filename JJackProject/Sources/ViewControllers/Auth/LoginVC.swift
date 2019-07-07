@@ -41,8 +41,48 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func Login(_ sender: Any) {
-        guard let dvc = UIStoryboard(name: "HomeMain", bundle: nil).instantiateViewController(withIdentifier: "Home")as? HomeVC else {return}
-        navigationController?.pushViewController(dvc, animated: true)
+        guard let id = idTF.text else {return}
+        guard let pw = pwTF.text else {return}
+       
+        if id.Validate(){
+            AuthServices.shared.login(id, pw) {
+                (data) in
+                switch data {
+                case .success(let token):
+                    print(token)
+                    print(id)
+                    print(pw)
+                    guard let dvc = UIStoryboard(name: "HomeMain", bundle: nil).instantiateViewController(withIdentifier: "Home")as? HomeVC else {return}
+                    self.navigationController?.pushViewController(dvc, animated: true)
+                    break
+                case .requestErr(let err):
+                    print(err)
+                    break
+                case .pathErr:
+                    // 대체로 경로를 잘못 쓴 경우입니다.
+                    // 오타를 확인해보세요.
+                    print("경로 에러")
+                    break
+                case .serverErr:
+                    // 서버의 문제인 경우입니다.
+                    // 여기에서 동작할 행동을 정의해주시면 됩니다.
+                    print("서버 에러")
+                    break
+                case .networkFail:
+                    // 이 경우엔 reachability 를 이용해서 현재 네트워크 상태를 검사하고
+                    // 앱을 종료시키거나 메시지를 표시하면 됩니다.
+                    // reachability 에 대해서 구글링해보세요!
+                    print(id)
+                    print(pw)
+                    print("네트워크 에러")
+                    break
+                }
+            }
+        } else{
+            simpleAlert(title: "실패", message: "이메일 형식이 올바르지 않습니다.")
+        }
+        
+        
     }
     
     @IBAction func unwindToMain (segue: UIStoryboardSegue) {
