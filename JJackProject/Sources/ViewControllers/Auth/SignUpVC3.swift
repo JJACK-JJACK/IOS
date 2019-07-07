@@ -10,10 +10,14 @@ import UIKit
 
 class SignUpVC3: UIViewController {
 
+    @IBOutlet weak var checkDuplicate: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+       self.checkDuplicate.setBorder(borderColor: UIColor(white: 221.0 / 255.0, alpha: 1.0), borderWidth: 1.0)
+        self.checkDuplicate.makeRounded(cornerRadius: 8.0)
     }
     
 
