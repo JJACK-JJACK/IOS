@@ -51,7 +51,6 @@
 		C08482D822C253290087F3BC /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08482D722C253290087F3BC /* UIView+Extensions.swift */; };
 		C08482DA22C253370087F3BC /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08482D922C253370087F3BC /* UIViewController+Extensions.swift */; };
 		C08482DC22C337110087F3BC /* UIImageView+ㄷExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08482DB22C337110087F3BC /* UIImageView+ㄷExtensions.swift */; };
-		C08482E122C3378E0087F3BC /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08482E022C3378E0087F3BC /* APIManager.swift */; };
 		C084832522C93C930087F3BC /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C084832422C93C930087F3BC /* LoginVC.swift */; };
 		C084832822C953190087F3BC /* SignUpVC1.swift in Sources */ = {isa = PBXBuildFile; fileRef = C084832722C953190087F3BC /* SignUpVC1.swift */; };
 		C084832A22C953350087F3BC /* SignUpVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C084832922C953350087F3BC /* SignUpVC2.swift */; };
@@ -112,7 +111,6 @@
 		C08482D722C253290087F3BC /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		C08482D922C253370087F3BC /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		C08482DB22C337110087F3BC /* UIImageView+ㄷExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+ㄷExtensions.swift"; sourceTree = "<group>"; };
-		C08482E022C3378E0087F3BC /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		C084832422C93C930087F3BC /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		C084832722C953190087F3BC /* SignUpVC1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC1.swift; sourceTree = "<group>"; };
 		C084832922C953350087F3BC /* SignUpVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC2.swift; sourceTree = "<group>"; };
@@ -198,7 +196,6 @@
 		C021C30122D2258000ADF1FE /* common */ = {
 			isa = PBXGroup;
 			children = (
-				C08482E022C3378E0087F3BC /* APIManager.swift */,
 				C021C30222D225A500ADF1FE /* NetworkResult.swift */,
 			);
 			path = common;
@@ -546,7 +543,6 @@
 				C021C2F922D06E5900ADF1FE /* ChargeVC.swift in Sources */,
 				C08482BE22C2515D0087F3BC /* AppDelegate.swift in Sources */,
 				C01E930422CB7C5E00D43366 /* HomeVC.swift in Sources */,
-				C08482E122C3378E0087F3BC /* APIManager.swift in Sources */,
 				C021C2FF22D20C7D00ADF1FE /* ChargeMainVC.swift in Sources */,
 				C021C30322D225A500ADF1FE /* NetworkResult.swift in Sources */,
 				C021C30A22D255A400ADF1FE /* String+Extension.swift in Sources */,
