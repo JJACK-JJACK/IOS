@@ -65,18 +65,24 @@ class DetailVC: UIViewController {
         self.processRate.text = paramProcess + "%"
         self.donatedBerry.text = paramDonated
         
-        let rate = Double(paramProcess) ?? 0.0
-        let width = self.view.frame.width
-        let show = round( (Double(width)
-            - 40.0) * (rate / 100.0) )
-        self.showRate.constant = CGFloat(show)
-        // status Bar Border make rounded
-        self.statusBar.makeRounded(cornerRadius: nil)
-        self.rateBar.makeRounded(cornerRadius: nil)
-        
         // ready for container view
         self.container2.isHidden = true
         self.onPlan.constant = 0
+        
+        // show the process of donation
+        activateProcess()
+    }
+    func activateProcess() {
+        let rate = Double(paramProcess) ?? 0.0
+        let width = self.view.frame.width
+        
+        let show = round( (Double(width)
+            - 40.0) * (rate / 100.0) )
+        if show >= 100 { self.showRate.constant = 100}
+        else { self.showRate.constant = CGFloat(show) }
+        // status Bar Border make rounded
+        self.statusBar.makeRounded(cornerRadius: nil)
+        self.rateBar.makeRounded(cornerRadius: nil)
     }
     
     @IBAction func showInfo(_ sender: UIButton) {

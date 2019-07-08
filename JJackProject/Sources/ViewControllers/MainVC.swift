@@ -257,9 +257,13 @@ extension MainVC: UITableViewDataSource {
         cell.donatedBerry.text = List.donatedBerry
         
         let rate = Double(List.processRate) ?? 0.0
-        let num = round(197 * (rate / 100.0))
-        cell.showRate.constant = CGFloat(num)
-        
+        let length = Double(cell.statusBar.frame.width)
+        let num = round(length * (rate / 100.0))
+        if num >= 100 {
+            cell.showRate.constant = 100
+        } else{
+            cell.showRate.constant = CGFloat(num)
+        }
         return cell
     }
     

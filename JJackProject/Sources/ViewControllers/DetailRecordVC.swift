@@ -56,22 +56,31 @@ class DetailRecordVC: UIViewController {
         self.processRate.text = paramProcess + "%"
         self.donatedBerry.text = paramDonated
         
-        let rate = Double(paramProcess) ?? 0.0
-        let width = self.view.frame.width
-        let show = round( (Double(width)
-            - 40.0) * (rate / 100.0) )
-        self.showRate.constant = CGFloat(show)
         
-        // status Bar Border make rounded
-        self.statusBar.makeRounded(cornerRadius: nil)
-        self.rateBar.makeRounded(cornerRadius: nil)
+        
         self.statusDot1.makeRounded(cornerRadius: nil)
         self.statusDot2.makeRounded(cornerRadius: nil)
         self.statusDot3.makeRounded(cornerRadius: nil)
         
+        // show progress
+        activateProcess()
         
         // 색구분해주기
         sortingStatus()
+    }
+    
+    func activateProcess () {
+        let rate = Double(paramProcess) ?? 0.0
+        let width = self.view.frame.width
+        let show = round( (Double(width)
+            - 40.0) * (rate / 100.0) )
+        if show >= 100 {self.showRate.constant = 100}
+        else {self.showRate.constant = CGFloat(show)}
+        
+        
+        // status Bar Border make rounded
+        self.statusBar.makeRounded(cornerRadius: nil)
+        self.rateBar.makeRounded(cornerRadius: nil)
     }
     
     func sortingStatus () {

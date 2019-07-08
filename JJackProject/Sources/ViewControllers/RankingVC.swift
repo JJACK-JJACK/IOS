@@ -69,8 +69,8 @@ extension RankingVC: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let dvc = storyboard?.instantiateViewController(withIdentifier: "DetailRanking")as? DetailRankingVC else {return}
-        let List = topTenList[indexPath.row]
-        dvc.paramThumbImg = List
+//        let List = topTenList[indexPath.row]
+//        dvc.paramThumbImg = List
         
         navigationController?.pushViewController(dvc, animated: true)
     }
