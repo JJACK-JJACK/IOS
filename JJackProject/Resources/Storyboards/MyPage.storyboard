@@ -251,6 +251,7 @@
                         <outlet property="email" destination="vfk-WP-wqu" id="zbV-rZ-Wh6"/>
                         <outlet property="nickName" destination="Yft-2z-Lgg" id="gJ2-y2-Fxq"/>
                         <segue destination="T3R-lp-vnJ" kind="unwind" identifier="goHome" unwindAction="unwind:" id="Ysn-3f-cZZ"/>
+                        <segue destination="T3R-lp-vnJ" kind="unwind" identifier="toLogin" unwindAction="unwindToMainWithSegue:" id="q7k-zV-6dM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="irf-ol-AR8" userLabel="First Responder" sceneMemberID="firstResponder"/>

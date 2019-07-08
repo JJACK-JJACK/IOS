@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Charge MainVC-->
         <scene sceneID="0Li-pk-fus">
             <objects>
-                <viewController id="J1M-td-lVr" sceneMemberID="viewController">
+                <viewController id="J1M-td-lVr" customClass="ChargeMainVC" customModule="JJackProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SFo-fl-Ab9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,6 +35,9 @@
                                     <constraint firstAttribute="height" constant="32" id="vit-dz-TbV"/>
                                 </constraints>
                                 <state key="normal" image="icBack"/>
+                                <connections>
+                                    <action selector="Back:" destination="J1M-td-lVr" eventType="touchUpInside" id="cy9-Gx-AkK"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="berryRIcon" translatesAutoresizingMaskIntoConstraints="NO" id="7ub-bS-wRA">
                                 <rect key="frame" x="132" y="175" width="36" height="36"/>

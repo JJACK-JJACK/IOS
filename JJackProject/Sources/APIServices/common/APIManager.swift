@@ -7,8 +7,9 @@
 //
 
 protocol APIManager {}
+
 extension APIManager {
     static func url(_ path: String) -> String {
-        return " " + path
+        return "http://52.79.49.178:3000" + path
     }
 }

@@ -1080,6 +1080,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="confirmDonate:" destination="pYy-IV-2Qq" eventType="touchUpInside" id="PGP-sI-nFy"/>
                                     <segue destination="Dh0-xI-nd0" kind="presentation" id="UKg-bz-ehT"/>
                                 </connections>
                             </button>
