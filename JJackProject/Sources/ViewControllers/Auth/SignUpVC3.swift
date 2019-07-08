@@ -31,17 +31,71 @@ class SignUpVC3: UIViewController {
         setupNotification()
     }
     
+    var paramEmail: String = ""
     var paramPw: String = ""
+    var duplicate: Bool = false
 
+    @IBAction func checkDupl(_ sender: Any) {
+        guard let nickname = nameTF.text else {return}
+        
+        AuthServices.shared.checkDuplicate(nickname) {
+            (data) in
+            switch data {
+            case .success(let validate):
+                self.simpleAlert(title: "성공", message: "사용가능한 닉네임 입니다.")
+                let pass: Bool = (validate as? Bool)!
+                self.duplicate = pass
+                break
+            case .requestErr(let message):
+                print(message)
+                self.simpleAlert(title: "실패", message: (message as? String)!)
+                break
+            case .pathErr:
+                break
+            case .serverErr:
+                break
+            case .networkFail:
+                break
+            }
+        }
+    }
     
     @IBAction func completeSignup(_ sender: UIButton) {
         guard let pw = pwCheckTF.text else {return}
         guard let nickName = nameTF.text else {return}
         
-        if pw == self.paramPw{
+        if pw == self.paramPw && duplicate{
             // 통신
+            AuthServices.shared.signup(paramEmail, pw, nickName) {
+                (data) in
+                switch data {
+                case .success(let message):
+                    print(message)
+                    break
+                case .requestErr(let status):
+                    switch status as? Int {
+                    case 400:
+                        print("이미 회원입니다.")
+                    case 600:
+                        print("회원 등록 실패 / DB에러")
+                    case .none:
+                        print("값없음")
+                    case .some(_):
+                        print("띠용")
+                    }
+                    break
+                case .pathErr:
+                    break
+                case .serverErr:
+                    break
+                case .networkFail:
+                    break
+                }
+            }
+            // 돌아가기
             performSegue(withIdentifier: "unwindToMain", sender: self)
         } else {
+            // 닉네임 중복시랑, 패스워드 불일치 - 2가지 예외처리 필요!
             simpleAlert(title: "실패", message: "비밀번호가 일치 하지 않습니다.")
         }
         

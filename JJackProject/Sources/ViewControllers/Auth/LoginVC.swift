@@ -41,15 +41,21 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func Login(_ sender: Any) {
+//        guard let dvc = UIStoryboard(name: "HomeMain", bundle: nil).instantiateViewController(withIdentifier: "Home")as? HomeVC else {return}
+//        self.navigationController?.pushViewController(dvc, animated: true)
         guard let id = idTF.text else {return}
         guard let pw = pwTF.text else {return}
-       
+
         if id.Validate(){
             AuthServices.shared.login(id, pw) {
                 (data) in
                 switch data {
                 case .success(let token):
-                    print(token)
+                    // 보관 , 덮어쓰기 , 파기 -> 키 : 벨류 로 저장
+                    // UserDefaults를 사용할 때에는 객체를 담는 것이 아니라 객체의 정보를 담아야 함으로 형변환이 필요하다.
+/*A default object must be a property list—that is, an instance of (or for collections, a combination of instances of) NSData, NSString, NSNumber, NSDate, NSArray, or NSDictionary. If you want to store any other type of object, you should typically archive it to create an instance of NSData. */
+                    // as token 은 무슨 말일까?!
+                    UserDefaults.standard.set(token as! Token, forKey: "refreshToken")
                     print(id)
                     print(pw)
                     guard let dvc = UIStoryboard(name: "HomeMain", bundle: nil).instantiateViewController(withIdentifier: "Home")as? HomeVC else {return}
@@ -85,8 +91,6 @@ class LoginVC: UIViewController {
         
     }
     
-    @IBAction func unwindToMain (segue: UIStoryboardSegue) {
-    }
    
 }
 extension LoginVC: UITextFieldDelegate {

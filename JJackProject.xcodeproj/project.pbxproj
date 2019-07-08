@@ -58,6 +58,9 @@
 		C084832C22C953540087F3BC /* SignUpVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C084832B22C953540087F3BC /* SignUpVC3.swift */; };
 		C08D146322CF03E700F5EB0A /* RankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08D146222CF03E700F5EB0A /* RankingCell.swift */; };
 		C08D146522CF07AD00F5EB0A /* Ranking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08D146422CF07AD00F5EB0A /* Ranking.swift */; };
+		C0DC370E22D32DB90010A730 /* ResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC370D22D32DB90010A730 /* ResponseString.swift */; };
+		C0DC371122D339A60010A730 /* ResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC371022D339A60010A730 /* ResponseObject.swift */; };
+		C0DC371322D339B00010A730 /* ResponseArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC371222D339B00010A730 /* ResponseArray.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +119,9 @@
 		C084832B22C953540087F3BC /* SignUpVC3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC3.swift; sourceTree = "<group>"; };
 		C08D146222CF03E700F5EB0A /* RankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCell.swift; sourceTree = "<group>"; };
 		C08D146422CF07AD00F5EB0A /* Ranking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking.swift; sourceTree = "<group>"; };
+		C0DC370D22D32DB90010A730 /* ResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseString.swift; sourceTree = "<group>"; };
+		C0DC371022D339A60010A730 /* ResponseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseObject.swift; sourceTree = "<group>"; };
+		C0DC371222D339B00010A730 /* ResponseArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseArray.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,10 +334,10 @@
 		C08482DD22C3371E0087F3BC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C0DC370F22D339900010A730 /* Auth */,
 				C01E92F022CB62DE00D43366 /* History.swift */,
 				C01BC94322CCB393000AAF58 /* MainInfo.swift */,
 				C08D146422CF07AD00F5EB0A /* Ranking.swift */,
-				C021C30722D229AC00ADF1FE /* Token.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -366,6 +372,17 @@
 				C084832B22C953540087F3BC /* SignUpVC3.swift */,
 			);
 			path = Auth;
+			sourceTree = "<group>";
+		};
+		C0DC370F22D339900010A730 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				C0DC370D22D32DB90010A730 /* ResponseString.swift */,
+				C021C30722D229AC00ADF1FE /* Token.swift */,
+				C0DC371022D339A60010A730 /* ResponseObject.swift */,
+				C0DC371222D339B00010A730 /* ResponseArray.swift */,
+			);
+			name = Auth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -492,13 +509,16 @@
 				C01E92F122CB62DE00D43366 /* History.swift in Sources */,
 				C084832522C93C930087F3BC /* LoginVC.swift in Sources */,
 				C08482C022C2515D0087F3BC /* FirstVC.swift in Sources */,
+				C0DC371122D339A60010A730 /* ResponseObject.swift in Sources */,
 				C01E92E322CA372F00D43366 /* MyPageVC.swift in Sources */,
 				C08D146522CF07AD00F5EB0A /* Ranking.swift in Sources */,
 				C01BC94422CCB393000AAF58 /* MainInfo.swift in Sources */,
 				C021C30622D225F300ADF1FE /* AuthService.swift in Sources */,
 				C027A94922CD356100F198ED /* CompleteDonateAlertVC.swift in Sources */,
 				C021C2FB22D0D3D100ADF1FE /* CompleteChargeVC.swift in Sources */,
+				C0DC370E22D32DB90010A730 /* ResponseString.swift in Sources */,
 				C027A94722CD249C00F198ED /* DonateVC.swift in Sources */,
+				C0DC371322D339B00010A730 /* ResponseArray.swift in Sources */,
 				C027A94522CD074700F198ED /* DetailVC.swift in Sources */,
 				C01A043B22C9E9AE00ED8CD2 /* SideMenuVC.swift in Sources */,
 				C08482D622C2530B0087F3BC /* UIColor+Extensions.swift in Sources */,

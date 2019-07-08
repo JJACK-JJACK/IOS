@@ -23,12 +23,13 @@ class SignUpVC1: UIViewController {
         setupNotification()
         
     }
-    
 
     @IBAction func goNext(_ sender: Any) {
         guard let email = emailTF.text else {return}
         if email.Validate() {
             guard let dvc = storyboard?.instantiateViewController(withIdentifier: "SettingPwd") as? SignUpVC2 else { return }
+            
+            // email 문자열 전달
             
             dvc.paramEmail = email
             navigationController?.pushViewController(dvc, animated: true)
@@ -41,8 +42,7 @@ class SignUpVC1: UIViewController {
     @IBAction func Back(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-//    @IBAction func unwindToMain (segue: UIStoryboardSegue) {
-//    }
+
     
     
 }

@@ -35,7 +35,9 @@ class SignUpVC2: UIViewController {
         guard let pwCheck = pwCheckTF.text else {return}
         if pw == pwCheck {
             guard let dvc = storyboard?.instantiateViewController(withIdentifier: "SettingNickname")as? SignUpVC3 else {return}
-           dvc.paramPw = pw
+            // password 전달!
+            dvc.paramEmail = paramEmail
+            dvc.paramPw = pw
             navigationController?.pushViewController(dvc, animated: true)
         }else {
             simpleAlert(title: "실패", message: "두 비밀번호가 일치하지 않습니다.")

@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgLogin" translatesAutoresizingMaskIntoConstraints="NO" id="0su-eT-EeB">
-                                <rect key="frame" x="31" y="212" width="313" height="161"/>
+                                <rect key="frame" x="31" y="212" width="313" height="161.00000000000003"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="0su-eT-EeB" secondAttribute="height" multiplier="313:161" id="kI8-OV-kmv"/>
                                 </constraints>
@@ -572,6 +572,9 @@
                                 <state key="normal" title="중복확인">
                                     <color key="titleColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="checkDupl:" destination="3Qm-ya-Bor" eventType="touchUpInside" id="G0e-hu-ZCS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

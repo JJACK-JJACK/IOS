@@ -8,9 +8,6 @@
 
 import Foundation
 
-struct  Token: Codable {
-    let status: Int
-    let success: Bool
-    let message: String
-    let data: String?
+struct Token: Codable{
+    var token: String?
 }
