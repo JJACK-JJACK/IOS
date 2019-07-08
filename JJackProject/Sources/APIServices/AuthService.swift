@@ -28,7 +28,6 @@ struct AuthServices: APIManager {
         
         Alamofire.request(URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: headers)
             .responseData{ res in
-                
                 switch res.result {
                 case .success:
                     if let value = res.result.value {

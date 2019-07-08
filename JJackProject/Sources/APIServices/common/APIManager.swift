@@ -10,6 +10,6 @@ protocol APIManager {}
 
 extension APIManager {
     static func url(_ path: String) -> String {
-        return "52.79.49.178:3000" + path
+        return "https://52.79.49.178:3000" + path
     }
 }
