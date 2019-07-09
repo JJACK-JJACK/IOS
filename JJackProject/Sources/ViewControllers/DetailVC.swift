@@ -75,11 +75,9 @@ class DetailVC: UIViewController {
     }
     func activateProcess() {
         let rate = Double(paramProcess)
-        let width = self.view.frame.width
-        
-        let show = round( (Double(width)
-            - 40.0) * (rate / 100.0) )
-        if show >= 100 { self.showRate.constant = 100}
+        let width = Double(self.view.frame.width) -  40.0
+        let show = round( width * (rate / 100.0) )
+        if show >= width { self.showRate.constant = CGFloat(width)}
         else { self.showRate.constant = CGFloat(show) }
         // status Bar Border make rounded
         self.statusBar.makeRounded(cornerRadius: nil)
@@ -95,6 +93,8 @@ class DetailVC: UIViewController {
         switch sender.currentTitle {
         case "기부스토리":
             // 통신!
+            /* 어떻게 통신을 하면 좋을까?
+                해당 아이디에 관한 story와, plan을 가져와야 한다!*/
             plan.isSelected = false
         case "사용계획":
             // 통신!

@@ -40,7 +40,10 @@ class MainVC: UIViewController, UIScrollViewDelegate{
     @IBOutlet weak var highDonated: UIButton!
     @IBOutlet weak var lowDonated: UIButton!
     
+    // Home 에서 Select 된 카테고리의 인덱스패스 값
+    // 이 값들은 처음 실행 되고 나서 바뀐 값으로 유지 되고 갱신 되지 않는다.
     var paramIndex: Int = 0
+    var arrangeIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,18 +56,28 @@ class MainVC: UIViewController, UIScrollViewDelegate{
         
         scrollView.delegate = self
         
+        // 환경부터 Select시에 스크롤 필요!
         setBoldCategory(response: paramIndex)
         
         // 초기 설정.. 굳이?
         setBtn(button: upToDate, color: .JackBlack, font: .Medium2)
-//        setInfoData()
+
 
         self.loadViewIfNeeded()
-        
-        //sideMenu setUp
-//        setupSideMenu()
+    
+        // Home 에서 Main 이동 시 Main 기본 화면
+//        scroll(index: paramIndex)
+        // 다른 화면 전환 후 다시 올때
+        // paramIndex arrangeIndex 유지 할건지 아니면 초기화 할건지!
+        getFilteredList(category: paramIndex, filter: arrangeIndex)
+        print(arrangeIndex)
 
     
+    }
+    // Home 에서 Main 이동 시 Main 기본 화면
+    // 처음부터 화면이 나오게는 할 수 없나?
+    override func viewDidAppear(_ animated: Bool) {
+        scroll(index: paramIndex)
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
@@ -76,9 +89,6 @@ class MainVC: UIViewController, UIScrollViewDelegate{
         }
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        scroll(index: paramIndex)
-    }
     // 버튼 클릭시 컬랙션 뷰 스크롤
     func scroll (index: Int) {
         let menuIndex = NSIndexPath(item: index, section: 0)
@@ -111,6 +121,24 @@ class MainVC: UIViewController, UIScrollViewDelegate{
         scroll(index: response)
         
     }
+    // Donation List 내역 불러오기
+    func getDonatedList(category: Int) {
+        MainService.shared.getDonationList(category) {
+            [weak self]
+            (data) in
+            guard let `self` = self else {return}
+            switch data {
+            case .success(let data):
+                // infoset에 [info]형태를 갖춘 데이터들을 넣어서 info의 형식을 완성해야 한다.
+                self.infoSet = (data.self as? [Datum])!
+                self.donationInfoView.reloadData()
+                break
+            default:
+                break
+            }
+        }
+
+    }
     //Bolding Category
     @IBAction func selectCategory(_ sender: UIButton) {
         setBtn(button: child, color: .brownGrey, font: .Light)
@@ -124,7 +152,7 @@ class MainVC: UIViewController, UIScrollViewDelegate{
             sender.titleLabel?.font = .Bold
             sender.setTitleColor(.JackBlack, for: .normal)
             
-            var paramIndex: Int = 0
+//            var paramIndex: Int = 0
             switch sender.currentTitle {
             case "어린이":
                 scroll(index: 0)
@@ -147,19 +175,22 @@ class MainVC: UIViewController, UIScrollViewDelegate{
             default:
                 break
             }
-            MainService.shared.getDonationList(paramIndex) {
-                [weak self]
-                (data) in
-                guard let `self` = self else {return}
-                switch data {
-                case .success(let data):
-                    // infoset에 [info]형태를 갖춘 데이터들을 넣어서 info의 형식을 완성해야 한다.
-                    self.infoSet = (data.self as? [Datum])!
-                    self.donationInfoView.reloadData()
-                    break
-                default:
-                    break
-                }
+            getFilteredList(category: paramIndex, filter: arrangeIndex)
+        }
+    }
+    func getFilteredList (category: Int, filter: Int){
+        MainService.shared.getFilterdList(category, filter) {
+            [weak self]
+            (data) in
+            
+            guard let `self` = self else {return}
+            
+            switch data {
+            case .success(let data):
+                self.infoSet = (data.self as? [Datum])!
+                self.donationInfoView.reloadData()
+            default:
+                break
             }
         }
     }
@@ -173,8 +204,21 @@ class MainVC: UIViewController, UIScrollViewDelegate{
             sender.titleLabel?.font = .Medium2
             sender.setTitleColor(.JackBlack, for: .normal)
             
-            
             // switch 사용해서 통신 !
+            switch sender.currentTitle {
+            case "최신순":
+                arrangeIndex = 0
+                break
+            case "기부율 높은순":
+                arrangeIndex = 1
+                break
+            case "기부율 낮은순":
+                arrangeIndex = 2
+                break
+            default:
+                break
+            }
+            getFilteredList(category: paramIndex, filter: arrangeIndex)
         }
     }
     
@@ -283,8 +327,8 @@ extension MainVC: UITableViewDataSource {
         let rate = Double(List.percentage)
         let length = Double(cell.statusBar.frame.width)
         let num = round(length * (rate / 100.0))
-        if num >= 100 {
-            cell.showRate.constant = 100
+        if num >= length {
+            cell.showRate.constant = CGFloat(length)
         } else{
             cell.showRate.constant = CGFloat(num)
         }
