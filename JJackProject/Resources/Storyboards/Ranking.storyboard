@@ -19,13 +19,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ksz-ZK-Z4V">
-                                <rect key="frame" x="0.0" y="80" width="375" height="698"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="686"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZ6-GA-VpP">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="698"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="686"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rcK-kN-X9d">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="698"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="686"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lnN-vV-pdO">
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="202"/>
@@ -85,10 +85,10 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AX3-e4-OXm">
-                                                        <rect key="frame" x="0.0" y="285" width="375" height="413"/>
+                                                        <rect key="frame" x="0.0" y="285" width="375" height="401"/>
                                                         <subviews>
                                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="66K-Cl-0sV">
-                                                                <rect key="frame" x="0.0" y="0.0" width="375" height="413"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="375" height="401"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ASn-8S-DjB">
                                                                     <size key="itemSize" width="50" height="50"/>
@@ -98,7 +98,7 @@
                                                                 </collectionViewFlowLayout>
                                                                 <cells>
                                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RankingCell" id="W6d-zU-pmz" customClass="HomeCell" customModule="JJackProject" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="19" width="266" height="375"/>
+                                                                        <rect key="frame" x="0.0" y="13" width="266" height="375"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                                             <rect key="frame" x="0.0" y="0.0" width="266" height="375"/>
@@ -173,14 +173,14 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6i-mC-qgM">
-                                <rect key="frame" x="345" y="51" width="16" height="22"/>
+                                <rect key="frame" x="328" y="51.666666666666657" width="33" height="33"/>
                                 <state key="normal" image="icHamburger"/>
                                 <connections>
                                     <action selector="showMenu:" destination="QAw-7L-aWV" eventType="touchUpInside" id="1qg-0B-ma1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bep-W1-7TL">
-                                <rect key="frame" x="17" y="51" width="16" height="22"/>
+                                <rect key="frame" x="17" y="51" width="36" height="34"/>
                                 <state key="normal" image="icHome"/>
                                 <connections>
                                     <action selector="goHome:" destination="QAw-7L-aWV" eventType="touchUpInside" id="Qbi-Bp-EVl"/>
@@ -739,6 +739,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="PW5-vB-5og" secondAttribute="trailing" constant="20" id="YhM-vA-AMd"/>
                                                     <constraint firstAttribute="trailing" secondItem="ECw-dM-t0x" secondAttribute="trailing" constant="20" id="Zcl-t2-A58"/>
                                                     <constraint firstItem="05b-WM-hRj" firstAttribute="leading" secondItem="jmy-7y-2lY" secondAttribute="leading" constant="20" id="aoo-MH-qB9"/>
+                                                    <constraint firstAttribute="bottom" secondItem="4e9-Ek-vtd" secondAttribute="bottom" constant="17.333333333333258" id="c6L-K6-FTj"/>
                                                     <constraint firstItem="RDc-kS-QZl" firstAttribute="top" secondItem="5Ex-KY-2Yp" secondAttribute="bottom" constant="8" id="chP-ME-fQb"/>
                                                     <constraint firstAttribute="trailing" secondItem="7hC-ou-MQy" secondAttribute="trailing" constant="20" id="dTN-oF-Vt8"/>
                                                     <constraint firstItem="W8e-yn-kxD" firstAttribute="top" secondItem="FSu-eN-WFb" secondAttribute="bottom" constant="44" id="eYa-VN-0Ul"/>

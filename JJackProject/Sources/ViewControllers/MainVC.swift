@@ -22,10 +22,11 @@ class MainVC: UIViewController, UIScrollViewDelegate{
 
     @IBOutlet weak var mainView: UICollectionView!
     
-    var infoSet: [Info] = []
+    var infoSet = [Datum]()
+//    var infoSet: [Info] = []
     
     @IBOutlet weak var donationInfoView: UITableView!
-    
+
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var child: UIButton!
@@ -56,7 +57,7 @@ class MainVC: UIViewController, UIScrollViewDelegate{
         
         // 초기 설정.. 굳이?
         setBtn(button: upToDate, color: .JackBlack, font: .Medium2)
-        setInfoData()
+//        setInfoData()
 
         self.loadViewIfNeeded()
         
@@ -123,21 +124,42 @@ class MainVC: UIViewController, UIScrollViewDelegate{
             sender.titleLabel?.font = .Bold
             sender.setTitleColor(.JackBlack, for: .normal)
             
+            var paramIndex: Int = 0
             switch sender.currentTitle {
             case "어린이":
                 scroll(index: 0)
+                paramIndex = 0
             case "어르신":
                 scroll(index: 1)
+                paramIndex = 1
             case "동물":
                 scroll(index: 2)
+                paramIndex = 2
             case "장애우":
                 scroll(index: 3)
+                paramIndex = 3
             case "환경":
                 scroll(index: 4)
+                paramIndex = 4
             case "긴급구조":
                 scroll(index: 5)
+                paramIndex = 5
             default:
                 break
+            }
+            MainService.shared.getDonationList(paramIndex) {
+                [weak self]
+                (data) in
+                guard let `self` = self else {return}
+                switch data {
+                case .success(let data):
+                    // infoset에 [info]형태를 갖춘 데이터들을 넣어서 info의 형식을 완성해야 한다.
+                    self.infoSet = (data.self as? [Datum])!
+                    self.donationInfoView.reloadData()
+                    break
+                default:
+                    break
+                }
             }
         }
     }
@@ -229,13 +251,15 @@ extension MainVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let dvc = storyboard?.instantiateViewController(withIdentifier: "Detail")as? DetailVC else {return}
         let info = infoSet[indexPath.row]
-        
-        dvc.paramThumbImg = info.thumbImg
+        print(info.start)
+        print(info.finish)
+        dvc.paramThumbImg = info.thumbnail
         dvc.paramTitle = info.title
-        dvc.paramInstitution = info.institution
-        dvc.paramDate = info.date!
-        dvc.paramProcess = info.processRate
-        dvc.paramDonated = info.donatedBerry
+        dvc.paramInstitution = info.centerName
+//        dvc.paramDate = info.
+        dvc.paramProcess = info.percentage
+        dvc.paramGoal = info.maxBerry
+        dvc.paramDonated = info.totalBerry
         navigationController?.pushViewController(dvc, animated: true)
     }
     
@@ -248,15 +272,15 @@ extension MainVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = donationInfoView.dequeueReusableCell(withIdentifier: "MainCell")as! MainCell
         let List = infoSet[indexPath.row]
-        
-        cell.thumbImg.image = UIImage(named: List.thumbImg)
-        cell.date.text = List.date
+        cell.thumbImg.imageFromUrl(gsno(List.thumbnail), defaultImgPath: "imgHomeJjack")
+//        cell.date.text = List.date
         cell.title.text = List.title
-        cell.institution.text = List.institution
-        cell.processRate.text = List.processRate + "%"
-        cell.donatedBerry.text = List.donatedBerry
+        cell.processRate.text = String(List.percentage) + "%"
+        cell.institution.text = List.centerName
+//        cell.processRate.text = String(List.percentage) + "%"
+        cell.donatedBerry.text = String(List.maxBerry)
         
-        let rate = Double(List.processRate) ?? 0.0
+        let rate = Double(List.percentage)
         let length = Double(cell.statusBar.frame.width)
         let num = round(length * (rate / 100.0))
         if num >= 100 {
@@ -270,13 +294,13 @@ extension MainVC: UITableViewDataSource {
     
 }
 extension MainVC {
-    func setInfoData() {
-        let info1 = Info(thumbnail: "icCard", date: "D - 41", title: "올 겨울 혜리에게도 따뜻한 이불을 주세요!",institution: "사회 복지관", processRate: "50", donatedBerry: "404,040", status: nil)
-        let info2 = Info(thumbnail: "icCard", date: "D - 32", title: "올 겨울 혜리에게도 따뜻한 이불을 주세요!",institution: "샬롬 요양원", processRate: "70", donatedBerry: "404,040", status: nil)
-        let info3 = Info(thumbnail: "icCard", date: "D - 321", title: "올 겨울 혜리에게도 따뜻한 이불을 주세요!", institution: "주남바다요양센터", processRate: "20", donatedBerry: "404,040", status: nil)
-        
-        self.infoSet = [info1, info2, info3]
-    }
+//    func setInfoData() {
+//        let info1 = Info(thumbnail: "icCard", date: "D - 41", title: "올 겨울 혜리에게도 따뜻한 이불을 주세요!",institution: "사회 복지관", processRate: "50", donatedBerry: "404,040", status: nil)
+//        let info2 = Info(thumbnail: "icCard", date: "D - 32", title: "올 겨울 혜리에게도 따뜻한 이불을 주세요!",institution: "샬롬 요양원", processRate: "70", donatedBerry: "404,040", status: nil)
+//        let info3 = Info(thumbnail: "icCard", date: "D - 321", title: "올 겨울 혜리에게도 따뜻한 이불을 주세요!", institution: "주남바다요양센터", processRate: "20", donatedBerry: "404,040", status: nil)
+//
+//        self.infoSet = [info1, info2, info3]
+//    }
     func setBtn(button: UIButton, color: UIColor, font: UIFont) {
         button.titleLabel?.font = font
         button.setTitleColor(color, for: .normal)

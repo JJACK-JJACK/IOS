@@ -39,8 +39,10 @@ struct AuthServices: APIManager {
                             switch status {
                             case 200:
                                 do {
+                                    print("여기입니까?1")
                                     let decoder = JSONDecoder()
-                                    let result = try decoder.decode(ResponseObj<Token>.self, from: value)
+                                    let result = try decoder.decode(ResponseStr.self, from: value)
+                                    print("여기입니까?1")
                                     switch result.success{
                                     case true:
                                         print("\(result.status)")
@@ -108,6 +110,7 @@ struct AuthServices: APIManager {
                                     // if 로 바꾸자
                                     switch result.success{
                                     case true:
+                                        print("\(result.status)")
                                         //result 는 서버에서 전달하는 객체들의 결과를 말한다! 그래서 총 4가지!!!
 
                                         completion(.success(result.message))
@@ -158,11 +161,14 @@ struct AuthServices: APIManager {
                                 // if 로 바꾸자
                                 switch result.success{
                                 case true:
+                                    print("\(result.status)")
+                                    print("\(result.success)")
                                     //result 는 서버에서 전달하는 객체들의 결과를 말한다! 그래서 총 4가지!!!
                                     
                                     completion(.success(result.success))
                                 case false:
-
+                                    print("\(result.status)")
+                                    print("\(result.success)")
                                     completion(.requestErr(result.message))
                                 }
                             } catch {print("error")}

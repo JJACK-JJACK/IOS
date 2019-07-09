@@ -52,18 +52,19 @@ class DetailVC: UIViewController {
     var paramTitle: String = ""
     var paramInstitution: String = ""
     var paramDate: String = ""
-    var paramProcess: String = ""
-    var paramDonated: String = ""
-//    var paramGoal: String = ""
+    var paramProcess: Int = 0
+    var paramDonated: Int = 0
+    var paramGoal: Int = 0
     
     func setup() {
         // insert values
-        self.thumbImg.image = UIImage(named: paramThumbImg)
+        self.thumbImg.imageFromUrl(gsno(paramThumbImg), defaultImgPath: "imgHomeJjack")
         self.name.text = paramTitle
         self.institution.text = paramInstitution
         self.date.text = paramDate
-        self.processRate.text = paramProcess + "%"
-        self.donatedBerry.text = paramDonated
+        self.processRate.text = String(paramProcess) + "%"
+        self.donatedBerry.text = String(paramDonated)
+        self.goalBerry.text = String(paramGoal)
         
         // ready for container view
         self.container2.isHidden = true
@@ -73,7 +74,7 @@ class DetailVC: UIViewController {
         activateProcess()
     }
     func activateProcess() {
-        let rate = Double(paramProcess) ?? 0.0
+        let rate = Double(paramProcess)
         let width = self.view.frame.width
         
         let show = round( (Double(width)
