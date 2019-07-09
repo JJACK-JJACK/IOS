@@ -122,23 +122,23 @@ class MainVC: UIViewController, UIScrollViewDelegate{
         
     }
     // Donation List 내역 불러오기
-    func getDonatedList(category: Int) {
-        MainService.shared.getDonationList(category) {
-            [weak self]
-            (data) in
-            guard let `self` = self else {return}
-            switch data {
-            case .success(let data):
-                // infoset에 [info]형태를 갖춘 데이터들을 넣어서 info의 형식을 완성해야 한다.
-                self.infoSet = (data.self as? [Datum])!
-                self.donationInfoView.reloadData()
-                break
-            default:
-                break
-            }
-        }
+//    func getDonatedList(category: Int) {
+//        MainService.shared.getDonationList(category) {
+//            [weak self]
+//            (data) in
+//            guard let `self` = self else {return}
+//            switch data {
+//            case .success(let data):
+//                // infoset에 [info]형태를 갖춘 데이터들을 넣어서 info의 형식을 완성해야 한다.
+//                self.infoSet = (data.self as? [Datum])!
+//                self.donationInfoView.reloadData()
+//                break
+//            default:
+//                break
+//            }
+//        }
 
-    }
+//    }
     //Bolding Category
     @IBAction func selectCategory(_ sender: UIButton) {
         setBtn(button: child, color: .brownGrey, font: .Light)
@@ -187,6 +187,7 @@ class MainVC: UIViewController, UIScrollViewDelegate{
             
             switch data {
             case .success(let data):
+                print(data)
                 self.infoSet = (data.self as? [Datum])!
                 self.donationInfoView.reloadData()
             default:
@@ -229,7 +230,7 @@ class MainVC: UIViewController, UIScrollViewDelegate{
         navigationController?.show(dvc, sender: self)
     }
     @IBAction func goHome(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        backHome()
     }
     
 }
@@ -304,6 +305,8 @@ extension MainVC: UITableViewDelegate {
         dvc.paramProcess = info.percentage
         dvc.paramGoal = info.maxBerry
         dvc.paramDonated = info.totalBerry
+        dvc.paramId = info.id
+
         navigationController?.pushViewController(dvc, animated: true)
     }
     

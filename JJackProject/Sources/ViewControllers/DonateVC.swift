@@ -18,6 +18,8 @@ class DonateVC: UIViewController {
     @IBOutlet weak var berryValue: UITextField!
     
     @IBOutlet weak var confirmDonate: UIButton!
+    
+    var paramId: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -65,6 +67,25 @@ class DonateVC: UIViewController {
         // 스탬프의 개수를 알아온 뒤에
         // 개수에 따라서 베리를 부여할 지 판단하자
         // 서버가 어느정도의 역할을 할지..!
+        guard let token = UserDefaults.standard.string(forKey: "refreshToken") else {return}
+        guard let berry = Int(self.berryValue.text ?? "10") else {return}
+        DonateService.shared.donate(token, berry
+        , paramId){
+            (data) in
+            switch data {
+            case .success(let message):
+                print(message)
+            case .requestErr(let message):
+                print(message)
+            case .pathErr:
+                print("path")
+            case .serverErr:
+                print("server")
+            case .networkFail:
+                print("네트워크 오류")
+            }
+            
+        }
     }
     @IBAction func Back(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)

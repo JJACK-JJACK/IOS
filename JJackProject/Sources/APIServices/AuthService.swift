@@ -41,7 +41,7 @@ struct AuthServices: APIManager {
                                 do {
                                     print("여기입니까?1")
                                     let decoder = JSONDecoder()
-                                    let result = try decoder.decode(ResponseStr.self, from: value)
+                                    let result = try decoder.decode(ResponseObj<Token>.self, from: value)
                                     print("여기입니까?1")
                                     switch result.success{
                                     case true:

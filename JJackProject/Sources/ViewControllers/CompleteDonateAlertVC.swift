@@ -26,8 +26,7 @@ class CompleteDonateAlertVC: UIViewController {
         navigationController?.pushViewController(dvc, animated: true)
     }
     @IBAction func back(_ sender: Any) {
-        guard let dvc = storyboard?.instantiateViewController(withIdentifier: "MainVC") as? MainVC else {return}
-        navigationController?.pushViewController(dvc, animated: true)
+        backHome()
     }
     
 }
