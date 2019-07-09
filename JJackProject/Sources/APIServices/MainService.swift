@@ -67,7 +67,7 @@ struct MainService: APIManager {
                             do{
                                 let decoder = JSONDecoder()
                                 let result = try
-                                    decoder.decode(ResponseArr<Datum>.self, from: value)
+                                    decoder.decode(ResponseArr<Main>.self, from: value)
                                 if result.success {completion(.success(result.data!))}
                                 else { completion(.requestErr(result.message))}
                             } catch {print("error")}

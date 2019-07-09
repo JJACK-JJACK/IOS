@@ -1247,7 +1247,13 @@
                         <outlet property="onPlan" destination="FPh-8j-qG9" id="XzI-6z-HTH"/>
                         <outlet property="onStory" destination="jmG-f6-S2D" id="cZU-fL-IVt"/>
                         <outlet property="plan" destination="4hN-CK-Pth" id="jsv-l8-3Mc"/>
+                        <outlet property="price1" destination="aOz-Xd-DKR" id="5QI-DU-3Mz"/>
+                        <outlet property="price2" destination="0kQ-cd-fsz" id="u19-I9-cw0"/>
+                        <outlet property="price3" destination="VSG-4y-Syh" id="Yma-0F-c0J"/>
                         <outlet property="processRate" destination="G1a-eo-fKV" id="W84-Gu-ao3"/>
+                        <outlet property="purpose1" destination="vzf-sA-4Gx" id="f87-mt-Mhw"/>
+                        <outlet property="purpose2" destination="aFK-cX-g8T" id="XqU-PQ-xfY"/>
+                        <outlet property="purpose3" destination="aHc-c5-Iqj" id="jFe-A2-d7e"/>
                         <outlet property="rateBar" destination="ctI-bm-P5h" id="dVA-Qd-Wpd"/>
                         <outlet property="showRate" destination="J3o-t4-Ddl" id="5oI-X8-jfc"/>
                         <outlet property="statusBar" destination="ifq-9M-RyR" id="J9P-lg-5L8"/>
@@ -1256,6 +1262,7 @@
                         <outlet property="subTitle2" destination="0d8-hu-TZK" id="SNP-yB-apS"/>
                         <outlet property="subTitle3" destination="uiH-Il-xTS" id="Sfw-yd-8me"/>
                         <outlet property="thumbImg" destination="bfD-66-be9" id="5oH-u1-KfC"/>
+                        <outlet property="totalPrice" destination="hMU-5E-cvL" id="jaU-gC-Vs5"/>
                         <outlet property="viewHeight" destination="cwl-2D-gLo" id="t36-q3-eKe"/>
                     </connections>
                 </viewController>

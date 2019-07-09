@@ -67,6 +67,7 @@
 		C0DC372D22D491640010A730 /* HistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC372C22D491640010A730 /* HistoryService.swift */; };
 		C0DC373322D4C5500010A730 /* Donate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC373222D4C5500010A730 /* Donate.swift */; };
 		C0DC373622D4C57B0010A730 /* DonateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC373522D4C57B0010A730 /* DonateService.swift */; };
+		C0DC373822D555330010A730 /* MainData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC373722D555330010A730 /* MainData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -134,6 +135,7 @@
 		C0DC372C22D491640010A730 /* HistoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryService.swift; sourceTree = "<group>"; };
 		C0DC373222D4C5500010A730 /* Donate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donate.swift; sourceTree = "<group>"; };
 		C0DC373522D4C57B0010A730 /* DonateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateService.swift; sourceTree = "<group>"; };
+		C0DC373722D555330010A730 /* MainData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -423,6 +425,7 @@
 			isa = PBXGroup;
 			children = (
 				C0DC372022D360FF0010A730 /* Story.swift */,
+				C0DC373722D555330010A730 /* MainData.swift */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -618,6 +621,7 @@
 				C08482BE22C2515D0087F3BC /* AppDelegate.swift in Sources */,
 				C01E930422CB7C5E00D43366 /* HomeVC.swift in Sources */,
 				C021C2FF22D20C7D00ADF1FE /* ChargeMainVC.swift in Sources */,
+				C0DC373822D555330010A730 /* MainData.swift in Sources */,
 				C021C30322D225A500ADF1FE /* NetworkResult.swift in Sources */,
 				C021C30A22D255A400ADF1FE /* String+Extension.swift in Sources */,
 				C0DC372122D360FF0010A730 /* Story.swift in Sources */,

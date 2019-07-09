@@ -22,7 +22,7 @@ class MainVC: UIViewController, UIScrollViewDelegate{
 
     @IBOutlet weak var mainView: UICollectionView!
     
-    var infoSet = [Datum]()
+    var infoSet = [Main]()
 //    var infoSet: [Info] = []
     
     @IBOutlet weak var donationInfoView: UITableView!
@@ -42,7 +42,7 @@ class MainVC: UIViewController, UIScrollViewDelegate{
     
     // Home 에서 Select 된 카테고리의 인덱스패스 값
     // 이 값들은 처음 실행 되고 나서 바뀐 값으로 유지 되고 갱신 되지 않는다.
-    var paramIndex: Int = 0
+    var paramIndex: Int = 1
     var arrangeIndex: Int = 0
     
     override func viewDidLoad() {
@@ -156,22 +156,22 @@ class MainVC: UIViewController, UIScrollViewDelegate{
             switch sender.currentTitle {
             case "어린이":
                 scroll(index: 0)
-                paramIndex = 0
+                paramIndex = 1
             case "어르신":
                 scroll(index: 1)
-                paramIndex = 1
+                paramIndex = 2
             case "동물":
                 scroll(index: 2)
-                paramIndex = 2
+                paramIndex = 3
             case "장애우":
                 scroll(index: 3)
-                paramIndex = 3
+                paramIndex = 4
             case "환경":
                 scroll(index: 4)
-                paramIndex = 4
+                paramIndex = 5
             case "긴급구조":
                 scroll(index: 5)
-                paramIndex = 5
+                paramIndex = 6
             default:
                 break
             }
@@ -188,7 +188,7 @@ class MainVC: UIViewController, UIScrollViewDelegate{
             switch data {
             case .success(let data):
                 print(data)
-                self.infoSet = (data.self as? [Datum])!
+                self.infoSet = (data.self as? [Main])!
                 self.donationInfoView.reloadData()
             default:
                 break

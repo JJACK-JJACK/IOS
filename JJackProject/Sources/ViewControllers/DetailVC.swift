@@ -31,6 +31,15 @@ class DetailVC: UIViewController {
     
     @IBOutlet weak var container2: UIView!
     
+    @IBOutlet weak var purpose1: UILabel!
+    @IBOutlet weak var price1: UILabel!
+    
+    @IBOutlet weak var purpose2: UILabel!
+    @IBOutlet weak var price2: UILabel!
+    
+    @IBOutlet weak var purpose3: UILabel!
+    @IBOutlet weak var price3: UILabel!
+    @IBOutlet weak var totalPrice: UILabel!
     
     @IBOutlet weak var viewHeight: NSLayoutConstraint!
     
@@ -64,7 +73,7 @@ class DetailVC: UIViewController {
         
         getStory(id: gsno(paramId))
     }
-    var datum: Datum?
+    var datum = [Datum]()
     
     var paramThumbImg: String = ""
     var paramTitle: String = ""
@@ -102,25 +111,6 @@ class DetailVC: UIViewController {
         self.statusBar.makeRounded(cornerRadius: nil)
         self.rateBar.makeRounded(cornerRadius: nil)
     }
-    //    func setContainer1Data(container: [Story], index: Int, subTitle: UILabel!, img: UIImageView!, content1: UILabel!, content2: UILabel!){po $arg1
-
-//
-//        subTitle.text = gsno(container[index].subTitle)
-//        img.imageFromUrl(self.gsno(container[index].img), defaultImgPath: "imgHomeJjack")
-//        let contents1 = container[index].content
-//        content1.text = gsno(contents1[0])
-//        content2.text = contents1[1]
-//
-//        print("###################################################")
-//        print(container[index].subTitle)
-//        print("###################################################")
-//        print(container[index].img)
-//        print("###################################################")
-//        print(container[index].content[0])
-//        print("###################################################")
-//        print(container[index].content[1])
-//        print("###################################################")
-//    }
     func getStory (id: String) {
         MainService.shared.getDetailData(id) {
             [weak self]
@@ -130,9 +120,41 @@ class DetailVC: UIViewController {
             switch data {
             case .success(let data):
                 print(data)
-                self.datum = data.self as? Datum
-                let realData = self.datum?.story[0]
-                print(realData?.subTitle ?? "내 제목은 어디에...")
+                self.datum = (data.self as? [Datum])!
+                let contain1 = self.datum[0]
+//                print(contain1.centerName)
+//                print(contain1.story[0].subTitle)
+//                print(contain1.story[1].subTitle)
+//                print(contain1.title)
+                let story1 = contain1.story[0]
+                self.subTitle1.text = story1.subTitle
+                self.content1_1.text = story1.content[0]
+                self.content1_2.text = story1.content[1]
+                self.image1.imageFromUrl(self.gsno(story1.img), defaultImgPath: "imgHomeJjack")
+                let story2 = contain1.story[1]
+                self.subTitle2.text = story2.subTitle
+                self.content2_1.text = story2.content[0]
+                self.content2_2.text = story2.content[1]
+                self.image2.imageFromUrl(self.gsno(story2.img), defaultImgPath: "imgHomeJjack")
+                let story3 = contain1.story[2]
+                self.subTitle3.text = story3.subTitle
+                self.content3_1.text = story3.content[0]
+                self.content3_2.text = story3.content[1]
+                self.image3.imageFromUrl(self.gsno(story3.img), defaultImgPath: "imgHomeJjack")
+                
+                let contain2 = self.datum[0]
+                let plan1 = contain2.plan[0]
+                self.purpose1.text = plan1.purpose
+                self.price1.text = String(plan1.price)
+                let plan2 = contain2.plan[1]
+                self.purpose2.text = plan2.purpose
+                self.price2.text = String(plan2.price)
+                let plan3 = contain2.plan[2]
+                self.purpose3.text = plan3.purpose
+                self.price3.text = String(plan3.price)
+                
+                self.totalPrice.text = String(plan1.price + plan2.price + plan3.price)
+                
                 //                print(common.story)
 //                print("###########################")
 //                print(common.centerName)
@@ -156,7 +178,7 @@ class DetailVC: UIViewController {
 //                print("###########################")
                 
                 self.container1.reloadInputViews()
-                
+                self.container2.reloadInputViews()
                 break
             case .requestErr(let err):
                 print(err)
@@ -170,7 +192,24 @@ class DetailVC: UIViewController {
             }
         }
     }
-    
+//    func getPlan(){
+//        MainService.shared.getDetailData(paramId) {
+//            [weak self]
+//            (data) in
+//            switch data {
+//            case .success(let data):
+//
+//            case .requestErr(let message):
+//                print(message)
+//            case .pathErr:
+//                print("path")
+//            case .serverErr:
+//                print("server")
+//            case .networkFail:
+//                print("네트워크 오류")
+//            }
+//        }
+//    }
     @IBAction func showInfo(_ sender: UIButton) {
         print(sender.isSelected)
         if !sender.isSelected {
