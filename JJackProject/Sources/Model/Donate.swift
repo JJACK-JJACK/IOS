@@ -8,8 +8,8 @@
 
 import Foundation
 struct Donate: Codable {
-    let totalBerry: Int
-    let stamps: Int
-    let rewordsBerry: Int
+    let totalBerry: Int?
+    let stamps: Int?
+    let rewordsBerry: Int?
 }
 

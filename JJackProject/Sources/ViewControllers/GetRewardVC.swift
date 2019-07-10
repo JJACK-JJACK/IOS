@@ -21,4 +21,7 @@ class GetRewardVC: UIViewController {
     var rewardBerry: Int = 0
     
     
+    @IBAction func goHome(_ sender: Any) {
+        backHome()
+    }
 }

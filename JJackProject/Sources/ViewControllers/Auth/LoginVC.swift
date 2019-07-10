@@ -24,6 +24,9 @@ class LoginVC: UIViewController {
         setupNotification()
         idTF.delegate = self
         pwTF.delegate = self
+        
+        idTF.text = "IOS@gmail.com"
+        pwTF.text = "ios"
     }
     func setBorderRadius() {
         Login.makeRounded(cornerRadius: 4.0)
@@ -61,7 +64,8 @@ class LoginVC: UIViewController {
                     guard let token = token as? Token else {return}
                     print(token)
                     UserDefaults.standard.set(token.token, forKey: "refreshToken")
-                    UserDefaults.standard.set(token.nickname, forKey: "nickname")
+                    print(token.nickname); UserDefaults.standard.set(token.nickname, forKey: "nickname")
+                    print(id)
                     UserDefaults.standard.set(id, forKey: "email")
                     print(token.nickname)
                     print(id)

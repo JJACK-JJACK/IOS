@@ -119,7 +119,7 @@ class DetailVC: UIViewController {
             guard let `self` = self else {return}
             switch data {
             case .success(let data):
-                print(data)
+//                print(data)
                 self.datum = (data.self as? [Datum])!
                 let contain1 = self.datum[0]
 //                print(contain1.centerName)
@@ -271,7 +271,7 @@ class DetailVC: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goDonate"{
-            guard let dvc2 = storyboard?.instantiateViewController(withIdentifier: "Donate") as? DonateVC else {return}
+            let dvc2 = segue.destination as! DonateVC
             
             // paramId 전달!
             dvc2.paramId = paramId

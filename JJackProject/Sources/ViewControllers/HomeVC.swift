@@ -75,6 +75,9 @@ class HomeVC: UIViewController {
         setupSideMenu()
         getMyOwnBerry()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        getMyOwnBerry()
+    }
     func getMyOwnBerry () {
         guard let token = UserDefaults.standard.string(forKey: "refreshToken") else {return}
         ChargeService.shared.ownedBerry(token){

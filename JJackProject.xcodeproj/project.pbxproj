@@ -83,6 +83,7 @@
 		C0DC375222D623130010A730 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC375122D623130010A730 /* Review.swift */; };
 		C0DC375422D623260010A730 /* Story2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC375322D623260010A730 /* Story2.swift */; };
 		C0DC375822D651140010A730 /* GetRewardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC375722D651140010A730 /* GetRewardVC.swift */; };
+		C0DC375A22D66FF80010A730 /* StampService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC375922D66FF80010A730 /* StampService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -166,6 +167,7 @@
 		C0DC375122D623130010A730 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		C0DC375322D623260010A730 /* Story2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story2.swift; sourceTree = "<group>"; };
 		C0DC375722D651140010A730 /* GetRewardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRewardVC.swift; sourceTree = "<group>"; };
+		C0DC375922D66FF80010A730 /* StampService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -358,6 +360,7 @@
 				C0DC373B22D576F20010A730 /* ChargeService.swift */,
 				C0DC374722D5C6E30010A730 /* MyPageService.swift */,
 				C0DC374B22D5DCB60010A730 /* RankingService.swift */,
+				C0DC375922D66FF80010A730 /* StampService.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -605,6 +608,7 @@
 				C084832822C953190087F3BC /* SignUpVC1.swift in Sources */,
 				C08482DA22C253370087F3BC /* UIViewController+Extensions.swift in Sources */,
 				C0DC373622D4C57B0010A730 /* DonateService.swift in Sources */,
+				C0DC375A22D66FF80010A730 /* StampService.swift in Sources */,
 				C0DC375222D623130010A730 /* Review.swift in Sources */,
 				C01E930922CBEB6400D43366 /* MainVC.swift in Sources */,
 				C01E92E722CA788D00D43366 /* EditNicknameVC.swift in Sources */,

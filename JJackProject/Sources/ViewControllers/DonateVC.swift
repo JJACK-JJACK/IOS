@@ -31,6 +31,7 @@ class DonateVC: UIViewController {
     func setup() {
         setBorder()
         roundBorder()
+        // 내가 가지고있는 베리 가져오기
         self.ownBerry.text = String(UserDefaults.standard.integer(forKey: "ownBerry"))
 
     }
@@ -78,9 +79,13 @@ class DonateVC: UIViewController {
         // 스탬프의 개수를 알아온 뒤에
         // 개수에 따라서 베리를 부여할 지 판단하자
         // 서버가 어느정도의 역할을 할지..!
+        print("여기는 기부하기")
         guard let token = UserDefaults.standard.string(forKey: "refreshToken") else {return}
-        print("////////\(token)////////")
-        guard let berry = Int(self.berryValue.text ?? "10") else {return}
+//        print("////////\(token)////////")
+        print("token: \(token)")
+        guard let berry = Int(self.berryValue!.text!) else {return}
+        print(berry)
+        print(paramId)
         DonateService.shared.donate(token, berry
         , paramId){
             [weak self]
@@ -95,7 +100,7 @@ class DonateVC: UIViewController {
                     guard let dvc =  self.storyboard?.instantiateViewController(withIdentifier: "GetReward") as?GetRewardVC else {return}
                     print("#######@#############")
                     print(data)
-                    dvc.rewardBerry = data.rewordsBerry
+                    dvc.rewardBerry = data.rewordsBerry!
                     self.present(dvc, animated: true, completion: nil)
                 } else {
                     guard let dvc =  self.storyboard?.instantiateViewController(withIdentifier: "CompleteDonate") as? CompleteDonateAlertVC else {return}

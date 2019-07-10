@@ -91,14 +91,16 @@ extension UseHistoryVC: UITableViewDataSource{
         cell.Institution.text = history.centerName
         cell.berry.text = history.berry
         
-//        switch cell.purpose.text {
-//        case "기부":
-//            cell.berry.textColor = .pointCol
-//        case "충전":
-//            cell.berry.textColor = .mainCol
-//        default:
-//            break
-//        }
+        switch history.title {
+        case "기부":
+            cell.purpose.text = "기부"
+            cell.berry.textColor = .pointCol
+        case "충전":
+            cell.purpose.text = "충전"
+            cell.berry.textColor = .mainCol
+        default:
+            break
+        }
         
         return cell
     }

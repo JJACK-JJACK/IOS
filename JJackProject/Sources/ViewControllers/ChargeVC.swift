@@ -143,6 +143,7 @@ class ChargeVC: UIViewController{
                 print(chargedBerry)
                 let totalBerry = chargedBerry + UserDefaults.standard.integer(forKey: "myBerry")
                 UserDefaults.standard.set(totalBerry, forKey: "myBerry")
+                print(UserDefaults.standard.set(totalBerry, forKey: "myBerry"))
                 break
             case .requestErr(let message):
                 print(message)

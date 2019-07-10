@@ -291,10 +291,9 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="베리 10개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdk-Cq-ep6">
-                                                                <rect key="frame" x="73" y="3" width="66" height="17"/>
+                                                                <rect key="frame" x="73" y="3" width="62" height="17"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="17" id="V3e-Ws-gnc"/>
-                                                                    <constraint firstAttribute="width" constant="66" id="hep-sl-9jc"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="16"/>
                                                                 <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -414,10 +413,9 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="베리 50개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rod-mK-Xv8">
-                                                                <rect key="frame" x="68" y="3" width="66" height="17"/>
+                                                                <rect key="frame" x="68" y="3" width="64" height="17"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="17" id="XtL-0O-tyM"/>
-                                                                    <constraint firstAttribute="width" constant="66" id="h1U-gg-dGv"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="16"/>
                                                                 <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -539,7 +537,6 @@
                                                                 <rect key="frame" x="68" y="3" width="72" height="17"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="17" id="X7s-9C-NEo"/>
-                                                                    <constraint firstAttribute="width" constant="72" id="c8Z-Gd-rMv"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="16"/>
                                                                 <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -662,7 +659,6 @@
                                                                 <rect key="frame" x="68" y="3" width="74.666666666666686" height="17"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="17" id="jct-Pd-N5l"/>
-                                                                    <constraint firstAttribute="width" constant="74.666666666666686" id="opr-bH-Hd2"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="16"/>
                                                                 <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -783,7 +779,6 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="베리 500개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sW1-YQ-5Re">
                                                                 <rect key="frame" x="68" y="3" width="74.333333333333314" height="17"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="74.333333333333314" id="9UX-Hl-IG5"/>
                                                                     <constraint firstAttribute="height" constant="17" id="Jsr-YR-AtO"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="16"/>
@@ -906,7 +901,6 @@
                                                 <rect key="frame" x="19.999999999999996" y="35" width="60.666666666666657" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="7DT-Py-rx5"/>
-                                                    <constraint firstAttribute="width" constant="60.666666666666657" id="o99-kR-sPh"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
                                                 <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
