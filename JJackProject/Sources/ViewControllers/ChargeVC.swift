@@ -25,6 +25,9 @@ class ChargeVC: UIViewController{
     @IBOutlet weak var bankAccount: UILabel!
     
     var pickerData: [String] = [String]()
+    
+    var chargeData: Charge?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -115,8 +118,34 @@ class ChargeVC: UIViewController{
     
     @IBAction func ChargeBerry(_ sender: Any) {
         //통신
-        guard let token = UserDefaults.standard.string(forKey: "refreshToken")
-        ChargeService.shared.chargingBerry(<#T##token: String##String#>, <#T##berry: Int##Int#>, completion: <#T##(NetworkResult<Any>) -> Void#>)
+        guard let token = UserDefaults.standard.string(forKey: "refreshToken") else {return}
+        
+        ChargeService.shared.chargingBerry(token, paramBerry) {
+            [weak self]
+            (data) in
+            
+            guard let `self` = self else {return}
+            
+            switch data {
+            case .success(let data):
+                self.chargeData = (data.self as? Charge)!
+                guard let chargeInfo = self.chargeData?.charge else {return}
+                let endIndex = chargeInfo.endIndex
+                let chargedBerry = chargeInfo[endIndex + -1].chargeBerry
+                print("####################2222#######")
+                print(chargedBerry)
+                UserDefaults.standard.set(chargedBerry, forKey: "myBerry")
+                break
+            case .requestErr(let message):
+                print(message)
+            case .pathErr:
+                print("path")
+            case .serverErr:
+                print("server")
+            case .networkFail:
+                print("네트워크 오류")
+            }
+        }
     }
     
     @IBAction func Back(_ sender: Any) {

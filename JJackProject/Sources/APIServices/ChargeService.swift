@@ -34,7 +34,7 @@ struct ChargeService: APIManager {
                                 do{
                                     let decoder = JSONDecoder()
                                     let result = try
-                                        decoder.decode(ResponseArr<Charge>.self, from: value)
+                                        decoder.decode(ResponseObj<Charge>.self, from: value)
                                     if result.success {completion(.success(result.data!))}
                                     else { completion(.requestErr(result.message))}
                                 } catch {print("error")}

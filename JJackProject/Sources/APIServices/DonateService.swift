@@ -37,7 +37,7 @@ struct DonateService: APIManager {
                                     let decoder = JSONDecoder()
                                     print(1)
                                     let result = try
-                                        decoder.decode(ResponseArr<Donate>.self, from: value)
+                                        decoder.decode(ResponseObj<Donate>.self, from: value)
                                     print(1)
                                     if result.success
                                     {

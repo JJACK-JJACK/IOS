@@ -63,6 +63,13 @@ class DonateVC: UIViewController {
             break
         }
     }
+    @IBAction func showChargeView(_ sender: Any) {
+        guard let dvc = UIStoryboard(name: "Charge", bundle: nil).instantiateViewController(withIdentifier: "ChargeNavigation")as? UINavigationController else {return}
+        UserDefaults.standard.set(true, forKey: "fromDonate")
+
+        
+        self.present(dvc, animated: true)
+    }
     @IBAction func confirmDonate(_ sender: Any) {
         // 스탬프의 개수를 알아온 뒤에
         // 개수에 따라서 베리를 부여할 지 판단하자
@@ -74,7 +81,9 @@ class DonateVC: UIViewController {
         , paramId){
             [weak self]
             (data) in
+            
             guard let `self` = self else {return}
+            
             switch data {
             case .success(let message):
                guard let dvc = self.storyboard?.instantiateViewController(withIdentifier: "CompleteDonate")as? CompleteDonateAlertVC else {return}
@@ -100,5 +109,8 @@ class DonateVC: UIViewController {
     }
     @IBAction func Back(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    @IBAction func backToDonate (_ segue: UIStoryboardSegue) {
+        
     }
 }

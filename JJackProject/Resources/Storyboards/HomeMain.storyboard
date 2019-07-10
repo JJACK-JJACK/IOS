@@ -1203,7 +1203,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="pYy-IV-2Qq" kind="presentation" identifier="goDonate" id="q6l-iS-36L"/>
+                                            <segue destination="pYy-IV-2Qq" kind="presentation" identifier="goDonate" id="Cdo-qX-BZZ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1351,6 +1351,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehz-76-pOh">
                                 <rect key="frame" x="296" y="231.66666666666666" width="59" height="22"/>
                                 <state key="normal" image="chargeAllowButton"/>
+                                <connections>
+                                    <action selector="showChargeView:" destination="pYy-IV-2Qq" eventType="touchUpInside" id="oBU-bg-HaF"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="HnQ-Rw-TAV">
                                 <rect key="frame" x="67" y="274" width="288" height="30"/>
@@ -1452,6 +1455,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nRl-FZ-5CU"/>
                     </view>
+                    <navigationItem key="navigationItem" id="DHJ-yY-GLd"/>
                     <connections>
                         <outlet property="berryValue" destination="BzB-Xy-cY6" id="bBW-87-kUR"/>
                         <outlet property="charging10" destination="WTl-bt-uCC" id="e5M-AR-qCi"/>
@@ -1463,7 +1467,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f2k-yR-6Wd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3820" y="3"/>
+            <point key="canvasLocation" x="4089" y="-16"/>
         </scene>
         <!--Complete Donate AlertVC-->
         <scene sceneID="EnB-l8-Nwu">
@@ -1585,7 +1589,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dcq-fZ-597" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="NPd-0p-bzc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4642" y="3"/>
+            <point key="canvasLocation" x="5055" y="3"/>
         </scene>
     </scenes>
     <resources>

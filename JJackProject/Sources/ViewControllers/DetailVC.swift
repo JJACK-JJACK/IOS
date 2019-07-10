@@ -271,9 +271,10 @@ class DetailVC: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goDonate"{
-            let dvc = segue.destination as! DonateVC
+            guard let dvc2 = storyboard?.instantiateViewController(withIdentifier: "Donate") as? DonateVC else {return}
+            
             // paramId 전달!
-            dvc.paramId = paramId
+            dvc2.paramId = paramId
             // 화면 넘기기
         }
         

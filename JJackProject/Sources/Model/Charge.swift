@@ -19,7 +19,3 @@ struct Charge: Codable {
     }
     
 }
-struct ChargingInfo: Codable {
-    let date: String
-    let chargeBerry: Int
-}

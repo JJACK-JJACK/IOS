@@ -30,7 +30,9 @@ class SideMenuVC: UIViewController {
     @IBAction func showChargingView(_ sender: Any) {
         guard let dvc = UIStoryboard(name: "Charge", bundle: nil).instantiateViewController(withIdentifier: "ChargeNavigation")as? UINavigationController else {return}
         
-        self.present(dvc, animated: true, completion: nil)
+        UserDefaults.standard.set(false, forKey: "fromDonate")
+
+        self.present(dvc, animated: true)
     }
     @IBAction func showHistory(_ sender: Any) {
         guard let dvc = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: "UseHistoryVC") as? UseHistoryVC else {return}

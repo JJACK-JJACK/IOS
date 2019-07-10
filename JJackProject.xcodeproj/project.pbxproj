@@ -70,6 +70,7 @@
 		C0DC373822D555330010A730 /* MainData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC373722D555330010A730 /* MainData.swift */; };
 		C0DC373A22D576E20010A730 /* Charge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC373922D576E20010A730 /* Charge.swift */; };
 		C0DC373C22D576F20010A730 /* ChargeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC373B22D576F20010A730 /* ChargeService.swift */; };
+		C0DC373E22D58F600010A730 /* ChargingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC373D22D58F600010A730 /* ChargingInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,6 +141,7 @@
 		C0DC373722D555330010A730 /* MainData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainData.swift; sourceTree = "<group>"; };
 		C0DC373922D576E20010A730 /* Charge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charge.swift; sourceTree = "<group>"; };
 		C0DC373B22D576F20010A730 /* ChargeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeService.swift; sourceTree = "<group>"; };
+		C0DC373D22D58F600010A730 /* ChargingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -355,6 +357,7 @@
 				C0DC373222D4C5500010A730 /* Donate.swift */,
 				C0DC372922D491020010A730 /* Count.swift */,
 				C0DC373922D576E20010A730 /* Charge.swift */,
+				C0DC373D22D58F600010A730 /* ChargingInfo.swift */,
 				C0DC372822D490E90010A730 /* dummy */,
 			);
 			path = Model;
@@ -547,6 +550,7 @@
 				C021C2FB22D0D3D100ADF1FE /* CompleteChargeVC.swift in Sources */,
 				C0DC370E22D32DB90010A730 /* ResponseString.swift in Sources */,
 				C027A94722CD249C00F198ED /* DonateVC.swift in Sources */,
+				C0DC373E22D58F600010A730 /* ChargingInfo.swift in Sources */,
 				C0DC371322D339B00010A730 /* ResponseArray.swift in Sources */,
 				C027A94522CD074700F198ED /* DetailVC.swift in Sources */,
 				C01A043B22C9E9AE00ED8CD2 /* SideMenuVC.swift in Sources */,

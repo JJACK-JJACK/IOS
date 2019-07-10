@@ -18,10 +18,17 @@ class CompleteChargeVC: UIViewController {
         // Do any additional setup after loading the view.
         self.confirmBtn.makeRounded(cornerRadius: 8.0)
     }
-    
 
     
-
+    @IBAction func confirmCharge(_ sender: Any) {
+        let fromDonateView = UserDefaults.standard.bool(forKey: "fromDonate")
+        if fromDonateView {
+            performSegue(withIdentifier: "backToDonate", sender: self)
+        }else {
+            performSegue(withIdentifier: "goHome", sender: self)
+        }
+    }
+    
     @IBAction func cancle(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
