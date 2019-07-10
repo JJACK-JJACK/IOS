@@ -23,17 +23,67 @@ class EarnBerryVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.stamp1.tag = 1
-        self.stamp2.tag = 2
-        self.stamp3.tag = 3
-        self.stamp4.tag = 4
-        self.stamp5.tag = 5
-        self.stamp6.tag = 6
-        self.stamp7.tag = 7
-        self.stamp8.tag = 8
-        self.stamp9.tag = 9
+        setupStamp()
+        getMyStamp()
+    }
+    func setupStamp() {
+        self.stamp1.isHidden = true
+        self.stamp2.isHidden = true
+        self.stamp3.isHidden = true
+        self.stamp4.isHidden = true
+        self.stamp5.isHidden = true
+        self.stamp6.isHidden = true
+        self.stamp7.isHidden = true
+        self.stamp8.isHidden = true
+        self.stamp9.isHidden = true
     }
     
+    func getMyStamp(){
+        guard let token = UserDefaults.standard.string(forKey: "refreshToken") else {return}
+        StampServices.shared.getStamp(token) {
+            (data) in
+            switch data {
+            case .success(let data):
+                guard let stmp  = data as? GetStamp else {return}
+                print(stmp.cntStamp)
+                switch stmp.cntStamp {
+                case 1:
+                    self.stamp1.isHidden = false
+                    break
+                case 2:
+                    self.stamp2.isHidden = false
+                    break
+                case 3:
+                    self.stamp3.isHidden = false
+                    break
+                case 4:
+                    self.stamp4.isHidden = false
+                    break
+                case 5:
+                    self.stamp5.isHidden = false
+                    break
+                case 6:
+                    self.stamp6.isHidden = false
+                    break
+                case 7:
+                    self.stamp7.isHidden = false
+                    break
+                case 8:
+                    self.stamp8.isHidden = false
+                    break
+                case 9:
+                    self.stamp9.isHidden = false
+                    break
+                default:
+                    self.setupStamp()
+                }
+                break
+            default:
+                break
+                
+            }
+        }
+    }
     
     
     

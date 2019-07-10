@@ -84,6 +84,7 @@
 		C0DC375422D623260010A730 /* Story2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC375322D623260010A730 /* Story2.swift */; };
 		C0DC375822D651140010A730 /* GetRewardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC375722D651140010A730 /* GetRewardVC.swift */; };
 		C0DC375A22D66FF80010A730 /* StampService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC375922D66FF80010A730 /* StampService.swift */; };
+		C0DC375C22D671910010A730 /* GetStamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC375B22D671910010A730 /* GetStamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -168,6 +169,7 @@
 		C0DC375322D623260010A730 /* Story2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story2.swift; sourceTree = "<group>"; };
 		C0DC375722D651140010A730 /* GetRewardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRewardVC.swift; sourceTree = "<group>"; };
 		C0DC375922D66FF80010A730 /* StampService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampService.swift; sourceTree = "<group>"; };
+		C0DC375B22D671910010A730 /* GetStamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -397,6 +399,7 @@
 				C0DC374122D5B4AC0010A730 /* MyEachDonatedBerry.swift */,
 				C0DC374522D5C68C0010A730 /* Banking.swift */,
 				C0DC374322D5C5FF0010A730 /* UserHistory.swift */,
+				C0DC375B22D671910010A730 /* GetStamp.swift */,
 				C0DC372822D490E90010A730 /* dummy */,
 			);
 			path = Model;
@@ -629,6 +632,7 @@
 				C0DC374A22D5D4770010A730 /* MyBerry.swift in Sources */,
 				C0DC374222D5B4AC0010A730 /* MyEachDonatedBerry.swift in Sources */,
 				C0DC375822D651140010A730 /* GetRewardVC.swift in Sources */,
+				C0DC375C22D671910010A730 /* GetStamp.swift in Sources */,
 				C08482DC22C337110087F3BC /* UIImageView+ㄷExtensions.swift in Sources */,
 				C021C2F922D06E5900ADF1FE /* ChargeVC.swift in Sources */,
 				C08482BE22C2515D0087F3BC /* AppDelegate.swift in Sources */,

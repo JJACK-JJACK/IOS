@@ -30,7 +30,7 @@ struct StampServices: APIManager {
                                 do{
                                     let decoder = JSONDecoder()
                                     let result = try
-                                        decoder.decode(ResponseArr<Datum>.self, from: value)
+                                        decoder.decode(ResponseObj<GetStamp>.self, from: value)
                                     print(result)
                                     if result.success {completion(.success(result.data!))}
                                     else { completion(.requestErr(result.message))}
