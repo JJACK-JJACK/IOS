@@ -13,10 +13,17 @@ class MyPageVC: UIViewController {
 
     @IBOutlet weak var nickName: UILabel!
     @IBOutlet weak var email: UILabel!
+    
+    @IBOutlet weak var ownBerry: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setup()
+    }
+    func setup() {
+        self.ownBerry.text = String(UserDefaults.standard.integer(forKey: "ownBerry"))
+
     }
     
     @IBAction func goHome(_ sender: Any) {

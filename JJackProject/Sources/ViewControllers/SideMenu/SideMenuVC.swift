@@ -11,6 +11,8 @@ import UIKit
 class SideMenuVC: UIViewController {
 
     @IBOutlet weak var useInfo: UIButton!
+    
+    @IBOutlet weak var ownBerry: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +24,8 @@ class SideMenuVC: UIViewController {
     func setup() {
         self.useInfo.setBorder(borderColor: UIColor.veryLightPink, borderWidth: 1.0)
         self.useInfo.makeRounded(cornerRadius: 15.5)
+        
+        self.ownBerry.text = String(UserDefaults.standard.integer(forKey: "ownBerry"))
     }
     @IBAction func goHome(_ sender: Any) {
         backHome()

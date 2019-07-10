@@ -250,6 +250,7 @@
                     <connections>
                         <outlet property="email" destination="vfk-WP-wqu" id="zbV-rZ-Wh6"/>
                         <outlet property="nickName" destination="Yft-2z-Lgg" id="gJ2-y2-Fxq"/>
+                        <outlet property="ownBerry" destination="6wU-mR-BSV" id="4Th-Ux-ucc"/>
                         <segue destination="T3R-lp-vnJ" kind="unwind" identifier="goHome" unwindAction="unwind:" id="Ysn-3f-cZZ"/>
                         <segue destination="T3R-lp-vnJ" kind="unwind" identifier="toLogin" unwindAction="unwindToMainWithSegue:" id="q7k-zV-6dM"/>
                     </connections>
@@ -409,6 +410,7 @@
                     </view>
                     <connections>
                         <outlet property="historyTable" destination="M0A-vr-lEe" id="Yrc-iR-ssQ"/>
+                        <outlet property="ownBerry" destination="dit-WX-e0f" id="tpt-wt-QK8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fCm-WC-XO8" userLabel="First Responder" sceneMemberID="firstResponder"/>

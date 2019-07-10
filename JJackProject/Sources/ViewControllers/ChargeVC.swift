@@ -38,6 +38,7 @@ class ChargeVC: UIViewController{
         
         setup()
     }
+    var berry: Int = 0
     
     var paramBerry: Int = 1100
     var paramAccount: String? = ""
@@ -98,18 +99,23 @@ class ChargeVC: UIViewController{
         case 1:
             select1.isHidden = false
             self.paramBerry = 1100
+            berry = 10
         case 2:
             select2.isHidden = false
             self.paramBerry = 5500
+            berry = 50
         case 3:
             select3.isHidden = false
             self.paramBerry = 11000
+            berry = 100
         case 4:
             select4.isHidden = false
             self.paramBerry = 33000
+            berry = 300
         case 5:
             select5.isHidden = false
             self.paramBerry = 55000
+            berry = 500
         default:
             break
         }
@@ -120,7 +126,8 @@ class ChargeVC: UIViewController{
         //통신
         guard let token = UserDefaults.standard.string(forKey: "refreshToken") else {return}
         
-        ChargeService.shared.chargingBerry(token, paramBerry) {
+        
+        ChargeService.shared.chargingBerry(token, berry) {
             [weak self]
             (data) in
             

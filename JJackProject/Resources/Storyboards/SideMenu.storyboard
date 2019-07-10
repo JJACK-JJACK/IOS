@@ -311,6 +311,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="inC-IG-M9V"/>
                     <connections>
+                        <outlet property="ownBerry" destination="0UW-Zw-rTp" id="Q3c-SE-tZ4"/>
                         <outlet property="useInfo" destination="ZyH-cg-LF5" id="ZRn-hv-t5c"/>
                         <segue destination="xw5-tP-gdi" kind="unwind" identifier="goHome" unwindAction="unwind:" id="gOM-Rg-17Y"/>
                     </connections>

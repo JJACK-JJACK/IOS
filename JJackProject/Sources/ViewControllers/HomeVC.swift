@@ -73,6 +73,22 @@ class HomeVC: UIViewController {
         
         //sideMenu setUp
         setupSideMenu()
+        getMyOwnBerry()
+    }
+    func getMyOwnBerry () {
+        guard let token = UserDefaults.standard.string(forKey: "refreshToken") else {return}
+        ChargeService.shared.ownedBerry(token){
+            (data) in
+            
+            switch data {
+            case .success(let data):
+                guard let berry = data as? Int else {return}
+                UserDefaults.standard.set(berry, forKey: "ownBerry")
+                print(UserDefaults.standard.integer(forKey: "ownBerry"))
+            default:
+                break
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {

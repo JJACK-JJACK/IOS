@@ -1463,6 +1463,7 @@
                         <outlet property="charging50" destination="8ou-YM-3zl" id="jHt-z7-jVb"/>
                         <outlet property="chargingAll" destination="QJL-VH-bJz" id="Mwr-A5-Tz9"/>
                         <outlet property="confirmDonate" destination="Y9j-rp-sUW" id="eEc-41-HbJ"/>
+                        <outlet property="ownBerry" destination="9bV-et-vLY" id="eBi-sX-G6V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f2k-yR-6Wd" userLabel="First Responder" sceneMemberID="firstResponder"/>

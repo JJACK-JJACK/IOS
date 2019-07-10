@@ -24,7 +24,24 @@ class DetailRankingVC: UIViewController {
         staticBar.makeRounded(cornerRadius: nil)
     }
     
-    var paramThumbImg : UIImage?
+    var paramThumbImg: String = ""
+    var process: Int = 0
+    var berry: Int = 0
+    var subTitle: String = ""
+    var content1: String = ""
+    var content2: String = ""
+    var contentImg: String = ""
+    var purpose1: String = ""
+    var purpose2: String = ""
+    var purpose3: String = ""
+    var price1: Int = 0
+    var price2: Int = 0
+    var price3: Int = 0
+    var totalPrice: Int = 0
+    func setup() {
+        
+    }
+    
     
     @IBAction func Back(_ sender: Any) {
         self.pop()

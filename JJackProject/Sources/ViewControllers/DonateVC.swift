@@ -9,7 +9,9 @@
 import UIKit
 
 class DonateVC: UIViewController {
-
+    
+    @IBOutlet weak var ownBerry: UILabel!
+    
     @IBOutlet weak var charging10: UIButton!
     @IBOutlet weak var charging20: UIButton!
     @IBOutlet weak var charging50: UIButton!
@@ -29,6 +31,8 @@ class DonateVC: UIViewController {
     func setup() {
         setBorder()
         roundBorder()
+        self.ownBerry.text = String(UserDefaults.standard.integer(forKey: "ownBerry"))
+
     }
     func setBorder () {
         charging10.setBorder(borderColor: .brownishGrey, borderWidth: 1.0)

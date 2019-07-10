@@ -12,9 +12,8 @@ class RankingVC: UIViewController {
 
     @IBOutlet weak var topTenListView: UICollectionView!
     
-    let topTenList: [UIImage] = []
+    var topTenList = [Datum]()
     
-  
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +21,29 @@ class RankingVC: UIViewController {
         topTenListView.dataSource = self
         topTenListView.delegate = self
         
+    }
+    
+    func get10Rank() {
+        RankingService.shared.getRanking() {
+            [weak self]
+            (data) in
+            guard let `self` = self else {return}
+            
+            switch data {
+            case .success(let data):
+                self.topTenList = (data as? [Datum])!
+                self.topTenListView.reloadData()
+                break
+            case .requestErr(let err):
+                print(err)
+            case .pathErr:
+                print("path")
+            case .serverErr:
+                print("server")
+            case .networkFail:
+                print("network")
+            }
+        }
     }
     
     @IBAction func showMenu(_ sender: Any) {
@@ -40,9 +62,8 @@ extension RankingVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = topTenListView.dequeueReusableCell(withReuseIdentifier: "RankingCell", for: indexPath )as! HomeCell
-//        let topList = topTenList[indexPath.row]
-//        cell.categoryImg.image = topList
-        cell.backgroundColor = .mainCol
+        let topList = topTenList[indexPath.row]
+        cell.categoryImg.imageFromUrl(self.gsno(topList.thumbnail), defaultImgPath: "imgHomeJjack")
         cell.makeRounded(cornerRadius: 8.0)
         return cell
     }
@@ -69,8 +90,13 @@ extension RankingVC: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let dvc = storyboard?.instantiateViewController(withIdentifier: "DetailRanking")as? DetailRankingVC else {return}
-//        let List = topTenList[indexPath.row]
-//        dvc.paramThumbImg = List
+        let List = topTenList[indexPath.row]
+        dvc.paramThumbImg = List.thumbnail
+        dvc.process = List.percentage
+        dvc.berry = List.totalBerry
+        
+        
+        
         
         navigationController?.pushViewController(dvc, animated: true)
     }
