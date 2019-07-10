@@ -303,6 +303,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="MCc-h3-dHs"/>
                     <connections>
+                        <outlet property="MyDonate" destination="D0f-8g-v1G" id="WpX-sA-2uS"/>
+                        <outlet property="MyDonateBerry" destination="5Zs-3S-IB6" id="sn8-VE-NwD"/>
                         <outlet property="myRecordView" destination="Wcc-b6-vUe" id="ZIe-mp-OWV"/>
                         <segue destination="dIB-sx-SXZ" kind="unwind" identifier="goHome" unwindAction="unwind:" id="haC-dj-81u"/>
                     </connections>
@@ -463,8 +465,8 @@
                                 <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="아직 베리가 차곡차곡 모이는 중이에요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5SW-k4-BZe">
-                                <rect key="frame" x="52" y="459" width="219" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아직 베리가 차곡차곡 모이는 중이에요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5SW-k4-BZe">
+                                <rect key="frame" x="52" y="458.5" width="342" height="17"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
                                 <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -492,8 +494,8 @@
                                 <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="모금된 베리가 전달을 기다리고 있어요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AyE-Ob-Ptq">
-                                <rect key="frame" x="52" y="520.5" width="212.5" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="모금된 베리가 전달을 기다리고 있어요!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AyE-Ob-Ptq">
+                                <rect key="frame" x="52" y="520.5" width="342" height="17"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
                                 <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -522,7 +524,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="추후 후기를 작성할 계획입니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ed7-Uk-QHq">
-                                <rect key="frame" x="52" y="582.5" width="172.5" height="17"/>
+                                <rect key="frame" x="52" y="582.5" width="342" height="17"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
                                 <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -543,6 +545,7 @@
                             <constraint firstItem="Ed7-Uk-QHq" firstAttribute="top" secondItem="jf1-KG-0ct" secondAttribute="bottom" constant="8" id="1YU-0Z-ZHD"/>
                             <constraint firstItem="3xf-fT-I9I" firstAttribute="centerY" secondItem="mS3-Xg-6OI" secondAttribute="centerY" id="26b-D3-4Uy"/>
                             <constraint firstItem="jf1-KG-0ct" firstAttribute="leading" secondItem="lfe-3b-vYV" secondAttribute="trailing" constant="20" id="29E-VD-5h6"/>
+                            <constraint firstItem="v3s-n8-kKQ" firstAttribute="trailing" secondItem="5SW-k4-BZe" secondAttribute="trailing" constant="20" id="3eZ-RX-ebD"/>
                             <constraint firstItem="q7M-jz-c7X" firstAttribute="leading" secondItem="jf1-KG-0ct" secondAttribute="trailing" constant="6" id="43l-uy-QdL"/>
                             <constraint firstItem="rHB-Hl-pc2" firstAttribute="leading" secondItem="nLC-Wz-Vgr" secondAttribute="leading" constant="20" id="4D6-KN-Q4d"/>
                             <constraint firstItem="sFb-Zu-vBk" firstAttribute="leading" secondItem="Hw8-Ms-hdY" secondAttribute="trailing" constant="6" id="67C-Hv-nem"/>
@@ -580,6 +583,7 @@
                             <constraint firstItem="us5-ID-aby" firstAttribute="top" secondItem="Ed7-Uk-QHq" secondAttribute="bottom" constant="39" id="cUd-C6-s68"/>
                             <constraint firstItem="sFb-Zu-vBk" firstAttribute="centerY" secondItem="z7C-IK-8DT" secondAttribute="centerY" id="cWi-jw-i0s"/>
                             <constraint firstItem="eu6-3x-0vL" firstAttribute="centerX" secondItem="hiP-Hn-MIy" secondAttribute="centerX" id="cpv-qt-Bxq"/>
+                            <constraint firstItem="v3s-n8-kKQ" firstAttribute="trailing" secondItem="Ed7-Uk-QHq" secondAttribute="trailing" constant="20" id="d88-T7-rbb"/>
                             <constraint firstItem="OEU-9Y-fYn" firstAttribute="leading" secondItem="5Sr-W8-Yrr" secondAttribute="trailing" constant="5" id="e8R-T8-nsG"/>
                             <constraint firstItem="5SW-k4-BZe" firstAttribute="leading" secondItem="z7C-IK-8DT" secondAttribute="leading" id="ewm-dD-BUT"/>
                             <constraint firstItem="jf1-KG-0ct" firstAttribute="centerY" secondItem="lfe-3b-vYV" secondAttribute="centerY" id="gCu-xJ-L9J"/>
@@ -596,6 +600,7 @@
                             <constraint firstItem="Hw8-Ms-hdY" firstAttribute="leading" secondItem="z7C-IK-8DT" secondAttribute="trailing" constant="6" id="qYO-Fz-NQq"/>
                             <constraint firstItem="3xf-fT-I9I" firstAttribute="top" secondItem="iQm-Wz-b36" secondAttribute="bottom" constant="8" id="r6R-cT-No8"/>
                             <constraint firstItem="eA7-ZT-Q1v" firstAttribute="leading" secondItem="kiZ-3V-3Jg" secondAttribute="trailing" constant="6" id="rMX-gQ-Z70"/>
+                            <constraint firstItem="v3s-n8-kKQ" firstAttribute="trailing" secondItem="AyE-Ob-Ptq" secondAttribute="trailing" constant="20" id="rye-Eh-I48"/>
                             <constraint firstItem="uV5-nE-k8f" firstAttribute="centerY" secondItem="eu6-3x-0vL" secondAttribute="centerY" id="ul0-cd-RC2"/>
                             <constraint firstItem="ddz-Dt-gk5" firstAttribute="leading" secondItem="q7M-jz-c7X" secondAttribute="trailing" constant="6" id="ymI-SU-Dge"/>
                             <constraint firstItem="3xf-fT-I9I" firstAttribute="leading" secondItem="mS3-Xg-6OI" secondAttribute="trailing" constant="2" id="zZ7-SU-DDR"/>
@@ -614,6 +619,9 @@
                         <outlet property="processRate" destination="5Sr-W8-Yrr" id="FVa-TD-Twd"/>
                         <outlet property="rateBar" destination="9sC-Yq-k32" id="yQ9-Ed-T8X"/>
                         <outlet property="showRate" destination="Iqo-Hc-yZG" id="ahU-8c-678"/>
+                        <outlet property="stateText1" destination="5SW-k4-BZe" id="4ix-4T-SSN"/>
+                        <outlet property="stateText2" destination="AyE-Ob-Ptq" id="NzF-3c-6EA"/>
+                        <outlet property="stateText3" destination="Ed7-Uk-QHq" id="0zj-hg-LKa"/>
                         <outlet property="statusBar" destination="iQm-Wz-b36" id="EOH-TI-GSd"/>
                         <outlet property="statusDot1" destination="eWE-AR-869" id="ytR-TO-Ubd"/>
                         <outlet property="statusDot2" destination="eu6-3x-0vL" id="4gg-v5-kZU"/>

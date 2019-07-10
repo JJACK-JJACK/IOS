@@ -71,6 +71,8 @@
 		C0DC373A22D576E20010A730 /* Charge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC373922D576E20010A730 /* Charge.swift */; };
 		C0DC373C22D576F20010A730 /* ChargeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC373B22D576F20010A730 /* ChargeService.swift */; };
 		C0DC373E22D58F600010A730 /* ChargingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC373D22D58F600010A730 /* ChargingInfo.swift */; };
+		C0DC374022D5AE870010A730 /* MyHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC373F22D5AE870010A730 /* MyHistory.swift */; };
+		C0DC374222D5B4AC0010A730 /* MyEachDonatedBerry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC374122D5B4AC0010A730 /* MyEachDonatedBerry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -142,6 +144,8 @@
 		C0DC373922D576E20010A730 /* Charge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charge.swift; sourceTree = "<group>"; };
 		C0DC373B22D576F20010A730 /* ChargeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeService.swift; sourceTree = "<group>"; };
 		C0DC373D22D58F600010A730 /* ChargingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingInfo.swift; sourceTree = "<group>"; };
+		C0DC373F22D5AE870010A730 /* MyHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHistory.swift; sourceTree = "<group>"; };
+		C0DC374122D5B4AC0010A730 /* MyEachDonatedBerry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEachDonatedBerry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -358,6 +362,8 @@
 				C0DC372922D491020010A730 /* Count.swift */,
 				C0DC373922D576E20010A730 /* Charge.swift */,
 				C0DC373D22D58F600010A730 /* ChargingInfo.swift */,
+				C0DC373F22D5AE870010A730 /* MyHistory.swift */,
+				C0DC374122D5B4AC0010A730 /* MyEachDonatedBerry.swift */,
 				C0DC372822D490E90010A730 /* dummy */,
 			);
 			path = Model;
@@ -542,6 +548,7 @@
 				C0DC371122D339A60010A730 /* ResponseObject.swift in Sources */,
 				C0DC373C22D576F20010A730 /* ChargeService.swift in Sources */,
 				C0DC371722D35CEB0010A730 /* APIManager.swift in Sources */,
+				C0DC374022D5AE870010A730 /* MyHistory.swift in Sources */,
 				C01E92E322CA372F00D43366 /* MyPageVC.swift in Sources */,
 				C08D146522CF07AD00F5EB0A /* Ranking.swift in Sources */,
 				C01BC94422CCB393000AAF58 /* MainInfo.swift in Sources */,
@@ -580,6 +587,7 @@
 				C0DC372D22D491640010A730 /* HistoryService.swift in Sources */,
 				C021C30822D229AC00ADF1FE /* Token.swift in Sources */,
 				C027A95022CD4C9600F198ED /* EarnBerryVC.swift in Sources */,
+				C0DC374222D5B4AC0010A730 /* MyEachDonatedBerry.swift in Sources */,
 				C08482DC22C337110087F3BC /* UIImageView+ㄷExtensions.swift in Sources */,
 				C021C2F922D06E5900ADF1FE /* ChargeVC.swift in Sources */,
 				C08482BE22C2515D0087F3BC /* AppDelegate.swift in Sources */,

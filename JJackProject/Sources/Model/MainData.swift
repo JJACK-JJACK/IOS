@@ -12,6 +12,7 @@ struct Main: Codable {
     let id, title, centerName: String
     let thumbnail: String
     let start, finish: String
+    let state: Int
     
     enum CodingKeys: String, CodingKey{
         case totalBerry, maxBerry, percentage
@@ -19,5 +20,6 @@ struct Main: Codable {
         case title, centerName
         case thumbnail
         case start, finish
+        case state
     }
 }

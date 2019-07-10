@@ -28,6 +28,10 @@ class DetailRecordVC: UIViewController {
     @IBOutlet weak var statusDot2: UIView!
     @IBOutlet weak var statusDot3: UIView!
     
+    @IBOutlet weak var stateText1: UILabel!
+    @IBOutlet weak var stateText2: UILabel!
+    @IBOutlet weak var stateText3: UILabel!
+    
     @IBOutlet weak var ongoingLabel: UILabel!
     @IBOutlet weak var closeLabel: UILabel!
     @IBOutlet weak var completeLabel: UILabel!
@@ -43,18 +47,18 @@ class DetailRecordVC: UIViewController {
     var paramTitle: String = ""
     var paramInstitution: String = ""
     var paramDate: String = ""
-    var paramProcess: String = ""
-    var paramDonated: String = ""
-    var paramStatus: String = ""
+    var paramProcess: Int = 0
+    var paramDonated: Int = 0
+    var paramStatus: Int = 0
 
     func setup() {
         // insert values
-        self.thumbImg.image = UIImage(named: paramThumbImg)
+        self.thumbImg.imageFromUrl(self.gsno(paramThumbImg), defaultImgPath: "imgHomeJjack")
         self.name.text = paramTitle
         self.institution.text = paramInstitution
         self.date.text = paramDate
-        self.processRate.text = paramProcess + "%"
-        self.donatedBerry.text = paramDonated
+        self.processRate.text = String(paramProcess) + "%"
+        self.donatedBerry.text = String(paramDonated)
         
         
         
@@ -70,11 +74,11 @@ class DetailRecordVC: UIViewController {
     }
     
     func activateProcess () {
-        let rate = Double(paramProcess) ?? 0.0
+        let rate = Double(paramProcess)
         let width = self.view.frame.width
         let show = round( (Double(width)
             - 40.0) * (rate / 100.0) )
-        if show >= 100 {self.showRate.constant = 100}
+        if show >= Double(width) {self.showRate.constant = width}
         else {self.showRate.constant = CGFloat(show)}
         
         
@@ -86,24 +90,27 @@ class DetailRecordVC: UIViewController {
     func sortingStatus () {
         let status = paramStatus
         switch status {
-        case "진행중":
+        case 0:
             self.date.textColor = UIColor.pointCol
             self.rateBar.backgroundColor = UIColor.pointCol
             self.processRate.textColor = UIColor.pointCol
             self.statusDot1.backgroundColor = UIColor.pointCol
             self.ongoingLabel.textColor = UIColor.pointCol
-        case "마감":
+            self.stateText1.textColor = UIColor(white: 52.0/166.0, alpha: 1.0)
+        case 1:
             self.date.textColor = UIColor.closeCol
             self.rateBar.backgroundColor = UIColor.closeCol
             self.processRate.textColor = UIColor.closeCol
             self.statusDot2.backgroundColor = UIColor.closeCol
             self.closeLabel.textColor = UIColor.closeCol
-        case "전달완료":
+            self.stateText2.textColor = UIColor(white: 52.0/166.0, alpha: 1.0)
+        case 2:
             self.date.textColor = UIColor.completeCol
             self.rateBar.backgroundColor = UIColor.completeCol
             self.processRate.textColor = UIColor.completeCol
             self.statusDot3.backgroundColor = UIColor.completeCol
             self.completeLabel.textColor = UIColor.completeCol
+            self.stateText3.textColor = UIColor(white: 52.0/166.0, alpha: 1.0)
         default:
             break
         }
