@@ -93,7 +93,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="58" id="A5c-1u-Ela"/>
                                         </constraints>
-                                        <state key="normal" image="icUsagelist"/>
+                                        <state key="normal" image="group4"/>
                                         <connections>
                                             <action selector="showRecord:" destination="OX7-sM-8P6" eventType="touchUpInside" id="idN-nF-cuc"/>
                                         </connections>
@@ -103,7 +103,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="58" id="Wa7-Bw-LWj"/>
                                         </constraints>
-                                        <state key="normal" image="icRanking"/>
+                                        <state key="normal" image="group5"/>
                                         <connections>
                                             <action selector="showRanking:" destination="OX7-sM-8P6" eventType="touchUpInside" id="cVs-Vy-M61"/>
                                         </connections>
@@ -191,7 +191,7 @@
                                             <constraint firstAttribute="width" constant="65" id="FJN-va-sB2"/>
                                             <constraint firstAttribute="height" constant="82" id="K7m-Tj-XXD"/>
                                         </constraints>
-                                        <state key="normal" image="icAnimal"/>
+                                        <state key="normal" image="icChildren"/>
                                         <connections>
                                             <action selector="goMainView:" destination="OX7-sM-8P6" eventType="touchUpInside" id="Ecb-YE-Ghj"/>
                                         </connections>
@@ -202,7 +202,7 @@
                                             <constraint firstAttribute="width" constant="65" id="Cbv-Lq-jU6"/>
                                             <constraint firstAttribute="height" constant="82" id="Vdx-uK-E6I"/>
                                         </constraints>
-                                        <state key="normal" image="icEnvironment"/>
+                                        <state key="normal" image="icSenior"/>
                                         <connections>
                                             <action selector="goMainView:" destination="OX7-sM-8P6" eventType="touchUpInside" id="WM1-uT-XN2"/>
                                         </connections>
@@ -218,7 +218,7 @@
                                             <constraint firstAttribute="height" constant="82" id="V6D-PV-DjY"/>
                                             <constraint firstAttribute="width" constant="65" id="ii5-kh-Mah"/>
                                         </constraints>
-                                        <state key="normal" image="icChildren"/>
+                                        <state key="normal" image="icAnimal"/>
                                         <connections>
                                             <action selector="goMainView:" destination="OX7-sM-8P6" eventType="touchUpInside" id="REU-76-lv1"/>
                                         </connections>
@@ -245,7 +245,7 @@
                                             <constraint firstAttribute="height" constant="82" id="bTN-qO-1dN"/>
                                             <constraint firstAttribute="width" constant="65" id="zcy-IV-tMs"/>
                                         </constraints>
-                                        <state key="normal" image="icEmergency"/>
+                                        <state key="normal" image="icEnvironment"/>
                                         <connections>
                                             <action selector="goMainView:" destination="OX7-sM-8P6" eventType="touchUpInside" id="Scy-Wh-vaa"/>
                                         </connections>
@@ -256,7 +256,7 @@
                                             <constraint firstAttribute="height" constant="82" id="Cun-V7-CQS"/>
                                             <constraint firstAttribute="width" constant="65" id="LUb-WW-WzP"/>
                                         </constraints>
-                                        <state key="normal" image="icSenior"/>
+                                        <state key="normal" image="icEmergency"/>
                                         <connections>
                                             <action selector="goMainView:" destination="OX7-sM-8P6" eventType="touchUpInside" id="zJh-mU-IXL"/>
                                         </connections>
@@ -311,6 +311,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="inC-IG-M9V"/>
                     <connections>
+                        <outlet property="email" destination="SGS-ix-DNy" id="C9r-jZ-lfC"/>
+                        <outlet property="nickname" destination="4Hb-h9-Eqo" id="XEo-6m-5Tg"/>
                         <outlet property="ownBerry" destination="0UW-Zw-rTp" id="Q3c-SE-tZ4"/>
                         <outlet property="useInfo" destination="ZyH-cg-LF5" id="ZRn-hv-t5c"/>
                         <segue destination="xw5-tP-gdi" kind="unwind" identifier="goHome" unwindAction="unwind:" id="gOM-Rg-17Y"/>
@@ -340,6 +342,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="group4" width="52" height="52"/>
+        <image name="group5" width="52" height="52"/>
         <image name="icAnimal" width="65" height="82"/>
         <image name="icCancleLarge" width="27" height="29"/>
         <image name="icCharge" width="62" height="31"/>
@@ -349,8 +353,6 @@
         <image name="icEnvironment" width="65" height="82"/>
         <image name="icHome" width="36" height="34"/>
         <image name="icMypage" width="72" height="69"/>
-        <image name="icRanking" width="58" height="69"/>
         <image name="icSenior" width="65" height="82"/>
-        <image name="icUsagelist" width="58" height="69"/>
     </resources>
 </document>

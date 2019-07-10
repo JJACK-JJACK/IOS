@@ -89,11 +89,21 @@ class DonateVC: UIViewController {
             guard let `self` = self else {return}
             
             switch data {
-            case .success(let message):
-               guard let dvc = self.storyboard?.instantiateViewController(withIdentifier: "CompleteDonate")as? CompleteDonateAlertVC else {return}
-                print("#######@#############")
-                print(message)
-                self.present(dvc, animated: true, completion: nil)
+            case .success(let data):
+                guard let data = data as? Donate else {return}
+                if data.stamps == 10 {
+                    guard let dvc =  self.storyboard?.instantiateViewController(withIdentifier: "GetReward") as?GetRewardVC else {return}
+                    print("#######@#############")
+                    print(data)
+                    dvc.rewardBerry = data.rewordsBerry
+                    self.present(dvc, animated: true, completion: nil)
+                } else {
+                    guard let dvc =  self.storyboard?.instantiateViewController(withIdentifier: "CompleteDonate") as? CompleteDonateAlertVC else {return}
+                    print("#######@#############")
+                    print(data)
+                    self.present(dvc, animated: true, completion: nil)
+
+                }
             case .requestErr(let message):
                 print(message)
             case .pathErr:
@@ -102,6 +112,7 @@ class DonateVC: UIViewController {
                 print("server")
             case .networkFail:
                 print("네트워크 오류")
+            
             }
         
         }

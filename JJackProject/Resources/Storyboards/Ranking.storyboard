@@ -201,6 +201,7 @@
                         <viewLayoutGuide key="safeArea" id="a5D-8R-wOK"/>
                     </view>
                     <connections>
+                        <outlet property="EntireDonatedBerry" destination="Ia0-en-eYl" id="S6p-zy-w7n"/>
                         <outlet property="topTenListView" destination="66K-Cl-0sV" id="jhs-Qh-JmH"/>
                         <segue destination="cMQ-Pm-ilq" kind="unwind" identifier="goHome" unwindAction="unwind:" id="Fm9-a4-qKW"/>
                     </connections>
@@ -303,7 +304,6 @@
                                                         <rect key="frame" x="23" y="726" width="329" height="183"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="182.99999999999994" id="wDi-Qq-kkf"/>
-                                                            <constraint firstAttribute="width" secondItem="xpm-vu-9uc" secondAttribute="height" multiplier="329:183" id="z1C-us-MBg"/>
                                                         </constraints>
                                                     </imageView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sV0-aE-B7m">
@@ -800,10 +800,19 @@
                     </view>
                     <size key="freeformSize" width="375" height="1473"/>
                     <connections>
+                        <outlet property="comment1" destination="yyV-SI-lDC" id="SyP-Zd-DMS"/>
+                        <outlet property="commnet2" destination="7hC-ou-MQy" id="VBK-ix-m5c"/>
+                        <outlet property="maxBerry" destination="ozt-iD-xyL" id="ayt-cn-Uvs"/>
+                        <outlet property="percentage" destination="RDc-kS-QZl" id="Ah1-oB-soe"/>
+                        <outlet property="planPrice" destination="rLw-xS-FTl" id="gwy-Af-S4m"/>
+                        <outlet property="planPurpose" destination="0Il-zS-Gv0" id="tL5-oT-KKC"/>
                         <outlet property="processBar" destination="6jl-fX-xgf" id="uMa-MT-Mx2"/>
                         <outlet property="processRate" destination="5Rz-2l-2I5" id="Az9-rO-tC8"/>
                         <outlet property="staticBar" destination="5Ex-KY-2Yp" id="lk1-pe-Kaa"/>
+                        <outlet property="storyImg" destination="xpm-vu-9uc" id="UVz-Yh-stj"/>
+                        <outlet property="subtitle" destination="eXe-4A-hJq" id="wJa-Rr-aev"/>
                         <outlet property="thumbImg" destination="gjZ-lZ-6GQ" id="9ao-TS-D9R"/>
+                        <outlet property="totalBerry" destination="tlk-VQ-Nn3" id="ajF-x0-i9t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOd-Kc-356" userLabel="First Responder" sceneMemberID="firstResponder"/>

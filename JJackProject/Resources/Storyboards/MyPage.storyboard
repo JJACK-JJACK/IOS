@@ -40,16 +40,16 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="woP-Vy-YeB">
-                                <rect key="frame" x="85" y="172" width="121.5" height="48"/>
+                                <rect key="frame" x="85" y="172" width="246" height="48"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nickname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yft-2z-Lgg">
-                                        <rect key="frame" x="0.0" y="0.0" width="121.5" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="246" height="24"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="14"/>
                                         <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JJACkJJAck@sopt.org" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfk-WP-wqu">
-                                        <rect key="frame" x="0.0" y="24" width="121.5" height="24"/>
+                                        <rect key="frame" x="0.0" y="24" width="246" height="24"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Thin" family="Apple SD Gothic Neo" pointSize="14"/>
                                         <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -74,6 +74,10 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOo-um-kIg">
                                 <rect key="frame" x="371" y="172" width="31" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="31" id="2Tl-O4-3YK"/>
+                                    <constraint firstAttribute="height" constant="31" id="40d-6h-yEp"/>
+                                </constraints>
                                 <state key="normal" image="icEditLarge"/>
                                 <connections>
                                     <segue destination="xsx-di-su4" kind="show" identifier="goEditSegue" id="lxv-ys-CX1"/>
@@ -212,6 +216,7 @@
                             <constraint firstItem="SY2-DU-jYw" firstAttribute="top" secondItem="HEU-nY-UsV" secondAttribute="bottom" constant="20" id="V2r-Eo-9Ap"/>
                             <constraint firstItem="goj-PZ-whW" firstAttribute="centerY" secondItem="KAm-FG-tZE" secondAttribute="centerY" id="WUk-UD-cb0"/>
                             <constraint firstItem="KAm-FG-tZE" firstAttribute="top" secondItem="OF5-7g-7Gs" secondAttribute="bottom" constant="32" id="Wm7-Cf-MFH"/>
+                            <constraint firstItem="QOo-um-kIg" firstAttribute="leading" secondItem="woP-Vy-YeB" secondAttribute="trailing" constant="40" id="ZsS-zV-UMk"/>
                             <constraint firstItem="FOi-xC-sZV" firstAttribute="trailing" secondItem="v4c-Ga-FYs" secondAttribute="trailing" constant="14" id="ah1-0k-kkt"/>
                             <constraint firstItem="69i-6G-ug9" firstAttribute="centerY" secondItem="XY2-44-Dgf" secondAttribute="centerY" id="apC-0c-CvA"/>
                             <constraint firstItem="v4c-Ga-FYs" firstAttribute="leading" secondItem="FOi-xC-sZV" secondAttribute="leading" constant="20" id="awg-Ra-Le9"/>
@@ -248,8 +253,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="ZMc-Ok-XeN"/>
                     <connections>
-                        <outlet property="email" destination="vfk-WP-wqu" id="zbV-rZ-Wh6"/>
-                        <outlet property="nickName" destination="Yft-2z-Lgg" id="gJ2-y2-Fxq"/>
+                        <outlet property="email" destination="vfk-WP-wqu" id="pdl-cu-CRQ"/>
+                        <outlet property="nickName" destination="Yft-2z-Lgg" id="hnQ-3y-NN7"/>
                         <outlet property="ownBerry" destination="6wU-mR-BSV" id="4Th-Ux-ucc"/>
                         <segue destination="T3R-lp-vnJ" kind="unwind" identifier="goHome" unwindAction="unwind:" id="Ysn-3f-cZZ"/>
                         <segue destination="T3R-lp-vnJ" kind="unwind" identifier="toLogin" unwindAction="unwindToMainWithSegue:" id="q7k-zV-6dM"/>

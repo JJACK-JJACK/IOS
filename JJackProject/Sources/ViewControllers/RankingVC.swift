@@ -12,6 +12,8 @@ class RankingVC: UIViewController {
 
     @IBOutlet weak var topTenListView: UICollectionView!
     
+    @IBOutlet weak var EntireDonatedBerry: UILabel!
+    
     var topTenList = [Datum]()
     
     override func viewDidLoad() {
@@ -21,6 +23,27 @@ class RankingVC: UIViewController {
         topTenListView.dataSource = self
         topTenListView.delegate = self
         
+        get10Rank()
+        getEntireBerry()
+        
+    }
+    func getEntireBerry() {
+        MainService.shared.getEntireDonatedBerry(){
+            [weak self]
+            (data) in
+            guard let `self` = self else {return}
+            
+            switch data {
+            case .success(let data):
+                let berry = (data as? [EntireBerry])!
+                print(berry[0].totalDonate)
+                self.EntireDonatedBerry.text = String(berry[0].totalDonate)
+                break
+            default:
+                break
+            }
+            
+        }
     }
     
     func get10Rank() {
@@ -31,7 +54,10 @@ class RankingVC: UIViewController {
             
             switch data {
             case .success(let data):
-                self.topTenList = (data as? [Datum])!
+                let datum = (data as? [Datum])!
+                self.topTenList = datum
+                print("Ssssssssssssssss")
+                print(self.topTenList.count)
                 self.topTenListView.reloadData()
                 break
             case .requestErr(let err):
@@ -57,7 +83,7 @@ class RankingVC: UIViewController {
 
 extension RankingVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return topTenList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -94,8 +120,16 @@ extension RankingVC: UICollectionViewDelegateFlowLayout {
         dvc.paramThumbImg = List.thumbnail
         dvc.process = List.percentage
         dvc.berry = List.totalBerry
+        dvc.max = List.maxBerry
         
-        
+        let reviewStory = List.review[0].story!
+        dvc.subTitle = reviewStory[0].subTitle
+        dvc.content1 = reviewStory[0].content[0]
+        dvc.content2 = reviewStory[0].content[1]
+        dvc.contentImg = reviewStory[0].img
+        let reviewPlan = List.review[1].plan!
+        dvc.purpose1 = reviewPlan[0].purpose
+        dvc.price1 = reviewPlan[0].price
         
         
         navigationController?.pushViewController(dvc, animated: true)

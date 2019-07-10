@@ -11,10 +11,17 @@ struct Datum: Codable {
     let story: [Story]
     let plan: [Plan]
     let review: [Review]
-    let state, totalBerry, maxBerry, percentage: Int
-    let id, title, centerName: String
+    let state:Int
+    let totalBerry: Int
+    let maxBerry: Int
+    let percentage: Int
+    let id: String
+    let title: String
+    let centerName: String
     let thumbnail: String
-    let start, finish, deliver: String
+    let start: String
+    let finish: String
+    let deliver: String
     let categoryID: Int
     
     enum CodingKeys: String, CodingKey {
@@ -24,21 +31,6 @@ struct Datum: Codable {
         case categoryID = "categoryId"
     }
 }
-// MARK: - Plan
-struct Plan: Codable {
-    let purpose: String
-    let price: Int
-}
 
-// MARK: - Review
-struct Review: Codable {
-    let story: [Story]?
-    let plan: [Plan]?
-}
 
-// MARK: - Story
-struct Story: Codable {
-    let subTitle: String
-    let content: [String]
-    let img: String
-}
+

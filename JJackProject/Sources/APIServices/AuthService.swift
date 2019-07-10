@@ -46,7 +46,7 @@ struct AuthServices: APIManager {
                                     switch result.success{
                                     case true:
                                         print("\(result.status)")
-                                        completion(.success(result.data?.token! as Any))
+                                        completion(.success(result.data!))
                                     case false:
                                         completion(.requestErr(result.message))
                                     }

@@ -42,7 +42,7 @@ struct DonateService: APIManager {
                                     if result.success
                                     {
                                        print("성공!")
-                                        completion(.success(result.message))}
+                                        completion(.success(result.data!))}
                                         
                                     else {
                                         print("실패")

@@ -8,26 +8,8 @@
 
 import Foundation
 struct Donate: Codable {
-    let program: [Program]
-    let id: String
-    let userId: Int
-
-    enum CodingKeys: String, CodingKey{
-        case program
-        case id = "_id"
-        case userId = "user_id"
-    }
+    let totalBerry: Int
+    let stamps: Int
+    let rewordsBerry: Int
 }
 
-struct Program: Codable {
-
-    let programId: String
-    let date: String
-    let donateBerry: Int
-
-    enum CodingKeys: String, CodingKey{
-        case programId = "program_id"
-        case date
-        case donateBerry
-    }
-}

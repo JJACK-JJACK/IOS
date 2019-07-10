@@ -10,11 +10,11 @@ import UIKit
 import SideMenu
 
 class MyPageVC: UIViewController {
-
+    
+    @IBOutlet weak var ownBerry: UILabel!
     @IBOutlet weak var nickName: UILabel!
     @IBOutlet weak var email: UILabel!
     
-    @IBOutlet weak var ownBerry: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,7 +23,8 @@ class MyPageVC: UIViewController {
     }
     func setup() {
         self.ownBerry.text = String(UserDefaults.standard.integer(forKey: "ownBerry"))
-
+        self.nickName.text = UserDefaults.standard.string(forKey: "nickname")
+        self.email.text = UserDefaults.standard.string(forKey: "email")
     }
     
     @IBAction func goHome(_ sender: Any) {
