@@ -68,13 +68,19 @@ class DonateVC: UIViewController {
         // 개수에 따라서 베리를 부여할 지 판단하자
         // 서버가 어느정도의 역할을 할지..!
         guard let token = UserDefaults.standard.string(forKey: "refreshToken") else {return}
+        print("////////\(token)////////")
         guard let berry = Int(self.berryValue.text ?? "10") else {return}
         DonateService.shared.donate(token, berry
         , paramId){
+            [weak self]
             (data) in
+            guard let `self` = self else {return}
             switch data {
             case .success(let message):
+               guard let dvc = self.storyboard?.instantiateViewController(withIdentifier: "CompleteDonate")as? CompleteDonateAlertVC else {return}
+                print("#######@#############")
                 print(message)
+                self.present(dvc, animated: true, completion: nil)
             case .requestErr(let message):
                 print(message)
             case .pathErr:
@@ -84,8 +90,13 @@ class DonateVC: UIViewController {
             case .networkFail:
                 print("네트워크 오류")
             }
-            
+        
         }
+//        guard let dvc = self.storyboard?.instantiateViewController(withIdentifier: "CompleteDonate")as? CompleteDonateAlertVC else {return}
+//        print("#######@#############")
+////        print(token)
+//        print(berry)
+//        self.present(dvc, animated: true, completion: nil)
     }
     @IBAction func Back(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)

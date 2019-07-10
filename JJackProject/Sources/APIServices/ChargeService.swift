@@ -1,30 +1,29 @@
 //
-//  DonateService.swift
+//  ChargeService.swift
 //  JJackProject
 //
-//  Created by SangIl Mo on 09/07/2019.
+//  Created by SangIl Mo on 10/07/2019.
 //  Copyright © 2019 SangIl Mo. All rights reserved.
 //
 
 import Foundation
 import Alamofire
 
-struct DonateService: APIManager {
+struct ChargeService: APIManager {
     
-    static let shared = DonateService()
-    let BaseUrl = url("/userHistory")
+    static let shared = ChargeService()
     
-    func donate (_ token: String, _ berry: Int,_ programId: String, completion: @escaping (NetworkResult<Any>) -> Void) {
-        
-        let URL = BaseUrl + "/\(programId)"
-        
+    let URL = url("/berryHistory")
+    
+    func chargingBerry (_ token: String, _ berry: Int, completion: @escaping (NetworkResult<Any>) -> Void) {
         let headers: HTTPHeaders = [
             "Content-type" : "application/json",
             "token" : token
         ]
         let body: Parameters = [
-            "donateBerry" : berry
+            "chargeBerry" : berry
         ]
+        
         Alamofire.request(URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: headers)
             .responseData{ res in
                 res.result.ifSuccess {
@@ -33,21 +32,12 @@ struct DonateService: APIManager {
                             switch status {
                             case 200:
                                 do{
-                                    print(1)
                                     let decoder = JSONDecoder()
-                                    print(1)
                                     let result = try
-                                        decoder.decode(ResponseArr<Donate>.self, from: value)
-                                    print(1)
-                                    if result.success
-                                    {
-                                       print("성공!")
-                                        completion(.success(result.message))}
-                                        
-                                    else {
-                                        print("실패")
-                                        completion(.requestErr(result.message))}
-                                } catch { print("error") }
+                                        decoder.decode(ResponseArr<Charge>.self, from: value)
+                                    if result.success {completion(.success(result.data!))}
+                                    else { completion(.requestErr(result.message))}
+                                } catch {print("error")}
                             case 400:
                                 print("pathErr")
                                 completion(.pathErr)
@@ -61,12 +51,11 @@ struct DonateService: APIManager {
                     }
                 }
                 res.result.ifFailure {
-                    print(URL)
+                    print(self.URL)
                     let err = res.result.error!
                     print(err.localizedDescription)
                     completion(.networkFail)
                 }
         }
     }
-    
 }

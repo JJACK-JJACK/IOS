@@ -115,6 +115,8 @@ class ChargeVC: UIViewController{
     
     @IBAction func ChargeBerry(_ sender: Any) {
         //통신
+        guard let token = UserDefaults.standard.string(forKey: "refreshToken")
+        ChargeService.shared.chargingBerry(<#T##token: String##String#>, <#T##berry: Int##Int#>, completion: <#T##(NetworkResult<Any>) -> Void#>)
     }
     
     @IBAction func Back(_ sender: Any) {

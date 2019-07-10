@@ -68,6 +68,8 @@
 		C0DC373322D4C5500010A730 /* Donate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC373222D4C5500010A730 /* Donate.swift */; };
 		C0DC373622D4C57B0010A730 /* DonateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC373522D4C57B0010A730 /* DonateService.swift */; };
 		C0DC373822D555330010A730 /* MainData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC373722D555330010A730 /* MainData.swift */; };
+		C0DC373A22D576E20010A730 /* Charge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC373922D576E20010A730 /* Charge.swift */; };
+		C0DC373C22D576F20010A730 /* ChargeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC373B22D576F20010A730 /* ChargeService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -136,6 +138,8 @@
 		C0DC373222D4C5500010A730 /* Donate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donate.swift; sourceTree = "<group>"; };
 		C0DC373522D4C57B0010A730 /* DonateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateService.swift; sourceTree = "<group>"; };
 		C0DC373722D555330010A730 /* MainData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainData.swift; sourceTree = "<group>"; };
+		C0DC373922D576E20010A730 /* Charge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charge.swift; sourceTree = "<group>"; };
+		C0DC373B22D576F20010A730 /* ChargeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,14 +220,6 @@
 				C021C30222D225A500ADF1FE /* NetworkResult.swift */,
 			);
 			path = common;
-			sourceTree = "<group>";
-		};
-		C021C30422D225D900ADF1FE /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				C021C30522D225F300ADF1FE /* AuthService.swift */,
-			);
-			name = Auth;
 			sourceTree = "<group>";
 		};
 		C027A94C22CD40C600F198ED /* Record */ = {
@@ -328,10 +324,11 @@
 			isa = PBXGroup;
 			children = (
 				C021C30122D2258000ADF1FE /* common */,
-				C021C30422D225D900ADF1FE /* Auth */,
-				C0DC371822D35E5B0010A730 /* Main */,
-				C0DC372B22D4912F0010A730 /* History */,
+				C021C30522D225F300ADF1FE /* AuthService.swift */,
+				C0DC372422D362AB0010A730 /* MainService.swift */,
+				C0DC372C22D491640010A730 /* HistoryService.swift */,
 				C0DC373522D4C57B0010A730 /* DonateService.swift */,
+				C0DC373B22D576F20010A730 /* ChargeService.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -351,14 +348,14 @@
 		C08482DD22C3371E0087F3BC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C0DC373122D4C5370010A730 /* Donate */,
 				C0DC371E22D360BD0010A730 /* common */,
-				C0DC370F22D339900010A730 /* Auth */,
-				C0DC371F22D360DE0010A730 /* Main */,
-				C0DC372822D490E90010A730 /* History */,
-				C01E92F022CB62DE00D43366 /* History.swift */,
-				C01BC94322CCB393000AAF58 /* MainInfo.swift */,
-				C08D146422CF07AD00F5EB0A /* Ranking.swift */,
+				C021C30722D229AC00ADF1FE /* Token.swift */,
+				C0DC372022D360FF0010A730 /* Story.swift */,
+				C0DC373722D555330010A730 /* MainData.swift */,
+				C0DC373222D4C5500010A730 /* Donate.swift */,
+				C0DC372922D491020010A730 /* Count.swift */,
+				C0DC373922D576E20010A730 /* Charge.swift */,
+				C0DC372822D490E90010A730 /* dummy */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -395,22 +392,6 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
-		C0DC370F22D339900010A730 /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				C021C30722D229AC00ADF1FE /* Token.swift */,
-			);
-			name = Auth;
-			sourceTree = "<group>";
-		};
-		C0DC371822D35E5B0010A730 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				C0DC372422D362AB0010A730 /* MainService.swift */,
-			);
-			name = Main;
-			sourceTree = "<group>";
-		};
 		C0DC371E22D360BD0010A730 /* common */ = {
 			isa = PBXGroup;
 			children = (
@@ -421,37 +402,14 @@
 			name = common;
 			sourceTree = "<group>";
 		};
-		C0DC371F22D360DE0010A730 /* Main */ = {
+		C0DC372822D490E90010A730 /* dummy */ = {
 			isa = PBXGroup;
 			children = (
-				C0DC372022D360FF0010A730 /* Story.swift */,
-				C0DC373722D555330010A730 /* MainData.swift */,
+				C01E92F022CB62DE00D43366 /* History.swift */,
+				C01BC94322CCB393000AAF58 /* MainInfo.swift */,
+				C08D146422CF07AD00F5EB0A /* Ranking.swift */,
 			);
-			name = Main;
-			sourceTree = "<group>";
-		};
-		C0DC372822D490E90010A730 /* History */ = {
-			isa = PBXGroup;
-			children = (
-				C0DC372922D491020010A730 /* Count.swift */,
-			);
-			path = History;
-			sourceTree = "<group>";
-		};
-		C0DC372B22D4912F0010A730 /* History */ = {
-			isa = PBXGroup;
-			children = (
-				C0DC372C22D491640010A730 /* HistoryService.swift */,
-			);
-			path = History;
-			sourceTree = "<group>";
-		};
-		C0DC373122D4C5370010A730 /* Donate */ = {
-			isa = PBXGroup;
-			children = (
-				C0DC373222D4C5500010A730 /* Donate.swift */,
-			);
-			name = Donate;
+			path = dummy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -579,6 +537,7 @@
 				C084832522C93C930087F3BC /* LoginVC.swift in Sources */,
 				C08482C022C2515D0087F3BC /* FirstVC.swift in Sources */,
 				C0DC371122D339A60010A730 /* ResponseObject.swift in Sources */,
+				C0DC373C22D576F20010A730 /* ChargeService.swift in Sources */,
 				C0DC371722D35CEB0010A730 /* APIManager.swift in Sources */,
 				C01E92E322CA372F00D43366 /* MyPageVC.swift in Sources */,
 				C08D146522CF07AD00F5EB0A /* Ranking.swift in Sources */,
@@ -608,6 +567,7 @@
 				C01E930722CBC02B00D43366 /* HomeCell.swift in Sources */,
 				C0DC373322D4C5500010A730 /* Donate.swift in Sources */,
 				C08D146322CF03E700F5EB0A /* RankingCell.swift in Sources */,
+				C0DC373A22D576E20010A730 /* Charge.swift in Sources */,
 				C01BC94222CCA7C6000AAF58 /* MainCell.swift in Sources */,
 				C021C2FD22D0ED1E00ADF1FE /* DetailRankingVC.swift in Sources */,
 				C03353F322CE237D007EEA16 /* RankingVC.swift in Sources */,
