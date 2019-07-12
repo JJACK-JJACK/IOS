@@ -21,6 +21,11 @@ class EditAccoutVC: UIViewController {
 
         // Do any additional setup after loading the view.
         setup()
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        paramName = UserDefaults.standard.string(forKey: "nickname")!
+        setup()
     }
     
     // 값을 전달 받을 parameter 생성
@@ -35,6 +40,9 @@ class EditAccoutVC: UIViewController {
         self.email.text = paramEmail
     }
    
+    @IBAction func editProfileImg(_ sender: Any) {
+        
+    }
     // Nickname 다음 뷰로 넘겨주기
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -50,5 +58,8 @@ class EditAccoutVC: UIViewController {
     @IBAction func Back(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
+    
+}
+extension EditAccoutVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
 }

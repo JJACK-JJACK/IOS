@@ -26,6 +26,8 @@ class RankingVC: UIViewController {
         get10Rank()
         getEntireBerry()
         
+        
+        
     }
     func getEntireBerry() {
         MainService.shared.getEntireDonatedBerry(){
@@ -130,6 +132,8 @@ extension RankingVC: UICollectionViewDelegateFlowLayout {
         let reviewPlan = List.review[1].plan!
         dvc.purpose1 = reviewPlan[0].purpose
         dvc.price1 = reviewPlan[0].price
+        
+        dvc.plans = reviewPlan
         
         
         navigationController?.pushViewController(dvc, animated: true)

@@ -32,7 +32,7 @@ class UseHistoryVC: UIViewController {
     func getBanking (){
         guard let token = UserDefaults.standard.string(forKey: "refreshToken") else {return}
         
-        MyPageService.shared.getBanking(token) {
+        BankingService.shared.getBanking(token) {
             [weak self]
             (data) in
             guard let `self` = self else {return}

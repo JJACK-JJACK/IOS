@@ -107,6 +107,7 @@ struct MainService: APIManager {
                                     let decoder = JSONDecoder()
                                     let result = try
                                         decoder.decode(ResponseArr<Datum>.self, from: value)
+                                    print(result)
                                     if result.success {
                                        print(result.success)
                                         print("성공")

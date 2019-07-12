@@ -21,6 +21,10 @@ class MyPageVC: UIViewController {
         // Do any additional setup after loading the view.
         setup()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        setup()
+    }
+
     func setup() {
         self.ownBerry.text = String(UserDefaults.standard.integer(forKey: "ownBerry"))
         self.nickName.text = UserDefaults.standard.string(forKey: "nickname")

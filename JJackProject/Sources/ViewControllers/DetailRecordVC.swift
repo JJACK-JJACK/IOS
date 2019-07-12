@@ -50,6 +50,7 @@ class DetailRecordVC: UIViewController {
     var paramProcess: Int = 0
     var paramDonated: Int = 0
     var paramStatus: Int = 0
+    var paramGoal: Int = 0
 
     func setup() {
         // insert values
@@ -59,6 +60,7 @@ class DetailRecordVC: UIViewController {
         self.date.text = paramDate
         self.processRate.text = String(paramProcess) + "%"
         self.donatedBerry.text = String(paramDonated)
+        self.goalBerry.text = String(paramGoal)
         
         
         

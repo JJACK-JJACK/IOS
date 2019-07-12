@@ -1,24 +1,28 @@
 PODS:
   - Alamofire (4.8.2)
   - Kingfisher (4.10.1)
+  - lottie-ios (3.1.1)
   - SideMenu (5.0.3)
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.2)
   - Kingfisher (~> 4.10.1)
+  - lottie-ios
   - SideMenu
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Kingfisher
+    - lottie-ios
     - SideMenu
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  lottie-ios: 43a472d22b2dd2bed292cc4010c0b4d2e66d3ba8
   SideMenu: 1dcaabce84538c53325c287f7fe62999379a641c
 
-PODFILE CHECKSUM: eeed13b92cb789d3b78485653632c210a482b492
+PODFILE CHECKSUM: bf122783c0ec900ca3571d9fbc0d805aca483488
 
 COCOAPODS: 1.7.1

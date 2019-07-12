@@ -25,7 +25,7 @@ class LoginVC: UIViewController {
         idTF.delegate = self
         pwTF.delegate = self
         
-        idTF.text = "IOS@gmail.com"
+        idTF.text = "ios@jjack.com"
         pwTF.text = "ios"
     }
     func setBorderRadius() {

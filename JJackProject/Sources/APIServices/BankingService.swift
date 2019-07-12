@@ -2,50 +2,42 @@
 //  MyPageService.swift
 //  JJackProject
 //
-//  Created by SangIl Mo on 12/07/2019.
+//  Created by SangIl Mo on 10/07/2019.
 //  Copyright © 2019 SangIl Mo. All rights reserved.
 //
 
 import Foundation
 import Alamofire
 
-struct MyPageService: APIManager {
-
-    static let shared = MyPageService()
-    let BaseUrl = url("/mypage")
+struct BankingService: APIManager {
     
-    func EditNickname (_ token: String, _ nickname: String, completion: @escaping (NetworkResult<Any>) -> Void) {
+    static let shared = BankingService()
+    let BaseUrl = url("/banking")
+    
+    func getBanking (_ token: String, completion: @escaping (NetworkResult<Any>) -> Void) {
+        let URL = BaseUrl
         
-        let URL = BaseUrl + "/nickname"
         let headers: HTTPHeaders = [
             "Content-type" : "application/json",
             "token" : token
         ]
-        let body: Parameters = [
-            "nickname" : nickname
-        ]
         
-        Alamofire.request(URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers:    headers)
-            .responseData{
-                res in
+        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers)
+            .responseData{ res in
                 res.result.ifSuccess {
                     if let value = res.result.value{
                         if let status =
-                            res.response?.statusCode{
+                                res.response?.statusCode{
                             switch status {
                             case 200:
                                 do{
                                     let decoder = JSONDecoder()
                                     let result = try
-                                        decoder.decode(ResponseStr.self, from: value)
-                                    print(result)
+                                    decoder.decode(ResponseObj<Banking>.self, from: value)
                                     if result.success
-                                    {
-                                       print(result.success)
-                                        completion(.success(result.message))}
+                                    {completion(.success(result.data!))}
                                     else
-                                    {print(result.success)
-                                        completion(.requestErr(result.message))}
+                                    {completion(.requestErr(result.message))}
                                 } catch {print("error")}
                             case 400:
                                 print("pathErr")
@@ -59,13 +51,12 @@ struct MyPageService: APIManager {
                         }
                     }
                 }
-            res.result.ifFailure {
+                res.result.ifFailure {
                     print(URL)
                     let err = res.result.error!
                     print(err.localizedDescription)
                     completion(.networkFail)
                 }
-
         }
     }
 }

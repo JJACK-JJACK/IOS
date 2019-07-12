@@ -11,6 +11,8 @@ import UIKit
 class DetailRankingVC: UIViewController {
     
     
+    @IBOutlet weak var entireScrollView: UIView!
+    @IBOutlet weak var scrollViewHeight: NSLayoutConstraint!
     
 
     @IBOutlet weak var processRate: NSLayoutConstraint!
@@ -27,16 +29,22 @@ class DetailRankingVC: UIViewController {
     @IBOutlet weak var commnet2: UILabel!
     @IBOutlet weak var storyImg: UIImageView!
     
-    @IBOutlet weak var planPurpose: UILabel!
-    @IBOutlet weak var planPrice: UILabel!
-    
     @IBOutlet weak var maxBerry: UILabel!
+    
+    
+    @IBOutlet weak var planListView: UITableView!
+    
+    var plans = [Plan]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         processBar.makeRounded(cornerRadius: nil)
         staticBar.makeRounded(cornerRadius: nil)
+        
+//        self.scrollViewHeight.constant = self.scrollViewHeight.constant - CGFloat(64 * plans.count)
+        
+        self.planListView.dataSource = self
         
         setup()
     }
@@ -73,8 +81,6 @@ class DetailRankingVC: UIViewController {
         self.comment1.text = content1
         self.commnet2.text = content2
         self.storyImg.imageFromUrl(self.gsno(contentImg), defaultImgPath: "imgHomeJjack")
-        self.planPurpose.text = purpose1
-        self.planPrice.text = String(price1)
         self.maxBerry.text = String(max)
 
     }
@@ -83,5 +89,31 @@ class DetailRankingVC: UIViewController {
     @IBAction func Back(_ sender: Any) {
         self.pop()
     }
+    
+}
+extension DetailRankingVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return plans.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = planListView.dequeueReusableCell(withIdentifier: "plan")as! DetailPlanCell
+        let plan = plans[indexPath.row]
+        cell.index.text = String(indexPath.row + 1)
+        cell.purpose.text = plan.purpose
+        cell.price.text = String(plan.price)
+        
+//        print(self.scrollViewHeight.constant)
+//        
+//        self.scrollViewHeight.constant = self.scrollViewHeight.constant + CGFloat(64 * plans.count)
+//        
+//        print(self.entireScrollView.frame.height + CGFloat(64 * plans.count))
+//        print(self.entireScrollView.frame.height)
+//        print(64 * plans.count)
+//        print(self.scrollViewHeight.constant)
+        
+        return cell
+    }
+    
     
 }

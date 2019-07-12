@@ -14,8 +14,9 @@ class RecordedDonationVC: UIViewController {
     @IBOutlet weak var MyDonate: UILabel!
     @IBOutlet weak var MyDonateBerry: UILabel!
     
-    var recordList = [Main]()
+    var recordList = [HistoryList]()
     var eachRecordBerry = [MyEachDonatedBerry]()
+    
     @IBOutlet weak var myRecordView: UITableView!
     
     override func viewDidLoad() {
@@ -74,7 +75,7 @@ class RecordedDonationVC: UIViewController {
             guard let `self` = self else {return}
             switch data {
             case .success(let data):
-                self.recordList = (data.self as? [Main])!
+                self.recordList = (data.self as? [HistoryList])!
                 self.myRecordView.reloadData()
                 print(data)
                 print("성공")
@@ -94,6 +95,7 @@ class RecordedDonationVC: UIViewController {
             switch data {
             case .success(let data):
                 self.eachRecordBerry = (data.self as? [MyEachDonatedBerry])!
+                print(self.eachRecordBerry.count)
                 self.myRecordView.reloadData()
                 print(data)
                 print("성공")
@@ -123,8 +125,8 @@ extension RecordedDonationVC: UITableViewDataSource {
         print(index)
         let List = recordList[index]
         print(index)
-        let berry = eachRecordBerry[index]
-        print(index)
+//        let berry = eachRecordBerry[index]
+//        print(index)
         
         
         
@@ -142,7 +144,7 @@ extension RecordedDonationVC: UITableViewDataSource {
         cell.title.text = List.title
         cell.institution.text = List.centerName
         cell.processRate.text = String(List.percentage) + "%"
-        cell.donatedBerry.text = String(berry.berry)
+//        cell.donatedBerry.text = String(berry.berry)
         
         let rate = Double(List.percentage)
         let width = Double(cell.statusBar.frame.width)
@@ -182,7 +184,7 @@ extension RecordedDonationVC: UITableViewDelegate {
         guard let dvc = storyboard?.instantiateViewController(withIdentifier: "Detail")as? DetailRecordVC else {return}
         
         let info = recordList[indexPath.row]
-        let berryInfo = eachRecordBerry[indexPath.row]
+//        let berryInfo = eachRecordBerry[indexPath.row]
         
 //        dvc.paramStatus = info.status ?? ""
 //        dvc.paramThumbImg = info.thumbImg
@@ -197,8 +199,9 @@ extension RecordedDonationVC: UITableViewDelegate {
         dvc.paramInstitution = info.centerName
 //        dvc.paramDate =
         dvc.paramProcess = info.percentage
-        dvc.paramDonated = berryInfo.berry
+//        dvc.paramDonated = berryInfo.berry
         dvc.paramStatus = info.state
+        dvc.paramGoal = info.maxBerry
         
         navigationController?.pushViewController(dvc, animated: true)
     }

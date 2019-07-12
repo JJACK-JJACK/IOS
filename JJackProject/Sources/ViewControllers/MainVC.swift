@@ -156,22 +156,22 @@ class MainVC: UIViewController, UIScrollViewDelegate{
             switch sender.currentTitle {
             case "어린이":
                 scroll(index: 0)
-                paramIndex = 0
+                paramIndex = 1
             case "어르신":
                 scroll(index: 1)
-                paramIndex = 1
+                paramIndex = 5
             case "동물":
                 scroll(index: 2)
-                paramIndex = 2
-            case "장애우":
+                paramIndex = 0
+            case "장애인":
                 scroll(index: 3)
-                paramIndex = 3
+                paramIndex = 2
             case "환경":
                 scroll(index: 4)
-                paramIndex = 4
+                paramIndex = 3
             case "긴급구조":
                 scroll(index: 5)
-                paramIndex = 5
+                paramIndex = 4
             default:
                 break
             }

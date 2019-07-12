@@ -9,7 +9,7 @@
 import Foundation
 struct Datum: Codable {
     let story: [Story]
-    let plan: [Plan]
+    let plan: [Plan]?
     let review: [Review]
     let state:Int
     let totalBerry: Int

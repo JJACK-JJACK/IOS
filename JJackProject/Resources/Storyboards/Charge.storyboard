@@ -216,7 +216,6 @@
                                 </state>
                                 <connections>
                                     <action selector="ChargeBerry:" destination="575-Za-JFh" eventType="touchUpInside" id="L8I-Dr-dWL"/>
-                                    <segue destination="FyO-x0-a1H" kind="presentation" id="1pG-Tr-fmW"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L3k-Q5-mLz">
@@ -1086,11 +1085,10 @@
                                                             <constraint firstAttribute="height" constant="1" id="Y0k-Zw-C8E"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="결제 금액" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBb-yC-ZN6">
-                                                        <rect key="frame" x="30.000000000000004" y="460" width="52.333333333333343" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="무통장입금" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBb-yC-ZN6">
+                                                        <rect key="frame" x="29.999999999999996" y="460" width="60.666666666666657" height="17"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="17" id="aWH-gZ-tHb"/>
-                                                            <constraint firstAttribute="width" constant="52.333333333333343" id="fKb-Cp-osb"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="14"/>
                                                         <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -1209,7 +1207,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="ChargeBerry:" destination="575-Za-JFh" eventType="touchUpInside" id="vUX-Yv-kHA"/>
                                     <action selector="confirmCharge:" destination="FyO-x0-a1H" eventType="touchUpInside" id="3i6-pn-QkM"/>
                                 </connections>
                             </button>
@@ -1229,7 +1226,11 @@
                         <viewLayoutGuide key="safeArea" id="Ppr-Ym-Dob"/>
                     </view>
                     <connections>
+                        <outlet property="Account" destination="Tra-DS-jfi" id="Fry-2h-PFl"/>
+                        <outlet property="bankName" destination="dhx-WD-zKb" id="pxp-Is-Qga"/>
+                        <outlet property="chargedPrice" destination="SAr-j7-vVp" id="g7E-5r-iTT"/>
                         <outlet property="confirmBtn" destination="c4m-0L-O3b" id="3Bc-uR-gbU"/>
+                        <outlet property="dueDate" destination="TxP-Tb-dG4" id="odM-Hq-fPU"/>
                         <segue destination="cqu-qg-cFv" kind="unwind" identifier="goHome" unwindAction="unwind:" id="6fx-yL-JEa"/>
                         <segue destination="cqu-qg-cFv" kind="unwind" identifier="backToDonate" unwindAction="backToDonate:" id="hG0-g5-mdL"/>
                     </connections>

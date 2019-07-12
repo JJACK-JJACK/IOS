@@ -19,6 +19,7 @@ class EarnBerryVC: UIViewController {
     @IBOutlet weak var stamp7: UIImageView!
     @IBOutlet weak var stamp8: UIImageView!
     @IBOutlet weak var stamp9: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -48,31 +49,37 @@ class EarnBerryVC: UIViewController {
                 print(stmp.cntStamp)
                 switch stmp.cntStamp {
                 case 1:
-                    self.stamp1.isHidden = false
+                    self.showStamps(self.stamp1, nil, nil, nil, nil, nil, nil, nil, nil)
                     break
                 case 2:
-                    self.stamp2.isHidden = false
+                    self.showStamps(self.stamp1, self.stamp2, nil, nil, nil, nil, nil, nil, nil)
                     break
                 case 3:
-                    self.stamp3.isHidden = false
+                    self.showStamps(self.stamp1, self.stamp2, self.stamp3, nil, nil, nil, nil, nil, nil)
                     break
                 case 4:
-                    self.stamp4.isHidden = false
+                    self.showStamps(self.stamp1, self.stamp2, self.stamp3, self.stamp4, nil, nil, nil, nil, nil)
                     break
                 case 5:
-                    self.stamp5.isHidden = false
+                    self.showStamps(self.stamp1, self.stamp2, self.stamp3, self.stamp4, self.stamp5, nil, nil, nil, nil)
                     break
                 case 6:
-                    self.stamp6.isHidden = false
+                    self.showStamps(self.stamp1, self.stamp2, self.stamp3, self.stamp4, self.stamp5
+                        , self.stamp6, nil, nil, nil)
                     break
                 case 7:
-                    self.stamp7.isHidden = false
+                    self.showStamps(self.stamp1, self.stamp2, self.stamp3, self.stamp4, self.stamp5
+                        , self.stamp6, self.stamp7, nil, nil)
                     break
                 case 8:
-                    self.stamp8.isHidden = false
+                    self.showStamps(self.stamp1, self.stamp2, self.stamp3, self.stamp4, self.stamp5
+                        , self.stamp6, self.stamp7, self.stamp8, nil)
+
                     break
                 case 9:
-                    self.stamp9.isHidden = false
+                    self.showStamps(self.stamp1, self.stamp2, self.stamp3, self.stamp4, self.stamp5
+                        , self.stamp6, self.stamp7, self.stamp8, self.stamp9)
+
                     break
                 default:
                     self.setupStamp()
@@ -98,5 +105,16 @@ extension EarnBerryVC {
     open override func awakeFromNib() {
         super.awakeFromNib()
         self.view.makeRounded(cornerRadius: 8.0)
+    }
+    func showStamps (_ stamp1_: UIImageView?, _ stamp2_: UIImageView?, _ stamp3_: UIImageView?, _ stamp4_: UIImageView?, _ stamp5_: UIImageView?, _ stamp6_: UIImageView?, _ stamp7_: UIImageView?, _ stamp8_: UIImageView?, _ stamp9_: UIImageView?) {
+        stamp1_?.isHidden = false
+        stamp2_?.isHidden = false
+        stamp3_?.isHidden = false
+        stamp4_?.isHidden = false
+        stamp5_?.isHidden = false
+        stamp6_?.isHidden = false
+        stamp7_?.isHidden = false
+        stamp8_?.isHidden = false
+        stamp9_?.isHidden = false
     }
 }

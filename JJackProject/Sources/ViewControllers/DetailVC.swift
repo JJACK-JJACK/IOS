@@ -27,18 +27,19 @@ class DetailVC: UIViewController {
     @IBOutlet weak var content3_2: UILabel!
     @IBOutlet weak var image3: UIImageView!
     
-
     
+    
+    @IBOutlet weak var planListView: UITableView!
+    
+    var planList = [Datum]()
+    
+    var plans = [Plan]()
+    
+    @IBOutlet weak var planListViewHeight: NSLayoutConstraint!
     @IBOutlet weak var container2: UIView!
     
-    @IBOutlet weak var purpose1: UILabel!
-    @IBOutlet weak var price1: UILabel!
     
-    @IBOutlet weak var purpose2: UILabel!
-    @IBOutlet weak var price2: UILabel!
-    
-    @IBOutlet weak var purpose3: UILabel!
-    @IBOutlet weak var price3: UILabel!
+
     @IBOutlet weak var totalPrice: UILabel!
     
     @IBOutlet weak var viewHeight: NSLayoutConstraint!
@@ -71,9 +72,10 @@ class DetailVC: UIViewController {
         print(paramId)
         print("여기는 디테일")
         
+        planListView.dataSource = self
+        
         getStory(id: gsno(paramId))
     }
-    var datum = [Datum]()
     
     var paramThumbImg: String = ""
     var paramTitle: String = ""
@@ -93,13 +95,18 @@ class DetailVC: UIViewController {
         self.processRate.text = String(paramProcess) + "%"
         self.donatedBerry.text = String(paramDonated)
         self.goalBerry.text = String(paramGoal)
-
+        
+        self.totalPrice.text = String(paramGoal)
+        
         // ready for container view
         self.container2.isHidden = true
         self.onPlan.constant = 0
         
         // show the process of donation
         activateProcess()
+        
+        print(planList.count)
+//        print(planList[0].plan.count)
     }
     func activateProcess() {
         let rate = Double(paramProcess)
@@ -120,8 +127,9 @@ class DetailVC: UIViewController {
             switch data {
             case .success(let data):
 //                print(data)
-                self.datum = (data.self as? [Datum])!
-                let contain1 = self.datum[0]
+                self.planList = (data.self as? [Datum])!
+                
+                let contain1 = self.planList[0]
 //                print(contain1.centerName)
 //                print(contain1.story[0].subTitle)
 //                print(contain1.story[1].subTitle)
@@ -142,18 +150,20 @@ class DetailVC: UIViewController {
                 self.content3_2.text = story3.content[1]
                 self.image3.imageFromUrl(self.gsno(story3.img), defaultImgPath: "imgHomeJjack")
                 
-                let contain2 = self.datum[0]
-                let plan1 = contain2.plan[0]
-                self.purpose1.text = plan1.purpose
-                self.price1.text = String(plan1.price)
-                let plan2 = contain2.plan[1]
-                self.purpose2.text = plan2.purpose
-                self.price2.text = String(plan2.price)
-                let plan3 = contain2.plan[2]
-                self.purpose3.text = plan3.purpose
-                self.price3.text = String(plan3.price)
+                self.plans = self.planList[0].plan!
                 
-                self.totalPrice.text = String(plan1.price + plan2.price + plan3.price)
+//                let contain2 = self.[0]
+//                let plan1 = contain2.plan[0]
+//                self.purpose1.text = plan1.purpose
+//                self.price1.text = String(plan1.price)
+//                let plan2 = contain2.plan[1]
+//                self.purpose2.text = plan2.purpose
+//                self.price2.text = String(plan2.price)
+//                let plan3 = contain2.plan[2]
+//                self.purpose3.text = plan3.purpose
+//                self.price3.text = String(plan3.price)
+//
+//                self.totalPrice.text = String(plan1.price + plan2.price + plan3.price)
                 
                 //                print(common.story)
 //                print("###########################")
@@ -176,7 +186,7 @@ class DetailVC: UIViewController {
 //                self.content1_2.text = contents1[1]
 //                print(contents1[1])
 //                print("###########################")
-                
+                self.planListView.reloadData()
                 self.container1.reloadInputViews()
                 self.container2.reloadInputViews()
                 break
@@ -238,9 +248,9 @@ class DetailVC: UIViewController {
             self.viewHeight.constant = 1846
         }else {
             (UIView.animate(withDuration: 0.3, animations: {
-                self.onStory.constant = 0
                 self.view.layoutIfNeeded()
             }))
+            self.onStory.constant = 0
             self.story.setTitleColor(.brownGrey, for: .normal)
             self.story.titleLabel?.font = .Light2
             
@@ -251,16 +261,21 @@ class DetailVC: UIViewController {
             self.onPlan.constant = 57
             self.view.layoutIfNeeded()
         }))
+            print("###################")
+            print(planList.count)
             self.plan.setTitleColor(.JackBlack, for: .normal)
             self.plan.titleLabel?.font = .Bold2
     
             self.container2.isHidden = false
-            self.viewHeight.constant = container2.frame.height
+            self.planListViewHeight.constant = CGFloat(64 * plans.count + 20)
+            self.viewHeight.constant = self.container2.frame.height
         }else {
             (UIView.animate(withDuration: 0.3, animations: {
                 self.onPlan.constant = 0
                 self.view.layoutIfNeeded()
             }))
+            print("#######################")
+            print(planList.count)
             self.plan.setTitleColor(.brownGrey, for: .normal)
             self.plan.titleLabel?.font = .Light2
             self.container2.isHidden = true
@@ -288,3 +303,32 @@ class DetailVC: UIViewController {
     }
     
 }
+
+extension DetailVC: UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("####################")
+        print(plans.count)
+        
+        return plans.count
+        
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = planListView.dequeueReusableCell(withIdentifier: "plan") as! DetailPlanCell
+//        let plan = planList[0].plan!
+//        let planData = planList[0].plan![indexPath.row]
+        let planData = plans[indexPath
+        .row]
+        cell.index.text = String(indexPath.row + 1)
+        cell.purpose.text = planData.purpose
+        cell.price.text = String(planData.price)
+        
+        self.planListViewHeight.constant = CGFloat(64 * plans.count + 20)
+
+        
+        return cell
+    }
+    
+    
+}
+
