@@ -11,6 +11,11 @@ import UIKit
 class SideMenuVC: UIViewController {
 
     @IBOutlet weak var useInfo: UIButton!
+    
+    @IBOutlet weak var email: UILabel!
+    @IBOutlet weak var nickname: UILabel!
+    @IBOutlet weak var ownBerry: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +27,10 @@ class SideMenuVC: UIViewController {
     func setup() {
         self.useInfo.setBorder(borderColor: UIColor.veryLightPink, borderWidth: 1.0)
         self.useInfo.makeRounded(cornerRadius: 15.5)
+        
+        self.ownBerry.text = String(UserDefaults.standard.integer(forKey: "ownBerry"))
+        self.nickname.text = UserDefaults.standard.string(forKey: "nickname")
+        self.email.text = UserDefaults.standard.string(forKey: "email")
     }
     @IBAction func goHome(_ sender: Any) {
         backHome()
@@ -30,7 +39,9 @@ class SideMenuVC: UIViewController {
     @IBAction func showChargingView(_ sender: Any) {
         guard let dvc = UIStoryboard(name: "Charge", bundle: nil).instantiateViewController(withIdentifier: "ChargeNavigation")as? UINavigationController else {return}
         
-        self.present(dvc, animated: true, completion: nil)
+        UserDefaults.standard.set(false, forKey: "fromDonate")
+
+        self.present(dvc, animated: true)
     }
     @IBAction func showHistory(_ sender: Any) {
         guard let dvc = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: "UseHistoryVC") as? UseHistoryVC else {return}
@@ -55,7 +66,7 @@ class SideMenuVC: UIViewController {
     }
     
     @IBAction func goMainView(_ sender: UIButton) {
-        guard let dvc = UIStoryboard(name: "HomeMain", bundle: nil).instantiateViewController(withIdentifier: "MainVC") as? MainVC else {return}
+        guard let dvc = UIStoryboard(name: "HomeMain", bundle: nil).instantiateViewController(withIdentifier: "Main") as? MainVC else {return}
         
         var index:Int = 0
         
@@ -76,7 +87,6 @@ class SideMenuVC: UIViewController {
             break
         }
         dvc.paramIndex = index
-        
         navigationController?.pushViewController(dvc, animated: true)
         
     }

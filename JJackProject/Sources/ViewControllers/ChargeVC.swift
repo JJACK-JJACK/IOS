@@ -25,18 +25,27 @@ class ChargeVC: UIViewController{
     @IBOutlet weak var bankAccount: UILabel!
     
     var pickerData: [String] = [String]()
+    
+    var chargeData: Charge?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        pickerData = ["Item1", "Item2", "Item3", "Item4",]
+        pickerData = ["국민 67070204087002",
+            "신한 110499030264",
+            "우리 1002659283912",
+            "하나 50391038504107",
+            "카카오 3333048166414"
+    ]
     
         select1.isHidden = false
         
         setup()
     }
+    var berry: Int = 10
     
-    var paramBerry: Int = 1100
+    var paramBerry: String = "1,100원"
     var paramAccount: String? = ""
     
     func setup () {
@@ -64,6 +73,7 @@ class ChargeVC: UIViewController{
         control4.tag = 4
         control5.tag = 5
     }
+    
     @IBAction func showpicker(_ sender: Any) {
         let message = "\n\n\n\n\n\n"
         let alert = UIAlertController(title: "Please Select City", message: message, preferredStyle: .actionSheet)
@@ -85,6 +95,7 @@ class ChargeVC: UIViewController{
         let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
         alert.addAction(cancelAction)
         self.present(alert, animated: true, completion: nil)
+        self.bankAccount.text = paramAccount
         
     }
     
@@ -94,19 +105,24 @@ class ChargeVC: UIViewController{
         switch sender.tag {
         case 1:
             select1.isHidden = false
-            self.paramBerry = 1100
+            self.paramBerry = "1,100원"
+            berry = 10
         case 2:
             select2.isHidden = false
-            self.paramBerry = 5500
+            self.paramBerry = "5,500원"
+            berry = 50
         case 3:
             select3.isHidden = false
-            self.paramBerry = 11000
+            self.paramBerry = "1,1000원"
+            berry = 100
         case 4:
             select4.isHidden = false
-            self.paramBerry = 33000
+            self.paramBerry = "3,3000원"
+            berry = 300
         case 5:
             select5.isHidden = false
-            self.paramBerry = 55000
+            self.paramBerry = "5,5000원"
+            berry = 500
         default:
             break
         }
@@ -115,6 +131,46 @@ class ChargeVC: UIViewController{
     
     @IBAction func ChargeBerry(_ sender: Any) {
         //통신
+        guard let token = UserDefaults.standard.string(forKey: "refreshToken") else {return}
+        
+        if self.paramAccount != "입금하실 은행 선택" {
+            ChargeService.shared.chargingBerry(token, berry) {
+                [weak self]
+                (data) in
+                
+                guard let `self` = self else {return}
+                
+                switch data {
+                case .success(let data):
+                    self.chargeData = (data.self as? Charge)!
+                    guard let chargeInfo = self.chargeData?.charge else {return}
+                    let endIndex = chargeInfo.endIndex
+                    let chargedBerry = chargeInfo[endIndex + -1].chargeBerry
+                    print("####################2222#######")
+                    print(chargedBerry)
+                    let totalBerry = chargedBerry + UserDefaults.standard.integer(forKey: "ownBerry")
+                    
+                    UserDefaults.standard.set(totalBerry, forKey: "ownBerry")
+                    print(UserDefaults.standard.set(totalBerry, forKey: "ownBerry"))
+                    
+                    guard let dvc = self.storyboard?.instantiateViewController(withIdentifier: "CompleteCharge")as? CompleteChargeVC else {return}
+                    let bankInfo = self.bankAccount.text?.components(separatedBy: " ")
+                    dvc.paramBank = bankInfo![0]
+                    dvc.paramAccount = bankInfo![1]
+                    dvc.chargedBerry = self.paramBerry
+                    self.present(dvc, animated: true)
+                    break
+                case .requestErr(let message):
+                    print(message)
+                case .pathErr:
+                    print("path")
+                case .serverErr:
+                    print("server")
+                case .networkFail:
+                    print("네트워크 오류")
+                }
+            }
+        }else {simpleAlert(title: "충전 실패", message: "계좌를 선택해 주세요")}
     }
     
     @IBAction func Back(_ sender: Any) {

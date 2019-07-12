@@ -24,6 +24,9 @@ class LoginVC: UIViewController {
         setupNotification()
         idTF.delegate = self
         pwTF.delegate = self
+        
+        idTF.text = "ios@jjack.com"
+        pwTF.text = "ios"
     }
     func setBorderRadius() {
         Login.makeRounded(cornerRadius: 4.0)
@@ -53,9 +56,18 @@ class LoginVC: UIViewController {
                 case .success(let token):
                     // 보관 , 덮어쓰기 , 파기 -> 키 : 벨류 로 저장
                     // UserDefaults를 사용할 때에는 객체를 담는 것이 아니라 객체의 정보를 담아야 함으로 형변환이 필요하다.
+                    
 /*A default object must be a property list—that is, an instance of (or for collections, a combination of instances of) NSData, NSString, NSNumber, NSDate, NSArray, or NSDictionary. If you want to store any other type of object, you should typically archive it to create an instance of NSData. */
                     // as token 은 무슨 말일까?!
-                    UserDefaults.standard.set(token as! Token, forKey: "refreshToken")
+                    
+//                    print(self.gsno(token as? String))
+                    guard let token = token as? Token else {return}
+                    print(token)
+                    UserDefaults.standard.set(token.token, forKey: "refreshToken")
+                    print(token.nickname); UserDefaults.standard.set(token.nickname, forKey: "nickname")
+                    print(id)
+                    UserDefaults.standard.set(id, forKey: "email")
+                    print(token.nickname)
                     print(id)
                     print(pw)
                     guard let dvc = UIStoryboard(name: "HomeMain", bundle: nil).instantiateViewController(withIdentifier: "Home")as? HomeVC else {return}

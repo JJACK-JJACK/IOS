@@ -57,9 +57,38 @@
 		C084832C22C953540087F3BC /* SignUpVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C084832B22C953540087F3BC /* SignUpVC3.swift */; };
 		C08D146322CF03E700F5EB0A /* RankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08D146222CF03E700F5EB0A /* RankingCell.swift */; };
 		C08D146522CF07AD00F5EB0A /* Ranking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08D146422CF07AD00F5EB0A /* Ranking.swift */; };
+		C09DBBDE22D8651300124CC6 /* MyPageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09DBBDD22D8651300124CC6 /* MyPageService.swift */; };
 		C0DC370E22D32DB90010A730 /* ResponseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC370D22D32DB90010A730 /* ResponseString.swift */; };
 		C0DC371122D339A60010A730 /* ResponseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC371022D339A60010A730 /* ResponseObject.swift */; };
 		C0DC371322D339B00010A730 /* ResponseArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC371222D339B00010A730 /* ResponseArray.swift */; };
+		C0DC371722D35CEB0010A730 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC371622D35CEB0010A730 /* APIManager.swift */; };
+		C0DC372122D360FF0010A730 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC372022D360FF0010A730 /* Story.swift */; };
+		C0DC372522D362AB0010A730 /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC372422D362AB0010A730 /* MainService.swift */; };
+		C0DC372A22D491020010A730 /* Count.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC372922D491020010A730 /* Count.swift */; };
+		C0DC372D22D491640010A730 /* HistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC372C22D491640010A730 /* HistoryService.swift */; };
+		C0DC373322D4C5500010A730 /* Donate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC373222D4C5500010A730 /* Donate.swift */; };
+		C0DC373622D4C57B0010A730 /* DonateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC373522D4C57B0010A730 /* DonateService.swift */; };
+		C0DC373822D555330010A730 /* MainData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC373722D555330010A730 /* MainData.swift */; };
+		C0DC373A22D576E20010A730 /* Charge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC373922D576E20010A730 /* Charge.swift */; };
+		C0DC373C22D576F20010A730 /* ChargeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC373B22D576F20010A730 /* ChargeService.swift */; };
+		C0DC373E22D58F600010A730 /* ChargingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC373D22D58F600010A730 /* ChargingInfo.swift */; };
+		C0DC374022D5AE870010A730 /* MyHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC373F22D5AE870010A730 /* MyHistory.swift */; };
+		C0DC374222D5B4AC0010A730 /* MyEachDonatedBerry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC374122D5B4AC0010A730 /* MyEachDonatedBerry.swift */; };
+		C0DC374422D5C5FF0010A730 /* UserHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC374322D5C5FF0010A730 /* UserHistory.swift */; };
+		C0DC374622D5C68C0010A730 /* Banking.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC374522D5C68C0010A730 /* Banking.swift */; };
+		C0DC374822D5C6E30010A730 /* BankingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC374722D5C6E30010A730 /* BankingService.swift */; };
+		C0DC374A22D5D4770010A730 /* MyBerry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC374922D5D4770010A730 /* MyBerry.swift */; };
+		C0DC374C22D5DCB60010A730 /* RankingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC374B22D5DCB60010A730 /* RankingService.swift */; };
+		C0DC374E22D5F57E0010A730 /* EntireBerry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC374D22D5F57E0010A730 /* EntireBerry.swift */; };
+		C0DC375022D622DA0010A730 /* Plan.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC374F22D622DA0010A730 /* Plan.swift */; };
+		C0DC375222D623130010A730 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC375122D623130010A730 /* Review.swift */; };
+		C0DC375422D623260010A730 /* Story2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC375322D623260010A730 /* Story2.swift */; };
+		C0DC375822D651140010A730 /* GetRewardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC375722D651140010A730 /* GetRewardVC.swift */; };
+		C0DC375A22D66FF80010A730 /* StampService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC375922D66FF80010A730 /* StampService.swift */; };
+		C0DC375C22D671910010A730 /* GetStamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC375B22D671910010A730 /* GetStamp.swift */; };
+		C0DC375E22D767B30010A730 /* berrydata2.json in Resources */ = {isa = PBXBuildFile; fileRef = C0DC375D22D767B30010A730 /* berrydata2.json */; };
+		C0DC376022D787CA0010A730 /* HistoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC375F22D787CA0010A730 /* HistoryList.swift */; };
+		C0DC376422D794560010A730 /* DetailPlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC376322D794560010A730 /* DetailPlanCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -117,9 +146,38 @@
 		C084832B22C953540087F3BC /* SignUpVC3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC3.swift; sourceTree = "<group>"; };
 		C08D146222CF03E700F5EB0A /* RankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingCell.swift; sourceTree = "<group>"; };
 		C08D146422CF07AD00F5EB0A /* Ranking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking.swift; sourceTree = "<group>"; };
+		C09DBBDD22D8651300124CC6 /* MyPageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageService.swift; sourceTree = "<group>"; };
 		C0DC370D22D32DB90010A730 /* ResponseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseString.swift; sourceTree = "<group>"; };
 		C0DC371022D339A60010A730 /* ResponseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseObject.swift; sourceTree = "<group>"; };
 		C0DC371222D339B00010A730 /* ResponseArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseArray.swift; sourceTree = "<group>"; };
+		C0DC371622D35CEB0010A730 /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		C0DC372022D360FF0010A730 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		C0DC372422D362AB0010A730 /* MainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
+		C0DC372922D491020010A730 /* Count.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Count.swift; sourceTree = "<group>"; };
+		C0DC372C22D491640010A730 /* HistoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryService.swift; sourceTree = "<group>"; };
+		C0DC373222D4C5500010A730 /* Donate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donate.swift; sourceTree = "<group>"; };
+		C0DC373522D4C57B0010A730 /* DonateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateService.swift; sourceTree = "<group>"; };
+		C0DC373722D555330010A730 /* MainData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainData.swift; sourceTree = "<group>"; };
+		C0DC373922D576E20010A730 /* Charge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Charge.swift; sourceTree = "<group>"; };
+		C0DC373B22D576F20010A730 /* ChargeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeService.swift; sourceTree = "<group>"; };
+		C0DC373D22D58F600010A730 /* ChargingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargingInfo.swift; sourceTree = "<group>"; };
+		C0DC373F22D5AE870010A730 /* MyHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHistory.swift; sourceTree = "<group>"; };
+		C0DC374122D5B4AC0010A730 /* MyEachDonatedBerry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEachDonatedBerry.swift; sourceTree = "<group>"; };
+		C0DC374322D5C5FF0010A730 /* UserHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHistory.swift; sourceTree = "<group>"; };
+		C0DC374522D5C68C0010A730 /* Banking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banking.swift; sourceTree = "<group>"; };
+		C0DC374722D5C6E30010A730 /* BankingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankingService.swift; sourceTree = "<group>"; };
+		C0DC374922D5D4770010A730 /* MyBerry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBerry.swift; sourceTree = "<group>"; };
+		C0DC374B22D5DCB60010A730 /* RankingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingService.swift; sourceTree = "<group>"; };
+		C0DC374D22D5F57E0010A730 /* EntireBerry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntireBerry.swift; sourceTree = "<group>"; };
+		C0DC374F22D622DA0010A730 /* Plan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plan.swift; sourceTree = "<group>"; };
+		C0DC375122D623130010A730 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		C0DC375322D623260010A730 /* Story2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story2.swift; sourceTree = "<group>"; };
+		C0DC375722D651140010A730 /* GetRewardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRewardVC.swift; sourceTree = "<group>"; };
+		C0DC375922D66FF80010A730 /* StampService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampService.swift; sourceTree = "<group>"; };
+		C0DC375B22D671910010A730 /* GetStamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStamp.swift; sourceTree = "<group>"; };
+		C0DC375D22D767B30010A730 /* berrydata2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = berrydata2.json; path = ../../../../../berrydata2.json; sourceTree = "<group>"; };
+		C0DC375F22D787CA0010A730 /* HistoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryList.swift; sourceTree = "<group>"; };
+		C0DC376322D794560010A730 /* DetailPlanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPlanCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +236,7 @@
 				C027A94422CD074700F198ED /* DetailVC.swift */,
 				C027A94622CD249C00F198ED /* DonateVC.swift */,
 				C027A94822CD356100F198ED /* CompleteDonateAlertVC.swift */,
+				C0DC375722D651140010A730 /* GetRewardVC.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -185,7 +244,6 @@
 		C021C2F722D06E4200ADF1FE /* Charge */ = {
 			isa = PBXGroup;
 			children = (
-				C08482DF22C337640087F3BC /* Views */,
 				C021C2F822D06E5900ADF1FE /* ChargeVC.swift */,
 				C021C2FA22D0D3D100ADF1FE /* CompleteChargeVC.swift */,
 				C021C2FE22D20C7D00ADF1FE /* ChargeMainVC.swift */,
@@ -196,17 +254,10 @@
 		C021C30122D2258000ADF1FE /* common */ = {
 			isa = PBXGroup;
 			children = (
+				C0DC371622D35CEB0010A730 /* APIManager.swift */,
 				C021C30222D225A500ADF1FE /* NetworkResult.swift */,
 			);
 			path = common;
-			sourceTree = "<group>";
-		};
-		C021C30422D225D900ADF1FE /* Auth */ = {
-			isa = PBXGroup;
-			children = (
-				C021C30522D225F300ADF1FE /* AuthService.swift */,
-			);
-			name = Auth;
 			sourceTree = "<group>";
 		};
 		C027A94C22CD40C600F198ED /* Record */ = {
@@ -258,6 +309,7 @@
 		C08482CF22C251CC0087F3BC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C0DC375D22D767B30010A730 /* berrydata2.json */,
 				C08482C422C251600087F3BC /* Assets.xcassets */,
 				C08482C922C251600087F3BC /* Info.plist */,
 				C08482D122C2525D0087F3BC /* Storyboards */,
@@ -273,6 +325,7 @@
 				C08482D322C252C70087F3BC /* APIServices */,
 				C08482DD22C3371E0087F3BC /* Model */,
 				C08482DE22C337490087F3BC /* Protocol */,
+				C08482DF22C337640087F3BC /* Views */,
 				C08482D222C252AD0087F3BC /* ViewControllers */,
 			);
 			path = Sources;
@@ -299,10 +352,10 @@
 				C021C2F722D06E4200ADF1FE /* Charge */,
 				C03353F122CE2368007EEA16 /* Ranking */,
 				C027A94C22CD40C600F198ED /* Record */,
-				C01E930222CB7C2300D43366 /* Home */,
 				C01E92E122CA371800D43366 /* MyPage */,
 				C01A043922C9E99200ED8CD2 /* SideMenu */,
 				C084832622C93C9B0087F3BC /* Auth */,
+				C01E930222CB7C2300D43366 /* Home */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -310,8 +363,16 @@
 		C08482D322C252C70087F3BC /* APIServices */ = {
 			isa = PBXGroup;
 			children = (
-				C021C30422D225D900ADF1FE /* Auth */,
 				C021C30122D2258000ADF1FE /* common */,
+				C021C30522D225F300ADF1FE /* AuthService.swift */,
+				C0DC372422D362AB0010A730 /* MainService.swift */,
+				C0DC372C22D491640010A730 /* HistoryService.swift */,
+				C0DC373522D4C57B0010A730 /* DonateService.swift */,
+				C0DC373B22D576F20010A730 /* ChargeService.swift */,
+				C0DC374722D5C6E30010A730 /* BankingService.swift */,
+				C0DC374B22D5DCB60010A730 /* RankingService.swift */,
+				C0DC375922D66FF80010A730 /* StampService.swift */,
+				C09DBBDD22D8651300124CC6 /* MyPageService.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -331,10 +392,26 @@
 		C08482DD22C3371E0087F3BC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C0DC370F22D339900010A730 /* Auth */,
-				C01E92F022CB62DE00D43366 /* History.swift */,
-				C01BC94322CCB393000AAF58 /* MainInfo.swift */,
-				C08D146422CF07AD00F5EB0A /* Ranking.swift */,
+				C0DC371E22D360BD0010A730 /* common */,
+				C021C30722D229AC00ADF1FE /* Token.swift */,
+				C0DC374922D5D4770010A730 /* MyBerry.swift */,
+				C0DC372022D360FF0010A730 /* Story.swift */,
+				C0DC374F22D622DA0010A730 /* Plan.swift */,
+				C0DC375122D623130010A730 /* Review.swift */,
+				C0DC375322D623260010A730 /* Story2.swift */,
+				C0DC373722D555330010A730 /* MainData.swift */,
+				C0DC375F22D787CA0010A730 /* HistoryList.swift */,
+				C0DC374D22D5F57E0010A730 /* EntireBerry.swift */,
+				C0DC373222D4C5500010A730 /* Donate.swift */,
+				C0DC372922D491020010A730 /* Count.swift */,
+				C0DC373922D576E20010A730 /* Charge.swift */,
+				C0DC373D22D58F600010A730 /* ChargingInfo.swift */,
+				C0DC373F22D5AE870010A730 /* MyHistory.swift */,
+				C0DC374122D5B4AC0010A730 /* MyEachDonatedBerry.swift */,
+				C0DC374522D5C68C0010A730 /* Banking.swift */,
+				C0DC374322D5C5FF0010A730 /* UserHistory.swift */,
+				C0DC375B22D671910010A730 /* GetStamp.swift */,
+				C0DC372822D490E90010A730 /* dummy */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -352,11 +429,11 @@
 				C01E92EE22CB5F6B00D43366 /* HistoryCell.swift */,
 				C01E930622CBC02B00D43366 /* HomeCell.swift */,
 				C01BC94122CCA7C6000AAF58 /* MainCell.swift */,
+				C0DC376322D794560010A730 /* DetailPlanCell.swift */,
 				C03353EB22CDC565007EEA16 /* RecordCell.swift */,
 				C08D146222CF03E700F5EB0A /* RankingCell.swift */,
 			);
-			name = Views;
-			path = ../Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		C084832622C93C9B0087F3BC /* Auth */ = {
@@ -371,15 +448,24 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
-		C0DC370F22D339900010A730 /* Auth */ = {
+		C0DC371E22D360BD0010A730 /* common */ = {
 			isa = PBXGroup;
 			children = (
 				C0DC370D22D32DB90010A730 /* ResponseString.swift */,
-				C021C30722D229AC00ADF1FE /* Token.swift */,
 				C0DC371022D339A60010A730 /* ResponseObject.swift */,
 				C0DC371222D339B00010A730 /* ResponseArray.swift */,
 			);
-			name = Auth;
+			name = common;
+			sourceTree = "<group>";
+		};
+		C0DC372822D490E90010A730 /* dummy */ = {
+			isa = PBXGroup;
+			children = (
+				C01E92F022CB62DE00D43366 /* History.swift */,
+				C01BC94322CCB393000AAF58 /* MainInfo.swift */,
+				C08D146422CF07AD00F5EB0A /* Ranking.swift */,
+			);
+			path = dummy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,6 +529,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C01E92F322CB732800D43366 /* HomeMain.storyboard in Resources */,
+				C0DC375E22D767B30010A730 /* berrydata2.json in Resources */,
 				C01A043822C9E7DF00ED8CD2 /* SideMenu.storyboard in Resources */,
 				C01A043D22CA272A00ED8CD2 /* MyPage.storyboard in Resources */,
 				C03353F022CE230C007EEA16 /* Ranking.storyboard in Resources */,
@@ -507,6 +594,10 @@
 				C084832522C93C930087F3BC /* LoginVC.swift in Sources */,
 				C08482C022C2515D0087F3BC /* FirstVC.swift in Sources */,
 				C0DC371122D339A60010A730 /* ResponseObject.swift in Sources */,
+				C0DC373C22D576F20010A730 /* ChargeService.swift in Sources */,
+				C0DC371722D35CEB0010A730 /* APIManager.swift in Sources */,
+				C0DC376022D787CA0010A730 /* HistoryList.swift in Sources */,
+				C0DC374022D5AE870010A730 /* MyHistory.swift in Sources */,
 				C01E92E322CA372F00D43366 /* MyPageVC.swift in Sources */,
 				C08D146522CF07AD00F5EB0A /* Ranking.swift in Sources */,
 				C01BC94422CCB393000AAF58 /* MainInfo.swift in Sources */,
@@ -515,10 +606,16 @@
 				C021C2FB22D0D3D100ADF1FE /* CompleteChargeVC.swift in Sources */,
 				C0DC370E22D32DB90010A730 /* ResponseString.swift in Sources */,
 				C027A94722CD249C00F198ED /* DonateVC.swift in Sources */,
+				C0DC373E22D58F600010A730 /* ChargingInfo.swift in Sources */,
+				C0DC374622D5C68C0010A730 /* Banking.swift in Sources */,
 				C0DC371322D339B00010A730 /* ResponseArray.swift in Sources */,
 				C027A94522CD074700F198ED /* DetailVC.swift in Sources */,
 				C01A043B22C9E9AE00ED8CD2 /* SideMenuVC.swift in Sources */,
 				C08482D622C2530B0087F3BC /* UIColor+Extensions.swift in Sources */,
+				C0DC374C22D5DCB60010A730 /* RankingService.swift in Sources */,
+				C0DC372522D362AB0010A730 /* MainService.swift in Sources */,
+				C0DC375022D622DA0010A730 /* Plan.swift in Sources */,
+				C09DBBDE22D8651300124CC6 /* MyPageService.swift in Sources */,
 				C01E92E922CB433600D43366 /* UseHistoryVC.swift in Sources */,
 				C01E92EF22CB5F6B00D43366 /* HistoryCell.swift in Sources */,
 				C084832C22C953540087F3BC /* SignUpVC3.swift in Sources */,
@@ -527,25 +624,43 @@
 				C01E92E522CA401B00D43366 /* EditAccoutVC.swift in Sources */,
 				C084832822C953190087F3BC /* SignUpVC1.swift in Sources */,
 				C08482DA22C253370087F3BC /* UIViewController+Extensions.swift in Sources */,
+				C0DC373622D4C57B0010A730 /* DonateService.swift in Sources */,
+				C0DC375A22D66FF80010A730 /* StampService.swift in Sources */,
+				C0DC375222D623130010A730 /* Review.swift in Sources */,
 				C01E930922CBEB6400D43366 /* MainVC.swift in Sources */,
 				C01E92E722CA788D00D43366 /* EditNicknameVC.swift in Sources */,
 				C027A94E22CD40F200F198ED /* RecordedDonationVC.swift in Sources */,
 				C01E930722CBC02B00D43366 /* HomeCell.swift in Sources */,
+				C0DC373322D4C5500010A730 /* Donate.swift in Sources */,
 				C08D146322CF03E700F5EB0A /* RankingCell.swift in Sources */,
+				C0DC373A22D576E20010A730 /* Charge.swift in Sources */,
 				C01BC94222CCA7C6000AAF58 /* MainCell.swift in Sources */,
 				C021C2FD22D0ED1E00ADF1FE /* DetailRankingVC.swift in Sources */,
 				C03353F322CE237D007EEA16 /* RankingVC.swift in Sources */,
 				C08482D822C253290087F3BC /* UIView+Extensions.swift in Sources */,
+				C0DC375422D623260010A730 /* Story2.swift in Sources */,
 				C03353EE22CDC6C7007EEA16 /* DetailRecordVC.swift in Sources */,
+				C0DC372D22D491640010A730 /* HistoryService.swift in Sources */,
 				C021C30822D229AC00ADF1FE /* Token.swift in Sources */,
 				C027A95022CD4C9600F198ED /* EarnBerryVC.swift in Sources */,
+				C0DC374A22D5D4770010A730 /* MyBerry.swift in Sources */,
+				C0DC374222D5B4AC0010A730 /* MyEachDonatedBerry.swift in Sources */,
+				C0DC375822D651140010A730 /* GetRewardVC.swift in Sources */,
+				C0DC375C22D671910010A730 /* GetStamp.swift in Sources */,
 				C08482DC22C337110087F3BC /* UIImageView+ㄷExtensions.swift in Sources */,
 				C021C2F922D06E5900ADF1FE /* ChargeVC.swift in Sources */,
 				C08482BE22C2515D0087F3BC /* AppDelegate.swift in Sources */,
 				C01E930422CB7C5E00D43366 /* HomeVC.swift in Sources */,
 				C021C2FF22D20C7D00ADF1FE /* ChargeMainVC.swift in Sources */,
+				C0DC376422D794560010A730 /* DetailPlanCell.swift in Sources */,
+				C0DC373822D555330010A730 /* MainData.swift in Sources */,
+				C0DC374E22D5F57E0010A730 /* EntireBerry.swift in Sources */,
 				C021C30322D225A500ADF1FE /* NetworkResult.swift in Sources */,
+				C0DC374422D5C5FF0010A730 /* UserHistory.swift in Sources */,
 				C021C30A22D255A400ADF1FE /* String+Extension.swift in Sources */,
+				C0DC372122D360FF0010A730 /* Story.swift in Sources */,
+				C0DC374822D5C6E30010A730 /* BankingService.swift in Sources */,
+				C0DC372A22D491020010A730 /* Count.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

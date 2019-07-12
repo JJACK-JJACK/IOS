@@ -12,9 +12,10 @@ class RankingVC: UIViewController {
 
     @IBOutlet weak var topTenListView: UICollectionView!
     
-    let topTenList: [UIImage] = []
+    @IBOutlet weak var EntireDonatedBerry: UILabel!
     
-  
+    var topTenList = [Datum]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +23,55 @@ class RankingVC: UIViewController {
         topTenListView.dataSource = self
         topTenListView.delegate = self
         
+        get10Rank()
+        getEntireBerry()
+        
+        
+        
+    }
+    func getEntireBerry() {
+        MainService.shared.getEntireDonatedBerry(){
+            [weak self]
+            (data) in
+            guard let `self` = self else {return}
+            
+            switch data {
+            case .success(let data):
+                let berry = (data as? [EntireBerry])!
+                print(berry[0].totalDonate)
+                self.EntireDonatedBerry.text = String(berry[0].totalDonate)
+                break
+            default:
+                break
+            }
+            
+        }
+    }
+    
+    func get10Rank() {
+        RankingService.shared.getRanking() {
+            [weak self]
+            (data) in
+            guard let `self` = self else {return}
+            
+            switch data {
+            case .success(let data):
+                let datum = (data as? [Datum])!
+                self.topTenList = datum
+                print("Ssssssssssssssss")
+                print(self.topTenList.count)
+                self.topTenListView.reloadData()
+                break
+            case .requestErr(let err):
+                print(err)
+            case .pathErr:
+                print("path")
+            case .serverErr:
+                print("server")
+            case .networkFail:
+                print("network")
+            }
+        }
     }
     
     @IBAction func showMenu(_ sender: Any) {
@@ -35,14 +85,13 @@ class RankingVC: UIViewController {
 
 extension RankingVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return topTenList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = topTenListView.dequeueReusableCell(withReuseIdentifier: "RankingCell", for: indexPath )as! HomeCell
-//        let topList = topTenList[indexPath.row]
-//        cell.categoryImg.image = topList
-        cell.backgroundColor = .mainCol
+        let topList = topTenList[indexPath.row]
+        cell.categoryImg.imageFromUrl(self.gsno(topList.thumbnail), defaultImgPath: "imgHomeJjack")
         cell.makeRounded(cornerRadius: 8.0)
         return cell
     }
@@ -69,8 +118,23 @@ extension RankingVC: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let dvc = storyboard?.instantiateViewController(withIdentifier: "DetailRanking")as? DetailRankingVC else {return}
-//        let List = topTenList[indexPath.row]
-//        dvc.paramThumbImg = List
+        let List = topTenList[indexPath.row]
+        dvc.paramThumbImg = List.thumbnail
+        dvc.process = List.percentage
+        dvc.berry = List.totalBerry
+        dvc.max = List.maxBerry
+        
+        let reviewStory = List.review[0].story!
+        dvc.subTitle = reviewStory[0].subTitle
+        dvc.content1 = reviewStory[0].content[0]
+        dvc.content2 = reviewStory[0].content[1]
+        dvc.contentImg = reviewStory[0].img
+        let reviewPlan = List.review[1].plan!
+        dvc.purpose1 = reviewPlan[0].purpose
+        dvc.price1 = reviewPlan[0].price
+        
+        dvc.plans = reviewPlan
+        
         
         navigationController?.pushViewController(dvc, animated: true)
     }

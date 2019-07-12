@@ -13,7 +13,7 @@
         <!--Charge MainVC-->
         <scene sceneID="0Li-pk-fus">
             <objects>
-                <viewController id="J1M-td-lVr" customClass="ChargeMainVC" customModule="JJackProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChargeMain" id="J1M-td-lVr" customClass="ChargeMainVC" customModule="JJackProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SFo-fl-Ab9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -216,7 +216,6 @@
                                 </state>
                                 <connections>
                                     <action selector="ChargeBerry:" destination="575-Za-JFh" eventType="touchUpInside" id="L8I-Dr-dWL"/>
-                                    <segue destination="FyO-x0-a1H" kind="presentation" id="1pG-Tr-fmW"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L3k-Q5-mLz">
@@ -291,10 +290,9 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="베리 10개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdk-Cq-ep6">
-                                                                <rect key="frame" x="73" y="3" width="66" height="17"/>
+                                                                <rect key="frame" x="73" y="3" width="62" height="17"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="17" id="V3e-Ws-gnc"/>
-                                                                    <constraint firstAttribute="width" constant="66" id="hep-sl-9jc"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="16"/>
                                                                 <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -414,10 +412,9 @@
                                                                 </constraints>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="베리 50개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rod-mK-Xv8">
-                                                                <rect key="frame" x="68" y="3" width="66" height="17"/>
+                                                                <rect key="frame" x="68" y="3" width="64" height="17"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="17" id="XtL-0O-tyM"/>
-                                                                    <constraint firstAttribute="width" constant="66" id="h1U-gg-dGv"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="16"/>
                                                                 <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -539,7 +536,6 @@
                                                                 <rect key="frame" x="68" y="3" width="72" height="17"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="17" id="X7s-9C-NEo"/>
-                                                                    <constraint firstAttribute="width" constant="72" id="c8Z-Gd-rMv"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="16"/>
                                                                 <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -662,7 +658,6 @@
                                                                 <rect key="frame" x="68" y="3" width="74.666666666666686" height="17"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="17" id="jct-Pd-N5l"/>
-                                                                    <constraint firstAttribute="width" constant="74.666666666666686" id="opr-bH-Hd2"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="16"/>
                                                                 <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -783,7 +778,6 @@
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="베리 500개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sW1-YQ-5Re">
                                                                 <rect key="frame" x="68" y="3" width="74.333333333333314" height="17"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="74.333333333333314" id="9UX-Hl-IG5"/>
                                                                     <constraint firstAttribute="height" constant="17" id="Jsr-YR-AtO"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="16"/>
@@ -906,7 +900,6 @@
                                                 <rect key="frame" x="19.999999999999996" y="35" width="60.666666666666657" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="17" id="7DT-Py-rx5"/>
-                                                    <constraint firstAttribute="width" constant="60.666666666666657" id="o99-kR-sPh"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
                                                 <color key="textColor" red="0.066666666669999999" green="0.066666666669999999" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -982,7 +975,7 @@
         <!--Complete ChargeVC-->
         <scene sceneID="0n4-FC-K5Q">
             <objects>
-                <viewController id="FyO-x0-a1H" customClass="CompleteChargeVC" customModule="JJackProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CompleteCharge" id="FyO-x0-a1H" customClass="CompleteChargeVC" customModule="JJackProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qRY-xt-EEL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1092,11 +1085,10 @@
                                                             <constraint firstAttribute="height" constant="1" id="Y0k-Zw-C8E"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="결제 금액" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBb-yC-ZN6">
-                                                        <rect key="frame" x="30.000000000000004" y="460" width="52.333333333333343" height="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="무통장입금" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBb-yC-ZN6">
+                                                        <rect key="frame" x="29.999999999999996" y="460" width="60.666666666666657" height="17"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="17" id="aWH-gZ-tHb"/>
-                                                            <constraint firstAttribute="width" constant="52.333333333333343" id="fKb-Cp-osb"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="14"/>
                                                         <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -1215,7 +1207,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="ChargeBerry:" destination="575-Za-JFh" eventType="touchUpInside" id="vUX-Yv-kHA"/>
+                                    <action selector="confirmCharge:" destination="FyO-x0-a1H" eventType="touchUpInside" id="3i6-pn-QkM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1234,12 +1226,19 @@
                         <viewLayoutGuide key="safeArea" id="Ppr-Ym-Dob"/>
                     </view>
                     <connections>
+                        <outlet property="Account" destination="Tra-DS-jfi" id="Fry-2h-PFl"/>
+                        <outlet property="bankName" destination="dhx-WD-zKb" id="pxp-Is-Qga"/>
+                        <outlet property="chargedPrice" destination="SAr-j7-vVp" id="g7E-5r-iTT"/>
                         <outlet property="confirmBtn" destination="c4m-0L-O3b" id="3Bc-uR-gbU"/>
+                        <outlet property="dueDate" destination="TxP-Tb-dG4" id="odM-Hq-fPU"/>
+                        <segue destination="cqu-qg-cFv" kind="unwind" identifier="goHome" unwindAction="unwind:" id="6fx-yL-JEa"/>
+                        <segue destination="cqu-qg-cFv" kind="unwind" identifier="backToDonate" unwindAction="backToDonate:" id="hG0-g5-mdL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yzp-kq-RXA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="cqu-qg-cFv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2480" y="118"/>
+            <point key="canvasLocation" x="2506" y="112"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="B7b-7Y-xax">

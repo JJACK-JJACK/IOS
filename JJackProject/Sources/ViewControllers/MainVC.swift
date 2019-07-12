@@ -22,10 +22,11 @@ class MainVC: UIViewController, UIScrollViewDelegate{
 
     @IBOutlet weak var mainView: UICollectionView!
     
-    var infoSet: [Info] = []
+    var infoSet = [Main]()
+//    var infoSet: [Info] = []
     
     @IBOutlet weak var donationInfoView: UITableView!
-    
+
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var child: UIButton!
@@ -39,7 +40,10 @@ class MainVC: UIViewController, UIScrollViewDelegate{
     @IBOutlet weak var highDonated: UIButton!
     @IBOutlet weak var lowDonated: UIButton!
     
-    var paramIndex: Int = 0
+    // Home 에서 Select 된 카테고리의 인덱스패스 값
+    // 이 값들은 처음 실행 되고 나서 바뀐 값으로 유지 되고 갱신 되지 않는다.
+    var paramIndex: Int = 1
+    var arrangeIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,18 +56,28 @@ class MainVC: UIViewController, UIScrollViewDelegate{
         
         scrollView.delegate = self
         
+        // 환경부터 Select시에 스크롤 필요!
         setBoldCategory(response: paramIndex)
         
         // 초기 설정.. 굳이?
         setBtn(button: upToDate, color: .JackBlack, font: .Medium2)
-        setInfoData()
+
 
         self.loadViewIfNeeded()
-        
-        //sideMenu setUp
-//        setupSideMenu()
+    
+        // Home 에서 Main 이동 시 Main 기본 화면
+//        scroll(index: paramIndex)
+        // 다른 화면 전환 후 다시 올때
+        // paramIndex arrangeIndex 유지 할건지 아니면 초기화 할건지!
+        getFilteredList(category: paramIndex, filter: arrangeIndex)
+        print(arrangeIndex)
 
     
+    }
+    // Home 에서 Main 이동 시 Main 기본 화면
+    // 처음부터 화면이 나오게는 할 수 없나?
+    override func viewDidAppear(_ animated: Bool) {
+        scroll(index: paramIndex)
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
@@ -75,9 +89,6 @@ class MainVC: UIViewController, UIScrollViewDelegate{
         }
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        scroll(index: paramIndex)
-    }
     // 버튼 클릭시 컬랙션 뷰 스크롤
     func scroll (index: Int) {
         let menuIndex = NSIndexPath(item: index, section: 0)
@@ -110,6 +121,24 @@ class MainVC: UIViewController, UIScrollViewDelegate{
         scroll(index: response)
         
     }
+    // Donation List 내역 불러오기
+//    func getDonatedList(category: Int) {
+//        MainService.shared.getDonationList(category) {
+//            [weak self]
+//            (data) in
+//            guard let `self` = self else {return}
+//            switch data {
+//            case .success(let data):
+//                // infoset에 [info]형태를 갖춘 데이터들을 넣어서 info의 형식을 완성해야 한다.
+//                self.infoSet = (data.self as? [Datum])!
+//                self.donationInfoView.reloadData()
+//                break
+//            default:
+//                break
+//            }
+//        }
+
+//    }
     //Bolding Category
     @IBAction func selectCategory(_ sender: UIButton) {
         setBtn(button: child, color: .brownGrey, font: .Light)
@@ -123,19 +152,44 @@ class MainVC: UIViewController, UIScrollViewDelegate{
             sender.titleLabel?.font = .Bold
             sender.setTitleColor(.JackBlack, for: .normal)
             
+//            var paramIndex: Int = 0
             switch sender.currentTitle {
             case "어린이":
                 scroll(index: 0)
+                paramIndex = 1
             case "어르신":
                 scroll(index: 1)
+                paramIndex = 5
             case "동물":
                 scroll(index: 2)
-            case "장애우":
+                paramIndex = 0
+            case "장애인":
                 scroll(index: 3)
+                paramIndex = 2
             case "환경":
                 scroll(index: 4)
+                paramIndex = 3
             case "긴급구조":
                 scroll(index: 5)
+                paramIndex = 4
+            default:
+                break
+            }
+            getFilteredList(category: paramIndex, filter: arrangeIndex)
+        }
+    }
+    func getFilteredList (category: Int, filter: Int){
+        MainService.shared.getFilterdList(category, filter) {
+            [weak self]
+            (data) in
+            
+            guard let `self` = self else {return}
+            
+            switch data {
+            case .success(let data):
+                print(data)
+                self.infoSet = (data.self as? [Main])!
+                self.donationInfoView.reloadData()
             default:
                 break
             }
@@ -151,8 +205,21 @@ class MainVC: UIViewController, UIScrollViewDelegate{
             sender.titleLabel?.font = .Medium2
             sender.setTitleColor(.JackBlack, for: .normal)
             
-            
             // switch 사용해서 통신 !
+            switch sender.currentTitle {
+            case "최신순":
+                arrangeIndex = 0
+                break
+            case "기부율 높은순":
+                arrangeIndex = 1
+                break
+            case "기부율 낮은순":
+                arrangeIndex = 2
+                break
+            default:
+                break
+            }
+            getFilteredList(category: paramIndex, filter: arrangeIndex)
         }
     }
     
@@ -163,7 +230,7 @@ class MainVC: UIViewController, UIScrollViewDelegate{
         navigationController?.show(dvc, sender: self)
     }
     @IBAction func goHome(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
+        backHome()
     }
     
 }
@@ -229,13 +296,17 @@ extension MainVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let dvc = storyboard?.instantiateViewController(withIdentifier: "Detail")as? DetailVC else {return}
         let info = infoSet[indexPath.row]
-        
-        dvc.paramThumbImg = info.thumbImg
+        print(info.start)
+        print(info.finish)
+        dvc.paramThumbImg = info.thumbnail
         dvc.paramTitle = info.title
-        dvc.paramInstitution = info.institution
-        dvc.paramDate = info.date!
-        dvc.paramProcess = info.processRate
-        dvc.paramDonated = info.donatedBerry
+        dvc.paramInstitution = info.centerName
+//        dvc.paramDate = info.
+        dvc.paramProcess = info.percentage
+        dvc.paramGoal = info.maxBerry
+        dvc.paramDonated = info.totalBerry
+        dvc.paramId = info.id
+
         navigationController?.pushViewController(dvc, animated: true)
     }
     
@@ -248,19 +319,19 @@ extension MainVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = donationInfoView.dequeueReusableCell(withIdentifier: "MainCell")as! MainCell
         let List = infoSet[indexPath.row]
-        
-        cell.thumbImg.image = UIImage(named: List.thumbImg)
-        cell.date.text = List.date
+        cell.thumbImg.imageFromUrl(gsno(List.thumbnail), defaultImgPath: "imgHomeJjack")
+//        cell.date.text = List.date
         cell.title.text = List.title
-        cell.institution.text = List.institution
-        cell.processRate.text = List.processRate + "%"
-        cell.donatedBerry.text = List.donatedBerry
+        cell.processRate.text = String(List.percentage) + "%"
+        cell.institution.text = List.centerName
+//        cell.processRate.text = String(List.percentage) + "%"
+        cell.donatedBerry.text = String(List.maxBerry)
         
-        let rate = Double(List.processRate) ?? 0.0
+        let rate = Double(List.percentage)
         let length = Double(cell.statusBar.frame.width)
         let num = round(length * (rate / 100.0))
-        if num >= 100 {
-            cell.showRate.constant = 100
+        if num >= length {
+            cell.showRate.constant = CGFloat(length)
         } else{
             cell.showRate.constant = CGFloat(num)
         }
@@ -270,13 +341,13 @@ extension MainVC: UITableViewDataSource {
     
 }
 extension MainVC {
-    func setInfoData() {
-        let info1 = Info(thumbnail: "icCard", date: "D - 41", title: "올 겨울 혜리에게도 따뜻한 이불을 주세요!",institution: "사회 복지관", processRate: "50", donatedBerry: "404,040", status: nil)
-        let info2 = Info(thumbnail: "icCard", date: "D - 32", title: "올 겨울 혜리에게도 따뜻한 이불을 주세요!",institution: "샬롬 요양원", processRate: "70", donatedBerry: "404,040", status: nil)
-        let info3 = Info(thumbnail: "icCard", date: "D - 321", title: "올 겨울 혜리에게도 따뜻한 이불을 주세요!", institution: "주남바다요양센터", processRate: "20", donatedBerry: "404,040", status: nil)
-        
-        self.infoSet = [info1, info2, info3]
-    }
+//    func setInfoData() {
+//        let info1 = Info(thumbnail: "icCard", date: "D - 41", title: "올 겨울 혜리에게도 따뜻한 이불을 주세요!",institution: "사회 복지관", processRate: "50", donatedBerry: "404,040", status: nil)
+//        let info2 = Info(thumbnail: "icCard", date: "D - 32", title: "올 겨울 혜리에게도 따뜻한 이불을 주세요!",institution: "샬롬 요양원", processRate: "70", donatedBerry: "404,040", status: nil)
+//        let info3 = Info(thumbnail: "icCard", date: "D - 321", title: "올 겨울 혜리에게도 따뜻한 이불을 주세요!", institution: "주남바다요양센터", processRate: "20", donatedBerry: "404,040", status: nil)
+//
+//        self.infoSet = [info1, info2, info3]
+//    }
     func setBtn(button: UIButton, color: UIColor, font: UIFont) {
         button.titleLabel?.font = font
         button.setTitleColor(color, for: .normal)

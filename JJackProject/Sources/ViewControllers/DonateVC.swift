@@ -8,8 +8,12 @@
 
 import UIKit
 
-class DonateVC: UIViewController {
-
+class DonateVC: UIViewController{
+    
+    @IBOutlet weak var ownBerry: UILabel!
+    
+    @IBOutlet weak var deleteBerry: UIButton!
+    
     @IBOutlet weak var charging10: UIButton!
     @IBOutlet weak var charging20: UIButton!
     @IBOutlet weak var charging50: UIButton!
@@ -18,6 +22,9 @@ class DonateVC: UIViewController {
     @IBOutlet weak var berryValue: UITextField!
     
     @IBOutlet weak var confirmDonate: UIButton!
+    
+    var paramId: String = ""
+    var myBerryAmount: Int = UserDefaults.standard.integer(forKey: "ownBerry")
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,6 +34,9 @@ class DonateVC: UIViewController {
     func setup() {
         setBorder()
         roundBorder()
+        // 내가 가지고있는 베리 가져오기
+        self.ownBerry.text = String(myBerryAmount)
+
     }
     func setBorder () {
         charging10.setBorder(borderColor: .brownishGrey, borderWidth: 1.0)
@@ -42,6 +52,9 @@ class DonateVC: UIViewController {
         confirmDonate.makeRounded(cornerRadius: 4.0)
     }
     
+    @IBAction func eraseBerry(_ sender: Any) {
+        self.berryValue.text = ""
+    }
     @IBAction func easyChargeBtn(_ sender: UIButton) {
         switch sender.currentTitle {
         case "+ 10":
@@ -54,19 +67,82 @@ class DonateVC: UIViewController {
             let num = Int(self.berryValue.text!) ?? 0
             self.berryValue.text = String(num + 50)
         case "전액":
-            let num = Int(self.berryValue.text!) ?? 0
-            self.berryValue.text = String(num + 10)
+            self.berryValue.text = String(myBerryAmount)
             //myBerry의 서버에서 전달받은 값을 사용하자.
         default:
             break
         }
     }
+    
+    @IBAction func showChargeView(_ sender: Any) {
+        guard let dvc = UIStoryboard(name: "Charge", bundle: nil).instantiateViewController(withIdentifier: "ChargeNavigation")as? UINavigationController else {return}
+        UserDefaults.standard.set(true, forKey: "fromDonate")
+
+        
+        self.present(dvc, animated: true)
+    }
     @IBAction func confirmDonate(_ sender: Any) {
         // 스탬프의 개수를 알아온 뒤에
         // 개수에 따라서 베리를 부여할 지 판단하자
         // 서버가 어느정도의 역할을 할지..!
+        guard let berry = Int(self.berryValue!.text!) else {return}
+        
+        print("여기는 기부하기")
+        if self.myBerryAmount >= berry {
+            guard let token = UserDefaults.standard.string(forKey: "refreshToken") else {return}
+    //        print("////////\(token)////////")
+            print("token: \(token)")
+            print(berry)
+            print(paramId)
+            DonateService.shared.donate(token, berry
+            , paramId){
+                [weak self]
+                (data) in
+                
+                guard let `self` = self else {return}
+                
+                switch data {
+                case .success(let data):
+                    guard let data = data as? Donate else {return}
+                    print(data.rewordsBerry!)
+                    print(data.stamps!)
+                    print(data.totalBerry!)
+                    if data.stamps == 10 {
+                        guard let dvc =  self.storyboard?.instantiateViewController(withIdentifier: "GetReward") as?GetRewardVC else {return}
+                        print("#######@#############")
+                        print(data)
+                        dvc.rewardBerry = data.rewordsBerry!
+                        self.present(dvc, animated: true, completion: nil)
+                    } else {
+                        guard let dvc =  self.storyboard?.instantiateViewController(withIdentifier: "CompleteDonate") as? CompleteDonateAlertVC else {return}
+                        print("#######@#############")
+                        print(data)
+                        self.present(dvc, animated: true, completion: nil)
+
+                    }
+                case .requestErr(let message):
+                    print(message)
+                case .pathErr:
+                    print("path")
+                case .serverErr:
+                    print("server")
+                case .networkFail:
+                    print("네트워크 오류")
+                
+                }
+            
+            }
+        } else {self.simpleAlert(title: "기부 실패", message: "베리가 부족합니다.")}
+//        guard let dvc = self.storyboard?.instantiateViewController(withIdentifier: "CompleteDonate")as? CompleteDonateAlertVC else {return}
+//        print("#######@#############")
+////        print(token)
+//        print(berry)
+//        self.present(dvc, animated: true, completion: nil)
     }
     @IBAction func Back(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    @IBAction func backToDonate (_ segue: UIStoryboardSegue) {
+        
     }
 }

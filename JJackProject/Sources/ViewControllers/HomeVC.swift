@@ -73,6 +73,25 @@ class HomeVC: UIViewController {
         
         //sideMenu setUp
         setupSideMenu()
+        getMyOwnBerry()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        getMyOwnBerry()
+    }
+    func getMyOwnBerry () {
+        guard let token = UserDefaults.standard.string(forKey: "refreshToken") else {return}
+        ChargeService.shared.ownedBerry(token){
+            (data) in
+            
+            switch data {
+            case .success(let data):
+                guard let berry = data as? Int else {return}
+                UserDefaults.standard.set(berry, forKey: "ownBerry")
+                print(UserDefaults.standard.integer(forKey: "ownBerry"))
+            default:
+                break
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -155,7 +174,7 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        guard let dvc = storyboard?.instantiateViewController(withIdentifier: "MainVC") as? MainVC else {return}
+        guard let dvc = storyboard?.instantiateViewController(withIdentifier: "Main") as? MainVC else {return}
         dvc.paramIndex = indexPath.row
        navigationController?.show(dvc, sender: self)
     }
