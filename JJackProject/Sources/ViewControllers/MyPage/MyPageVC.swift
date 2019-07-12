@@ -59,7 +59,6 @@ class MyPageVC: UIViewController {
     }
     
     @IBAction func logoutBtn(_ sender: UIButton) {
-//        guard let dvc = UIStoryboard(name: "Login", bundle: nil).instantiateViewController(withIdentifier: "FirstView") as? ViewController else {return}
         simpleAlertwithHandler(title: "로그아웃 하시겠습니까?", message: "진짜로?", okHandler: {res in
             self.performSegue(withIdentifier: "toLogin", sender: self)
         }, cancleHandler: nil)

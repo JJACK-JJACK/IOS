@@ -81,16 +81,14 @@ class DonateVC: UIViewController{
         
         self.present(dvc, animated: true)
     }
+    
+    // 기부하기 확인
     @IBAction func confirmDonate(_ sender: Any) {
-        // 스탬프의 개수를 알아온 뒤에
-        // 개수에 따라서 베리를 부여할 지 판단하자
-        // 서버가 어느정도의 역할을 할지..!
         guard let berry = Int(self.berryValue!.text!) else {return}
         
         print("여기는 기부하기")
         if self.myBerryAmount >= berry {
             guard let token = UserDefaults.standard.string(forKey: "refreshToken") else {return}
-    //        print("////////\(token)////////")
             print("token: \(token)")
             print(berry)
             print(paramId)
@@ -133,11 +131,7 @@ class DonateVC: UIViewController{
             
             }
         } else {self.simpleAlert(title: "기부 실패", message: "베리가 부족합니다.")}
-//        guard let dvc = self.storyboard?.instantiateViewController(withIdentifier: "CompleteDonate")as? CompleteDonateAlertVC else {return}
-//        print("#######@#############")
-////        print(token)
-//        print(berry)
-//        self.present(dvc, animated: true, completion: nil)
+
     }
     @IBAction func Back(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)

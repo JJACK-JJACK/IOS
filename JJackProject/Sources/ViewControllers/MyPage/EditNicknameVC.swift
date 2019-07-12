@@ -31,6 +31,7 @@ class EditNicknameVC: UIViewController, UITextFieldDelegate {
         self.dismiss(animated: true, completion: nil)
     }
     
+    // 닉네임 중복 검사
     @IBAction func checkDuplicate(_ sender: Any) {
         guard let nickname = edittingNiknm.text else {return}
         AuthServices.shared.checkDuplicate(nickname) {
@@ -56,6 +57,8 @@ class EditNicknameVC: UIViewController, UITextFieldDelegate {
         }
         
     }
+    
+    // 닉네임 수정
     @IBAction func confirmEditName (_ sender: Any) {
 
         print(isDuplicate)

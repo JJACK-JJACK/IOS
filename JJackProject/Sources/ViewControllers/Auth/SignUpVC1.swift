@@ -29,8 +29,7 @@ class SignUpVC1: UIViewController {
         if email.Validate() {
             guard let dvc = storyboard?.instantiateViewController(withIdentifier: "SettingPwd") as? SignUpVC2 else { return }
             
-            // email 문자열 전달
-            
+            // deliever Values to next View
             dvc.paramEmail = email
             navigationController?.pushViewController(dvc, animated: true)
         }else {
@@ -47,7 +46,7 @@ class SignUpVC1: UIViewController {
     
 }
 extension SignUpVC1: UITextFieldDelegate {
-    
+    // KeyBoard Action 설정
     func setupNotification() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name:  UIResponder.keyboardWillShowNotification , object: nil)
         
@@ -61,16 +60,9 @@ extension SignUpVC1: UITextFieldDelegate {
     @objc func keyboardWillShow (_ sender: Notification) {
                 guard let userInfo = sender.userInfo as? [String:Any] else {return}
                 guard let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
-        //        self.Login.transform = CGAffineTransform(translationX: 0, y: -30)
-        //        self.toSignup.transform = CGAffineTransform(translationX: 0, y: -30)
         self.nextBtn.transform = CGAffineTransform(translationX: 0, y: -keyboardFrame.cgRectValue.height + control.constant - 10)
-        //        self.view.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
-        
-        //        self.view.frame.origin.y = -100
     }
     @objc func keyboardWillHide (_ sender: Notification) {
-        //        self.Login.transform = .identity
-        //        self.toSignup.transform = .identity
         self.nextBtn.transform = .identity
     }
 }

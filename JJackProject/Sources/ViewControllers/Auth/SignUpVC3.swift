@@ -35,6 +35,7 @@ class SignUpVC3: UIViewController {
     var paramPw: String = ""
     var duplicate: Bool = false
 
+    // 닉네임 중복 검사
     @IBAction func checkDupl(_ sender: Any) {
         guard let nickname = nameTF.text else {return}
         
@@ -60,12 +61,12 @@ class SignUpVC3: UIViewController {
         }
     }
     
+    // 회원가입 통신 / 확인!
     @IBAction func completeSignup(_ sender: UIButton) {
         guard let pw = pwCheckTF.text else {return}
         guard let nickName = nameTF.text else {return}
         
         if pw == self.paramPw && duplicate{
-            // 통신
             AuthServices.shared.signup(paramEmail, pw, nickName) {
                 (data) in
                 switch data {
@@ -105,6 +106,7 @@ class SignUpVC3: UIViewController {
         navigationController?.popViewController(animated: true)
     }
 }
+// KeyBoard Action
 extension SignUpVC3: UITextFieldDelegate {
     
     func setupNotification() {
@@ -121,17 +123,11 @@ extension SignUpVC3: UITextFieldDelegate {
     @objc func keyboardWillShow (_ sender: Notification) {
         guard let userInfo = sender.userInfo as? [String:Any] else {return}
         guard let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
-        //        self.Login.transform = CGAffineTransform(translationX: 0, y: -30)
-        //        self.toSignup.transform = CGAffineTransform(translationX: 0, y: -30)
+        
         self.nextBtn.transform = CGAffineTransform(translationX: 0, y: -keyboardFrame.cgRectValue.height + control.constant - 10)
         self.view.transform = CGAffineTransform(translationX: 0 , y: -20)
-        //        self.view.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
-        
-        //        self.view.frame.origin.y = -100
     }
     @objc func keyboardWillHide (_ sender: Notification) {
-        //        self.Login.transform = .identity
-        //        self.toSignup.transform = .identity
         self.nextBtn.transform = .identity
         self.view.transform = .identity
     }

@@ -25,18 +25,17 @@ class RecordedDonationVC: UIViewController {
         myRecordView.delegate = self
         myRecordView.dataSource = self
         // Do any additional setup after loading the view.
-//        setData()
+
 
         
         getMyHistory()
         getDonatedHistory()
         getEachDonatedBerry()
     }
+    
+    // deselectRow after click
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        
-        // deselectRow after click
-        
         if let index = myRecordView.indexPathForSelectedRow {
             myRecordView.deselectRow(at: index, animated: true)
         }
@@ -153,6 +152,7 @@ extension RecordedDonationVC: UITableViewDataSource {
         if num >= width {cell.showRate.constant =  CGFloat(width)}
         else {cell.showRate.constant = CGFloat(num)}
         
+        // 해당 기부사건 케이스따라서 뷰 설정
         let status = List.state
         switch status {
         case 0:
@@ -180,6 +180,7 @@ extension RecordedDonationVC: UITableViewDataSource {
         return cell
     }
 }
+// List Extension
 extension RecordedDonationVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let dvc = storyboard?.instantiateViewController(withIdentifier: "Detail")as? DetailRecordVC else {return}

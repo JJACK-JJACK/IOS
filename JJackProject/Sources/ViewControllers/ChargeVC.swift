@@ -74,6 +74,7 @@ class ChargeVC: UIViewController{
         control5.tag = 5
     }
     
+    // 피커 뷰 설정 및 Show
     @IBAction func showpicker(_ sender: Any) {
         let message = "\n\n\n\n\n\n"
         let alert = UIAlertController(title: "Please Select City", message: message, preferredStyle: .actionSheet)
@@ -81,10 +82,8 @@ class ChargeVC: UIViewController{
         
         let pickerFrame = UIPickerView(frame: CGRect(x: 5, y: 20, width: view.frame.width - 30, height: 140)) // CGRectMake(left, top, width, height) - left and top are like margins
         pickerFrame.tag = 555
-        //set the pickers datasource and delegate
+        //set the pickers delegate
         pickerFrame.delegate = self
-//        pickerFrame.dataSource = self
-        
         //Add the picker to the alert controller
         alert.view.addSubview(pickerFrame)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: {
@@ -99,6 +98,7 @@ class ChargeVC: UIViewController{
         
     }
     
+    // 체크 버튼 클릭시 뷰 / 변수 값 설정
     @IBAction func SelectAmountOfBerry(_ sender: UIButton) {
         select1.isHidden = true
         setSelection()
@@ -129,10 +129,12 @@ class ChargeVC: UIViewController{
         print(paramBerry)
     }
     
+    // 베리 충전하기
     @IBAction func ChargeBerry(_ sender: Any) {
         //통신
         guard let token = UserDefaults.standard.string(forKey: "refreshToken") else {return}
         
+        // 은행 설정 할 때 실행
         if self.paramAccount != "입금하실 은행 선택" {
             ChargeService.shared.chargingBerry(token, berry) {
                 [weak self]
@@ -146,7 +148,7 @@ class ChargeVC: UIViewController{
                     guard let chargeInfo = self.chargeData?.charge else {return}
                     let endIndex = chargeInfo.endIndex
                     let chargedBerry = chargeInfo[endIndex + -1].chargeBerry
-                    print("####################2222#######")
+                    
                     print(chargedBerry)
                     let totalBerry = chargedBerry + UserDefaults.standard.integer(forKey: "ownBerry")
                     
@@ -154,6 +156,8 @@ class ChargeVC: UIViewController{
                     print(UserDefaults.standard.set(totalBerry, forKey: "ownBerry"))
                     
                     guard let dvc = self.storyboard?.instantiateViewController(withIdentifier: "CompleteCharge")as? CompleteChargeVC else {return}
+                    
+                    // 은행 계좌 String Slicing
                     let bankInfo = self.bankAccount.text?.components(separatedBy: " ")
                     dvc.paramBank = bankInfo![0]
                     dvc.paramAccount = bankInfo![1]
@@ -170,6 +174,7 @@ class ChargeVC: UIViewController{
                     print("네트워크 오류")
                 }
             }
+            // 계좌 선택 안할 시 예외 처리
         }else {simpleAlert(title: "충전 실패", message: "계좌를 선택해 주세요")}
     }
     

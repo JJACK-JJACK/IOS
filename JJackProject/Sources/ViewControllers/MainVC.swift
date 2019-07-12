@@ -23,7 +23,6 @@ class MainVC: UIViewController, UIScrollViewDelegate{
     @IBOutlet weak var mainView: UICollectionView!
     
     var infoSet = [Main]()
-//    var infoSet: [Info] = []
     
     @IBOutlet weak var donationInfoView: UITableView!
 
@@ -60,14 +59,13 @@ class MainVC: UIViewController, UIScrollViewDelegate{
         // 환경부터 Select시에 스크롤 필요!
         setBoldCategory(response: paramIndex)
         
-        // 초기 설정.. 굳이?
+        // 초기 설정..(StoryBoard Interface에서도 가능)
         setBtn(button: upToDate, color: .JackBlack, font: .Medium2)
 
 
         self.loadViewIfNeeded()
     
         // Home 에서 Main 이동 시 Main 기본 화면
-//        scroll(index: paramIndex)
         // 다른 화면 전환 후 다시 올때
         // paramIndex arrangeIndex 유지 할건지 아니면 초기화 할건지!
         getFilteredList(category: paramIndex, filter: arrangeIndex)
@@ -122,24 +120,7 @@ class MainVC: UIViewController, UIScrollViewDelegate{
         scroll(index: response)
         
     }
-    // Donation List 내역 불러오기
-//    func getDonatedList(category: Int) {
-//        MainService.shared.getDonationList(category) {
-//            [weak self]
-//            (data) in
-//            guard let `self` = self else {return}
-//            switch data {
-//            case .success(let data):
-//                // infoset에 [info]형태를 갖춘 데이터들을 넣어서 info의 형식을 완성해야 한다.
-//                self.infoSet = (data.self as? [Datum])!
-//                self.donationInfoView.reloadData()
-//                break
-//            default:
-//                break
-//            }
-//        }
-
-//    }
+ 
     //Bolding Category
     @IBAction func selectCategory(_ sender: UIButton) {
         setBtn(button: child, color: .brownGrey, font: .Light)
@@ -292,6 +273,8 @@ extension MainVC: UICollectionViewDelegateFlowLayout{
         }
     }
 }
+
+// Plan - Table View로 관리
 
 extension MainVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

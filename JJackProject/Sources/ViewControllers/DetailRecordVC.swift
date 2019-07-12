@@ -91,6 +91,7 @@ class DetailRecordVC: UIViewController {
         self.rateBar.makeRounded(cornerRadius: nil)
     }
     
+    // 기부 상황에 따라서 뷰 작성
     func sortingStatus () {
         let status = paramStatus
         switch status {

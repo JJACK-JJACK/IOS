@@ -39,6 +39,7 @@ class EarnBerryVC: UIViewController {
         self.stamp9.isHidden = true
     }
     
+    // 스탬프 개수 확인 및 스탬프 이미지 넣기
     func getMyStamp(){
         guard let token = UserDefaults.standard.string(forKey: "refreshToken") else {return}
         StampServices.shared.getStamp(token) {
@@ -101,6 +102,7 @@ class EarnBerryVC: UIViewController {
     
 }
 
+// 스탬프 보여주기 Extension
 extension EarnBerryVC {
     open override func awakeFromNib() {
         super.awakeFromNib()

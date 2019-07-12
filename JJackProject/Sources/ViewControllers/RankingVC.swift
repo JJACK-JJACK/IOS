@@ -29,6 +29,7 @@ class RankingVC: UIViewController {
         
         
     }
+    // 전체 기부된 베리 가져오기
     func getEntireBerry() {
         MainService.shared.getEntireDonatedBerry(){
             [weak self]
@@ -48,6 +49,7 @@ class RankingVC: UIViewController {
         }
     }
     
+    // 10개 기부 후기 가져오기 - 후기 넣어야 한다.
     func get10Rank() {
         RankingService.shared.getRanking() {
             [weak self]
@@ -155,15 +157,4 @@ extension RankingVC {
         button7?.isSelected = false
     }
     
-//    func showSelectedState (button: UIButton) {
-//        if button.isSelected {
-//            button.backgroundColor = .mainCol
-//            button.setBorder(borderColor: nil, borderWidth: 0.0)
-//            button.titleLabel?.font = .Bold3
-//        } else {
-//            button.backgroundColor = .white
-//            button.setBorder(borderColor: .brownGrey, borderWidth: 1.0)
-//            button.titleLabel?.font = .Medium
-//        }
-//    }
 }

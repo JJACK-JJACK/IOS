@@ -19,6 +19,8 @@ class GetRewardVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // 로티 설정
         let giveRewardAnimationView = AnimationView(name: "berrydata2")
         giveRewardAnimationView.frame = CGRect(x: 0, y: 0, width: 300, height: 300)
         giveRewardAnimationView.center = self.view.center

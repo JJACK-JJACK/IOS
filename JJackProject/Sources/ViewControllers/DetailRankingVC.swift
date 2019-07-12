@@ -12,7 +12,6 @@ class DetailRankingVC: UIViewController {
     
     
     @IBOutlet weak var entireScrollView: UIView!
-    @IBOutlet weak var scrollViewHeight: NSLayoutConstraint!
     
 
     @IBOutlet weak var processRate: NSLayoutConstraint!
@@ -42,7 +41,6 @@ class DetailRankingVC: UIViewController {
         processBar.makeRounded(cornerRadius: nil)
         staticBar.makeRounded(cornerRadius: nil)
         
-//        self.scrollViewHeight.constant = self.scrollViewHeight.constant - CGFloat(64 * plans.count)
         
         self.planListView.dataSource = self
         
@@ -91,6 +89,7 @@ class DetailRankingVC: UIViewController {
     }
     
 }
+// plan Table 로 설정하기
 extension DetailRankingVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return plans.count
@@ -102,15 +101,6 @@ extension DetailRankingVC: UITableViewDataSource {
         cell.index.text = String(indexPath.row + 1)
         cell.purpose.text = plan.purpose
         cell.price.text = String(plan.price)
-        
-//        print(self.scrollViewHeight.constant)
-//        
-//        self.scrollViewHeight.constant = self.scrollViewHeight.constant + CGFloat(64 * plans.count)
-//        
-//        print(self.entireScrollView.frame.height + CGFloat(64 * plans.count))
-//        print(self.entireScrollView.frame.height)
-//        print(64 * plans.count)
-//        print(self.scrollViewHeight.constant)
         
         return cell
     }

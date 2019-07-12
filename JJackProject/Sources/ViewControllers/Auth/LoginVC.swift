@@ -28,6 +28,7 @@ class LoginVC: UIViewController {
         idTF.text = "ios@jjack.com"
         pwTF.text = "ios"
     }
+    // setting Views
     func setBorderRadius() {
         Login.makeRounded(cornerRadius: 4.0)
         toSignup.makeRounded(cornerRadius: 4.0)
@@ -44,8 +45,7 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func Login(_ sender: Any) {
-//        guard let dvc = UIStoryboard(name: "HomeMain", bundle: nil).instantiateViewController(withIdentifier: "Home")as? HomeVC else {return}
-//        self.navigationController?.pushViewController(dvc, animated: true)
+navigationController?.pushViewController(dvc, animated: true)
         guard let id = idTF.text else {return}
         guard let pw = pwTF.text else {return}
 
@@ -58,9 +58,7 @@ class LoginVC: UIViewController {
                     // UserDefaults를 사용할 때에는 객체를 담는 것이 아니라 객체의 정보를 담아야 함으로 형변환이 필요하다.
                     
 /*A default object must be a property list—that is, an instance of (or for collections, a combination of instances of) NSData, NSString, NSNumber, NSDate, NSArray, or NSDictionary. If you want to store any other type of object, you should typically archive it to create an instance of NSData. */
-                    // as token 은 무슨 말일까?!
-                    
-//                    print(self.gsno(token as? String))
+
                     guard let token = token as? Token else {return}
                     print(token)
                     UserDefaults.standard.set(token.token, forKey: "refreshToken")
@@ -108,27 +106,22 @@ class LoginVC: UIViewController {
 }
 extension LoginVC: UITextFieldDelegate {
     
+    //Keyboard show Notification!
     func setupNotification() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name:  UIResponder.keyboardWillShowNotification , object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name:  UIResponder.keyboardWillHideNotification , object: nil)
     }
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         idTF.resignFirstResponder()
         pwTF.resignFirstResponder()
         return true
     }
+    // 키보드 발생시 함수
     @objc func keyboardWillShow (_ sender: Notification) {
-//        guard let userInfo = sender.userInfo as? [String:Any] else {return}
-//        guard let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return }
-//        self.Login.transform = CGAffineTransform(translationX: 0, y: -30)
-//        self.toSignup.transform = CGAffineTransform(translationX: 0, y: -30)
+
         self.view.transform = CGAffineTransform(translationX: 0, y:  -40)
-        //        self.view.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
-        
-        //        self.view.frame.origin.y = -100
-    }
+            }
     @objc func keyboardWillHide (_ sender: Notification) {
 //        self.Login.transform = .identity
 //        self.toSignup.transform = .identity

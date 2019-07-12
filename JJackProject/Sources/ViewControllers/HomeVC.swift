@@ -44,7 +44,7 @@ class HomeVC: UIViewController {
         HomeView.dataSource = self
         HomeView.delegate = self
         
-        // collection View
+        // collection View paging Center
         let cellWidth: CGFloat = 285
         let cellHeight: CGFloat = 328
         
@@ -61,9 +61,7 @@ class HomeVC: UIViewController {
         
         HomeView.decelerationRate = UIScrollView.DecelerationRate.fast
         
-        //paging 만들기!
-//        HomeView.isPagingEnabled = true
-        
+        // set view design
         self.pageDot1.makeRounded(cornerRadius: nil)
         self.pageDot2.makeRounded(cornerRadius: nil)
         self.pageDot3.makeRounded(cornerRadius: nil)
@@ -75,9 +73,13 @@ class HomeVC: UIViewController {
         setupSideMenu()
         getMyOwnBerry()
     }
+    
+    // 홈으로 돌아올때마다 갱신
     override func viewWillAppear(_ animated: Bool) {
         getMyOwnBerry()
     }
+    
+    // 보유 베리 서버에서 받아오는 통신
     func getMyOwnBerry () {
         guard let token = UserDefaults.standard.string(forKey: "refreshToken") else {return}
         ChargeService.shared.ownedBerry(token){
@@ -98,6 +100,7 @@ class HomeVC: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    // scroll 시에 page Dots Custom
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let x: Int = Int((scrollView.contentOffset.x + 45) / 251)
         switch x {
@@ -144,6 +147,8 @@ class HomeVC: UIViewController {
             self.view.layoutIfNeeded()
         })
     }
+    
+    // 메뉴 열기
     @IBAction func openMenu(_ sender: Any) {
         showMenu()
     }
@@ -153,6 +158,8 @@ class HomeVC: UIViewController {
     }
     
 }
+
+// Collection View Extension
 extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -164,10 +171,8 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCell", for: indexPath)as! HomeCell
         
-//        let image = imageSet[indexPath.row]
-        
         cell.categoryImg.image = imageSet[indexPath.row]
-//        cell.makeRounded(cornerRadius: 8.0)
+        cell.makeRounded(cornerRadius: 8.0)
         
         return cell
     }
@@ -181,6 +186,7 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate {
 
 }
 
+// Paging on Center CollectionView Setting
 extension HomeVC: UIScrollViewDelegate {
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {

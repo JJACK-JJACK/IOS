@@ -35,6 +35,7 @@ class EditAccoutVC: UIViewController {
     var paramEmail: String = ""
     var paramProfileImg: UIImage?
     
+    // Device 내 사진, 카메라 접근
     let picker = UIImagePickerController()
     
     func openLibrary () {
@@ -76,6 +77,7 @@ class EditAccoutVC: UIViewController {
         present(AlertController, animated: true)
         
     }
+    
     // Nickname 다음 뷰로 넘겨주기
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -93,18 +95,15 @@ class EditAccoutVC: UIViewController {
     }
     
 }
+// 사진 정보, 뷰 이동시 실행되는 액션
 extension EditAccoutVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         print(info)
         if let image = info[(UIImagePickerController.InfoKey).originalImage]as? UIImage {
             self.profileImg.image = image
-//            self.paramProfileImg = image
         }
-//        if let url = info[UIImagePickerController.InfoKey.imageURL]as? URL{
-//            print("##################################URL")
-//            print(url)
-//        }
+
         
         
         dismiss(animated: true, completion: nil)
