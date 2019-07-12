@@ -175,7 +175,23 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         guard let dvc = storyboard?.instantiateViewController(withIdentifier: "Main") as? MainVC else {return}
-        dvc.paramIndex = indexPath.row
+        
+        switch indexPath.row {
+        case 0:
+            dvc.paramIndex = 1
+        case 1:
+            dvc.paramIndex = 5
+        case 2:
+            dvc.paramIndex = 0
+        case 3:
+            dvc.paramIndex = 2
+        case 4:
+            dvc.paramIndex = 3
+        case 5:
+            dvc.paramIndex = 4
+        default:
+            break
+        }
        navigationController?.show(dvc, sender: self)
     }
 

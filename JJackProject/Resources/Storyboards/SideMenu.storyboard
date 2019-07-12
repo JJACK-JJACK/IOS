@@ -40,7 +40,7 @@
                                     <action selector="cancelMenu:" destination="OX7-sM-8P6" eventType="touchUpInside" id="Bnw-zV-8bj"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UZw-oA-bPR">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pofile" translatesAutoresizingMaskIntoConstraints="NO" id="UZw-oA-bPR">
                                 <rect key="frame" x="35" y="112" width="48" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="5mt-iJ-27r"/>
@@ -354,5 +354,6 @@
         <image name="icHome" width="36" height="34"/>
         <image name="icMypage" width="72" height="69"/>
         <image name="icSenior" width="65" height="82"/>
+        <image name="pofile" width="110" height="110"/>
     </resources>
 </document>

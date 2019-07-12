@@ -152,40 +152,7 @@ class DetailVC: UIViewController {
                 
                 self.plans = self.planList[0].plan!
                 
-//                let contain2 = self.[0]
-//                let plan1 = contain2.plan[0]
-//                self.purpose1.text = plan1.purpose
-//                self.price1.text = String(plan1.price)
-//                let plan2 = contain2.plan[1]
-//                self.purpose2.text = plan2.purpose
-//                self.price2.text = String(plan2.price)
-//                let plan3 = contain2.plan[2]
-//                self.purpose3.text = plan3.purpose
-//                self.price3.text = String(plan3.price)
-//
-//                self.totalPrice.text = String(plan1.price + plan2.price + plan3.price)
-                
-                //                print(common.story)
-//                print("###########################")
-//                print(common.centerName)
-//                print(common.categoryID)
-//                print(common.maxBerry)
-//                let contain1 = common.story[0]
-//                print(contain
-//                print("###########################")
-//                self.subTitle1.text = contain1.subTitle
-//                print(contain1.subTitle)
-//                print("###########################")
-//                self.thumbImg.imageFromUrl(self.gsno(contain1.img), defaultImgPath: "imgHomeJjack")
-//                print(contain1.img)
-//                print("###########################")
-//                let contents1 = contain1.content
-//                self.content1_1.text = contents1[0]
-//                print(contents1[0])
-//                print("###########################")
-//                self.content1_2.text = contents1[1]
-//                print(contents1[1])
-//                print("###########################")
+
                 self.planListView.reloadData()
                 self.container1.reloadInputViews()
                 self.container2.reloadInputViews()
@@ -202,24 +169,6 @@ class DetailVC: UIViewController {
             }
         }
     }
-//    func getPlan(){
-//        MainService.shared.getDetailData(paramId) {
-//            [weak self]
-//            (data) in
-//            switch data {
-//            case .success(let data):
-//
-//            case .requestErr(let message):
-//                print(message)
-//            case .pathErr:
-//                print("path")
-//            case .serverErr:
-//                print("server")
-//            case .networkFail:
-//                print("네트워크 오류")
-//            }
-//        }
-//    }
     @IBAction func showInfo(_ sender: UIButton) {
         print(sender.isSelected)
         if !sender.isSelected {
@@ -283,6 +232,8 @@ class DetailVC: UIViewController {
         story.isSelected = false
         plan.isSelected = false
     }
+    
+    // 기부하기로 넘어가기!
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goDonate"{

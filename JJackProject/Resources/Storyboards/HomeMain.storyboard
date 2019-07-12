@@ -623,13 +623,13 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wIH-xx-O2q">
-                                <rect key="frame" x="0.0" y="92.000000000000114" width="375" height="2018.666666666667"/>
+                                <rect key="frame" x="0.0" y="92.000000000000114" width="375" height="2041.666666666667"/>
                                 <subviews>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fns-sf-UhQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2018.6666666666667"/>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" bounces="NO" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fns-sf-UhQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2056.6666666666665"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ta9-Gs-VNN">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="2018.6666666666667"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="2041.6666666666667"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bfD-66-be9">
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="207"/>
@@ -780,151 +780,6 @@
                                                             <constraint firstAttribute="width" constant="57" id="FPh-8j-qG9"/>
                                                             <constraint firstAttribute="height" constant="1" id="XP0-nc-aV6"/>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="1" id="ci6-7A-2LY"/>
-                                                        </constraints>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iiD-VB-euT">
-                                                        <rect key="frame" x="0.0" y="353.66666666666674" width="375" height="1665"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="“나도 누군가의 반려견이었답니다”" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uR5-KL-j9x">
-                                                                <rect key="frame" x="20" y="40" width="335" height="24"/>
-                                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
-                                                                <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDv-0P-G7G">
-                                                                <rect key="frame" x="20" y="83.999999999999943" width="335" height="101"/>
-                                                                <string key="text">길거리에 있는 유기견들 외에, 사설보호소에도 유기견들이 많다는 사실, 아시나요? 
-전국에 산재해 있는 사설 보호소는 대부분 늙고 힘없는 소장님 한 명에 의해 운영되며,
-이곳에는 적게는 수십마리, 많게는 수 백에서 수천 마리의 유기견들이 살고 있습니다.</string>
-                                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="14"/>
-                                                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qqh-PL-wyo">
-                                                                <rect key="frame" x="20" y="204.99999999999994" width="335" height="151.33333333333331"/>
-                                                                <string key="text">누군가 불러주던 이름조차 없어진 이 아이들도 누군가의 가족으로 살던 시간이 있었겠죠.
-그러나 지금은 낯설고 힘든 이곳에서 매일매일 추위, 더위, 질병, 배고픔과 싸워가며 하루하루를 버텨내고 있습니다.
-품종견들이나, 잡종견들이나 이곳에선 똑같은 처지입니다. 
-중성화수술조차 하지 않고 버리고 가는 사람들 때문에 사설보호소에서는 새로운 강아지가 태어나기도 합니다. 
-하지만 열악한 상황에서 새끼강아지들은 생명을 다 피우지 못하고 죽어갑니다.</string>
-                                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="14"/>
-                                                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nHv-V6-roD">
-                                                                <rect key="frame" x="20" y="376.33333333333331" width="335" height="186.33333333333331"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" secondItem="nHv-V6-roD" secondAttribute="height" multiplier="329:183" id="612-hB-Noh"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="“나도 누군가의 반려견이었답니다”" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0d8-hu-TZK">
-                                                                <rect key="frame" x="20" y="582.66666666666652" width="335" height="24"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="height" constant="24" id="8tq-ER-3VD"/>
-                                                                </constraints>
-                                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
-                                                                <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cap-Z6-ug4">
-                                                                <rect key="frame" x="20" y="626.66666666666652" width="335" height="101"/>
-                                                                <string key="text">길거리에 있는 유기견들 외에, 사설보호소에도 유기견들이 많다는 사실, 아시나요? 
-전국에 산재해 있는 사설 보호소는 대부분 늙고 힘없는 소장님 한 명에 의해 운영되며,
-이곳에는 적게는 수십마리, 많게는 수 백에서 수천 마리의 유기견들이 살고 있습니다.</string>
-                                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="14"/>
-                                                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqf-pf-Sjw">
-                                                                <rect key="frame" x="20" y="747.66666666666652" width="335" height="151.33333333333337"/>
-                                                                <string key="text">누군가 불러주던 이름조차 없어진 이 아이들도 누군가의 가족으로 살던 시간이 있었겠죠.
-그러나 지금은 낯설고 힘든 이곳에서 매일매일 추위, 더위, 질병, 배고픔과 싸워가며 하루하루를 버텨내고 있습니다.
-품종견들이나, 잡종견들이나 이곳에선 똑같은 처지입니다. 
-중성화수술조차 하지 않고 버리고 가는 사람들 때문에 사설보호소에서는 새로운 강아지가 태어나기도 합니다. 
-하지만 열악한 상황에서 새끼강아지들은 생명을 다 피우지 못하고 죽어갑니다.</string>
-                                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="14"/>
-                                                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N7S-cz-OVF">
-                                                                <rect key="frame" x="20" y="919" width="335" height="186.66666666666674"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" secondItem="N7S-cz-OVF" secondAttribute="height" multiplier="329:183" id="PS1-6S-jCY"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="“나도 누군가의 반려견이었답니다”" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiH-Il-xTS">
-                                                                <rect key="frame" x="20" y="1125.6666666666665" width="335" height="24"/>
-                                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
-                                                                <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAZ-ab-41y">
-                                                                <rect key="frame" x="20" y="1169.6666666666665" width="335" height="101"/>
-                                                                <string key="text">길거리에 있는 유기견들 외에, 사설보호소에도 유기견들이 많다는 사실, 아시나요? 
-전국에 산재해 있는 사설 보호소는 대부분 늙고 힘없는 소장님 한 명에 의해 운영되며,
-이곳에는 적게는 수십마리, 많게는 수 백에서 수천 마리의 유기견들이 살고 있습니다.</string>
-                                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="14"/>
-                                                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOO-3s-bXU">
-                                                                <rect key="frame" x="20" y="1290.6666666666665" width="335" height="151.33333333333326"/>
-                                                                <string key="text">누군가 불러주던 이름조차 없어진 이 아이들도 누군가의 가족으로 살던 시간이 있었겠죠.
-그러나 지금은 낯설고 힘든 이곳에서 매일매일 추위, 더위, 질병, 배고픔과 싸워가며 하루하루를 버텨내고 있습니다.
-품종견들이나, 잡종견들이나 이곳에선 똑같은 처지입니다. 
-중성화수술조차 하지 않고 버리고 가는 사람들 때문에 사설보호소에서는 새로운 강아지가 태어나기도 합니다. 
-하지만 열악한 상황에서 새끼강아지들은 생명을 다 피우지 못하고 죽어갑니다.</string>
-                                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="14"/>
-                                                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="64E-8s-ABO">
-                                                                <rect key="frame" x="20" y="1462" width="335" height="183"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" secondItem="64E-8s-ABO" secondAttribute="height" multiplier="335:183" id="613-wI-EA8"/>
-                                                                </constraints>
-                                                            </imageView>
-                                                        </subviews>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstItem="uOO-3s-bXU" firstAttribute="top" secondItem="pAZ-ab-41y" secondAttribute="bottom" constant="20" id="09S-KG-8Nh"/>
-                                                            <constraint firstItem="nHv-V6-roD" firstAttribute="leading" secondItem="iiD-VB-euT" secondAttribute="leading" constant="20" id="2aS-HP-NdF"/>
-                                                            <constraint firstAttribute="trailing" secondItem="0d8-hu-TZK" secondAttribute="trailing" constant="20" id="Apb-Pw-dk9"/>
-                                                            <constraint firstItem="64E-8s-ABO" firstAttribute="top" secondItem="uOO-3s-bXU" secondAttribute="bottom" constant="20" id="Cw9-a9-AZJ"/>
-                                                            <constraint firstAttribute="trailing" secondItem="bDv-0P-G7G" secondAttribute="trailing" constant="20" id="E9d-4P-8YZ"/>
-                                                            <constraint firstAttribute="trailing" secondItem="Cap-Z6-ug4" secondAttribute="trailing" constant="20" id="FeF-aE-Kbu"/>
-                                                            <constraint firstAttribute="trailing" secondItem="nHv-V6-roD" secondAttribute="trailing" constant="20" id="GAj-Xr-dp2"/>
-                                                            <constraint firstItem="uOO-3s-bXU" firstAttribute="leading" secondItem="iiD-VB-euT" secondAttribute="leading" constant="20" id="K7H-4z-uMf"/>
-                                                            <constraint firstAttribute="trailing" secondItem="uOO-3s-bXU" secondAttribute="trailing" constant="20" id="LmD-VS-pzP"/>
-                                                            <constraint firstItem="uiH-Il-xTS" firstAttribute="top" secondItem="N7S-cz-OVF" secondAttribute="bottom" constant="20" id="Mwe-tl-klr"/>
-                                                            <constraint firstAttribute="trailing" secondItem="pAZ-ab-41y" secondAttribute="trailing" constant="20" id="N4F-Yo-xdP"/>
-                                                            <constraint firstItem="Cap-Z6-ug4" firstAttribute="top" secondItem="0d8-hu-TZK" secondAttribute="bottom" constant="20" id="Nlc-4X-7Mq"/>
-                                                            <constraint firstItem="uR5-KL-j9x" firstAttribute="top" secondItem="iiD-VB-euT" secondAttribute="top" constant="40" id="NoJ-EO-ouc"/>
-                                                            <constraint firstItem="uR5-KL-j9x" firstAttribute="leading" secondItem="iiD-VB-euT" secondAttribute="leading" constant="20" id="PYs-Hu-i2Y"/>
-                                                            <constraint firstItem="pAZ-ab-41y" firstAttribute="top" secondItem="uiH-Il-xTS" secondAttribute="bottom" constant="20" id="RRe-nx-p3H"/>
-                                                            <constraint firstItem="uiH-Il-xTS" firstAttribute="leading" secondItem="iiD-VB-euT" secondAttribute="leading" constant="20" id="S2J-Fh-4xs"/>
-                                                            <constraint firstItem="Cap-Z6-ug4" firstAttribute="leading" secondItem="iiD-VB-euT" secondAttribute="leading" constant="20" id="SjN-n8-R9a"/>
-                                                            <constraint firstItem="Qqh-PL-wyo" firstAttribute="leading" secondItem="iiD-VB-euT" secondAttribute="leading" constant="20" id="XXa-PE-Hub"/>
-                                                            <constraint firstItem="0d8-hu-TZK" firstAttribute="top" secondItem="nHv-V6-roD" secondAttribute="bottom" constant="20" id="Yyb-tq-zgj"/>
-                                                            <constraint firstItem="N7S-cz-OVF" firstAttribute="top" secondItem="yqf-pf-Sjw" secondAttribute="bottom" constant="20" id="cRh-IG-emG"/>
-                                                            <constraint firstAttribute="height" constant="1665" id="cwl-2D-gLo"/>
-                                                            <constraint firstItem="bDv-0P-G7G" firstAttribute="top" secondItem="uR5-KL-j9x" secondAttribute="bottom" constant="20" id="ede-oe-Pvi"/>
-                                                            <constraint firstAttribute="bottom" secondItem="64E-8s-ABO" secondAttribute="bottom" constant="20" id="h4B-sA-P6h"/>
-                                                            <constraint firstItem="nHv-V6-roD" firstAttribute="top" secondItem="Qqh-PL-wyo" secondAttribute="bottom" constant="20" id="hUP-P5-Wu7"/>
-                                                            <constraint firstAttribute="trailing" secondItem="yqf-pf-Sjw" secondAttribute="trailing" constant="20" id="hWJ-i3-2YF"/>
-                                                            <constraint firstItem="bDv-0P-G7G" firstAttribute="leading" secondItem="iiD-VB-euT" secondAttribute="leading" constant="20" id="mdj-Ht-jL1"/>
-                                                            <constraint firstItem="Qqh-PL-wyo" firstAttribute="top" secondItem="bDv-0P-G7G" secondAttribute="bottom" constant="20" id="nDD-e5-rJ8"/>
-                                                            <constraint firstAttribute="trailing" secondItem="uiH-Il-xTS" secondAttribute="trailing" constant="20" id="olo-Co-aro"/>
-                                                            <constraint firstItem="yqf-pf-Sjw" firstAttribute="top" secondItem="Cap-Z6-ug4" secondAttribute="bottom" constant="20" id="qb3-7J-PI5"/>
-                                                            <constraint firstAttribute="trailing" secondItem="Qqh-PL-wyo" secondAttribute="trailing" constant="20" id="qwR-rU-lJa"/>
-                                                            <constraint firstAttribute="trailing" secondItem="N7S-cz-OVF" secondAttribute="trailing" constant="20" id="twp-qq-keT"/>
-                                                            <constraint firstItem="yqf-pf-Sjw" firstAttribute="leading" secondItem="iiD-VB-euT" secondAttribute="leading" constant="20" id="uNG-tN-ivd"/>
-                                                            <constraint firstAttribute="trailing" secondItem="64E-8s-ABO" secondAttribute="trailing" constant="20" id="vc7-0P-sQ2"/>
-                                                            <constraint firstItem="N7S-cz-OVF" firstAttribute="leading" secondItem="iiD-VB-euT" secondAttribute="leading" constant="20" id="wRO-iG-YPz"/>
-                                                            <constraint firstItem="0d8-hu-TZK" firstAttribute="leading" secondItem="iiD-VB-euT" secondAttribute="leading" constant="20" id="xg7-1U-fgP"/>
-                                                            <constraint firstItem="pAZ-ab-41y" firstAttribute="leading" secondItem="iiD-VB-euT" secondAttribute="leading" constant="20" id="xvR-DS-Dn8"/>
-                                                            <constraint firstAttribute="trailing" secondItem="uR5-KL-j9x" secondAttribute="trailing" constant="20" id="yWG-mA-nM9"/>
-                                                            <constraint firstItem="64E-8s-ABO" firstAttribute="leading" secondItem="iiD-VB-euT" secondAttribute="leading" constant="20" id="zNo-fZ-V9J"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6M6-QW-t5N">
@@ -1088,6 +943,177 @@
                                                             <constraint firstItem="hMU-5E-cvL" firstAttribute="centerY" secondItem="DyF-7T-aTs" secondAttribute="centerY" id="rig-09-BbO"/>
                                                         </constraints>
                                                     </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iiD-VB-euT">
+                                                        <rect key="frame" x="0.0" y="353.66666666666674" width="375" height="1688"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="“나도 누군가의 반려견이었답니다”" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uR5-KL-j9x">
+                                                                <rect key="frame" x="20" y="40" width="335" height="24"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="24" id="AS2-Uz-tML"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                                                <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDv-0P-G7G">
+                                                                <rect key="frame" x="20" y="83.999999999999943" width="335" height="101"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="101" id="Swe-8Q-uQN"/>
+                                                                </constraints>
+                                                                <string key="text">길거리에 있는 유기견들 외에, 사설보호소에도 유기견들이 많다는 사실, 아시나요? 
+전국에 산재해 있는 사설 보호소는 대부분 늙고 힘없는 소장님 한 명에 의해 운영되며,
+이곳에는 적게는 수십마리, 많게는 수 백에서 수천 마리의 유기견들이 살고 있습니다.</string>
+                                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qqh-PL-wyo">
+                                                                <rect key="frame" x="20" y="204.99999999999994" width="335" height="151.33333333333331"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="151.33333333333331" id="YWM-cD-5MH"/>
+                                                                </constraints>
+                                                                <string key="text">누군가 불러주던 이름조차 없어진 이 아이들도 누군가의 가족으로 살던 시간이 있었겠죠.
+그러나 지금은 낯설고 힘든 이곳에서 매일매일 추위, 더위, 질병, 배고픔과 싸워가며 하루하루를 버텨내고 있습니다.
+품종견들이나, 잡종견들이나 이곳에선 똑같은 처지입니다. 
+중성화수술조차 하지 않고 버리고 가는 사람들 때문에 사설보호소에서는 새로운 강아지가 태어나기도 합니다. 
+하지만 열악한 상황에서 새끼강아지들은 생명을 다 피우지 못하고 죽어갑니다.</string>
+                                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nHv-V6-roD">
+                                                                <rect key="frame" x="20" y="376.33333333333331" width="335" height="186.33333333333331"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="186.33333333333331" id="hl8-PN-M0k"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="“나도 누군가의 반려견이었답니다”" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0d8-hu-TZK">
+                                                                <rect key="frame" x="20" y="582.66666666666652" width="335" height="24"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="8hA-gu-8NQ"/>
+                                                                    <constraint firstAttribute="height" constant="24" id="8tq-ER-3VD"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                                                <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cap-Z6-ug4">
+                                                                <rect key="frame" x="20" y="626.66666666666652" width="335" height="101"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="101" id="dHU-yJ-4mV"/>
+                                                                </constraints>
+                                                                <string key="text">길거리에 있는 유기견들 외에, 사설보호소에도 유기견들이 많다는 사실, 아시나요? 
+전국에 산재해 있는 사설 보호소는 대부분 늙고 힘없는 소장님 한 명에 의해 운영되며,
+이곳에는 적게는 수십마리, 많게는 수 백에서 수천 마리의 유기견들이 살고 있습니다.</string>
+                                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqf-pf-Sjw">
+                                                                <rect key="frame" x="20" y="747.66666666666652" width="335" height="174.66666666666663"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="189.66666666666663" id="m31-lU-W6c"/>
+                                                                </constraints>
+                                                                <string key="text">누군가 불러주던 이름조차 없어진 이 아이들도 누군가의 가족으로 살던 시간이 있었겠죠.
+그러나 지금은 낯설고 힘든 이곳에서 매일매일 추위, 더위, 질병, 배고픔과 싸워가며 하루하루를 버텨내고 있습니다.
+품종견들이나, 잡종견들이나 이곳에선 똑같은 처지입니다. 
+중성화수술조차 하지 않고 버리고 가는 사람들 때문에 사설보호소에서는 새로운 강아지가 태어나기도 합니다. 
+하지만 열악한 상황에서 새끼강아지들은 생명을 다 피우지 못하고 죽어갑니다.</string>
+                                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="N7S-cz-OVF">
+                                                                <rect key="frame" x="20" y="942.33333333333337" width="335" height="186.33333333333337"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="186.33333333333337" id="wV5-Uv-bJb"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="“나도 누군가의 반려견이었답니다”" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uiH-Il-xTS">
+                                                                <rect key="frame" x="20" y="1148.6666666666665" width="335" height="24"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="24" id="ofO-gr-to9"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                                                <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAZ-ab-41y">
+                                                                <rect key="frame" x="20" y="1192.6666666666665" width="335" height="101"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="101" id="nwQ-vX-GOJ"/>
+                                                                </constraints>
+                                                                <string key="text">길거리에 있는 유기견들 외에, 사설보호소에도 유기견들이 많다는 사실, 아시나요? 
+전국에 산재해 있는 사설 보호소는 대부분 늙고 힘없는 소장님 한 명에 의해 운영되며,
+이곳에는 적게는 수십마리, 많게는 수 백에서 수천 마리의 유기견들이 살고 있습니다.</string>
+                                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uOO-3s-bXU">
+                                                                <rect key="frame" x="20" y="1313.6666666666665" width="335" height="151.33333333333326"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="151.33333333333326" id="l3r-Yw-tdt"/>
+                                                                </constraints>
+                                                                <string key="text">누군가 불러주던 이름조차 없어진 이 아이들도 누군가의 가족으로 살던 시간이 있었겠죠.
+그러나 지금은 낯설고 힘든 이곳에서 매일매일 추위, 더위, 질병, 배고픔과 싸워가며 하루하루를 버텨내고 있습니다.
+품종견들이나, 잡종견들이나 이곳에선 똑같은 처지입니다. 
+중성화수술조차 하지 않고 버리고 가는 사람들 때문에 사설보호소에서는 새로운 강아지가 태어나기도 합니다. 
+하지만 열악한 상황에서 새끼강아지들은 생명을 다 피우지 못하고 죽어갑니다.</string>
+                                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="64E-8s-ABO">
+                                                                <rect key="frame" x="20" y="1485" width="335" height="183"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" secondItem="64E-8s-ABO" secondAttribute="height" multiplier="335:183" id="613-wI-EA8"/>
+                                                                    <constraint firstAttribute="height" constant="183" id="gpu-Ob-lma"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstItem="uOO-3s-bXU" firstAttribute="top" secondItem="pAZ-ab-41y" secondAttribute="bottom" constant="20" id="09S-KG-8Nh"/>
+                                                            <constraint firstItem="nHv-V6-roD" firstAttribute="leading" secondItem="iiD-VB-euT" secondAttribute="leading" constant="20" id="2aS-HP-NdF"/>
+                                                            <constraint firstAttribute="trailing" secondItem="0d8-hu-TZK" secondAttribute="trailing" constant="20" id="Apb-Pw-dk9"/>
+                                                            <constraint firstItem="64E-8s-ABO" firstAttribute="top" secondItem="uOO-3s-bXU" secondAttribute="bottom" constant="20" id="Cw9-a9-AZJ"/>
+                                                            <constraint firstAttribute="trailing" secondItem="bDv-0P-G7G" secondAttribute="trailing" constant="20" id="E9d-4P-8YZ"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Cap-Z6-ug4" secondAttribute="trailing" constant="20" id="FeF-aE-Kbu"/>
+                                                            <constraint firstAttribute="trailing" secondItem="nHv-V6-roD" secondAttribute="trailing" constant="20" id="GAj-Xr-dp2"/>
+                                                            <constraint firstItem="uOO-3s-bXU" firstAttribute="leading" secondItem="iiD-VB-euT" secondAttribute="leading" constant="20" id="K7H-4z-uMf"/>
+                                                            <constraint firstAttribute="trailing" secondItem="uOO-3s-bXU" secondAttribute="trailing" constant="20" id="LmD-VS-pzP"/>
+                                                            <constraint firstItem="uiH-Il-xTS" firstAttribute="top" secondItem="N7S-cz-OVF" secondAttribute="bottom" constant="20" id="Mwe-tl-klr"/>
+                                                            <constraint firstAttribute="trailing" secondItem="pAZ-ab-41y" secondAttribute="trailing" constant="20" id="N4F-Yo-xdP"/>
+                                                            <constraint firstItem="Cap-Z6-ug4" firstAttribute="top" secondItem="0d8-hu-TZK" secondAttribute="bottom" constant="20" id="Nlc-4X-7Mq"/>
+                                                            <constraint firstItem="uR5-KL-j9x" firstAttribute="top" secondItem="iiD-VB-euT" secondAttribute="top" constant="40" id="NoJ-EO-ouc"/>
+                                                            <constraint firstItem="uR5-KL-j9x" firstAttribute="leading" secondItem="iiD-VB-euT" secondAttribute="leading" constant="20" id="PYs-Hu-i2Y"/>
+                                                            <constraint firstItem="pAZ-ab-41y" firstAttribute="top" secondItem="uiH-Il-xTS" secondAttribute="bottom" constant="20" id="RRe-nx-p3H"/>
+                                                            <constraint firstItem="uiH-Il-xTS" firstAttribute="leading" secondItem="iiD-VB-euT" secondAttribute="leading" constant="20" id="S2J-Fh-4xs"/>
+                                                            <constraint firstItem="Cap-Z6-ug4" firstAttribute="leading" secondItem="iiD-VB-euT" secondAttribute="leading" constant="20" id="SjN-n8-R9a"/>
+                                                            <constraint firstItem="Qqh-PL-wyo" firstAttribute="leading" secondItem="iiD-VB-euT" secondAttribute="leading" constant="20" id="XXa-PE-Hub"/>
+                                                            <constraint firstItem="0d8-hu-TZK" firstAttribute="top" secondItem="nHv-V6-roD" secondAttribute="bottom" constant="20" id="Yyb-tq-zgj"/>
+                                                            <constraint firstItem="N7S-cz-OVF" firstAttribute="top" secondItem="yqf-pf-Sjw" secondAttribute="bottom" constant="20" id="cRh-IG-emG"/>
+                                                            <constraint firstAttribute="height" constant="1703" id="cwl-2D-gLo"/>
+                                                            <constraint firstItem="bDv-0P-G7G" firstAttribute="top" secondItem="uR5-KL-j9x" secondAttribute="bottom" constant="20" id="ede-oe-Pvi"/>
+                                                            <constraint firstAttribute="bottom" secondItem="64E-8s-ABO" secondAttribute="bottom" constant="20" id="h4B-sA-P6h"/>
+                                                            <constraint firstItem="nHv-V6-roD" firstAttribute="top" secondItem="Qqh-PL-wyo" secondAttribute="bottom" constant="20" id="hUP-P5-Wu7"/>
+                                                            <constraint firstAttribute="trailing" secondItem="yqf-pf-Sjw" secondAttribute="trailing" constant="20" id="hWJ-i3-2YF"/>
+                                                            <constraint firstItem="bDv-0P-G7G" firstAttribute="leading" secondItem="iiD-VB-euT" secondAttribute="leading" constant="20" id="mdj-Ht-jL1"/>
+                                                            <constraint firstItem="Qqh-PL-wyo" firstAttribute="top" secondItem="bDv-0P-G7G" secondAttribute="bottom" constant="20" id="nDD-e5-rJ8"/>
+                                                            <constraint firstAttribute="trailing" secondItem="uiH-Il-xTS" secondAttribute="trailing" constant="20" id="olo-Co-aro"/>
+                                                            <constraint firstItem="yqf-pf-Sjw" firstAttribute="top" secondItem="Cap-Z6-ug4" secondAttribute="bottom" constant="20" id="qb3-7J-PI5"/>
+                                                            <constraint firstAttribute="trailing" secondItem="Qqh-PL-wyo" secondAttribute="trailing" constant="20" id="qwR-rU-lJa"/>
+                                                            <constraint firstAttribute="trailing" secondItem="N7S-cz-OVF" secondAttribute="trailing" constant="20" id="twp-qq-keT"/>
+                                                            <constraint firstItem="yqf-pf-Sjw" firstAttribute="leading" secondItem="iiD-VB-euT" secondAttribute="leading" constant="20" id="uNG-tN-ivd"/>
+                                                            <constraint firstAttribute="trailing" secondItem="64E-8s-ABO" secondAttribute="trailing" constant="20" id="vc7-0P-sQ2"/>
+                                                            <constraint firstItem="N7S-cz-OVF" firstAttribute="leading" secondItem="iiD-VB-euT" secondAttribute="leading" constant="20" id="wRO-iG-YPz"/>
+                                                            <constraint firstItem="0d8-hu-TZK" firstAttribute="leading" secondItem="iiD-VB-euT" secondAttribute="leading" constant="20" id="xg7-1U-fgP"/>
+                                                            <constraint firstItem="pAZ-ab-41y" firstAttribute="leading" secondItem="iiD-VB-euT" secondAttribute="leading" constant="20" id="xvR-DS-Dn8"/>
+                                                            <constraint firstAttribute="trailing" secondItem="uR5-KL-j9x" secondAttribute="trailing" constant="20" id="yWG-mA-nM9"/>
+                                                            <constraint firstItem="64E-8s-ABO" firstAttribute="leading" secondItem="iiD-VB-euT" secondAttribute="leading" constant="20" id="zNo-fZ-V9J"/>
+                                                        </constraints>
+                                                    </view>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -1137,41 +1163,39 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="ta9-Gs-VNN" secondAttribute="trailing" id="apY-ZN-Fx4"/>
                                             <constraint firstItem="ta9-Gs-VNN" firstAttribute="leading" secondItem="fns-sf-UhQ" secondAttribute="leading" id="ogN-kO-UIa"/>
-                                            <constraint firstAttribute="bottom" secondItem="ta9-Gs-VNN" secondAttribute="bottom" id="w6d-cs-3T2"/>
                                             <constraint firstItem="ta9-Gs-VNN" firstAttribute="top" secondItem="fns-sf-UhQ" secondAttribute="top" id="x2U-Yy-AnU"/>
                                         </constraints>
                                     </scrollView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="fns-sf-UhQ" firstAttribute="top" secondItem="wIH-xx-O2q" secondAttribute="top" id="2He-2R-AUp"/>
                                     <constraint firstItem="ta9-Gs-VNN" firstAttribute="height" secondItem="wIH-xx-O2q" secondAttribute="height" priority="250" id="Ad6-qu-GiN"/>
                                     <constraint firstItem="ta9-Gs-VNN" firstAttribute="width" secondItem="wIH-xx-O2q" secondAttribute="width" id="PTP-bD-FIv"/>
                                     <constraint firstItem="fns-sf-UhQ" firstAttribute="leading" secondItem="wIH-xx-O2q" secondAttribute="leading" id="PhX-95-dcf"/>
+                                    <constraint firstItem="fns-sf-UhQ" firstAttribute="top" secondItem="wIH-xx-O2q" secondAttribute="top" id="lGf-CF-CJE"/>
                                     <constraint firstAttribute="trailing" secondItem="fns-sf-UhQ" secondAttribute="trailing" id="phc-xG-nIF"/>
                                     <constraint firstAttribute="bottom" secondItem="fns-sf-UhQ" secondAttribute="bottom" id="zW2-WR-o6w"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a9I-vf-FJa">
-                                <rect key="frame" x="0.0" y="2110.6666666666665" width="375" height="64"/>
+                                <rect key="frame" x="0.0" y="2133.6666666666665" width="375" height="75"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="di0-au-q1g" userLabel="응원하기">
-                                        <rect key="frame" x="0.0" y="0.0" width="102" height="64"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="119.66666666666667" height="75"/>
                                         <color key="backgroundColor" red="1" green="0.76078431369999999" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="di0-au-q1g" secondAttribute="height" multiplier="51:32" id="Kvl-H6-blm"/>
-                                            <constraint firstAttribute="height" constant="64" id="ds7-if-0N4"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
-                                        <state key="normal" title="응원하기">
+                                        <state key="normal">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sPa-Ow-dwA" userLabel="기부하기">
-                                        <rect key="frame" x="102" y="0.0" width="273" height="64"/>
+                                        <rect key="frame" x="119.66666666666667" y="0.0" width="255.33333333333331" height="75"/>
                                         <color key="backgroundColor" red="0.85490196080000003" green="0.28235294119999998" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
-                                        <state key="normal" title="기부하기">
+                                        <state key="normal">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -1180,7 +1204,50 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="di0-au-q1g" firstAttribute="width" relation="lessThanOrEqual" secondItem="sPa-Ow-dwA" secondAttribute="width" multiplier="51:32" id="zSn-gi-a90"/>
+                                    <constraint firstAttribute="height" constant="75" id="ShC-BA-zbt"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기부하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lta-UL-fVg">
+                                <rect key="frame" x="212.66666666666666" y="2150.6666666666665" width="69.333333333333343" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="9tn-jj-7us"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="응원하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpe-NX-Gdk">
+                                <rect key="frame" x="25" y="2150.6666666666665" width="69.333333333333329" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="eDe-G0-1sU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lmo-Wj-1ff">
+                                <rect key="frame" x="0.0" y="2133.6666666666665" width="375" height="75"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="geW-MG-DPz" userLabel="응원하기">
+                                        <rect key="frame" x="0.0" y="0.0" width="119.66666666666667" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="geW-MG-DPz" secondAttribute="height" multiplier="51:32" id="hkp-cn-8Ij"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZL-62-d0D" userLabel="기부하기">
+                                        <rect key="frame" x="119.66666666666667" y="0.0" width="255.33333333333331" height="75"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="Oq4-f0-LhW"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -1188,13 +1255,21 @@
                         <constraints>
                             <constraint firstItem="a9I-vf-FJa" firstAttribute="leading" secondItem="grE-Ln-vLt" secondAttribute="leading" id="1Xt-Xx-9r6"/>
                             <constraint firstItem="grE-Ln-vLt" firstAttribute="trailing" secondItem="wIH-xx-O2q" secondAttribute="trailing" id="1gM-L7-8RR"/>
+                            <constraint firstItem="lmo-Wj-1ff" firstAttribute="leading" secondItem="grE-Ln-vLt" secondAttribute="leading" id="1ga-tx-0K9"/>
+                            <constraint firstItem="fpe-NX-Gdk" firstAttribute="centerX" secondItem="geW-MG-DPz" secondAttribute="centerX" id="7WY-Us-cld"/>
+                            <constraint firstItem="lmo-Wj-1ff" firstAttribute="top" secondItem="fpe-NX-Gdk" secondAttribute="bottom" constant="-38" id="DaI-Qn-PPE"/>
                             <constraint firstItem="wIH-xx-O2q" firstAttribute="top" secondItem="DuA-u1-dm5" secondAttribute="bottom" constant="7" id="H8B-36-SgQ"/>
                             <constraint firstItem="wIH-xx-O2q" firstAttribute="leading" secondItem="grE-Ln-vLt" secondAttribute="leading" id="PJw-tV-9JR"/>
+                            <constraint firstItem="grE-Ln-vLt" firstAttribute="trailing" secondItem="lmo-Wj-1ff" secondAttribute="trailing" id="PmQ-nY-eo2"/>
                             <constraint firstItem="grE-Ln-vLt" firstAttribute="trailing" secondItem="a9I-vf-FJa" secondAttribute="trailing" id="RoV-2X-u51"/>
                             <constraint firstItem="DuA-u1-dm5" firstAttribute="top" secondItem="grE-Ln-vLt" secondAttribute="top" constant="9" id="TBT-YJ-7Jz"/>
+                            <constraint firstItem="a9I-vf-FJa" firstAttribute="top" secondItem="ta9-Gs-VNN" secondAttribute="bottom" id="UgU-A4-uTr"/>
+                            <constraint firstItem="Lta-UL-fVg" firstAttribute="centerX" secondItem="sPa-Ow-dwA" secondAttribute="centerX" id="WQ9-05-da1"/>
                             <constraint firstItem="DuA-u1-dm5" firstAttribute="leading" secondItem="grE-Ln-vLt" secondAttribute="leading" constant="11" id="aa0-JJ-KUs"/>
+                            <constraint firstItem="a9I-vf-FJa" firstAttribute="top" secondItem="Lta-UL-fVg" secondAttribute="bottom" constant="-38" id="abk-SD-JDT"/>
                             <constraint firstItem="a9I-vf-FJa" firstAttribute="top" secondItem="wIH-xx-O2q" secondAttribute="bottom" id="baL-qE-FfA"/>
-                            <constraint firstItem="grE-Ln-vLt" firstAttribute="bottom" secondItem="a9I-vf-FJa" secondAttribute="bottom" id="xQd-RC-XTb"/>
+                            <constraint firstAttribute="bottom" secondItem="lmo-Wj-1ff" secondAttribute="bottom" id="hsp-vC-qMP"/>
+                            <constraint firstAttribute="bottom" secondItem="a9I-vf-FJa" secondAttribute="bottom" id="xQd-RC-XTb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="grE-Ln-vLt"/>
                     </view>
@@ -1236,7 +1311,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Mq-GP-qsF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3772" y="2.9556650246305418"/>
+            <point key="canvasLocation" x="3772" y="2.5862068965517242"/>
         </scene>
         <!--DonateVC-->
         <scene sceneID="h6G-Td-VkX">
@@ -1658,6 +1733,6 @@
         <image name="icHamburger" width="33" height="33"/>
         <image name="icHome" width="36" height="34"/>
         <image name="imgAdStamp100" width="335" height="199"/>
-        <image name="imgHomeJjack" width="31" height="31"/>
+        <image name="imgHomeJjack" width="30" height="32"/>
     </resources>
 </document>

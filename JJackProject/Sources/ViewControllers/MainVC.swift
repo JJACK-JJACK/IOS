@@ -61,6 +61,8 @@ class MainVC: UIViewController, UIScrollViewDelegate{
         
         // 초기 설정..(StoryBoard Interface에서도 가능)
         setBtn(button: upToDate, color: .JackBlack, font: .Medium2)
+        
+        setCategoryNum()
 
 
         self.loadViewIfNeeded()
@@ -77,7 +79,14 @@ class MainVC: UIViewController, UIScrollViewDelegate{
     // 처음부터 화면이 나오게는 할 수 없나?
     override func viewDidAppear(_ animated: Bool) {
         scroll(index: paramIndex)
+
     }
+    override func viewWillAppear(_ animated: Bool) {
+        getFilteredList(category: paramIndex, filter: arrangeIndex)
+        self.loadViewIfNeeded()
+
+    }
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
@@ -87,7 +96,25 @@ class MainVC: UIViewController, UIScrollViewDelegate{
             donationInfoView.deselectRow(at: index, animated: true)
         }
     }
-
+    
+    func setCategoryNum () {
+        switch self.paramIndex {
+        case 1:
+            paramIndex = 0
+        case 5:
+            paramIndex = 1
+        case 0:
+            paramIndex = 2
+        case 2:
+            paramIndex = 3
+        case 3:
+            paramIndex = 4
+        case 4:
+            paramIndex = 5
+        default:
+            break
+        }
+    }
         // 버튼 클릭시 컬랙션 뷰 스크롤
     func scroll (index: Int) {
         let menuIndex = NSIndexPath(item: index, section: 0)
@@ -256,6 +283,7 @@ extension MainVC: UICollectionViewDelegateFlowLayout{
         
         return UIEdgeInsets(top: 1,  left: 1, bottom: 1, right: 1)
     }
+    
     func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
         
         setBtn(button: child, color: .brownGrey, font: .Light)

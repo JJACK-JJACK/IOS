@@ -7,12 +7,12 @@
     },
     {
       "scale" : "2x",
-      "idiom" : "universal",
-      "filename" : "berryRIcon@2x.png"
+      "filename" : "berryRIcon@2x.png",
+      "idiom" : "universal"
     },
     {
-      "scale" : "3x",
       "idiom" : "universal",
+      "scale" : "3x",
       "filename" : "berryRIcon@3x.png"
     }
   ],
