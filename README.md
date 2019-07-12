@@ -16,7 +16,10 @@
 
 - Xcode12
 - Swift 4
-
+- Alamofire
+- Kingfisher
+- SideMenu
+- Lottie
 
 
 ## 기능
