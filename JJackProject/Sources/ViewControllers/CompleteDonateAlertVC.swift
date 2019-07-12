@@ -15,19 +15,20 @@ class CompleteDonateAlertVC: UIViewController {
     @IBOutlet weak var skipBtn: UIButton!
     
     
-    @IBOutlet weak var getStampAnimation: AnimationView!
+    @IBOutlet weak var alertBackground: UIView!
+    @IBOutlet weak var setIntervalText: UILabel!
     
+    @IBOutlet weak var getStampAnimation: AnimationView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.checkStampBtn.makeRounded(cornerRadius: nil)
-        
         self.skipBtn.makeRounded(cornerRadius: nil)
         
-        self.getStampAnimation.loopMode = .playOnce
-        self.getStampAnimation.animationSpeed = 1.0
-        self.getStampAnimation.play()
+        getStampAnimation.loopMode = .playOnce
+        getStampAnimation.animationSpeed = 1.0
+        getStampAnimation.play()
     }
     
     

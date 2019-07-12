@@ -664,9 +664,9 @@
     <resources>
         <image name="icBack" width="27" height="32"/>
         <image name="icEmail" width="18" height="14"/>
-        <image name="imgLogin" width="313" height="161"/>
+        <image name="imgLogin" width="311" height="148"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lCZ-oX-cG1"/>
+        <segue reference="9YL-dE-3q6"/>
     </inferredMetricsTieBreakers>
 </document>

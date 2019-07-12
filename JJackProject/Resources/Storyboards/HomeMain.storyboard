@@ -1662,14 +1662,14 @@
                                             <action selector="back:" destination="Dh0-xI-nd0" eventType="touchUpInside" id="0VN-WI-F5T"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgAdStamp100" translatesAutoresizingMaskIntoConstraints="NO" id="GUA-vI-ap7">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="199"/>
-                                    </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dkg-Ff-ULx" customClass="AnimationView" customModule="JJackProject" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AKr-eu-1W5" customClass="AnimationView" customModule="Lottie">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="199"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="AKr-eu-1W5" secondAttribute="height" multiplier="335:199" id="dVD-By-2o8"/>
+                                        </constraints>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="give.json"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="give"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
@@ -1678,21 +1678,17 @@
                                     <constraint firstItem="rO0-On-8Go" firstAttribute="leading" secondItem="Pim-Q1-GUo" secondAttribute="leading" constant="20" id="68O-UT-mbC"/>
                                     <constraint firstItem="Tbb-oL-kC0" firstAttribute="top" secondItem="7Kk-M8-t5P" secondAttribute="bottom" constant="20" id="6Mr-EV-tji"/>
                                     <constraint firstItem="UUt-mw-Uq6" firstAttribute="top" secondItem="rO0-On-8Go" secondAttribute="bottom" constant="8" id="85e-hU-Bnz"/>
-                                    <constraint firstItem="Dkg-Ff-ULx" firstAttribute="top" secondItem="Pim-Q1-GUo" secondAttribute="top" id="Fr1-f5-Gkn"/>
                                     <constraint firstItem="Tbb-oL-kC0" firstAttribute="centerX" secondItem="Pim-Q1-GUo" secondAttribute="centerX" id="H7X-NG-Fuz"/>
-                                    <constraint firstItem="Dkg-Ff-ULx" firstAttribute="leading" secondItem="Pim-Q1-GUo" secondAttribute="leading" id="LUz-16-suh"/>
+                                    <constraint firstItem="AKr-eu-1W5" firstAttribute="leading" secondItem="Pim-Q1-GUo" secondAttribute="leading" id="M9U-nc-ItK"/>
                                     <constraint firstAttribute="trailing" secondItem="UUt-mw-Uq6" secondAttribute="trailing" constant="20" id="RPg-bZ-XmW"/>
-                                    <constraint firstItem="GUA-vI-ap7" firstAttribute="leading" secondItem="Pim-Q1-GUo" secondAttribute="leading" id="SBC-yi-31P"/>
-                                    <constraint firstAttribute="trailing" secondItem="Dkg-Ff-ULx" secondAttribute="trailing" id="Tkw-W6-jeG"/>
-                                    <constraint firstItem="7Kk-M8-t5P" firstAttribute="top" secondItem="GUA-vI-ap7" secondAttribute="bottom" constant="14" id="V8M-gT-25C"/>
-                                    <constraint firstItem="tgX-LY-Plj" firstAttribute="top" secondItem="Dkg-Ff-ULx" secondAttribute="bottom" constant="14" id="cpW-mG-oW8"/>
+                                    <constraint firstAttribute="trailing" secondItem="AKr-eu-1W5" secondAttribute="trailing" id="U9o-3b-svt"/>
                                     <constraint firstAttribute="bottom" secondItem="UUt-mw-Uq6" secondAttribute="bottom" constant="26" id="e7O-AN-vDp"/>
+                                    <constraint firstItem="AKr-eu-1W5" firstAttribute="top" secondItem="Pim-Q1-GUo" secondAttribute="top" id="fUV-GS-NZo"/>
                                     <constraint firstItem="rO0-On-8Go" firstAttribute="top" secondItem="Tbb-oL-kC0" secondAttribute="bottom" constant="20" id="hMU-Hw-20O"/>
-                                    <constraint firstItem="GUA-vI-ap7" firstAttribute="top" secondItem="Pim-Q1-GUo" secondAttribute="top" id="hcq-LU-GJQ"/>
                                     <constraint firstItem="UUt-mw-Uq6" firstAttribute="leading" secondItem="Pim-Q1-GUo" secondAttribute="leading" constant="20" id="ptQ-Kd-kuQ"/>
                                     <constraint firstAttribute="height" constant="453" id="qrv-CF-TkA"/>
+                                    <constraint firstItem="7Kk-M8-t5P" firstAttribute="top" secondItem="AKr-eu-1W5" secondAttribute="bottom" constant="14" id="tCf-r9-393"/>
                                     <constraint firstAttribute="trailing" secondItem="rO0-On-8Go" secondAttribute="trailing" constant="20" id="uCi-XL-0Gg"/>
-                                    <constraint firstAttribute="trailing" secondItem="GUA-vI-ap7" secondAttribute="trailing" id="yWp-s5-1CM"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -1707,8 +1703,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="zdg-fc-vMI"/>
                     <connections>
+                        <outlet property="alertBackground" destination="Pim-Q1-GUo" id="jqH-cP-nHG"/>
                         <outlet property="checkStampBtn" destination="rO0-On-8Go" id="uvD-J8-YNg"/>
-                        <outlet property="getStampAnimation" destination="Dkg-Ff-ULx" id="shQ-gV-CY2"/>
+                        <outlet property="getStampAnimation" destination="AKr-eu-1W5" id="iNv-Ou-k8s"/>
+                        <outlet property="setIntervalText" destination="tgX-LY-Plj" id="cfV-Ty-BcW"/>
                         <outlet property="skipBtn" destination="UUt-mw-Uq6" id="trw-0e-KhC"/>
                         <segue destination="NPd-0p-bzc" kind="unwind" identifier="goHome" unwindAction="unwind:" id="Soz-9n-c0Q"/>
                     </connections>
@@ -1744,7 +1742,6 @@
         <image name="icCard" width="45" height="28"/>
         <image name="icHamburger" width="33" height="33"/>
         <image name="icHome" width="36" height="34"/>
-        <image name="imgAdStamp100" width="335" height="199"/>
         <image name="imgHomeJjack" width="30" height="32"/>
     </resources>
 </document>

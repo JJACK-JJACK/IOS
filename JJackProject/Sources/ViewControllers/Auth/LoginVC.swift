@@ -64,6 +64,7 @@ class LoginVC: UIViewController {
                     print(token.nickname); UserDefaults.standard.set(token.nickname, forKey: "nickname")
                     print(id)
                     UserDefaults.standard.set(id, forKey: "email")
+                    UserDefaults.standard.set(pw, forKey: "password")
                     print(token.nickname)
                     print(id)
                     print(pw)

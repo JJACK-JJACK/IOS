@@ -26,7 +26,7 @@ class GetRewardVC: UIViewController {
         giveRewardAnimationView.center = self.view.center
         giveRewardAnimationView.contentMode = .scaleAspectFit
         
-        view.addSubview(giveRewardAnimationView)
+        self.view.addSubview(giveRewardAnimationView)
         
         giveRewardAnimationView.loopMode = .playOnce
         giveRewardAnimationView.animationSpeed = 1.0
