@@ -1,6 +1,6 @@
-JJack Service
-=============
-# JJack iOS
+JJack Service - JJack iOS
+=========================
+
 
 
 ## 프로젝트 이름
@@ -27,7 +27,7 @@ JJack Service
 
 ## 저자
 
-- **유기태** - [ktyu](https://github.com/ktyu)
-- Thanks for SOPT 23rd, APP-JAM [Smatching Team](https://github.com/smatching) :D
+- **모상일** - [sangil](https://github.com/MoSangIl)
+- [JJACK Team](https://github.com/JJACK-JJACK) :D
 
 
