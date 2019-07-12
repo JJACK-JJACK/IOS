@@ -74,7 +74,8 @@ class LoginVC: UIViewController {
                     self.navigationController?.pushViewController(dvc, animated: true)
                     break
                 case .requestErr(let err):
-                    print(err)
+                    guard let err = err as? String else {return}
+                    self.simpleAlert(title: "로그인 실패", message: err)
                     break
                 case .pathErr:
                     // 대체로 경로를 잘못 쓴 경우입니다.

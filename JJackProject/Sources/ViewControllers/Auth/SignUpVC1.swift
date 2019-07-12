@@ -34,7 +34,7 @@ class SignUpVC1: UIViewController {
             dvc.paramEmail = email
             navigationController?.pushViewController(dvc, animated: true)
         }else {
-            simpleAlert(title: "실패", message: "이메일 형식이 잘못 되었습니다.")
+            simpleAlert(title: "이메일 형식이 잘못 되었습니다.", message: "")
         }
        
     }

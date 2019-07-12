@@ -97,7 +97,7 @@ class SignUpVC3: UIViewController {
         } else if pw != self.paramPw{
             // 닉네임 중복시랑, 패스워드 불일치 - 2가지 예외처리 필요!
             simpleAlert(title: "실패", message: "비밀번호가 일치 하지 않습니다.")
-        }else {simpleAlert(title: "실패", message: "다른 닉네임을 사용해 주세요.")}
+        }else {simpleAlert(title: "실패", message: "중복확인 혹은 다른 닉네임을 사용해주세요.")}
         
     }
     

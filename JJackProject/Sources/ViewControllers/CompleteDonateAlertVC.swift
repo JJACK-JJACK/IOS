@@ -22,7 +22,7 @@ class CompleteDonateAlertVC: UIViewController {
     
     
     @IBAction func goMyStamps(_ sender: Any) {
-        guard let dvc = UIStoryboard(name: "Record", bundle: nil).instantiateViewController(withIdentifier: "EarnBerry")as? EarnBerryVC else {return}
+        guard let dvc = UIStoryboard(name: "Record", bundle: nil).instantiateViewController(withIdentifier: "Record")as? RecordedDonationVC else {return}
         navigationController?.pushViewController(dvc, animated: true)
     }
     @IBAction func back(_ sender: Any) {

@@ -40,7 +40,7 @@ class SignUpVC2: UIViewController {
             dvc.paramPw = pw
             navigationController?.pushViewController(dvc, animated: true)
         }else {
-            simpleAlert(title: "실패", message: "두 비밀번호가 일치하지 않습니다.")
+            simpleAlert(title: "비밀번호가 일치하지 않습니다.", message: "")
         }
     }
     

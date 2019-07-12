@@ -244,12 +244,12 @@
                                     <constraint firstItem="Wcc-b6-vUe" firstAttribute="top" secondItem="X4A-6i-gKg" secondAttribute="top" id="XcG-i9-A6u"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="had-yY-97U">
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="had-yY-97U">
                                 <rect key="frame" x="20" y="279" width="374" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="uar-8E-MVv"/>
                                 </constraints>
-                                <state key="normal" image="group6"/>
+                                <state key="normal" image="img_stamp2_1x"/>
                                 <connections>
                                     <segue destination="UMz-Vf-UCR" kind="presentation" id="Q4l-yo-isl"/>
                                 </connections>
@@ -960,12 +960,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="group6" width="335" height="100"/>
         <image name="icBack" width="27" height="32"/>
         <image name="icHamburger" width="33" height="33"/>
         <image name="icHome" width="36" height="34"/>
         <image name="ic_bry_stamp_1x" width="43" height="42.5"/>
         <image name="ic_non_bry_stamp_1x" width="30" height="29.5"/>
+        <image name="img_stamp2_1x" width="335" height="100"/>
         <image name="img_stamp_bg_1x" width="335" height="479"/>
     </resources>
 </document>

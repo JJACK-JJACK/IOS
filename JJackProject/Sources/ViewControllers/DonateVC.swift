@@ -114,7 +114,7 @@ class DonateVC: UIViewController{
                         dvc.rewardBerry = data.rewordsBerry!
                         self.present(dvc, animated: true, completion: nil)
                     } else {
-                        guard let dvc =  self.storyboard?.instantiateViewController(withIdentifier: "CompleteDonate") as? CompleteDonateAlertVC else {return}
+                        guard let dvc =  self.storyboard?.instantiateViewController(withIdentifier: "CompleteDonate") as? UINavigationController else {return}
                         print("#######@#############")
                         print(data)
                         self.present(dvc, animated: true, completion: nil)

@@ -1506,12 +1506,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cJy-RZ-MVx" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="7Ln-VV-vus" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5964" y="714.53201970443354"/>
+            <point key="canvasLocation" x="6337" y="701"/>
         </scene>
         <!--Complete Donate AlertVC-->
         <scene sceneID="EnB-l8-Nwu">
             <objects>
-                <viewController storyboardIdentifier="CompleteDonate" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="Dh0-xI-nd0" customClass="CompleteDonateAlertVC" customModule="JJackProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="Dh0-xI-nd0" customClass="CompleteDonateAlertVC" customModule="JJackProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WBd-5v-kkp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1619,6 +1619,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7za-BG-YKD"/>
                     </view>
+                    <navigationItem key="navigationItem" id="zdg-fc-vMI"/>
                     <connections>
                         <outlet property="checkStampBtn" destination="rO0-On-8Go" id="uvD-J8-YNg"/>
                         <outlet property="skipBtn" destination="UUt-mw-Uq6" id="trw-0e-KhC"/>
@@ -1628,7 +1629,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dcq-fZ-597" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="NPd-0p-bzc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5996" y="2.9556650246305418"/>
+            <point key="canvasLocation" x="7279.1999999999998" y="1.4778325123152709"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VUO-gN-FIk">
+            <objects>
+                <navigationController storyboardIdentifier="CompleteDonate" automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" navigationBarHidden="YES" id="OJu-V8-8OB" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ayj-a4-wdN">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Dh0-xI-nd0" kind="relationship" relationship="rootViewController" id="4gv-JF-i76"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TPs-Xc-Dp7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6336.8000000000002" y="1.4778325123152709"/>
         </scene>
     </scenes>
     <resources>
