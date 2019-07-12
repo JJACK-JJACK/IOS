@@ -12,12 +12,12 @@ import SideMenu
 class MainVC: UIViewController, UIScrollViewDelegate{
     
     let imageSet: [UIImage] = [
-        (UIImage(named: "icChildren"))!,
-        (UIImage(named: "icSenior"))!,
-        (UIImage(named: "icAnimal"))!,
-        (UIImage(named: "icDisabled"))!,
-        (UIImage(named: "icEnvironment"))!,
-        (UIImage(named: "icEmergency"))!
+        (UIImage(named: "img_land_children"))!,
+        (UIImage(named: "img_land_older"))!,
+        (UIImage(named: "img_land_animal"))!,
+        (UIImage(named: "img_land_disabled"))!,
+        (UIImage(named: "img_land_environment"))!,
+        (UIImage(named: "img_land_emergency"))!
     ]
 
     @IBOutlet weak var mainView: UICollectionView!
@@ -311,35 +311,37 @@ extension MainVC: UITableViewDelegate {
 }
 extension MainVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return infoSet.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = donationInfoView.dequeueReusableCell(withIdentifier: "MainCell")as! MainCell
         let List = infoSet[indexPath.row]
+        
         cell.thumbImg.imageFromUrl(gsno(List.thumbnail), defaultImgPath: "imgHomeJjack")
         cell.title.text = List.title
         cell.processRate.text = String(List.percentage) + "%"
         cell.institution.text = List.centerName
 
         cell.donatedBerry.text = String(List.maxBerry)
-        
-        
+            
+            
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let index = List.start.index(List.start.startIndex, offsetBy: 10)
 
         let start = dateFormatter.date(from: String((List.start[..<index])))
-        
+            
         let finish = dateFormatter.date(from: String((List.finish[..<index])))
 
         let interval = finish!.timeIntervalSince(start!)
-        
+            
         let days = Int(interval / 86400)
         print(days)
         self.paramDday = String(days)
         cell.date.text = "D - " + String(days)
-        
+            
         let rate = Double(List.percentage)
         let length = Double(cell.statusBar.frame.width)
         let num = round(length * (rate / 100.0))

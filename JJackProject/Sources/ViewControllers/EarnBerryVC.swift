@@ -20,6 +20,7 @@ class EarnBerryVC: UIViewController {
     @IBOutlet weak var stamp8: UIImageView!
     @IBOutlet weak var stamp9: UIImageView!
     
+    @IBOutlet weak var stampView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,6 +38,8 @@ class EarnBerryVC: UIViewController {
         self.stamp7.isHidden = true
         self.stamp8.isHidden = true
         self.stamp9.isHidden = true
+        
+        self.stampView.makeRounded(cornerRadius: 8.0)
     }
     
     // 스탬프 개수 확인 및 스탬프 이미지 넣기

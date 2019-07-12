@@ -104,7 +104,7 @@
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecordView" rowHeight="139" id="LJT-TG-Awj" customClass="RecordCell" customModule="JJackProject" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="414" height="139"/>
                                                 <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LJT-TG-Awj" id="fYu-oR-BxT">
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LJT-TG-Awj" id="fYu-oR-BxT">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="138.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
@@ -244,7 +244,7 @@
                                     <constraint firstItem="Wcc-b6-vUe" firstAttribute="top" secondItem="X4A-6i-gKg" secondAttribute="top" id="XcG-i9-A6u"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="had-yY-97U">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="had-yY-97U">
                                 <rect key="frame" x="20" y="279" width="374" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="uar-8E-MVv"/>
@@ -305,6 +305,7 @@
                     <connections>
                         <outlet property="MyDonate" destination="D0f-8g-v1G" id="WpX-sA-2uS"/>
                         <outlet property="MyDonateBerry" destination="5Zs-3S-IB6" id="sn8-VE-NwD"/>
+                        <outlet property="goStampView" destination="had-yY-97U" id="K6R-On-5zh"/>
                         <outlet property="myRecordView" destination="Wcc-b6-vUe" id="ZIe-mp-OWV"/>
                         <segue destination="dIB-sx-SXZ" kind="unwind" identifier="goHome" unwindAction="unwind:" id="haC-dj-81u"/>
                     </connections>
@@ -952,6 +953,7 @@
                         <outlet property="stamp7" destination="CdY-kk-5RN" id="Rv8-MM-swh"/>
                         <outlet property="stamp8" destination="yRn-e2-Dd2" id="sYJ-l2-uxI"/>
                         <outlet property="stamp9" destination="9YF-Aj-CHF" id="tSq-1O-OrZ"/>
+                        <outlet property="stampView" destination="r0w-k4-hKl" id="oG4-L6-zhN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w4Q-k4-4Qb" userLabel="First Responder" sceneMemberID="firstResponder"/>

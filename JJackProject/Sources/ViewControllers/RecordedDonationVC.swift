@@ -19,6 +19,7 @@ class RecordedDonationVC: UIViewController {
     
     @IBOutlet weak var myRecordView: UITableView!
     
+    @IBOutlet weak var goStampView: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,7 +27,7 @@ class RecordedDonationVC: UIViewController {
         myRecordView.dataSource = self
         // Do any additional setup after loading the view.
 
-
+        self.goStampView.makeRounded(cornerRadius: 8.0)
         
         getMyHistory()
         getDonatedHistory()
@@ -87,6 +88,7 @@ class RecordedDonationVC: UIViewController {
             
         }
     }
+    
     // 각 기부 내역에 기부한 베리 가져오기
     func getEachDonatedBerry (){
         guard let token = UserDefaults.standard.string(forKey: "refreshToken") else {return}

@@ -11,13 +11,8 @@ import SideMenu
 
 class HomeVC: UIViewController {
 
-    let imageSet: [UIImage] = [
-    (UIImage(named: "icCard"))!,
-    (UIImage(named: "icCard"))!,
-    (UIImage(named: "icCard"))!,
-    (UIImage(named: "icCard"))!,
-    (UIImage(named: "icCard"))!,
-    (UIImage(named: "icCard"))!
+    let imageSet: [String] = [
+         "img_cildren", "img_older", "img_animal", "img_disabled", "img_environment", "img_emergency"
     ]
     
     @IBOutlet weak var pageDot1: UIView!
@@ -171,7 +166,7 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCell", for: indexPath)as! HomeCell
         
-        cell.categoryImg.image = imageSet[indexPath.row]
+        cell.categoryImg.image = UIImage(named: imageSet[indexPath.row])
         cell.makeRounded(cornerRadius: 8.0)
         
         return cell
