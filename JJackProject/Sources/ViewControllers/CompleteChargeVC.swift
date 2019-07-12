@@ -25,7 +25,7 @@ class CompleteChargeVC: UIViewController {
         
         self.chargedPrice.text = chargedBerry
         self.bankName.text = paramBank + "은행"
-        
+        self.Account.text = paramAccount
     }
     
     var chargedBerry: String = "1,100원"

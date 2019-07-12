@@ -135,7 +135,8 @@ class ChargeVC: UIViewController{
         guard let token = UserDefaults.standard.string(forKey: "refreshToken") else {return}
         
         // 은행 설정 할 때 실행
-        if self.paramAccount != "입금하실 은행 선택" {
+        print(self.paramAccount!)
+        if self.paramAccount != "" {
             ChargeService.shared.chargingBerry(token, berry) {
                 [weak self]
                 (data) in

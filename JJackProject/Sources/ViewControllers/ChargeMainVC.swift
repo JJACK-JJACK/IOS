@@ -10,8 +10,8 @@ import UIKit
 
 class ChargeMainVC: UIViewController {
 
-    @IBOutlet weak var card: UIButton!
-    @IBOutlet weak var bank: UIButton!
+    @IBOutlet weak var card: UIView!
+    @IBOutlet weak var bank: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,5 +25,8 @@ class ChargeMainVC: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-
+    @IBAction func cardPay(_ sender: Any) {
+        self.simpleAlert(title: "아직 준비 중입니다.", message: "무통장입금을 사용해 주세요!")
+    }
+    
 }

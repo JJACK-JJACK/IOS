@@ -7,17 +7,27 @@
 //
 
 import UIKit
+import Lottie
 
 class CompleteDonateAlertVC: UIViewController {
 
     @IBOutlet weak var checkStampBtn: UIButton!
     @IBOutlet weak var skipBtn: UIButton!
+    
+    
+    @IBOutlet weak var getStampAnimation: AnimationView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         self.checkStampBtn.makeRounded(cornerRadius: nil)
+        
         self.skipBtn.makeRounded(cornerRadius: nil)
+        
+        self.getStampAnimation.loopMode = .playOnce
+        self.getStampAnimation.animationSpeed = 1.0
+        self.getStampAnimation.play()
     }
     
     
