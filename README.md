@@ -4,11 +4,9 @@
 ==========
 ### **JJack짹, 소액 기부 서비스 플랫폼**
 
-
-
-
-
-
+<br>
+<br>
+<br>
 
 ## 서비스 워크 플로우 
 ![JJack_ServiceWorkFlow](JJack_ServiceWorkFlow.png)
