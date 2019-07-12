@@ -27,10 +27,10 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rcK-kN-X9d">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="686"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lnN-vV-pdO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="202"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_ios_review_bg" translatesAutoresizingMaskIntoConstraints="NO" id="lnN-vV-pdO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="203"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="202" id="SRO-HG-ssN"/>
+                                                            <constraint firstAttribute="height" constant="203" id="SRO-HG-ssN"/>
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기부후기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCP-Dx-L3c">
@@ -73,7 +73,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxp-10-Klr">
-                                                        <rect key="frame" x="20" y="242" width="151" height="43"/>
+                                                        <rect key="frame" x="20" y="243" width="151" height="43"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="43" id="Az0-pB-efS"/>
                                                             <constraint firstAttribute="width" constant="151" id="Wgz-Lo-6Uv"/>
@@ -85,10 +85,10 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AX3-e4-OXm">
-                                                        <rect key="frame" x="0.0" y="285" width="375" height="401"/>
+                                                        <rect key="frame" x="0.0" y="286" width="375" height="400"/>
                                                         <subviews>
                                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="66K-Cl-0sV">
-                                                                <rect key="frame" x="0.0" y="0.0" width="375" height="401"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ASn-8S-DjB">
                                                                     <size key="itemSize" width="266" height="325"/>
@@ -98,7 +98,7 @@
                                                                 </collectionViewFlowLayout>
                                                                 <cells>
                                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RankingCell" id="W6d-zU-pmz" customClass="HomeCell" customModule="JJackProject" customModuleProvider="target">
-                                                                        <rect key="frame" x="0.0" y="36" width="285" height="329"/>
+                                                                        <rect key="frame" x="0.0" y="35.666666666666664" width="285" height="329"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                                             <rect key="frame" x="0.0" y="0.0" width="285" height="329"/>
@@ -784,5 +784,6 @@
         <image name="icBerrysSmall" width="25" height="23"/>
         <image name="icHamburger" width="33" height="33"/>
         <image name="icHome" width="36" height="34"/>
+        <image name="img_ios_review_bg" width="375" height="202"/>
     </resources>
 </document>

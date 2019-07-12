@@ -45,7 +45,6 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func Login(_ sender: Any) {
-navigationController?.pushViewController(dvc, animated: true)
         guard let id = idTF.text else {return}
         guard let pw = pwTF.text else {return}
 

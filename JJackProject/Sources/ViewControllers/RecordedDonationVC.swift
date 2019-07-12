@@ -40,6 +40,7 @@ class RecordedDonationVC: UIViewController {
             myRecordView.deselectRow(at: index, animated: true)
         }
     }
+    // 내 기부 회수, 베리 가져오기
     func getMyHistory () {
         guard let token = UserDefaults.standard.string(forKey: "refreshToken") else {return}
         HistoryService.shared.getMyHistory(token) {
@@ -65,6 +66,8 @@ class RecordedDonationVC: UIViewController {
             }
         }
     }
+    
+    // 내 기부 이력 가져오기
     func getDonatedHistory (){
         guard let token = UserDefaults.standard.string(forKey: "refreshToken") else {return}
         HistoryService.shared.getDonatedList(token) {
@@ -84,6 +87,7 @@ class RecordedDonationVC: UIViewController {
             
         }
     }
+    // 각 기부 내역에 기부한 베리 가져오기
     func getEachDonatedBerry (){
         guard let token = UserDefaults.standard.string(forKey: "refreshToken") else {return}
         HistoryService.shared.getEachDonatedBerry(token){
