@@ -1517,10 +1517,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pim-Q1-GUo">
-                                <rect key="frame" x="20" y="254" width="335" height="354"/>
+                                <rect key="frame" x="20" y="184.66666666666663" width="335" height="453"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="7Kk-M8-t5P">
-                                        <rect key="frame" x="83.666666666666686" y="114" width="168" height="48"/>
+                                        <rect key="frame" x="83.666666666666686" y="213.00000000000003" width="168" height="47.999999999999972"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기부 성공" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tgX-LY-Plj">
                                                 <rect key="frame" x="46.666666666666664" y="0.0" width="74.666666666666686" height="24"/>
@@ -1540,7 +1540,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Tbb-oL-kC0">
-                                        <rect key="frame" x="47" y="182" width="241" height="34"/>
+                                        <rect key="frame" x="47" y="281" width="241" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="스탬프 10개를 모으면 총 기부한 베리의 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1s3-AC-4rc">
                                                 <rect key="frame" x="11.666666666666671" y="0.0" width="217.66666666666663" height="17"/>
@@ -1560,7 +1560,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rO0-On-8Go">
-                                        <rect key="frame" x="20" y="236" width="295" height="42"/>
+                                        <rect key="frame" x="20" y="335" width="295" height="42"/>
                                         <color key="backgroundColor" red="1" green="0.76078431369999999" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="nGk-oH-EZl"/>
@@ -1574,7 +1574,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUt-mw-Uq6">
-                                        <rect key="frame" x="20" y="286" width="295" height="42"/>
+                                        <rect key="frame" x="20" y="385" width="295" height="42"/>
                                         <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="x5e-Pe-Hhq"/>
@@ -1587,35 +1587,35 @@
                                             <action selector="back:" destination="Dh0-xI-nd0" eventType="touchUpInside" id="0VN-WI-F5T"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bYw-5A-u9R">
-                                        <rect key="frame" x="10" y="-91" width="315" height="185"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgAdStamp100" translatesAutoresizingMaskIntoConstraints="NO" id="GUA-vI-ap7">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="199"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="bYw-5A-u9R" firstAttribute="top" secondItem="Pim-Q1-GUo" secondAttribute="top" constant="-91" id="1b6-v5-MPg"/>
                                     <constraint firstItem="rO0-On-8Go" firstAttribute="leading" secondItem="Pim-Q1-GUo" secondAttribute="leading" constant="20" id="68O-UT-mbC"/>
                                     <constraint firstItem="Tbb-oL-kC0" firstAttribute="top" secondItem="7Kk-M8-t5P" secondAttribute="bottom" constant="20" id="6Mr-EV-tji"/>
                                     <constraint firstItem="UUt-mw-Uq6" firstAttribute="top" secondItem="rO0-On-8Go" secondAttribute="bottom" constant="8" id="85e-hU-Bnz"/>
-                                    <constraint firstItem="bYw-5A-u9R" firstAttribute="leading" secondItem="Pim-Q1-GUo" secondAttribute="leading" constant="10" id="DyY-zu-beh"/>
                                     <constraint firstItem="Tbb-oL-kC0" firstAttribute="centerX" secondItem="Pim-Q1-GUo" secondAttribute="centerX" id="H7X-NG-Fuz"/>
                                     <constraint firstAttribute="trailing" secondItem="UUt-mw-Uq6" secondAttribute="trailing" constant="20" id="RPg-bZ-XmW"/>
+                                    <constraint firstItem="GUA-vI-ap7" firstAttribute="leading" secondItem="Pim-Q1-GUo" secondAttribute="leading" id="SBC-yi-31P"/>
+                                    <constraint firstItem="7Kk-M8-t5P" firstAttribute="top" secondItem="GUA-vI-ap7" secondAttribute="bottom" constant="14" id="V8M-gT-25C"/>
                                     <constraint firstAttribute="bottom" secondItem="UUt-mw-Uq6" secondAttribute="bottom" constant="26" id="e7O-AN-vDp"/>
-                                    <constraint firstItem="7Kk-M8-t5P" firstAttribute="top" secondItem="bYw-5A-u9R" secondAttribute="bottom" constant="20" id="eAc-RP-mt7"/>
-                                    <constraint firstAttribute="trailing" secondItem="bYw-5A-u9R" secondAttribute="trailing" constant="10" id="ekk-Zf-OAZ"/>
                                     <constraint firstItem="rO0-On-8Go" firstAttribute="top" secondItem="Tbb-oL-kC0" secondAttribute="bottom" constant="20" id="hMU-Hw-20O"/>
+                                    <constraint firstItem="GUA-vI-ap7" firstAttribute="top" secondItem="Pim-Q1-GUo" secondAttribute="top" id="hcq-LU-GJQ"/>
                                     <constraint firstItem="UUt-mw-Uq6" firstAttribute="leading" secondItem="Pim-Q1-GUo" secondAttribute="leading" constant="20" id="ptQ-Kd-kuQ"/>
-                                    <constraint firstItem="7Kk-M8-t5P" firstAttribute="top" secondItem="Pim-Q1-GUo" secondAttribute="top" constant="114" id="qAd-we-mEt"/>
+                                    <constraint firstAttribute="height" constant="453" id="qrv-CF-TkA"/>
                                     <constraint firstAttribute="trailing" secondItem="rO0-On-8Go" secondAttribute="trailing" constant="20" id="uCi-XL-0Gg"/>
+                                    <constraint firstAttribute="trailing" secondItem="GUA-vI-ap7" secondAttribute="trailing" id="yWp-s5-1CM"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.43608197773972601" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Pim-Q1-GUo" firstAttribute="leading" secondItem="7za-BG-YKD" secondAttribute="leading" constant="20" id="7wU-FR-ElL"/>
-                            <constraint firstItem="7za-BG-YKD" firstAttribute="trailing" secondItem="Pim-Q1-GUo" secondAttribute="trailing" constant="20" id="efJ-ws-DXo"/>
+                            <constraint firstItem="Pim-Q1-GUo" firstAttribute="centerY" secondItem="7za-BG-YKD" secondAttribute="centerY" id="eSo-hm-GNr"/>
                             <constraint firstItem="7Kk-M8-t5P" firstAttribute="centerX" secondItem="7za-BG-YKD" secondAttribute="centerX" id="fo0-Hc-HsS"/>
-                            <constraint firstItem="7za-BG-YKD" firstAttribute="bottom" secondItem="Pim-Q1-GUo" secondAttribute="bottom" constant="170" id="xCI-EN-vSB"/>
+                            <constraint firstItem="Pim-Q1-GUo" firstAttribute="centerX" secondItem="7za-BG-YKD" secondAttribute="centerX" id="rdN-Tm-Pg8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7za-BG-YKD"/>
                     </view>
@@ -1657,6 +1657,7 @@
         <image name="icCard" width="45" height="28"/>
         <image name="icHamburger" width="33" height="33"/>
         <image name="icHome" width="36" height="34"/>
+        <image name="imgAdStamp100" width="335" height="199"/>
         <image name="imgHomeJjack" width="31" height="31"/>
     </resources>
 </document>
