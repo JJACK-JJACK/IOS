@@ -1,9 +1,7 @@
-JJack Service - JJack iOS
-=========================
+***JJack Service - JJack iOS***
 
-
-
-## 프로젝트 이름
+프로젝트 이름
+==========
 **JJack짹, 소액 기부 서비스 플랫폼**
 
 
