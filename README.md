@@ -1,31 +1,29 @@
-# Smatching API Server
+JJack Service
+=============
+# JJack iOS
 
-![smatching_symbol_eng](smatching_symbol_eng.png)
+
+## 프로젝트 이름
+### JJack짹, 소액 기부 서비스 플랫폼
 
 
 
-### GitHub Wiki : https://github.com/smatching/Smatching_Server/wiki
-
-* (Android) Google Play Store : https://play.google.com/store/apps/details?id=appjam.sopt.a23rd.smatching
-
-* (iOS) : Upcoming!
+## 서비스 워크 플로우 
+![JJack_ServiceWorkFlow](JJack_ServiceWorkFlow.pdf)
 
 
 
 ## 개발 환경
 
-- JDK8
-- Spring Boot 2.1.1 (Embeded Tomcat + Maven)
+- Xcode12
+- Swift 4
 
 
 
-## 운용 환경
+## 기능
 
-- Application Server : AWS EC2 (Ubuntu)
-- Database : AWS RDS (MySQL  5.7)
-- File Storage : AWS S3
-
-![Web_App_Reference_Architecture](Web_App_Reference_Architecture.png)
+- [x] 회원가입 / 로그
+- [x] 카테고리
 
 ## 저자
 
