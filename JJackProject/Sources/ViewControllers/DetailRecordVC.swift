@@ -57,7 +57,9 @@ class DetailRecordVC: UIViewController {
         self.thumbImg.imageFromUrl(self.gsno(paramThumbImg), defaultImgPath: "imgHomeJjack")
         self.name.text = paramTitle
         self.institution.text = paramInstitution
-        self.date.text = paramDate
+        if paramDate != "" {
+            self.date.text = "D - " + paramDate
+        }
         self.processRate.text = String(paramProcess) + "%"
         self.donatedBerry.text = String(paramDonated)
         self.goalBerry.text = String(paramGoal)

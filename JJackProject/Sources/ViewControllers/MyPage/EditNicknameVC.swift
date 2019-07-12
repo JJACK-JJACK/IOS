@@ -57,16 +57,7 @@ class EditNicknameVC: UIViewController, UITextFieldDelegate {
         
     }
     @IBAction func confirmEditName (_ sender: Any) {
-//        guard let dvc = storyboard?.instantiateViewController(withIdentifier: "EditAccoutVC") as? EditAccoutVC else { return }
-        
-//        guard let text = edittingNiknm.text else { return }
-        
-//        dvc.name = self.edittingNiknm.text!
-//
-//        present(dvc, animated: true, completion: nil)
-        
-        /* 값 전달이 아니라 서버와 요청이 필요합니다.
-            서버 요청으로 값을 page View 에서 바꿔서 수정하는 부분으로 해야 할듯 함*/
+
         print(isDuplicate)
         if isDuplicate {
             guard let token = UserDefaults.standard.string(forKey: "refreshToken") else {return}
@@ -99,6 +90,8 @@ class EditNicknameVC: UIViewController, UITextFieldDelegate {
                     break
                 }
             }
+        }else {
+            self.simpleAlert(title: "중복 확인을 해주세요.", message: "")
         }
         
     }

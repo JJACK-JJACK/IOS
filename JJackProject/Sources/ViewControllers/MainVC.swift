@@ -44,6 +44,7 @@ class MainVC: UIViewController, UIScrollViewDelegate{
     // 이 값들은 처음 실행 되고 나서 바뀐 값으로 유지 되고 갱신 되지 않는다.
     var paramIndex: Int = 1
     var arrangeIndex: Int = 0
+    var paramDday: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,7 +90,7 @@ class MainVC: UIViewController, UIScrollViewDelegate{
         }
     }
 
-    // 버튼 클릭시 컬랙션 뷰 스크롤
+        // 버튼 클릭시 컬랙션 뷰 스크롤
     func scroll (index: Int) {
         let menuIndex = NSIndexPath(item: index, section: 0)
         self.mainView.scrollToItem(at: menuIndex as IndexPath, at: .centeredHorizontally, animated: true)
@@ -301,7 +302,21 @@ extension MainVC: UITableViewDelegate {
         dvc.paramThumbImg = info.thumbnail
         dvc.paramTitle = info.title
         dvc.paramInstitution = info.centerName
-//        dvc.paramDate = info.
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let index = info.start.index(info.start.startIndex, offsetBy: 10)
+        
+        let start = dateFormatter.date(from: String((info.start[..<index])))
+        
+        let finish = dateFormatter.date(from: String((info.finish[..<index])))
+        
+        let interval = finish!.timeIntervalSince(start!)
+        
+        let days = Int(interval / 86400)
+        paramDday = String(days)
+        dvc.paramDate = paramDday
+        
         dvc.paramProcess = info.percentage
         dvc.paramGoal = info.maxBerry
         dvc.paramDonated = info.totalBerry
@@ -320,12 +335,27 @@ extension MainVC: UITableViewDataSource {
         let cell = donationInfoView.dequeueReusableCell(withIdentifier: "MainCell")as! MainCell
         let List = infoSet[indexPath.row]
         cell.thumbImg.imageFromUrl(gsno(List.thumbnail), defaultImgPath: "imgHomeJjack")
-//        cell.date.text = List.date
         cell.title.text = List.title
         cell.processRate.text = String(List.percentage) + "%"
         cell.institution.text = List.centerName
-//        cell.processRate.text = String(List.percentage) + "%"
+
         cell.donatedBerry.text = String(List.maxBerry)
+        
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let index = List.start.index(List.start.startIndex, offsetBy: 10)
+
+        let start = dateFormatter.date(from: String((List.start[..<index])))
+        
+        let finish = dateFormatter.date(from: String((List.finish[..<index])))
+
+        let interval = finish!.timeIntervalSince(start!)
+        
+        let days = Int(interval / 86400)
+        print(days)
+        self.paramDday = String(days)
+        cell.date.text = "D - " + String(days)
         
         let rate = Double(List.percentage)
         let length = Double(cell.statusBar.frame.width)
@@ -341,13 +371,6 @@ extension MainVC: UITableViewDataSource {
     
 }
 extension MainVC {
-//    func setInfoData() {
-//        let info1 = Info(thumbnail: "icCard", date: "D - 41", title: "올 겨울 혜리에게도 따뜻한 이불을 주세요!",institution: "사회 복지관", processRate: "50", donatedBerry: "404,040", status: nil)
-//        let info2 = Info(thumbnail: "icCard", date: "D - 32", title: "올 겨울 혜리에게도 따뜻한 이불을 주세요!",institution: "샬롬 요양원", processRate: "70", donatedBerry: "404,040", status: nil)
-//        let info3 = Info(thumbnail: "icCard", date: "D - 321", title: "올 겨울 혜리에게도 따뜻한 이불을 주세요!", institution: "주남바다요양센터", processRate: "20", donatedBerry: "404,040", status: nil)
-//
-//        self.infoSet = [info1, info2, info3]
-//    }
     func setBtn(button: UIButton, color: UIColor, font: UIFont) {
         button.titleLabel?.font = font
         button.setTitleColor(color, for: .normal)

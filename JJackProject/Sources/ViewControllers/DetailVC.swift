@@ -91,7 +91,7 @@ class DetailVC: UIViewController {
         self.thumbImg.imageFromUrl(gsno(paramThumbImg), defaultImgPath: "imgHomeJjack")
         self.name.text = paramTitle
         self.institution.text = paramInstitution
-        self.date.text = paramDate
+        self.date.text = "D - " + paramDate
         self.processRate.text = String(paramProcess) + "%"
         self.donatedBerry.text = String(paramDonated)
         self.goalBerry.text = String(paramGoal)

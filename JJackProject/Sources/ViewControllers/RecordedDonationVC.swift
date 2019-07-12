@@ -121,30 +121,31 @@ extension RecordedDonationVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = myRecordView.dequeueReusableCell(withIdentifier: "RecordView")as! RecordCell
-        let index = indexPath.row
-        print(index)
-        let List = recordList[index]
-        print(index)
+        let List = recordList[indexPath.row]
 //        let berry = eachRecordBerry[index]
-//        print(index)
-        
-        
-        
-//        cell.thumbImg.image = UIImage(named: List.thumbImg)
-//        cell.status.text = List.status
-//        cell.date.text = List.date
-//        cell.title.text = List.title
-//        cell.institution.text = List.institution
-//        cell.processRate.text = List.processRate + "%"
-//        cell.donatedBerry.text = List.donatedBerry
+
         
         cell.thumbImg.imageFromUrl(self.gsno(List.thumbnail), defaultImgPath:"imgHomeJjack")
-//        cell.status.text = String(List.state)
-//        cell.date.text s나중에
         cell.title.text = List.title
         cell.institution.text = List.centerName
         cell.processRate.text = String(List.percentage) + "%"
 //        cell.donatedBerry.text = String(berry.berry)
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let index = List.start.index(List.start.startIndex, offsetBy: 10)
+        
+        let start = dateFormatter.date(from: String((List.start[..<index])))
+        let finish = dateFormatter.date(from: String((List.finish[..<index])))
+        
+        let interval = finish!.timeIntervalSince(start!)
+        let days = Int(interval / 86400)
+        print(days)
+        if finish! >= Date() {
+            print(days)
+            cell.date.text = "D - " + String(days)
+        }
+
         
         let rate = Double(List.percentage)
         let width = Double(cell.statusBar.frame.width)
@@ -186,31 +187,30 @@ extension RecordedDonationVC: UITableViewDelegate {
         let info = recordList[indexPath.row]
 //        let berryInfo = eachRecordBerry[indexPath.row]
         
-//        dvc.paramStatus = info.status ?? ""
-//        dvc.paramThumbImg = info.thumbImg
-//        dvc.paramTitle = info.title
-//        dvc.paramInstitution = info.institution
-//        dvc.paramDate = info.date ?? ""
-//        dvc.paramProcess = info.processRate
-//        dvc.paramDonated = info.donatedBerry
-        
         dvc.paramThumbImg = info.thumbnail
         dvc.paramTitle = info.title
         dvc.paramInstitution = info.centerName
-//        dvc.paramDate =
         dvc.paramProcess = info.percentage
 //        dvc.paramDonated = berryInfo.berry
         dvc.paramStatus = info.state
         dvc.paramGoal = info.maxBerry
         
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let index = info.start.index(info.start.startIndex, offsetBy: 10)
+        
+        let start = dateFormatter.date(from: String((info.start[..<index])))
+        
+        let finish = dateFormatter.date(from: String((info.finish[..<index])))
+        let interval = finish!.timeIntervalSince(start!)
+        
+        let days = Int(interval / 86400)
+        print(days)
+        if finish! >= Date() {
+            print(days)
+            dvc.paramDate = String(days)
+        }
+        
         navigationController?.pushViewController(dvc, animated: true)
     }
-}
-extension RecordedDonationVC {
-//    func setData () {
-//        let record1 = Info(thumbnail: "icCard", date: "D - 43", title: "올겨울 혜리에게도 따듯한 이불을 주세요!", institution: "주남바다요양센터", processRate: "69", donatedBerry: "20", status: "진행중")
-//        let record2 = Info(thumbnail: "icCard", date: nil, title: "올겨울 혜리에게도 따듯한 이불을 주세요!", institution: "주남바다요양센터", processRate: "100", donatedBerry: "100", status: "마감")
-//        let record3 = Info(thumbnail: "icCard", date: nil, title: "올겨울 혜리에게도 따듯한 이불을 주세요!", institution: "주남바다요양센터", processRate: "90", donatedBerry: "240", status: "전달완료")
-//        self.recordList = [record1, record2, record3]
-//    }
 }
