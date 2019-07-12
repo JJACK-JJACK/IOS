@@ -453,7 +453,7 @@
                                     <action selector="Back:" destination="xsx-di-su4" eventType="touchUpInside" id="JXf-iD-u6H"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icCard" translatesAutoresizingMaskIntoConstraints="NO" id="G1O-iO-wWt">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icCard" translatesAutoresizingMaskIntoConstraints="NO" id="G1O-iO-wWt">
                                 <rect key="frame" x="151" y="116" width="112" height="112"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="112" id="7JV-mb-3Xe"/>
