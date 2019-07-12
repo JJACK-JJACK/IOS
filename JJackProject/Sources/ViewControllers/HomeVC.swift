@@ -192,6 +192,7 @@ extension HomeVC: UICollectionViewDataSource, UICollectionViewDelegate {
         default:
             break
         }
+        dvc.viewCategory = indexPath.row
        navigationController?.show(dvc, sender: self)
     }
 

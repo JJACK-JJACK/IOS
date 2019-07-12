@@ -180,6 +180,10 @@
                         <viewLayoutGuide key="safeArea" id="tBy-K8-Wf4"/>
                     </view>
                     <navigationItem key="navigationItem" id="aSZ-nS-4TT"/>
+                    <connections>
+                        <outlet property="bank" destination="ZWf-OA-XbS" id="SvE-QI-DUw"/>
+                        <outlet property="card" destination="YJy-Kd-RSX" id="YVh-Li-E3W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dRH-w8-Wqj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

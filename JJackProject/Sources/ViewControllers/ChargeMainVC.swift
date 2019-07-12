@@ -10,10 +10,14 @@ import UIKit
 
 class ChargeMainVC: UIViewController {
 
+    @IBOutlet weak var card: UIButton!
+    @IBOutlet weak var bank: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.card.makeRounded(cornerRadius: 8.0)
+        self.bank.makeRounded(cornerRadius: 8.0)
     }
     
 

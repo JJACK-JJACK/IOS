@@ -89,6 +89,7 @@ class DetailVC: UIViewController {
     func setup() {
         // insert values
         self.thumbImg.imageFromUrl(gsno(paramThumbImg), defaultImgPath: "imgHomeJjack")
+        self.thumbImg.layer.opacity = 78
         self.name.text = paramTitle
         self.institution.text = paramInstitution
         self.date.text = "D - " + paramDate

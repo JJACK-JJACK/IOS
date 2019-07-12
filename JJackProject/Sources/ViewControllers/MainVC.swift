@@ -42,6 +42,7 @@ class MainVC: UIViewController, UIScrollViewDelegate{
     // Home 에서 Select 된 카테고리의 인덱스패스 값
     // 이 값들은 처음 실행 되고 나서 바뀐 값으로 유지 되고 갱신 되지 않는다.
     var paramIndex: Int = 1
+    var viewCategory: Int = 0
     var arrangeIndex: Int = 0
     var paramDday: String = ""
     
@@ -57,12 +58,10 @@ class MainVC: UIViewController, UIScrollViewDelegate{
         scrollView.delegate = self
         
         // 환경부터 Select시에 스크롤 필요!
-        setBoldCategory(response: paramIndex)
+        setBoldCategory(response: viewCategory)
         
         // 초기 설정..(StoryBoard Interface에서도 가능)
         setBtn(button: upToDate, color: .JackBlack, font: .Medium2)
-        
-        setCategoryNum()
 
 
         self.loadViewIfNeeded()
@@ -97,25 +96,7 @@ class MainVC: UIViewController, UIScrollViewDelegate{
         }
     }
     
-    func setCategoryNum () {
-        switch self.paramIndex {
-        case 1:
-            paramIndex = 0
-        case 5:
-            paramIndex = 1
-        case 0:
-            paramIndex = 2
-        case 2:
-            paramIndex = 3
-        case 3:
-            paramIndex = 4
-        case 4:
-            paramIndex = 5
-        default:
-            break
-        }
-    }
-        // 버튼 클릭시 컬랙션 뷰 스크롤
+    // 버튼 클릭시 컬랙션 뷰 스크롤
     func scroll (index: Int) {
         let menuIndex = NSIndexPath(item: index, section: 0)
         self.mainView.scrollToItem(at: menuIndex as IndexPath, at: .centeredHorizontally, animated: true)
