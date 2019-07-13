@@ -126,16 +126,16 @@ extension RankingVC: UICollectionViewDelegateFlowLayout {
         dvc.berry = List.totalBerry
         dvc.max = List.maxBerry
         
-        let reviewStory = List.review[0].story!
-        dvc.subTitle = reviewStory[0].subTitle
-        dvc.content1 = reviewStory[0].content[0]
-        dvc.content2 = reviewStory[0].content[1]
-        dvc.contentImg = reviewStory[0].img
-        let reviewPlan = List.review[1].plan!
-        dvc.purpose1 = reviewPlan[0].purpose
-        dvc.price1 = reviewPlan[0].price
+        let reviewStory = List.review?[0].story!
+        dvc.subTitle = reviewStory?[0].subTitle ?? "준비중입니다."
+        dvc.content1 = reviewStory?[0].content[0] ?? "준비중입니다."
+        dvc.content2 = reviewStory?[0].content[1] ?? "준비중입니다."
+        dvc.contentImg = reviewStory?[0].img ?? "imgHomeJjack"
+        let reviewPlan = List.review?[1].plan!
+        dvc.purpose1 = reviewPlan?[0].purpose ?? ""
+        dvc.price1 = reviewPlan?[0].price ?? 0
         
-        dvc.plans = reviewPlan
+        dvc.plans = reviewPlan ?? []
         
         
         navigationController?.pushViewController(dvc, animated: true)

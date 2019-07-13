@@ -77,8 +77,8 @@ class MainVC: UIViewController, UIScrollViewDelegate{
     // Home 에서 Main 이동 시 Main 기본 화면
     // 처음부터 화면이 나오게는 할 수 없나?
     override func viewDidAppear(_ animated: Bool) {
-        scroll(index: paramIndex)
-
+        scroll(index: viewCategory)
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         getFilteredList(category: paramIndex, filter: arrangeIndex)
