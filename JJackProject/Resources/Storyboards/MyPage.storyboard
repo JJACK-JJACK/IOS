@@ -453,7 +453,7 @@
                                     <action selector="Back:" destination="xsx-di-su4" eventType="touchUpInside" id="JXf-iD-u6H"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icCard" translatesAutoresizingMaskIntoConstraints="NO" id="G1O-iO-wWt">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pofile" translatesAutoresizingMaskIntoConstraints="NO" id="G1O-iO-wWt">
                                 <rect key="frame" x="151" y="116" width="112" height="112"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="112" id="7JV-mb-3Xe"/>
@@ -692,7 +692,6 @@
         <image name="editPhoto" width="30" height="30"/>
         <image name="icBack" width="27" height="32"/>
         <image name="icCancleSmall" width="23" height="23"/>
-        <image name="icCard" width="45" height="28"/>
         <image name="icEditLarge" width="31" height="31"/>
         <image name="icHamburger" width="33" height="33"/>
         <image name="icHome" width="36" height="34"/>

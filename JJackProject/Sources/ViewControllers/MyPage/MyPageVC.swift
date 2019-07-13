@@ -59,7 +59,7 @@ class MyPageVC: UIViewController {
     }
     
     @IBAction func logoutBtn(_ sender: UIButton) {
-        simpleAlertwithHandler(title: "로그아웃 하시겠습니까?", message: "진짜로?", okHandler: {res in
+        simpleAlertwithHandler(title: "로그아웃 하시겠습니까?", message: "", okHandler: {res in
             self.performSegue(withIdentifier: "toLogin", sender: self)
         }, cancleHandler: nil)
        

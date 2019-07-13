@@ -33,7 +33,6 @@ class EditAccoutVC: UIViewController {
     // 값을 전달 받을 parameter 생성
     var paramName: String = ""
     var paramEmail: String = ""
-    var paramProfileImg: UIImage?
     
     // Device 내 사진, 카메라 접근
     let picker = UIImagePickerController()
@@ -57,7 +56,6 @@ class EditAccoutVC: UIViewController {
         self.nickName1.text = paramName
         self.nickName2.text = paramName
         self.email.text = paramEmail
-        self.profileImg.image = paramProfileImg
     }
    
     @IBAction func editProfileImg(_ sender: Any) {
@@ -109,7 +107,7 @@ extension EditAccoutVC: UIImagePickerControllerDelegate, UINavigationControllerD
         dismiss(animated: true, completion: nil)
     }
     
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        dismiss(animated: true, completion: nil)
-    }
+//    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+//        dismiss(animated: true, completion: nil)
+//    }
 }

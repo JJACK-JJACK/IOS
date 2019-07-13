@@ -79,26 +79,34 @@ class SideMenuVC: UIViewController {
         guard let dvc = UIStoryboard(name: "HomeMain", bundle: nil).instantiateViewController(withIdentifier: "Main") as? MainVC else {return}
         
         var index:Int = 0
+        var serverIndex: Int = 0
         
         // 해당 카테고리로 이동
         switch sender.currentImage {
         case UIImage(named: "icChildren"):
             index = 0
+            serverIndex = 1
         case UIImage(named: "icSenior"):
             index = 1
+            serverIndex = 5
         case UIImage(named: "icAnimal"):
             index = 2
+            serverIndex = 0
         case UIImage(named: "icDisabled"):
             index = 3
+            serverIndex = 2
         case UIImage(named: "icEnvironment"):
             index = 4
+            serverIndex = 3
         case UIImage(named: "icEmergency"):
             index = 5
+            serverIndex = 4
         default:
             break
         }
         // 값 전달
-        dvc.paramIndex = index
+        dvc.viewCategory = index
+        dvc.paramIndex = serverIndex
         navigationController?.pushViewController(dvc, animated: true)
         
     }

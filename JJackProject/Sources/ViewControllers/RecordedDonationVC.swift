@@ -149,7 +149,7 @@ extension RecordedDonationVC: UITableViewDataSource {
         if finish! >= Date() {
             print(days)
             cell.date.text = "D - " + String(days)
-        }
+        }else {cell.date.text = ""}
 
         
         let rate = Double(List.percentage)
