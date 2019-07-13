@@ -130,7 +130,7 @@ extension RecordedDonationVC: UITableViewDataSource {
 //        let berry = eachRecordBerry[index]
 
         
-        cell.thumbImg.imageFromUrl(self.gsno(List.thumbnail), defaultImgPath:"imgHomeJjack")
+        cell.thumbImg.imageFromUrl(self.gsno(List.thumbnail), defaultImgPath:"imgDfSmall")
         cell.title.text = List.title
         cell.institution.text = List.centerName
         cell.processRate.text = String(List.percentage) + "%"

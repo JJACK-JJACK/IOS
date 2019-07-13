@@ -25,6 +25,7 @@ class CompleteDonateAlertVC: UIViewController {
         // Do any additional setup after loading the view.
         self.checkStampBtn.makeRounded(cornerRadius: nil)
         self.skipBtn.makeRounded(cornerRadius: nil)
+        self.alertBackground.makeRounded(cornerRadius: 8.0)
         
         getStampAnimation.loopMode = .playOnce
         getStampAnimation.animationSpeed = 1.0

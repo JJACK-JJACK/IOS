@@ -26,6 +26,18 @@ class CompleteChargeVC: UIViewController {
         self.chargedPrice.text = chargedBerry
         self.bankName.text = paramBank + "은행"
         self.Account.text = paramAccount
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        
+        let toString = formatter.string(from: Date(timeIntervalSinceNow: 86400))
+        
+        let dueDate = formatter.date(from: toString)
+        formatter.dateFormat = "yyyy-MM-dd"
+        let dueDateString = formatter.string(from: dueDate!)
+        
+        print(dueDateString)
+        self.dueDate.text = dueDateString + " 까지"
     }
     
     var chargedBerry: String = "1,100원"

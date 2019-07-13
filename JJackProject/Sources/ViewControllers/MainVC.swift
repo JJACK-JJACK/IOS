@@ -328,7 +328,7 @@ extension MainVC: UITableViewDataSource {
         let cell = donationInfoView.dequeueReusableCell(withIdentifier: "MainCell")as! MainCell
         let List = infoSet[indexPath.row]
         
-        cell.thumbImg.imageFromUrl(gsno(List.thumbnail), defaultImgPath: "imgHomeJjack")
+        cell.thumbImg.imageFromUrl(gsno(List.thumbnail), defaultImgPath: "imgDfSmall")
         cell.title.text = List.title
         cell.processRate.text = String(List.percentage) + "%"
         cell.institution.text = List.centerName
