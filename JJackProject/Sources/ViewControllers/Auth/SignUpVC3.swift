@@ -24,6 +24,7 @@ class SignUpVC3: UIViewController {
        self.checkDuplicate.setBorder(borderColor: UIColor(white: 221.0 / 255.0, alpha: 1.0), borderWidth: 1.0)
         self.checkDuplicate.makeRounded(cornerRadius: 8.0)
         self.nextBtn.setBorder(borderColor: .pointCol, borderWidth: 4.0)
+        self.nextBtn.makeRounded(cornerRadius: 8.0)
         
         nameTF.delegate = self
         pwCheckTF.delegate = self
@@ -72,6 +73,8 @@ class SignUpVC3: UIViewController {
                 switch data {
                 case .success(let message):
                     print(message)
+                        UserDefaults.standard.set(true, forKey: "didSignup")
+                    UserDefaults.standard.set(self.paramEmail, forKey: "email")
                     break
                 case .requestErr(let status):
                     switch status as? Int {

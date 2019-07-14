@@ -20,6 +20,7 @@ class SignUpVC1: UIViewController {
         // Do any additional setup after loading the view.
         self.emailTF.delegate = self
         self.nextBtn.setBorder(borderColor: .pointCol, borderWidth: 4.0)
+        self.nextBtn.makeRounded(cornerRadius: 8.0)
         setupNotification()
         
     }

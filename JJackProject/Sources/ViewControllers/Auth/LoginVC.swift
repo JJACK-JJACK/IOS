@@ -25,8 +25,15 @@ class LoginVC: UIViewController {
         idTF.delegate = self
         pwTF.delegate = self
         
-        idTF.text = "ios@jjack.com"
-        pwTF.text = "ios"
+        if  UserDefaults.standard.bool(forKey: "didSignup") {
+            guard let email = UserDefaults.standard.string(forKey: "email") else {return}
+                
+            self.idTF.text = email
+        }else {
+            idTF.text = "ios@jjack.com"
+            pwTF.text = "ios"
+        }
+        
     }
     // setting Views
     func setBorderRadius() {
@@ -120,8 +127,8 @@ extension LoginVC: UITextFieldDelegate {
     // 키보드 발생시 함수
     @objc func keyboardWillShow (_ sender: Notification) {
 
-        self.view.transform = CGAffineTransform(translationX: 0, y:  -40)
-            }
+        self.view.transform = CGAffineTransform(translationX: 0, y:  -30)
+        }
     @objc func keyboardWillHide (_ sender: Notification) {
 //        self.Login.transform = .identity
 //        self.toSignup.transform = .identity

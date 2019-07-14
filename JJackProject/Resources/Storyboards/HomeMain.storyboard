@@ -631,7 +631,7 @@
                                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ta9-Gs-VNN">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="2041.6666666666665"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bfD-66-be9">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bfD-66-be9">
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="207"/>
                                                         <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                         <constraints>

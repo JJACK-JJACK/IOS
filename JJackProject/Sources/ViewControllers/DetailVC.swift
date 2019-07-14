@@ -99,10 +99,10 @@ class DetailVC: UIViewController {
         
         self.totalPrice.text = String(paramGoal)
         
+        
         // ready for container view
         self.container2.isHidden = true
         self.onPlan.constant = 0
-        
         // show the process of donation
         activateProcess()
         

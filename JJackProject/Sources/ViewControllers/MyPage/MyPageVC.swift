@@ -61,6 +61,9 @@ class MyPageVC: UIViewController {
     @IBAction func logoutBtn(_ sender: UIButton) {
         simpleAlertwithHandler(title: "로그아웃 하시겠습니까?", message: "", okHandler: {res in
             self.performSegue(withIdentifier: "toLogin", sender: self)
+            UserDefaults.standard.set(false, forKey: "didSignup")
+            UserDefaults.standard.set("", forKey: "email")
+            UserDefaults.standard.set("", forKey: "password")
         }, cancleHandler: nil)
        
     }

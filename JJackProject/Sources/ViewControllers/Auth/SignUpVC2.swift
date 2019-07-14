@@ -25,6 +25,7 @@ class SignUpVC2: UIViewController {
         setupNotification()
         
         self.nextBtn.setBorder(borderColor: .pointCol, borderWidth: 4.0)
+        self.nextBtn.makeRounded(cornerRadius: 8.0)
         print(paramEmail)
     }
     
