@@ -52,8 +52,10 @@ class RecordedDonationVC: UIViewController {
             switch data {
             case .success(let data):
                 guard let data = data as? MyHistory else {return}
-                self.MyDonate.text = String(data.donate)
-                self.MyDonateBerry.text = String(data.donateBerry)
+                self.MyDonate.text = String(data.donate ?? 0)
+                print(data.donate)
+                print(data.donateBerry)
+                self.MyDonateBerry.text = String(data.donateBerry ?? 0)
                 self.view.reloadInputViews()
                 break
             case .requestErr(let err):

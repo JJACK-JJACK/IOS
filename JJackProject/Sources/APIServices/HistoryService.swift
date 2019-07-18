@@ -33,7 +33,7 @@ struct HistoryService: APIManager{
                                     let result = try
                                         decoder.decode(ResponseObj<MyHistory>.self, from: value)
                                     if result.success {
-                                        print(result.success)
+                                        print("-------My History-------")
                                         print("성공")
                                         completion(.success(result.data!))}
                                     else { completion(.requestErr(result.message))}

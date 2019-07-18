@@ -8,6 +8,6 @@
 
 import Foundation
 struct MyHistory: Codable{
-    let donateBerry: Int
-    let donate: Int
+    let donateBerry: Int?
+    let donate: Int?
 }

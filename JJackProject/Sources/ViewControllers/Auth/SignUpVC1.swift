@@ -30,7 +30,6 @@ class SignUpVC1: UIViewController {
         if email.Validate() {
             guard let dvc = storyboard?.instantiateViewController(withIdentifier: "SettingPwd") as? SignUpVC2 else { return }
             
-            // deliever Values to next View
             dvc.paramEmail = email
             navigationController?.pushViewController(dvc, animated: true)
         }else {

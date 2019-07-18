@@ -66,15 +66,15 @@ class LoginVC: UIViewController {
 /*A default object must be a property list—that is, an instance of (or for collections, a combination of instances of) NSData, NSString, NSNumber, NSDate, NSArray, or NSDictionary. If you want to store any other type of object, you should typically archive it to create an instance of NSData. */
 
                     guard let token = token as? Token else {return}
-                    print(token)
+                    print("token: \(token.token)")
                     UserDefaults.standard.set(token.token, forKey: "refreshToken")
-                    print(token.nickname); UserDefaults.standard.set(token.nickname, forKey: "nickname")
-                    print(id)
+                    print("NickName: \(token.nickname)")
+                    UserDefaults.standard.set(token.nickname, forKey: "nickname")
+                    print("Email: \(id)")
                     UserDefaults.standard.set(id, forKey: "email")
+                    print("Password: \(pw)")
                     UserDefaults.standard.set(pw, forKey: "password")
-                    print(token.nickname)
-                    print(id)
-                    print(pw)
+                    
                     guard let dvc = UIStoryboard(name: "HomeMain", bundle: nil).instantiateViewController(withIdentifier: "Home")as? HomeVC else {return}
                     self.navigationController?.pushViewController(dvc, animated: true)
                     break
@@ -96,8 +96,6 @@ class LoginVC: UIViewController {
                     // 이 경우엔 reachability 를 이용해서 현재 네트워크 상태를 검사하고
                     // 앱을 종료시키거나 메시지를 표시하면 됩니다.
                     // reachability 에 대해서 구글링해보세요!
-                    print(id)
-                    print(pw)
                     print("네트워크 에러")
                     break
                 }
@@ -130,8 +128,6 @@ extension LoginVC: UITextFieldDelegate {
         self.view.transform = CGAffineTransform(translationX: 0, y:  -30)
         }
     @objc func keyboardWillHide (_ sender: Notification) {
-//        self.Login.transform = .identity
-//        self.toSignup.transform = .identity
         self.view.transform = .identity
     }
 }

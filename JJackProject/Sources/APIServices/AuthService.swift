@@ -27,25 +27,24 @@ struct AuthServices: APIManager {
         
         Alamofire.request(URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: headers)
             .responseData{ res in
-                print("-----------------------------------")
-                print(res)
+                print("----------------- Login ------------------")
+                print("통신 이후 정보를 담아아오는 completion의 변수 res: \(res)")
                 switch res.result {
                 case .success:
                     // value는 data의 바이트 값을 나타낸다. -> 토큰의 정보가 되나?
                     if let value = res.result.value {
-                        print(value)
-                        print("0-------------------------0")
+                        print("담아온 정보를 걸러주는 프로퍼티 .value: \(value)")
                         if let status = res.response?.statusCode {
+                            print("통신 결과에 따른 값 들을 서버에서 REST DESIGN에 의해 보내는 값 Status Code: \(status)")
                             switch status {
                             case 200:
                                 do {
-                                    print("여기입니까?1")
                                     let decoder = JSONDecoder()
+                                    // json Data를 데이터로 다시 decoding 시도!
                                     let result = try decoder.decode(ResponseObj<Token>.self, from: value)
-                                    print("여기입니까?1")
+                                    print("제공 서비스 요청 성공 여부: \(result.success)")
                                     switch result.success{
                                     case true:
-                                        print("\(result.status)")
                                         completion(.success(result.data!))
                                     case false:
                                         completion(.requestErr(result.message))
@@ -58,13 +57,8 @@ struct AuthServices: APIManager {
                                 completion(.pathErr)
                             case 500:
                                 print(status)
-                                print("-------------------------------")
-//                                print(status)
                                 completion(.serverErr)
                             default:
-                                print("-------------------------------")
-                           
-                                print(status)
                                 break
                             }
                         }
@@ -72,10 +66,7 @@ struct AuthServices: APIManager {
                     break
 
                 case .failure(let err):
-//                    print(Alamofire.request)
-//                    print(URL)
                     print(err.localizedDescription)
-//                    print(res.result)
                     completion(.networkFail)
                     break
                 }
@@ -97,10 +88,12 @@ struct AuthServices: APIManager {
             .responseData{ res in
                 // 메서드 사용해서 코드 줄여 보기
                 //if 로 바꿔 보자
+                print("----------------- Signup ------------------")
                 switch res.result{
                 case .success:
                     if let value = res.result.value{
                         if let status = res.response?.statusCode {
+                            print("status: \(status)")
                             switch status {
                             case 200:
                                 do {
@@ -108,6 +101,7 @@ struct AuthServices: APIManager {
                                     let result = try
                                         decoder.decode(ResponseStr.self, from: value)
                                     // if 로 바꾸자
+                                    print("Request \(result.success)")
                                     switch result.success{
                                     case true:
                                         print("\(result.status)")
@@ -147,10 +141,13 @@ struct AuthServices: APIManager {
         let URL = BaseUrl + "/nickname"
         
         Alamofire.request(URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: headers).responseData{ res in
+            
+            print("----------------- Check Duplication NickName ------------------")
             switch res.result{
             case .success:
                 if let value = res.result.value{
                     if let status = res.response?.statusCode {
+                        print("status: \(status)")
                         switch status {
                         case 200:
                             do {
@@ -159,16 +156,12 @@ struct AuthServices: APIManager {
                                 let result = try
                                     decoder.decode(ResponseStr.self, from: value)
                                 // if 로 바꾸자
+                                print("Request \(result.success)")
                                 switch result.success{
                                 case true:
-                                    print("\(result.status)")
-                                    print("\(result.success)")
                                     //result 는 서버에서 전달하는 객체들의 결과를 말한다! 그래서 총 4가지!!!
-                                    
                                     completion(.success(result.success))
                                 case false:
-                                    print("\(result.status)")
-                                    print("\(result.success)")
                                     completion(.requestErr(result.message))
                                 }
                             } catch {print("error")}

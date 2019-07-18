@@ -53,11 +53,12 @@ class SignUpVC3: UIViewController {
                 self.simpleAlert(title: "실패", message: (message as? String)!)
                 break
             case .pathErr:
-                break
+                print("경로 에러")
             case .serverErr:
-                break
+                print("서버 에러")
             case .networkFail:
-                break
+                print("네트워크 에러")
+                
             }
         }
     }
@@ -73,8 +74,10 @@ class SignUpVC3: UIViewController {
                 switch data {
                 case .success(let message):
                     print(message)
-                        UserDefaults.standard.set(true, forKey: "didSignup")
+                    UserDefaults.standard.set(true, forKey: "didSignup")
+                    print("Email: \(self.paramEmail)")
                     UserDefaults.standard.set(self.paramEmail, forKey: "email")
+                    print("Password: \(pw)")
                     break
                 case .requestErr(let status):
                     switch status as? Int {
