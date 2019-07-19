@@ -27,27 +27,21 @@ struct DonateService: APIManager {
         ]
         Alamofire.request(URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: headers)
             .responseData{ res in
+                print("----------------- Donation ------------------")
                 res.result.ifSuccess {
                     if let value = res.result.value{
                         if let status = res.response?.statusCode{
-                            print(status)
+                            print("status: \(status)")
                             switch status {
                             case 200:
                                 do{
-                                    print(1)
                                     let decoder = JSONDecoder()
-                                    print(1)
                                     let result = try
                                         decoder.decode(ResponseObj<Donate>.self, from: value)
-                                    print(result)
+                                    print("Request: \(result.success)")
                                     if result.success
-                                    {
-                                       print("성공!")
-                                        completion(.success(result.data!))}
-                                        
-                                    else {
-                                        print("실패")
-                                        completion(.requestErr(result.message))}
+                                    { completion(.success(result.data!)) }
+                                    else { completion(.requestErr(result.message)) }
                                 } catch { print("error") }
                             case 400:
                                 print("pathErr")

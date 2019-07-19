@@ -33,6 +33,8 @@ class GetRewardVC: UIViewController {
         giveRewardAnimationView.play()
         
         self.reward.text = String(rewardBerry)
+        
+        print("Reward: \(rewardBerry)")
         self.enterBtn.makeRounded(cornerRadius: 8.0)
         
         self.showText.isHidden = true

@@ -30,6 +30,8 @@ class ChargeVC: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("----------------- Charging Page ------------------")
 
         // Do any additional setup after loading the view.
         pickerData = ["국민 67070204087002",
@@ -126,7 +128,7 @@ class ChargeVC: UIViewController{
         default:
             break
         }
-        print(paramBerry)
+        print("충전할 베리: \(paramBerry)")
     }
     
     // 베리 충전하기
@@ -144,18 +146,18 @@ class ChargeVC: UIViewController{
                 guard let `self` = self else {return}
                 
                 switch data {
-                case .success(let data):
-                    self.chargeData = (data.self as? Charge)!
-                    guard let chargeInfo = self.chargeData?.charge else {return}
-                    let endIndex = chargeInfo.endIndex
-                    let chargedBerry = chargeInfo[endIndex + -1].chargeBerry
-                    
-                    print(chargedBerry)
-                    let totalBerry = chargedBerry + UserDefaults.standard.integer(forKey: "ownBerry")
-                    
-                    UserDefaults.standard.set(totalBerry, forKey: "ownBerry")
-                    print(UserDefaults.standard.set(totalBerry, forKey: "ownBerry"))
-                    
+                case .success:
+//                    self.chargeData = (data.self as? Charge)!
+//                    guard let chargeInfo = self.chargeData?.charge else {return}
+//                    let endIndex = chargeInfo.endIndex
+//                    let chargedBerry = chargeInfo[endIndex + -1].chargeBerry
+//
+//                    print(chargedBerry)
+//                    let totalBerry = chargedBerry + UserDefaults.standard.integer(forKey: "ownBerry")
+//
+//                    UserDefaults.standard.set(totalBerry, forKey: "ownBerry")
+//                    print(UserDefaults.standard.set(totalBerry, forKey: "ownBerry"))
+//
                     guard let dvc = self.storyboard?.instantiateViewController(withIdentifier: "CompleteCharge")as? CompleteChargeVC else {return}
                     
                     // 은행 계좌 String Slicing

@@ -35,6 +35,7 @@ class DonateVC: UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         getMyOwnBerry()
         myBerryAmount = UserDefaults.standard.integer(forKey: "ownBerry")
+//        self.ownBerry.text = String(UserDefaults.standard.integer(forKey: "ownBerry")) 이건 왜 안먹지?
     }
     
     // 보유 베리 서버에서 받아오는 통신
@@ -47,7 +48,8 @@ class DonateVC: UIViewController{
             case .success(let data):
                 guard let berry = data as? Int else {return}
                 UserDefaults.standard.set(berry, forKey: "ownBerry")
-                print(UserDefaults.standard.integer(forKey: "ownBerry"))
+                self.ownBerry.text = String(UserDefaults.standard.integer(forKey: "ownBerry"))
+                print("보유 베리: \(UserDefaults.standard.integer(forKey: "ownBerry"))")
             default:
                 break
             }
@@ -109,37 +111,27 @@ class DonateVC: UIViewController{
     @IBAction func confirmDonate(_ sender: Any) {
         guard let berry = Int(self.berryValue!.text!) else {return}
         
-        print("여기는 기부하기")
-        if self.myBerryAmount >= berry {
+            if self.myBerryAmount >= berry {
             guard let token = UserDefaults.standard.string(forKey: "refreshToken") else {return}
-            print("token: \(token)")
-            print(berry)
-            print(paramId)
             DonateService.shared.donate(token, berry
             , paramId){
                 [weak self]
                 (data) in
-                
                 guard let `self` = self else {return}
-                
                 switch data {
                 case .success(let data):
                     guard let data = data as? Donate else {return}
-                    print(data.rewordsBerry!)
-                    print(data.stamps!)
-                    print(data.totalBerry!)
                     if data.stamps == 10 {
                         guard let dvc =  self.storyboard?.instantiateViewController(withIdentifier: "GetReward") as?GetRewardVC else {return}
-                        print("#######@#############")
-                        print(data)
+                        print("********************** Rewarding ************************")
+                        print("기부한 베리: \(berry)")
                         dvc.rewardBerry = data.rewordsBerry!
                         self.present(dvc, animated: true, completion: nil)
                     } else {
                         guard let dvc =  self.storyboard?.instantiateViewController(withIdentifier: "CompleteDonate") as? UINavigationController else {return}
-                        print("#######@#############")
-                        print(data)
+                        print("********************** Complete Donation ************************")
+                        print("기부한 베리: \(berry)")
                         self.present(dvc, animated: true, completion: nil)
-
                     }
                 case .requestErr(let message):
                     print(message)

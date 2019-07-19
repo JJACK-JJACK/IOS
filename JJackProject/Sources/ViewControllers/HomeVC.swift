@@ -66,7 +66,6 @@ class HomeVC: UIViewController {
         
         //sideMenu setUp
         setupSideMenu()
-        getMyOwnBerry()
     }
     
     // 홈으로 돌아올때마다 갱신
@@ -84,7 +83,7 @@ class HomeVC: UIViewController {
             case .success(let data):
                 guard let berry = data as? Int else {return}
                 UserDefaults.standard.set(berry, forKey: "ownBerry")
-                print(UserDefaults.standard.integer(forKey: "ownBerry"))
+                print("보유 베리: \(UserDefaults.standard.integer(forKey: "ownBerry"))")
             default:
                 break
             }
@@ -125,8 +124,6 @@ class HomeVC: UIViewController {
             
             break
         }
-        print(x)
-        
     }
     func selectDot (view: UIView, constraints: NSLayoutConstraint) {
         UIView.animate(withDuration: 0.2, animations: {

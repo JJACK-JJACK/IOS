@@ -53,10 +53,8 @@ struct AuthServices: APIManager {
                                     print("error")
                                 }
                             case 400:
-                                print(status)
                                 completion(.pathErr)
                             case 500:
-                                print(status)
                                 completion(.serverErr)
                             default:
                                 break

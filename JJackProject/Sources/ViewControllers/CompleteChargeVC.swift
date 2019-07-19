@@ -36,8 +36,12 @@ class CompleteChargeVC: UIViewController {
         formatter.dateFormat = "yyyy-MM-dd"
         let dueDateString = formatter.string(from: dueDate!)
         
-        print(dueDateString)
         self.dueDate.text = dueDateString + " 까지"
+        
+        print("입금할 금액: \(chargedBerry)")
+        print("입금 은행: \(paramBank)")
+        print("입금 계좌: \(paramAccount)")
+        print("입금 기한 날짜: \(dueDateString)")
     }
     
     var chargedBerry: String = "1,100원"

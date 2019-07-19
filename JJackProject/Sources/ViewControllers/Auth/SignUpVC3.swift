@@ -70,7 +70,9 @@ class SignUpVC3: UIViewController {
         
         if pw == self.paramPw && duplicate{
             AuthServices.shared.signup(paramEmail, pw, nickName) {
+                [weak self]
                 (data) in
+                guard let `self` = self else {return}
                 switch data {
                 case .success(let message):
                     print(message)
@@ -78,13 +80,14 @@ class SignUpVC3: UIViewController {
                     print("Email: \(self.paramEmail)")
                     UserDefaults.standard.set(self.paramEmail, forKey: "email")
                     print("Password: \(pw)")
-                    break
+                    // 돌아가기
+                    self.performSegue(withIdentifier: "unwindToMain", sender: self)
                 case .requestErr(let status):
                     switch status as? Int {
                     case 400:
-                        print("이미 회원입니다.")
+                        self.simpleAlert(title: "이미 회원입니다.", message: "")
                     case 600:
-                        print("회원 등록 실패 / DB에러")
+                        self.simpleAlert(title: "회원 등록 실패 / DB에러", message: "")
                     case .none:
                         print("값없음")
                     case .some(_):
@@ -99,8 +102,6 @@ class SignUpVC3: UIViewController {
                     break
                 }
             }
-            // 돌아가기
-            performSegue(withIdentifier: "unwindToMain", sender: self)
         } else if pw != self.paramPw{
             // 닉네임 중복시랑, 패스워드 불일치 - 2가지 예외처리 필요!
             simpleAlert(title: "실패", message: "비밀번호가 일치 하지 않습니다.")

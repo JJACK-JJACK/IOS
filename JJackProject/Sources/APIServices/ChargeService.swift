@@ -28,15 +28,18 @@ struct ChargeService: APIManager {
         
         Alamofire.request(URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: headers)
             .responseData{ res in
+                print("----------------- Charge Berry ------------------")
                 res.result.ifSuccess {
                     if let value = res.result.value{
                         if let status = res.response?.statusCode{
+                            print("status: \(status)")
                             switch status {
                             case 200:
                                 do{
                                     let decoder = JSONDecoder()
                                     let result = try
                                         decoder.decode(ResponseObj<Charge>.self, from: value)
+                                    print("Request: \(result.success)")
                                     if result.success {completion(.success(result.data!))}
                                     else { completion(.requestErr(result.message))}
                                 } catch {print("error")}
@@ -71,15 +74,18 @@ struct ChargeService: APIManager {
         
         Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers)
             .responseData{ res in
+                print("----------------- My Own Berry ------------------")
                 res.result.ifSuccess {
                     if let value = res.result.value{
                         if let status = res.response?.statusCode{
+                            print("status: \(status)")
                             switch status {
                             case 200:
                                 do{
                                     let decoder = JSONDecoder()
                                     let result = try
                                         decoder.decode(MyBerry.self, from: value)
+                                    print("Request: \(result.success)")
                                     if result.success {completion(.success(result.data))}
                                     else { completion(.requestErr(result.message))}
                                 } catch {print("error")}

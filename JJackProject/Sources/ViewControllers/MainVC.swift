@@ -70,7 +70,7 @@ class MainVC: UIViewController, UIScrollViewDelegate{
         // 다른 화면 전환 후 다시 올때
         // paramIndex arrangeIndex 유지 할건지 아니면 초기화 할건지!
         getFilteredList(category: paramIndex, filter: arrangeIndex)
-        print(arrangeIndex)
+        print("선택된 카테고리 인덱스: \(arrangeIndex)")
 
     
     }
@@ -177,7 +177,6 @@ class MainVC: UIViewController, UIScrollViewDelegate{
             
             switch data {
             case .success(let data):
-                print(data)
                 self.infoSet = (data.self as? [Main])!
                 self.donationInfoView.reloadData()
             default:
@@ -289,8 +288,6 @@ extension MainVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let dvc = storyboard?.instantiateViewController(withIdentifier: "Detail")as? DetailVC else {return}
         let info = infoSet[indexPath.row]
-        print(info.start)
-        print(info.finish)
         dvc.paramThumbImg = info.thumbnail
         dvc.paramTitle = info.title
         dvc.paramInstitution = info.centerName
@@ -347,7 +344,7 @@ extension MainVC: UITableViewDataSource {
         let interval = finish!.timeIntervalSince(start!)
             
         let days = Int(interval / 86400)
-        print(days)
+        print("D-day: \(days)")
         self.paramDday = String(days)
         cell.date.text = "D - " + String(days)
             

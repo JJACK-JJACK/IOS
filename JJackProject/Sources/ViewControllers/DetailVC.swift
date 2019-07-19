@@ -69,9 +69,6 @@ class DetailVC: UIViewController {
 
         // Do any additional setup after loading the view.
         setup()
-        print(paramId)
-        print("여기는 디테일")
-        
         planListView.dataSource = self
         
         getStory(id: gsno(paramId))
@@ -105,9 +102,6 @@ class DetailVC: UIViewController {
         self.onPlan.constant = 0
         // show the process of donation
         activateProcess()
-        
-        print(planList.count)
-//        print(planList[0].plan.count)
     }
     func activateProcess() {
         let rate = Double(paramProcess)
@@ -127,14 +121,9 @@ class DetailVC: UIViewController {
             guard let `self` = self else {return}
             switch data {
             case .success(let data):
-//                print(data)
                 self.planList = (data.self as? [Datum])!
                 
                 let contain1 = self.planList[0]
-//                print(contain1.centerName)
-//                print(contain1.story[0].subTitle)
-//                print(contain1.story[1].subTitle)
-//                print(contain1.title)
                 let story1 = contain1.story[0]
                 self.subTitle1.text = story1.subTitle
                 self.content1_1.text = story1.content[0]
@@ -153,7 +142,6 @@ class DetailVC: UIViewController {
                 
                 self.plans = self.planList[0].plan!
                 
-
                 self.planListView.reloadData()
                 self.container1.reloadInputViews()
                 self.container2.reloadInputViews()
@@ -171,7 +159,6 @@ class DetailVC: UIViewController {
         }
     }
     @IBAction func showInfo(_ sender: UIButton) {
-        print(sender.isSelected)
         if !sender.isSelected {
             sender.isSelected = true
         }
@@ -211,8 +198,6 @@ class DetailVC: UIViewController {
             self.onPlan.constant = 57
             self.view.layoutIfNeeded()
         }))
-            print("###################")
-            print(planList.count)
             self.plan.setTitleColor(.JackBlack, for: .normal)
             self.plan.titleLabel?.font = .Bold2
     
@@ -224,8 +209,6 @@ class DetailVC: UIViewController {
                 self.onPlan.constant = 0
                 self.view.layoutIfNeeded()
             }))
-            print("#######################")
-            print(planList.count)
             self.plan.setTitleColor(.brownGrey, for: .normal)
             self.plan.titleLabel?.font = .Light2
             self.container2.isHidden = true
@@ -258,17 +241,14 @@ class DetailVC: UIViewController {
 
 extension DetailVC: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("####################")
-        print(plans.count)
-        
+        print("Plan 계획 개수: \(plans.count)")
+
         return plans.count
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = planListView.dequeueReusableCell(withIdentifier: "plan") as! DetailPlanCell
-//        let plan = planList[0].plan!
-//        let planData = planList[0].plan![indexPath.row]
         let planData = plans[indexPath
         .row]
         cell.index.text = String(indexPath.row + 1)
@@ -276,7 +256,6 @@ extension DetailVC: UITableViewDataSource{
         cell.price.text = String(planData.price)
         
         self.planListViewHeight.constant = CGFloat(64 * plans.count + 20)
-
         
         return cell
     }
