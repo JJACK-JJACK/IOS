@@ -293,6 +293,26 @@
 			name = Main;
 			sourceTree = "<group>";
 		};
+		C03F28B922E16EF50031E3B6 /* Charge_Donate */ = {
+			isa = PBXGroup;
+			children = (
+				C0DC373922D576E20010A730 /* Charge.swift */,
+				C0DC373222D4C5500010A730 /* Donate.swift */,
+			);
+			name = Charge_Donate;
+			sourceTree = "<group>";
+		};
+		C03F28BA22E16F880031E3B6 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				C0DC373F22D5AE870010A730 /* MyHistory.swift */,
+				C0DC375F22D787CA0010A730 /* HistoryList.swift */,
+				C0DC374122D5B4AC0010A730 /* MyEachDonatedBerry.swift */,
+				C0DC375B22D671910010A730 /* GetStamp.swift */,
+			);
+			name = History;
+			sourceTree = "<group>";
+		};
 		C08482B122C2515D0087F3BC = {
 			isa = PBXGroup;
 			children = (
@@ -407,22 +427,18 @@
 		C08482DD22C3371E0087F3BC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C03F28BA22E16F880031E3B6 /* History */,
+				C03F28B922E16EF50031E3B6 /* Charge_Donate */,
 				C03F28B622E048010031E3B6 /* Main */,
 				C03F28B522E047480031E3B6 /* Auth */,
 				C0DC371E22D360BD0010A730 /* common */,
 				C0DC374F22D622DA0010A730 /* Plan.swift */,
 				C0DC375122D623130010A730 /* Review.swift */,
 				C0DC375322D623260010A730 /* Story2.swift */,
-				C0DC375F22D787CA0010A730 /* HistoryList.swift */,
-				C0DC373222D4C5500010A730 /* Donate.swift */,
 				C0DC372922D491020010A730 /* Count.swift */,
-				C0DC373922D576E20010A730 /* Charge.swift */,
 				C0DC373D22D58F600010A730 /* ChargingInfo.swift */,
-				C0DC373F22D5AE870010A730 /* MyHistory.swift */,
-				C0DC374122D5B4AC0010A730 /* MyEachDonatedBerry.swift */,
 				C0DC374522D5C68C0010A730 /* Banking.swift */,
 				C0DC374322D5C5FF0010A730 /* UserHistory.swift */,
-				C0DC375B22D671910010A730 /* GetStamp.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

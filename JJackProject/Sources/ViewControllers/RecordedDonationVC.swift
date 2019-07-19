@@ -53,9 +53,9 @@ class RecordedDonationVC: UIViewController {
             case .success(let data):
                 guard let data = data as? MyHistory else {return}
                 self.MyDonate.text = String(data.donate ?? 0)
-                print(data.donate)
-                print(data.donateBerry)
                 self.MyDonateBerry.text = String(data.donateBerry ?? 0)
+                print("기부 횟수: \(String(describing: data.donate))")
+                print("기부 베리: \(String(data.donateBerry!))")
                 self.view.reloadInputViews()
                 break
             case .requestErr(let err):
@@ -82,8 +82,6 @@ class RecordedDonationVC: UIViewController {
             case .success(let data):
                 self.recordList = (data.self as? [HistoryList])!
                 self.myRecordView.reloadData()
-                print(data)
-                print("성공")
             default:
                 break
             }
@@ -102,10 +100,7 @@ class RecordedDonationVC: UIViewController {
             switch data {
             case .success(let data):
                 self.eachRecordBerry = (data.self as? [MyEachDonatedBerry])!
-                print(self.eachRecordBerry.count)
                 self.myRecordView.reloadData()
-                print(data)
-                print("성공")
             default:
                 break
             }
@@ -129,14 +124,15 @@ extension RecordedDonationVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = myRecordView.dequeueReusableCell(withIdentifier: "RecordView")as! RecordCell
         let List = recordList[indexPath.row]
-//        let berry = eachRecordBerry[index]
+        let berry = eachRecordBerry[indexPath.row]
 
         
         cell.thumbImg.imageFromUrl(self.gsno(List.thumbnail), defaultImgPath:"imgDfSmall")
         cell.title.text = List.title
         cell.institution.text = List.centerName
         cell.processRate.text = String(List.percentage) + "%"
-//        cell.donatedBerry.text = String(berry.berry)
+        
+        cell.donatedBerry.text = String(berry.berry!)
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
@@ -147,9 +143,7 @@ extension RecordedDonationVC: UITableViewDataSource {
         
         let interval = finish!.timeIntervalSince(start!)
         let days = Int(interval / 86400)
-        print(days)
         if finish! >= Date() {
-            print(days)
             cell.date.text = "D - " + String(days)
         }else {cell.date.text = ""}
 
@@ -194,13 +188,15 @@ extension RecordedDonationVC: UITableViewDelegate {
         guard let dvc = storyboard?.instantiateViewController(withIdentifier: "Detail")as? DetailRecordVC else {return}
         
         let info = recordList[indexPath.row]
-//        let berryInfo = eachRecordBerry[indexPath.row]
+        let berryInfo = eachRecordBerry[indexPath.row]
         
         dvc.paramThumbImg = info.thumbnail
         dvc.paramTitle = info.title
         dvc.paramInstitution = info.centerName
         dvc.paramProcess = info.percentage
-//        dvc.paramDonated = berryInfo.berry
+        
+        dvc.paramDonated = berryInfo.berry!
+        
         dvc.paramStatus = info.state
         dvc.paramGoal = info.maxBerry
         
@@ -214,12 +210,10 @@ extension RecordedDonationVC: UITableViewDelegate {
         let interval = finish!.timeIntervalSince(start!)
         
         let days = Int(interval / 86400)
-        print(days)
         if finish! >= Date() {
-            print(days)
             dvc.paramDate = String(days)
         }
-        
+        print("-------------------- Detail ---------------------")
         navigationController?.pushViewController(dvc, animated: true)
     }
 }

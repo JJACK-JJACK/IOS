@@ -125,12 +125,16 @@ class DonateVC: UIViewController{
                         guard let dvc =  self.storyboard?.instantiateViewController(withIdentifier: "GetReward") as?GetRewardVC else {return}
                         print("********************** Rewarding ************************")
                         print("기부한 베리: \(berry)")
+                        print("리워드 베리: \(String(describing: data.rewordsBerry))")
+                        print("총 보유 베리: \(String(describing: data.totalBerry))")
                         dvc.rewardBerry = data.rewordsBerry!
                         self.present(dvc, animated: true, completion: nil)
                     } else {
                         guard let dvc =  self.storyboard?.instantiateViewController(withIdentifier: "CompleteDonate") as? UINavigationController else {return}
                         print("********************** Complete Donation ************************")
                         print("기부한 베리: \(berry)")
+                        print("리워드 베리: \(String(describing: data.stamps))")
+                        print("총 보유 베리: \(String(describing: data.totalBerry))")
                         self.present(dvc, animated: true, completion: nil)
                     }
                 case .requestErr(let message):

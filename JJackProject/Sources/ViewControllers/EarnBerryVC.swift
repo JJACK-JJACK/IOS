@@ -50,7 +50,7 @@ class EarnBerryVC: UIViewController {
             switch data {
             case .success(let data):
                 guard let stmp  = data as? GetStamp else {return}
-                print(stmp.cntStamp)
+                print("현재 보유 스탬프: \(stmp.cntStamp)개")
                 switch stmp.cntStamp {
                 case 1:
                     self.showStamps(self.stamp1, nil, nil, nil, nil, nil, nil, nil, nil)

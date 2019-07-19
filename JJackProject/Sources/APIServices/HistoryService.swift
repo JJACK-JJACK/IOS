@@ -23,19 +23,19 @@ struct HistoryService: APIManager{
         
         Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers)
             .responseData{ res in
+                print("----------------- My Recorded Donation ------------------")
                 res.result.ifSuccess {
                     if let value = res.result.value{
                         if let status = res.response?.statusCode{
+                            print("status: \(status)")
                             switch status {
                             case 200:
                                 do{
                                     let decoder = JSONDecoder()
                                     let result = try
                                         decoder.decode(ResponseObj<MyHistory>.self, from: value)
-                                    if result.success {
-                                        print("-------My History-------")
-                                        print("성공")
-                                        completion(.success(result.data!))}
+                                    print("Request: \(result.success)")
+                                    if result.success { completion(.success(result.data!))}
                                     else { completion(.requestErr(result.message))}
                                 } catch {print("error")}
                             case 400:
@@ -51,7 +51,6 @@ struct HistoryService: APIManager{
                     }
                 }
                 res.result.ifFailure {
-                    print(URL)
                     let err = res.result.error!
                     print(err.localizedDescription)
                     completion(.networkFail)
@@ -70,16 +69,18 @@ struct HistoryService: APIManager{
         ]
         
         Alamofire.request(URL, method: .get, parameters: nil , encoding: JSONEncoding.default, headers: headers).responseData{ res in
-            
+            print("----------------- My History List ------------------")
             res.result.ifSuccess {
                 if let value = res.result.value{
                     if let status = res.response?.statusCode{
+                        print("status: \(status)")
                         switch status {
                         case 200:
                             do{
                                 let decoder = JSONDecoder()
                                 let result = try
                                     decoder.decode(ResponseArr<HistoryList>.self, from: value)
+                                print("Request: \(result.success)")
                                 if result.success {completion(.success(result.data!))}
                                 else { completion(.requestErr(result.message))}
                             } catch {print("error")}
@@ -96,7 +97,6 @@ struct HistoryService: APIManager{
                 }
             }
             res.result.ifFailure {
-                print(URL)
                 let err = res.result.error!
                 print(err.localizedDescription)
                 completion(.networkFail)
@@ -114,21 +114,20 @@ struct HistoryService: APIManager{
         ]
         
         Alamofire.request(URL, method: .get, parameters: nil , encoding: JSONEncoding.default, headers: headers).responseData{ res in
-            
+            print("----------------- Donated Berry Each List ------------------")
             res.result.ifSuccess {
                 if let value = res.result.value{
                     if let status = res.response?.statusCode{
+                        print("status: \(status)")
                         switch status {
                         case 200:
                             do{
                                 let decoder = JSONDecoder()
                                 let result = try
                                     decoder.decode(ResponseArr<MyEachDonatedBerry>.self, from: value)
-                                print(result)
+                                print("Request: \(result.success)")
                                 if result.success
-                                    {
-                                       print("성공")
-                                    completion(.success(result.data!))}
+                                    { completion(.success(result.data!))}
                                 else { completion(.requestErr(result.message))}
                             } catch {print("error")}
                         case 400:
@@ -144,7 +143,6 @@ struct HistoryService: APIManager{
                 }
             }
             res.result.ifFailure {
-                print(URL)
                 let err = res.result.error!
                 print(err.localizedDescription)
                 completion(.networkFail)

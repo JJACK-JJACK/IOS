@@ -8,6 +8,6 @@
 
 import Foundation
 struct MyEachDonatedBerry: Codable {
-    let berry: Int
-    let id: String
+    let berry: Int?
+    let id: String?
 }
