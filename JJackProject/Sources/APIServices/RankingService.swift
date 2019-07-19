@@ -17,16 +17,18 @@ struct RankingService: APIManager {
         
         Alamofire.request(BaseUrl, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil)
             .responseData{ res in
+                print("----------------- Show Top 10 Review ------------------")
                 res.result.ifSuccess {
                     if let value = res.result.value{
                         if let status = res.response?.statusCode{
+                            print("status: \(status)")
                             switch status {
                             case 200:
                                 do{
                                     let decoder = JSONDecoder()
                                     let result = try
                                         decoder.decode(ResponseArr<Datum>.self, from: value)
-                                    print(result)
+                                    print("Reques: \(result.success)")
                                     if result.success {completion(.success(result.data!))}
                                     else { completion(.requestErr(result.message))}
                                 } catch {print("error")}

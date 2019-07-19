@@ -55,11 +55,7 @@ class DetailRankingVC: UIViewController {
     var content2: String = ""
     var contentImg: String = ""
     var purpose1: String = ""
-    var purpose2: String = ""
-    var purpose3: String = ""
     var price1: Int = 0
-    var price2: Int = 0
-    var price3: Int = 0
     var totalPrice: Int = 0
     var max: Int = 0
     
@@ -80,7 +76,8 @@ class DetailRankingVC: UIViewController {
         self.commnet2.text = content2
         self.storyImg.imageFromUrl(self.gsno(contentImg), defaultImgPath: "imgHomeJjack")
         self.maxBerry.text = String(max)
-
+        
+        print("사업 목표 개수: \(plans.count)")
     }
     
     

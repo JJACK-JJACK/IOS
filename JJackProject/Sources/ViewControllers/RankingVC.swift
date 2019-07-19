@@ -39,7 +39,7 @@ class RankingVC: UIViewController {
             switch data {
             case .success(let data):
                 let berry = (data as? [EntireBerry])!
-                print(berry[0].totalDonate)
+                print("사용자가 기부한 총 베리: \(berry[0].totalDonate) 베리")
                 self.EntireDonatedBerry.text = String(berry[0].totalDonate)
                 break
             default:
@@ -60,8 +60,6 @@ class RankingVC: UIViewController {
             case .success(let data):
                 let datum = (data as? [Datum])!
                 self.topTenList = datum
-                print("Ssssssssssssssss")
-                print(self.topTenList.count)
                 self.topTenListView.reloadData()
                 break
             case .requestErr(let err):
@@ -137,7 +135,7 @@ extension RankingVC: UICollectionViewDelegateFlowLayout {
         
         dvc.plans = reviewPlan ?? []
         
-        
+        print("----------------- Review Detail Page ------------------")
         navigationController?.pushViewController(dvc, animated: true)
     }
 

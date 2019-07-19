@@ -28,24 +28,23 @@ struct MyPageService: APIManager {
         Alamofire.request(URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers:    headers)
             .responseData{
                 res in
+                print("----------------- Edit NickName ------------------")
                 res.result.ifSuccess {
                     if let value = res.result.value{
                         if let status =
                             res.response?.statusCode{
+                            print("status: \(status)")
                             switch status {
                             case 200:
                                 do{
                                     let decoder = JSONDecoder()
                                     let result = try
                                         decoder.decode(ResponseStr.self, from: value)
-                                    print(result)
+                                    print("Request: \(result.success)")
                                     if result.success
-                                    {
-                                       print(result.success)
-                                        completion(.success(result.message))}
+                                    { completion(.success(result.message)) }
                                     else
-                                    {print(result.success)
-                                        completion(.requestErr(result.message))}
+                                    { completion(.requestErr(result.message)) }
                                 } catch {print("error")}
                             case 400:
                                 print("pathErr")
@@ -60,7 +59,6 @@ struct MyPageService: APIManager {
                     }
                 }
             res.result.ifFailure {
-                    print(URL)
                     let err = res.result.error!
                     print(err.localizedDescription)
                     completion(.networkFail)
