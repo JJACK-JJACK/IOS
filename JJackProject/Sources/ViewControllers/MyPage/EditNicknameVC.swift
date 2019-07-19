@@ -41,7 +41,6 @@ class EditNicknameVC: UIViewController, UITextFieldDelegate {
                 self.simpleAlert(title: "성공", message: "사용가능한 닉네임 입니다.")
                 let pass: Bool = (validate as? Bool)!
                 self.isDuplicate = pass
-                print(pass)
                 break
             case .requestErr(let message):
                 print(message)
@@ -64,18 +63,16 @@ class EditNicknameVC: UIViewController, UITextFieldDelegate {
         print(isDuplicate)
         if isDuplicate {
             guard let token = UserDefaults.standard.string(forKey: "refreshToken") else {return}
-            print(token)
             guard let nickname = edittingNiknm.text else {return}
-            print(nickname)
             MyPageService.shared.EditNickname(token, nickname){
                 [weak self]
                 (data) in
                 guard let `self` = self else {return}
-                print("여기인가?")
 
                 switch data {
                 case .success(let message):
                     print(message)
+                    print("수정된 닉네임: \(nickname)")
                     UserDefaults.standard.set(nickname, forKey: "nickname")
                     self.dismiss(animated: true, completion: nil)
                     break

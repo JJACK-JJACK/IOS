@@ -97,7 +97,6 @@ class EditAccoutVC: UIViewController {
 extension EditAccoutVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        print(info)
         if let image = info[(UIImagePickerController.InfoKey).originalImage]as? UIImage {
             self.profileImg.image = image
         }

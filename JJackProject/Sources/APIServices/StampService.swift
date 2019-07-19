@@ -22,16 +22,18 @@ struct StampServices: APIManager {
         
         Alamofire.request(BaseUrl, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers)
             .responseData{ res in
+                print("----------------- Get Stamps! ------------------")
                 res.result.ifSuccess {
                     if let value = res.result.value{
                         if let status = res.response?.statusCode{
+                            print("status: \(status)")
                             switch status {
                             case 200:
                                 do{
                                     let decoder = JSONDecoder()
                                     let result = try
                                         decoder.decode(ResponseObj<GetStamp>.self, from: value)
-                                    print(result)
+                                    print("Request: \(result.success)")
                                     if result.success {completion(.success(result.data!))}
                                     else { completion(.requestErr(result.message))}
                                 } catch {print("error")}

@@ -20,6 +20,7 @@ class MyPageVC: UIViewController {
 
         // Do any additional setup after loading the view.
         setup()
+        print("----------------- My Page ------------------")
     }
     override func viewWillAppear(_ animated: Bool) {
         setup()
@@ -64,6 +65,7 @@ class MyPageVC: UIViewController {
             UserDefaults.standard.set(false, forKey: "didSignup")
             UserDefaults.standard.set("", forKey: "email")
             UserDefaults.standard.set("", forKey: "password")
+            print("\n\n\n$ 로그아웃 $ \n")
         }, cancleHandler: nil)
        
     }

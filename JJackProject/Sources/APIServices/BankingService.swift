@@ -24,16 +24,19 @@ struct BankingService: APIManager {
         
         Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers)
             .responseData{ res in
+                print("----------------- Banking My History ------------------")
                 res.result.ifSuccess {
                     if let value = res.result.value{
                         if let status =
                                 res.response?.statusCode{
+                            print("status: \(status)")
                             switch status {
                             case 200:
                                 do{
                                     let decoder = JSONDecoder()
                                     let result = try
                                     decoder.decode(ResponseObj<Banking>.self, from: value)
+                                    print("Request: \(result.success)")
                                     if result.success
                                     {completion(.success(result.data!))}
                                     else
@@ -52,7 +55,6 @@ struct BankingService: APIManager {
                     }
                 }
                 res.result.ifFailure {
-                    print(URL)
                     let err = res.result.error!
                     print(err.localizedDescription)
                     completion(.networkFail)
