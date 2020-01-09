@@ -41,6 +41,7 @@
 		C03353F022CE230C007EEA16 /* Ranking.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C03353EF22CE230C007EEA16 /* Ranking.storyboard */; };
 		C03353F322CE237D007EEA16 /* RankingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03353F222CE237D007EEA16 /* RankingVC.swift */; };
 		C03F28B422D908B80031E3B6 /* give.json in Resources */ = {isa = PBXBuildFile; fileRef = C03F28B322D908B70031E3B6 /* give.json */; };
+		C0827E3F23C6E0E800B172A3 /* berrydata2.json in Resources */ = {isa = PBXBuildFile; fileRef = C0827E3E23C6E0E800B172A3 /* berrydata2.json */; };
 		C08482BE22C2515D0087F3BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08482BD22C2515D0087F3BC /* AppDelegate.swift */; };
 		C08482C022C2515D0087F3BC /* FirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08482BF22C2515D0087F3BC /* FirstVC.swift */; };
 		C08482C322C2515D0087F3BC /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C08482C122C2515D0087F3BC /* Login.storyboard */; };
@@ -84,7 +85,6 @@
 		C0DC375822D651140010A730 /* GetRewardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC375722D651140010A730 /* GetRewardVC.swift */; };
 		C0DC375A22D66FF80010A730 /* StampService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC375922D66FF80010A730 /* StampService.swift */; };
 		C0DC375C22D671910010A730 /* GetStamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC375B22D671910010A730 /* GetStamp.swift */; };
-		C0DC375E22D767B30010A730 /* berrydata2.json in Resources */ = {isa = PBXBuildFile; fileRef = C0DC375D22D767B30010A730 /* berrydata2.json */; };
 		C0DC376022D787CA0010A730 /* HistoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC375F22D787CA0010A730 /* HistoryList.swift */; };
 		C0DC376422D794560010A730 /* DetailPlanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0DC376322D794560010A730 /* DetailPlanCell.swift */; };
 /* End PBXBuildFile section */
@@ -126,6 +126,7 @@
 		C03353EF22CE230C007EEA16 /* Ranking.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ranking.storyboard; sourceTree = "<group>"; };
 		C03353F222CE237D007EEA16 /* RankingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingVC.swift; sourceTree = "<group>"; };
 		C03F28B322D908B70031E3B6 /* give.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = give.json; sourceTree = "<group>"; };
+		C0827E3E23C6E0E800B172A3 /* berrydata2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = berrydata2.json; sourceTree = "<group>"; };
 		C08482BA22C2515D0087F3BC /* JJackProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JJackProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08482BD22C2515D0087F3BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C08482BF22C2515D0087F3BC /* FirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstVC.swift; sourceTree = "<group>"; };
@@ -171,7 +172,6 @@
 		C0DC375722D651140010A730 /* GetRewardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRewardVC.swift; sourceTree = "<group>"; };
 		C0DC375922D66FF80010A730 /* StampService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StampService.swift; sourceTree = "<group>"; };
 		C0DC375B22D671910010A730 /* GetStamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStamp.swift; sourceTree = "<group>"; };
-		C0DC375D22D767B30010A730 /* berrydata2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = berrydata2.json; path = ../../../../../berrydata2.json; sourceTree = "<group>"; };
 		C0DC375F22D787CA0010A730 /* HistoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryList.swift; sourceTree = "<group>"; };
 		C0DC376322D794560010A730 /* DetailPlanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPlanCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -364,7 +364,7 @@
 			isa = PBXGroup;
 			children = (
 				C03F28B322D908B70031E3B6 /* give.json */,
-				C0DC375D22D767B30010A730 /* berrydata2.json */,
+				C0827E3E23C6E0E800B172A3 /* berrydata2.json */,
 				C08482C422C251600087F3BC /* Assets.xcassets */,
 				C08482C922C251600087F3BC /* Info.plist */,
 				C08482D122C2525D0087F3BC /* Storyboards */,
@@ -564,7 +564,7 @@
 			files = (
 				C03F28B422D908B80031E3B6 /* give.json in Resources */,
 				C01E92F322CB732800D43366 /* HomeMain.storyboard in Resources */,
-				C0DC375E22D767B30010A730 /* berrydata2.json in Resources */,
+				C0827E3F23C6E0E800B172A3 /* berrydata2.json in Resources */,
 				C01A043822C9E7DF00ED8CD2 /* SideMenu.storyboard in Resources */,
 				C01A043D22CA272A00ED8CD2 /* MyPage.storyboard in Resources */,
 				C03353F022CE230C007EEA16 /* Ranking.storyboard in Resources */,
