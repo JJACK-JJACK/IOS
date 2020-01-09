@@ -10,7 +10,8 @@
 ## 서비스 워크 플로우 
 ![JJack_ServiceWorkFlow](JJack_ServiceWorkFlow.png)
 
-
+## 시현 영상
+[![Video Label](http://img.youtube.com/vi/MLJVigHGXqI/0.jpg)](https://www.youtube.com/watch?v=MLJVigHGXqI)
 
 ## 개발 환경
 
