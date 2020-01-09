@@ -11,7 +11,7 @@
 ![JJack_ServiceWorkFlow](JJack_ServiceWorkFlow.png)
 
 ## 시현 영상
-[![Video Label](http://img.youtube.com/vi/MLJVigHGXqI/1.jpg)](https://www.youtube.com/watch?v=MLJVigHGXqI)
+[![Video Label](http://img.youtube.com/vi/MLJVigHGXqI/3.jpg)](https://www.youtube.com/watch?v=MLJVigHGXqI)
 
 ## 개발 환경
 
